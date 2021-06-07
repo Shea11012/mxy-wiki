@@ -7,9 +7,25 @@
         "id": "d60f81d7edd4ea51",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
-        }
+          "type": "markdown",
+          "state": {
+            "file": "git/Git 常用命令.md",
+            "mode": "source"
+          }
+        },
+        "group": "f8cf0554425b9977"
+      },
+      {
+        "id": "f6f47aa96f4223d0",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "git/Git 常用命令.md",
+            "mode": "preview"
+          }
+        },
+        "group": "f8cf0554425b9977"
       }
     ],
     "direction": "vertical"
@@ -65,28 +81,40 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "go/lint.md",
+                "file": "git/Git 常用命令.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "852757edc96c206f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "active": "d60f81d7edd4ea51",
   "lastOpenFiles": [
-    "go/lint.md",
     "git/Git 常用命令.md",
-    "Untitled.md"
+    "linux/tools/rsync.md",
+    "Untitled.md",
+    "go/lint.md"
   ]
 }

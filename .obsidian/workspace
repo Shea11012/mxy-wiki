@@ -1,0 +1,92 @@
+{
+  "main": {
+    "id": "f655af786e398df0",
+    "type": "split",
+    "children": [
+      {
+        "id": "d60f81d7edd4ea51",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6df16dcfb5a26ab8",
+    "type": "split",
+    "children": [
+      {
+        "id": "36ec3cadb959495f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1e0e7c94bb44fc03",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "41c9cc18add2eb42",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "68a487a1b2752a55",
+    "type": "split",
+    "children": [
+      {
+        "id": "378e2c22e68592e5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "555458c0b1060ca1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "go/lint.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "d60f81d7edd4ea51",
+  "lastOpenFiles": [
+    "go/lint.md",
+    "git/Git 常用命令.md",
+    "Untitled.md"
+  ]
+}

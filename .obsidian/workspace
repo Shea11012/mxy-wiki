@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "git/git action.md",
+            "file": "k8s/k8s安装.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "git/git action.md",
+            "file": "k8s/k8s安装.md",
             "mode": "preview"
           }
         },
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "git/git action.md",
+                "file": "k8s/k8s安装.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,16 +107,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "active": "d60f81d7edd4ea51",
   "lastOpenFiles": [
-    "git/Untitled.md",
-    "Untitled.md",
-    "linux/tools/ssh.md",
-    "linux/tools/rsync.md",
-    "linux/tools/Untitled.md",
+    "k8s/k8s安装.md",
     "git/Git 常用命令.md",
-    "go/lint.md"
+    "k8s/CNI plugins.md",
+    "k8s/未命名.md",
+    "linux/tools/rsync.md",
+    "linux/bash 脚本.md",
+    "linux/Untitled.md",
+    "git/git action.md",
+    "git/Untitled.md",
+    "Untitled.md"
   ]
 }

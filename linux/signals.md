@@ -1,0 +1,4 @@
+---
+tags: ["linux","signal"]
+---
+# signals

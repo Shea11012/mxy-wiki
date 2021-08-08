@@ -114,25 +114,21 @@ if let 8 = value {
 ```
 
 ## 包管理、模块
-1. 将模块放在 src 目录内 
-
-![](https://mxy-imgs.oss-cn-hangzhou.aliyuncs.com/imgs/20210629100115.png)
+1. 将模块放在 src 目录内
+![](https://mxy-imgs.oss-cn-hangzhou.aliyuncs.com/imgs/20210629111127.png)
 
 2. 创建一个本地库，导入本地库
 
-![[rust/Pasted image 20210629111127.png]]
-
 首先在 src 的同级目录下创建了一个 utils 目录，作为一个外部仓库导入到 src 中
 
-1. 首先修改根目录的 cargo.toml 文件
+  1. 首先修改根目录的 cargo.toml 文件
 
 ```toml
 utils = {path="utils",version="0.1.0"}
 ```
 
 2. 在 utils 内创建好包后，需要在 lib.rs 中指定导出
-
-![[rust/Pasted image 20210629111511.png]]
+![](https://mxy-imgs.oss-cn-hangzhou.aliyuncs.com/imgs/20210629111511.png)
 
 对于是在 utils 内的子包，需要在子包内建一个 mod.rs 指定需要导出的模块
 

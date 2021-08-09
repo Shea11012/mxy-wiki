@@ -32,21 +32,6 @@ let y = {
 println!("the value of y is: {}",y);
 ```
 
-## 定义结构和实现结构体方法
-```rust
-struct User {
-	email: String,
-	address: String,
-	active: true,
-}
-
-impl User {
-	fn toggleActive(&self) -> bool {
-		!self.active
-	}
-}
-```
-
 ## 枚举
 ```rust
 enum IpAddr {
@@ -112,6 +97,165 @@ if let 8 = value {
 	println!("eight");
 }
 ```
+
+## 所有权
+> 使得 rust 无需垃圾回收也可保障内存安全
+
+### 引用与借用
+[[../计算机基础/栈和堆#堆栈|堆栈简介]]
+#### 所有权规则
+1. rust 中的每一个值都有一个被称为所有者（owner）的变量
+2. 值在任一时刻有且只有一个所有者
+3. 当所有者离开作用域，这个值将被丢弃
+
+#### 引用与借用
+```rust
+fn main() {
+    let s1 = String::from("hello");
+
+    let len = calculate_length(&s1);
+
+    println!("The length of '{}' is {}.", s1, len);
+}
+
+fn calculate_length(s: &String) -> usize {
+    s.len()
+}
+```
+
+`&` 是引用符号，允许使用值但不获取其所有权，rust 将获取引用作为函数参数称为借用（borrowing）。
+rust 默认不允许修改借用的值
+
+#### 可变引用
+```rust
+fn main() {
+    let mut s = String::from("hello");
+
+    change(&mut s);
+}
+
+fn change(some_string: &mut String) {
+    some_string.push_str(", world");
+}
+```
+
+可变引用有一个限制：在特定作用域中的特定数据只能有一个可变引用
+```rust
+let mut s = String::from("hello");
+
+// 以下代码会报错
+let r1 = &mut s;
+let r2 = &mut s;
+
+println!("{}, {}", r1, r2);
+```
+这种限制的优点是 rust 可以在编译时就避免数据竞争。数据竞争的竟态条件，可由：
+- 两个或更多指针同时访问同一数据
+- 至少有一个指针被用来写入数据
+- 没有同步数据访问机制
+
+```rust
+
+#![allow(unused)]
+fn main() {
+let mut s = String::from("hello");
+
+{
+    let r1 = &mut s;
+
+} // r1 在这里离开了作用域，所以我们完全可以创建一个新的引用
+
+let r2 = &mut s;
+}
+
+```
+
+同时也不能在拥有不可变引用的同时拥有可变引用，多个不可变引用是允许同时存在的。
+一个引用的作用域从声明的地方开始一直持续到最后一次使用为止。
+```rust
+let mut s = String::from("hello");
+
+let r1 = &s; // 没问题
+let r2 = &s; // 没问题
+println!("{} and {}", r1, r2);
+// 此位置之后 r1 和 r2 不再使用
+
+let r3 = &mut s; // 没问题
+println!("{}", r3);
+
+```
+
+## 结构体
+定义结构体
+```rust
+struct User {
+    username: String,
+    email: String,
+    sign_in_count: u64,
+    active: bool,
+}
+```
+
+默认创建的结构体是不可变的，如果需要更改结构体内的某个值，需要使结构体可变
+
+```rust
+let mut user1 = User {
+	email: String::from("xx.com"),
+	username: String::from("sfsf"),
+	active: true,
+	sign_in_count: 1,
+};
+```
+
+创建结构体简写语法
+```rust
+
+struct User {
+    username: String,
+    email: String,
+    sign_in_count: u64,
+    active: bool,
+}
+
+fn build_user(email: String, username: String) -> User {
+    User {
+        email,
+        username,
+        active: true,
+        sign_in_count: 1,
+    }
+}
+
+```
+
+结构体更新语法
+```rust
+
+#![allow(unused)]
+fn main() {
+struct User {
+    username: String,
+    email: String,
+    sign_in_count: u64,
+    active: bool,
+}
+
+let user1 = User {
+    email: String::from("someone@example.com"),
+    username: String::from("someusername123"),
+    active: true,
+    sign_in_count: 1,
+};
+
+let user2 = User {
+    email: String::from("another@example.com"),
+    username: String::from("anotherusername567"),
+    ..user1
+};
+}
+
+```
+
 
 ## 包管理、模块
 1. 将模块放在 src 目录内 

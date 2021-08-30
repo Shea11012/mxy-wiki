@@ -32,72 +32,6 @@ let y = {
 println!("the value of y is: {}",y);
 ```
 
-## 枚举
-```rust
-enum IpAddr {
-	V4,
-	V6,
-}
-
-enum IpAddr {
-	V4(String),
-	V6(String),
-}
-
-enum IpAddr {
-	V4(u8,u8,u8,u8),
-	V6(String),
-}
-
-enum Message {
-	Quit,
-	Move {x: i32, y: i32},
-	Write(String),
-	ChangeColor(i32,i32,i32),
-}
-
-// 在枚举上定义方法
-impl Message {
-	fn call(&self) {
-		// do something
-	}
-}
-```
-
-**rust 没有 null，使用 option 替代**
-```rust
-enum Option<T> {
-	Some(T),
-	None,
-}
-```
-
-## match 控制流运算符
-```rust
-let value = 8;
-match value {
-	1 => println!("one"),
-	2 => println!("two"),
-	3 => println!("three"),
-	_ => (),
-}
-```
-
-### if let
-```rust
-let value = 8;
-match value {
-	8 => println!("eight"),
-	_ => (),
-}
-
-
-// 以上可以改为
-if let 8 = value {
-	println!("eight");
-}
-```
-
 ## 所有权
 > 使得 rust 无需垃圾回收也可保障内存安全
 
@@ -254,6 +188,125 @@ let user2 = User {
 };
 }
 
+```
+
+定义结构体方法
+```rust
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+
+fn main() {
+    let rect1 = Rectangle { width: 30, height: 50 };
+
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        rect1.area()
+    );
+}
+```
+
+**关联函数**
+在 impl 块中定义不以 self 作为参数的函数，被称为关联函数
+```rust
+impl Rectangle {
+    fn square(size: u32) -> Rectangle {
+        Rectangle { width: size, height: size }
+    }
+}
+```
+
+> 每个结构体都允许有多个 impl 块
+
+## 枚举
+rust 枚举中的每一个成员都可以处理不同类型和数量的数据
+```rust
+enum IpAddr {
+	V4,
+	V6,
+}
+
+
+struct Ipv4Addr {
+    // --snip--
+}
+
+struct Ipv6Addr {
+    // --snip--
+}
+
+enum IpAddr {
+    V4(Ipv4Addr),
+    V6(Ipv6Addr),
+}
+
+
+enum IpAddr {
+	V4(String),
+	V6(String),
+}
+
+enum IpAddr {
+	V4(u8,u8,u8,u8),
+	V6(String),
+}
+
+enum Message {
+	Quit,
+	Move {x: i32, y: i32},
+	Write(String),
+	ChangeColor(i32,i32,i32),
+}
+
+// 在枚举上定义方法
+impl Message {
+	fn call(&self) {
+		// do something
+	}
+}
+```
+
+> rust 没有 null，使用 option 替代
+```rust
+enum Option<T> {
+	Some(T),
+	None,
+}
+```
+
+
+## match 控制流运算符
+```rust
+let value = 8;
+match value {
+	1 => println!("one"),
+	2 => println!("two"),
+	3 => println!("three"),
+	_ => (),
+}
+```
+
+### if let
+```rust
+let value = 8;
+match value {
+	8 => println!("eight"),
+	_ => (),
+}
+
+
+// 以上可以改为
+if let 8 = value {
+	println!("eight");
+}
 ```
 
 

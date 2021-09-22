@@ -4,8 +4,8 @@
 持久化：`echo kernel.unprivileged_userna_clone=1 > /etc/sysctl.d/userns.conf`
 
 设置 /etc/subuid 和 /etc/subgid
-`touch /etc/{subuid,subgid}`
-`usermod --add-subuids 100000-165535 --add-subgids 100000-165535 zhuzi`
+`sudo touch /etc/{subuid,subgid}`
+`sudo usermod --add-subuids 100000-165535 --add-subgids 100000-165535 zhuzi`
 
 配置ping的权限
 `echo net.ipv4.ping_group_range=0 2000000`

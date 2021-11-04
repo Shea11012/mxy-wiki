@@ -66,6 +66,10 @@ TSopt 的作用：
 - 测量出两端往返所消耗的时间（RTTM）
 - 序列号回绕（PAWS）
 
+#### 半连接、全连接队列
+- 半连接队列（Incomplete connection queue），SYN 队列
+- 全连接队列（Completed connection queue），Accept 队列
+
 #### 检验和（checksum）
 每个TCP包首部都有两个字节来表示检验和，防止在传输过程中有损坏。如果收到一个校验和有差错的报文，TCP 不会发送任何确认直接丢弃它，等待发送端重传。
 > 包的序列号保证接收数据的乱序和重复问题

@@ -1,4 +1,10 @@
 [
   "note-refactor-obsidian",
-  "obsidian-admonition"
+  "obsidian-admonition",
+  "obsidian-git",
+  "obsidian-outliner",
+  "convert-url-to-iframe",
+  "media-extended",
+  "mx-bili-plugin",
+  "markdown-prettifier"
 ]

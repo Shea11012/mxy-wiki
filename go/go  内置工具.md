@@ -16,3 +16,8 @@ go tool compile -m -l xxx.go
 
 go build -gcflags "-m -l" xxx.go
 ```
+
+### 获取go的汇编代码
+```bash
+go tool compile -NlS  xx.go
+```

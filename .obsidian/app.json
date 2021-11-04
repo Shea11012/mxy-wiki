@@ -7,5 +7,6 @@
   "attachmentFolderPath": "./",
   "alwaysUpdateLinks": true,
   "foldHeading": true,
-  "foldIndent": true
+  "foldIndent": true,
+  "communityThemeSortOrder": "download"
 }

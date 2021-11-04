@@ -1,1 +1,11 @@
-{}
+{
+  "file-explorer:new-file-in-new-pane": [],
+  "editor:toggle-code": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "`"
+    }
+  ]
+}

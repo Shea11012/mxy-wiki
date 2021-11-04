@@ -4,9 +4,5 @@
   "promptDelete": false,
   "newFileLocation": "current",
   "newLinkFormat": "relative",
-  "attachmentFolderPath": "./",
-  "alwaysUpdateLinks": true,
-  "foldHeading": true,
-  "foldIndent": true,
-  "communityThemeSortOrder": "download"
+  "attachmentFolderPath": "./"
 }

@@ -3,8 +3,8 @@
   "syntaxHighlight": false,
   "copyButton": false,
   "version": "6.4.1",
-  "autoCollapse": false,
+  "autoCollapse": true,
   "defaultCollapseType": "open",
   "syncLinks": true,
-  "enableMarkdownProcessor": false
+  "enableMarkdownProcessor": true
 }

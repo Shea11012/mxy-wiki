@@ -8,5 +8,6 @@
   "alwaysUpdateLinks": true,
   "foldHeading": true,
   "foldIndent": true,
-  "communityThemeSortOrder": "download"
+  "communityThemeSortOrder": "download",
+  "autoPairBrackets": false
 }

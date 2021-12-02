@@ -1,7 +1,7 @@
 # shell
 [[linux/shell/shell 基础]]
 
-[[linux/shell/环境变量]]
+[[变量]]
 
 [[linux/shell/Linux 文件权限]]
 
@@ -9,7 +9,7 @@
 
 [[linux/shell/结构化命令]]
 
-[[linux/shell/参数]]
+[[变量]]
 
 [[linux/shell/获取用户输入和控制输出]]
 

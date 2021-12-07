@@ -7,11 +7,11 @@
 
 [Docker快速上手](https://segmentfault.com/a/1190000008822648)
 
-###镜像与容器
+### 镜像与容器
 | 命令                                                | 说明                                                         |
 | --------------------------------------------------- | ------------------------------------------------------------ |
 | docker search $mirror-name                          | 搜索镜像                                                     |
-| docker pull mirror-name: $tag                       | 获取镜像，$tag为镜像版本，省略则下载最新即:latest（若下载的镜像携带有版本标签，之后使用该镜像都需要携带版本标签，否则会因版本不同再次下载 |
+| docker pull mirror-name: \$tag                       | 获取镜像，$tag为镜像版本，省略则下载最新即:latest（若下载的镜像携带有版本标签，之后使用该镜像都需要携带版本标签，否则会因版本不同再次下载 |
 | docker images                                       | 查看所有可用镜像                                             |
 | docker images $mirror-name                          | 查看单个镜像                                                 |
 | docker rmi $mirror-name                             | 删除镜像                                                     |
@@ -19,43 +19,46 @@
 | docker ps -a                                        | 查看全部容器                                                 |
 | docker logs $container-name                         | 查看容器日志                                                 |
 | docker run $mirror-name:tag                         | 生成容器，如果宿主机中没有该镜像则会先进行下载，注意镜像标签是否正确 |
-| docker run --name $container-name \$mirror-name     | 给$mirror-name指定一个名字为container-name                  |
+| docker run --name \$container-name \$mirror-name     | 给\$mirror-name指定一个名字为container-name                  |
 | docker start $container-name                        | 启动容器                                                     |
 | docker stop $container-name                         | 关闭容器                                                     |
-| docker run -it $mirror-name                         | 以交互方式创建容器，也可以在$mirror-name的前面加上--name 来指定容器的名字 |
-| docker run -d $mirror-name                          | 以后台运行方式创建容器                                       |
-| docker inspect $container-name                      | 查看容器详情                                                 |
-| docker rm $container-name-1 ,[container-name-2] ... | 删除容器(可以加入一个或多个批量删除)                         |
-| docker rm $(docker ps -aq)                          | 删除全部容器                                                 |
-###docker 网络
-|命令 | 说明 |
-|----|----|
-| docker network ls | 查看网络类别（none[表示容器为独立个体，不与外部通信],host[表示容器与宿主机（安装docker的机器）共享网络],bridge[容器默认网络类型，网桥模式意味着容器间可以互相通信，对外通信需要借助宿主机，通常表现为端口号的映射]） |
-| docker network inspect $network-name | json格式，看到使用当前网络类型的容器列表，只会显示已经启动的容器 |
-| docker network create --driver $network-driver \$network-name | 创建网络，自定义网络类别和网络名 ，省略--driver $network-driver 就默认创建bridge|
-| docker network connect $network-name \$container-name | 将容器$container-name加入network-name网络中，一个容器可以属于多个网络 |
-| docker network disconnect $network-name container-name | 将容器从某一网络中移除 |
-| docker run --network $network-name mirror-name | 在容器生成时指定网络 |
-| docker network rm $network-name | 删除网络 |
+| docker run -it \$mirror-name                         | 以交互方式创建容器，也可以在$mirror-name的前面加上--name 来指定容器的名字 |
+| docker run -d \$mirror-name                          | 以后台运行方式创建容器                                       |
+| docker inspect \$container-name                      | 查看容器详情                                                 |
+| docker rm \$container-name-1 ,[container-name-2] ... | 删除容器(可以加入一个或多个批量删除)                         |
+| docker rm \$(docker ps -aq)                          | 删除全部容器                                                 |
+### docker 网络
+
+| 命令                                                           | 说明                                                                                                                                                                                                                 |
+| -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| docker network ls                                              | 查看网络类别（none[表示容器为独立个体，不与外部通信],host[表示容器与宿主机（安装docker的机器）共享网络],bridge[容器默认网络类型，网桥模式意味着容器间可以互相通信，对外通信需要借助宿主机，通常表现为端口号的映射]） |
+| docker network inspect \$network-name                          | json格式，看到使用当前网络类型的容器列表，只会显示已经启动的容器                                                                                                                                                     |
+| docker network create --driver \$network-driver \$network-name | 创建网络，自定义网络类别和网络名 ，省略--driver \$network-driver 就默认创建bridge                                                                                                                                     |
+| docker network connect \$network-name \$container-name         | 将容器\$container-name加入network-name网络中，一个容器可以属于多个网络                                                                                                                                               |
+| docker network disconnect $network-name container-name         | 将容器从某一网络中移除                                                                                                                                                                                               |
+| docker run --network \$network-name mirror-name                | 在容器生成时指定网络                                                                                                                                                                                                 |
+| docker network rm \$network-name                               | 删除网络                                                                                                                                                                                                             |
+
 测试网络联通情况
 1. 在容器交互模式中使用`ip addr`
 2. 使用`docker inspect $container-name`
 3. 使用`docker inspect $container-name | grep IPAddress`
   之后可以使用ping指令测试容器间的网络连通情况。没有ping指令的容器需要安装iputils
 
-###Docker 存储
+### Docker 存储
 讲容器的部分存储映射到宿主机器中，以便对配置文件、日志文件、数据文件等进行备份
-| 命令 | 说明 |
-|---|---|
-| docker run --volume /my/mac/dir:/container/dir $mirror-name| 在创建时，将系统的某一目录指定为容器某一目录的数据卷（此时容器内部的/container/dir与宿主机的/my/mac/dir形成映射）|
-| docker run --volume /my/mac/file:/container/file $mirror-name | 将文件与文件映射起来 |
-| docker run --volume /container/dir $mirror-name | 在指定数据卷时，可以省略宿主机目录，此时Docker会自动指定一个主机空间映射 |
-| docker run --volume /my/mac/dir:/container/dir:ro $mirror-name | 可以选择只读方式，这样文件或目录的修改就只能在宿主机中进行。添加`:ro` |
-| docker volume ls | 查看数据卷 |
-| docker volume ls -f dangling=true | 当容器被删除，主机上的数据卷不会被删除，可以通过以下指令查看那些没有容器使用的数据卷，注意，这里只会显示由Docker自动指定的数据卷 |
-| docker rm -v $container-name | 如果需要在删除容器时一并删除数据卷 |
-| docker run --volume-from $container mirror-name | 在创建容器时，选择该容器的数据卷与之前的某容器相同，比如在面对多容器共享项目目录空间这一需求时 |
-| docker volume rm $volume-id | 数据卷删除 |
+
+| 命令                                                            | 说明                                 |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | 
+| docker run --volume /my/mac/dir:/container/dir \$mirror-name    | 在创建时，将系统的某一目录指定为容器某一目录的数据卷（此时容器内部的/container/dir与宿主机的/my/mac/dir形成|
+| docker run --volume /my/mac/file:/container/file \$mirror-name  | 将文件与文件映射起来    | 
+| docker run --volume /container/dir \$mirror-name | 在指定数据卷时，可以省略宿主机目录，此时Docker会自动指定一个主机空间映射 |
+| docker run --volume /my/mac/dir:/container/dir:ro \$mirror-name | 可以选择只读方式，这样文件或目录的修改就只能在宿主机中进行。添加`:ro`|     
+| docker volume ls                                                | 查看数据卷  |
+| docker volume ls -f dangling=true                               | 当容器被删除，主机上的数据卷不会被删除，可以通过以下指令查看那些没有容器使用的数据卷，注意，这里只会显示由Docker自动指定的数据卷 |
+| docker rm -v \$container-name                                   | 如果需要在删除容器时一并删除数据卷                                                                                               |
+| docker run --volume-from \$container mirror-name                | 在创建容器时，选择该容器的数据卷与之前的某容器相同，比如在面对多容器共享项目目录空间这一需求时                                   |
+| docker volume rm \$volume-id                                    | 数据卷删除                                                                                                                       |
 
 可以通过`docker inspect $container-name`,在Mounts中看到数据卷的详细情况
 
@@ -63,8 +66,8 @@
 
 | 命令 | 说明 |
 |----|----|
-| docker run -p $host-port : \$container-port nginx | \$host-port(宿主机端口) $container-port(容器端口) 将主机端口绑定到容器端口，例：12345:80,这样对localhost:12345 就相当于访问容器80端口 |
-| docker port $container-name | 查看指定的容器端口 |
+| docker run -p \$host-port : \$container-port nginx | \$host-port(宿主机端口) $container-port(容器端口) 将主机端口绑定到容器端口，例：12345:80,这样对localhost:12345 就相当于访问容器80端口 |
+| docker port \$container-name | 查看指定的容器端口 |
 
 `docker ps -a` 中的 `PORTS` 栏看到端口映射情况。注意只有处于运行中的容器才会有实际的端口映射。
 
@@ -126,7 +129,7 @@ networks:
 | docker push $namespace/mirror-name:tag | 提交镜像 |
 国内使用DaoCloud或阿里Docker服务，具体推送方法去服务商网站查看
 
-###Dockerfile
+### Dockerfile
 Dockerfile 可以指定新镜像的原镜像来源，对原镜像的操作、环境变量、以及以此创建容器时执行的指令等。
 样例
 ```dockerfile

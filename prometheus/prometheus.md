@@ -12,4 +12,16 @@ prometheus 通过http周期性抓取被监控组件状态，任意组件只要�
 不适用场景：实时数据统计
 
 
-![](https://img.orchome.com/group1/M00/00/05/dr5oXF03GwiAaOjLAADVIb1FhZ4671.svg)
+![](https://yunlzheng.gitbook.io/~/files/v0/b/gitbook-28427.appspot.com/o/assets%2F-LBdoxo9EmQ0bJP2BuUi%2F-LPS8BVjkRvEjV8HmbBi%2F-LPS8D1gM9qp1zu_wp8y%2Fprometheus_architecture.png?generation=1540234733609534&alt=media)
+## Prometheus Server
+负责实现对监控数据的获取、存储以及查询。
+Prometheus Server 本身就是一个时序数据库，将采集到的监控数据按照时间序列的方式存储在本地磁盘中。
+
+## Exporters
+将监控数据采集的端点通过HTTP服务形式暴露给Prometheus Server。
+
+## AlertManager
+基于PromQL创建告警规则。
+
+## PushGateway
+将数据推送到Gateway中，Prometheus Server 从Gateway中pull数据。

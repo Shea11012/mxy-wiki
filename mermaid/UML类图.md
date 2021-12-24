@@ -31,8 +31,8 @@ classDiagram
 | **Type** | **Description** |
 | -------- | --------------- |
 | <--      | Inheritance 继承  |
-| \*--      | composition 组合  |
-| o--      | Aggregation 聚合  |
+| \*--      | composition 组合；一个对象由一个对象或多个其他对象实例构成  |
+| o--      | Aggregation 聚合；聚合关系中一个对象拥有一组其他对象  |
 | -->      | Association 关联  |
 | --       | 实线              |
 | ..>      | Dependency 依赖   |
@@ -41,12 +41,24 @@ classDiagram
 
 ```mermaid
 classDiagram
-	classA <|-- classB
-	classC *-- classD
-	classE o-- classF
-	classG <-- classH
+	%% Cat 和 Dog 是 Animal 的具体实现
+	class Animal
+	Animal: +makeSound()
+	class Cat
+	Cat: +makeSound()
+	class Dog
+	Dog: +makeSound()
+	Animal <|-- Cat
+	Animal <|-- Dog
+	
+	大学 *--> 院系
+	%% 院系包含教授
+	院系 o--> 教授
+	%% 教授关联学生
+	教授 --> 学生
 	classI -- classJ
-	classK <.. classL
+	%% 教授依赖课程
+	教授 <.. 课程
 	classM <|.. classN
 	classO .. classP
 ```

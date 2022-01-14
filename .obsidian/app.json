@@ -9,5 +9,7 @@
   "foldHeading": true,
   "foldIndent": true,
   "communityThemeSortOrder": "download",
-  "autoPairBrackets": false
+  "autoPairBrackets": false,
+  "legacyEditor": true,
+  "livePreview": false
 }

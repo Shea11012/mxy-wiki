@@ -2,19 +2,40 @@
 tags: ["rust"]
 ---
 # rust
+[rust](https://rustup.rs/) 官网安装rust编译器和工具
+## rust工具
+- 更新rust工具：`rustup update`
+- 更新rustup：`rustup self update`
+- 展示当前工具链：`rustup show`
+- 切换rust版本：`rustup override set nightly`
+- 安装指定版本：`rustup install nightly-2016-06-03`
 
-rust 中变量默认不可变，变量需要可变关键字 **mu**
+## rust 概要
+- bool
+- char
+- isize：有符号类型；如：i8、i16、i32、i64、i128
+- usize：无符号类型；如：u8、u16、u32、u64、u128
+- f32
+- f64
+- `[T;N]`：固定大小的数组；元素类型为 T，N在编译时确定
+- `[T]`：动态大小的连续序列
+- str：字符串切片
+- `(T,U,..)`：有限序列，T 和 U 可以是不同类型
+- `fn(i32) -> i32`：函数
+
+### 变量定义与不可变
+rust 中变量默认不可变，变量需要可变使用关键字 **mut**
 ```rust
-let foo = "a";	// 默认不可变
-let mu bar = "b"; // 变量可变
+	let foo = "a";	// 默认不可变
+	let mut bar = "b"; // 变量可变
 ```
-let 与 mu 的区别：
+let 与 mut 的区别：
 - 可以使用 let 关键字重复声明一个变量，每次 let 声明都是创建了一个新变量，可以改变值类型，但复用了这个名字
 
 ```rust
 let a = "";
 let a = 1;
-let a = 1.2
+let a = 1.2;
 // 以上使用使用相同变量隐藏了一个变量，行为看似是可以对一个变量赋值不同的类型
 
 // mut 关键字
@@ -22,101 +43,296 @@ let mut a = " ";
 a = 2;	// 会报错，a 变量可变，但是不能改变其类型
 ```
 
-## 表达式和语句
+### 表达式和语句
 **rust 中表达式有返回值，语句没有返回值**
 ```rust
 let y = {
 	let x = 3;
-	x + 1	// 因为没有分号，所以是表达式会有返回值
-}
+	x + 1	// 因为没有分号，所以表达式会有返回值
+};
 println!("the value of y is: {}",y);
 ```
 
-## 所有权
-> 使得 rust 无需垃圾回收也可保障内存安全
-
-### 引用与借用
-[[../计算机基础/栈和堆#堆栈|堆栈简介]]
-#### 所有权规则
-1. rust 中的每一个值都有一个被称为所有者（owner）的变量
-2. 值在任一时刻有且只有一个所有者
-3. 当所有者离开作用域，这个值将被丢弃
-
-#### 引用与借用
+### 闭包
+大多数情况下，rust的类型推断，可以检测闭包参数的类型；当rust不能推断时，可以手动指定参数类型
 ```rust
+let a = ||();
+let b = |a|();
+```
+
+### Strings
+- `&str`：指向一个存在的字符串，它可能存在stack、heap 或者 data segment 上。
+- `String`：只会分配在 heap 上。
+
+### if else
+rust 中 if else 会将最后一行作为返回值，且if else 返回类型必须一致。如果省略else块，则会返回一个 `()` ，rust不允许一个变量具有两种类型。
+```rust
+let resutl = if 1==2 {
+	"wait,what?"
+} else {
+	"Rust makes sense"
+};
+
+println!("You Know what? {}",result);
+```
+
+### match
+```rust
+	let status = req_status();
+	match status {
+		200 => println!("Success"),
+		404 => println!("Not Found"),
+		other => { // 捕获所有，如果想忽略则使用 _
+			println!("Request failed with code {}",other);	
+		}
+	}
+```
+
+### loops
+rust 支持三种循环：loop、while、for
+
+#### loop
+```rust
+
+let mut x = 1024;
+loop {
+	if x < 0 {
+		break;	
+	}
+	println!("{} more runs to go",x};
+	x -= 1;
+}
+```
+
+loop 支持命名，break 可以根据名字跳出指定循环
+```rust
+
+let mut x = 0;
+'first: loop {
+	println!("first loop");
+	'second: loop {
+		println!("second loop");
+		if x > 5 {
+			break 'first;
+		}
+		x += 1;
+	}
+}
+```
+
+#### while
+```rust
+
+let mut x = 1000;
+while x > 0 {
+	println!("{} more runs to go",x);
+	x -= 1;
+}
+```
+
+#### for
+for 循环仅支持 iterators
+```rust
+
+for i in 0..10 {
+	print!("{}",i);
+}
+
+println!();
+
+for i in 0..=10 {
+	print!("{}",i);
+}
+```
+
+### struct
+#### tuple struct
+```rust
+
+struct Color(u8,u8,u8);
+
 fn main() {
-    let s1 = String::from("hello");
+	let white = Color(255,255,255);
+	let red = white.0;
+	let green = white.1;
+	let blue = white.2;
 
-    let len = calculate_length(&s1);
+	println!("Red: {}, green: {}, Blue: {}\n",red,green,blue);
 
-    println!("The length of '{}' is {}.", s1, len);
-}
+	let orange = Color(255,165,0);
+	// 类似于 js 中的解构对象
+	let Color(r,g,b) = orange;
+	println!("Orange R: {}, G: {}, B: {}",r,g,b);
 
-fn calculate_length(s: &String) -> usize {
-    s.len()
+	// 不需要的可以使用 _ 忽略
+	let Color(r,_,b) = orange;
 }
 ```
 
-`&` 是引用符号，允许使用值但不获取其所有权，rust 将获取引用作为函数参数称为借用（borrowing）。
-rust 默认不允许修改借用的值
-
-#### 可变引用
+### enum
 ```rust
+
+#[derive(Debug)]
+enum Direction {
+    N,
+    E,
+    S,
+    W
+}
+
+enum PlayerAction {
+    Move {
+        direction: Direction,
+        speed: u8
+    },
+    Wait,
+    Attack(Direction)
+}
+
 fn main() {
-    let mut s = String::from("hello");
+    let simulated_player_action = PlayerAction::Move {
+        direction: Direction::N,
+        speed: 2,
+    };
 
-    change(&mut s);
-}
-
-fn change(some_string: &mut String) {
-    some_string.push_str(", world");
+    match simulated_player_action {
+        PlayerAction::Wait => println!("player wants to wait"),
+        PlayerAction::Move { direction,speed } => {
+            println!("player wants to move in direction {:?} with speed {}",direction,speed)
+        },
+        PlayerAction::Attack(direction) => {
+            println!("player wants to attack direction {:?}",direction)
+        }
+    };
 }
 ```
 
-可变引用有一个限制：在特定作用域中的特定数据只能有一个可变引用
-```rust
-let mut s = String::from("hello");
-
-// 以下代码会报错
-let r1 = &mut s;
-let r2 = &mut s;
-
-println!("{}, {}", r1, r2);
-```
-这种限制的优点是 rust 可以在编译时就避免数据竞争。数据竞争的竟态条件，可由：
-- 两个或更多指针同时访问同一数据
-- 至少有一个指针被用来写入数据
-- 没有同步数据访问机制
-
+### impl blocks for struct
 ```rust
 
-#![allow(unused)]
+struct Player {
+    name: String,
+    iq: u8,
+    friends: u8
+}
+
+impl Player {
+    fn with_name(name: &str) -> Player {
+        Player{
+            name: name.to_string(),
+            iq: 100,
+            friends: 100
+        }
+    }
+
+    fn get_friends(&self) -> u8 {
+        self.friends
+    }
+
+    fn set_friends(&mut self,count: u8) {
+        self.friends = count;
+    }
+}
+
 fn main() {
-let mut s = String::from("hello");
+    let mut player = Player::with_name("xiaoming");
+    player.set_friends(23);
+    println!("{} friends count: {}",player.name,player.get_friends());
 
-{
-    let r1 = &mut s;
 
-} // r1 在这里离开了作用域，所以我们完全可以创建一个新的引用
-
-let r2 = &mut s;
+    let _ = Player::get_friends(&player);
 }
-
 ```
 
-同时也不能在拥有不可变引用的同时拥有可变引用，多个不可变引用是允许同时存在的。
-一个引用的作用域从声明的地方开始一直持续到最后一次使用为止。
+类型的三种实例方法：
+- self：获取所有权，后续不可继续使用该实例
+- &self：借用，仅提供读取实例
+- &mut self：可变引用，允许读写该方法
+
+### impl blocks for enum
+
 ```rust
-let mut s = String::from("hello");
 
-let r1 = &s; // 没问题
-let r2 = &s; // 没问题
-println!("{} and {}", r1, r2);
-// 此位置之后 r1 和 r2 不再使用
+enum PaymentMode {
+    Debit,
+    Credit,
+    Paypal
+}
 
-let r3 = &mut s; // 没问题
-println!("{}", r3);
+fn pay_by_credit(amount: u64) {
+    println!("Processing credit payment of {}",amount);
+}
 
+fn pay_by_debit(amount: u64) {
+    println!("Processing debit payment of {}",amount);
+}
+
+fn paypal_redirect(amount: u64) {
+    println!("Redirecting to paypal for amount {}",amount);
+}
+
+impl PaymentMode {
+    fn pay(&self,amount: u64) {
+        match self {
+            PaymentMode::Credit => pay_by_credit(amount),
+            PaymentMode::Debit => pay_by_debit(amount),
+            PaymentMode::Paypal => paypal_redirect(amount)
+        }
+    }
+}
+
+fn get_saved_payment_mode() -> PaymentMode {
+    PaymentMode::Debit
+}
+
+fn main() {
+    let payment_mode = get_saved_payment_mode();
+    payment_mode.pay(512);
+}
+```
+
+
+### vectors
+vectors 分配在 heap 上。
+创建方式：`Vec::new` 或者 `vec![]` 宏
+```rust
+
+fn main() {
+	let mut numbers_vec: Vec<u8> = Vec::new();
+	numbers_vec.push(1);
+	numbers_vec.push(2);
+
+	let mut vec_with_macro = vec![1];
+	vec_with_macro.push(2);
+	let _ = vec_with_macro.pop();
+
+	let message = if numbers_vec == vec_with_macro {
+		"They are equal"
+	} else {
+		"Nah! They look different to me"
+	};
+	println!("{} {:?} {:?}",message,numbers_vec,vec_with_macro);
+}
+```
+
+
+### slices
+slices 表示为：`&[T]`
+```rust
+
+fn main() {
+	let mut numbers: [u8;4] = [1,2,3,4];
+	{
+		let all: &[u8] = &numbers[..];
+		println!("All of them {:?}",all);
+	}
+
+	{
+		let first_two: &mut [u8] = &mut numbers[0..2];
+		first_two[0] = 100;
+		first_two[1] = 99;
+	}
+}
 ```
 
 ## 结构体
@@ -310,26 +526,6 @@ if let 8 = value {
 ```
 
 
-## 包管理、模块
-1. 将模块放在 src 目录内
-![](https://mxy-imgs.oss-cn-hangzhou.aliyuncs.com/imgs/20210629111127.png)
-
-2. 创建一个本地库，导入本地库
-
-首先在 src 的同级目录下创建了一个 utils 目录，作为一个外部仓库导入到 src 中
-
-  1. 首先修改根目录的 cargo.toml 文件
-
-```toml
-utils = {path="utils",version="0.1.0"}
-```
-
-2. 在 utils 内创建好包后，需要在 lib.rs 中指定导出
-![](https://mxy-imgs.oss-cn-hangzhou.aliyuncs.com/imgs/20210629111511.png)
-
-对于是在 utils 内的子包，需要在子包内建一个 mod.rs 指定需要导出的模块
-
-
 ## 泛型、trait、生命周期
 
 ### 泛型
@@ -349,105 +545,8 @@ impl<T> Point<T> {
 }
 ```
 
-### trait
-> trait 类似其他语言的 interface
 
-定义一个 trait
-```rust
-pub trait Summary {
-	fn summarize(&self) -> String;
-}
-```
 
-为一个结构体实现 trait
-```rust
-use std::fmt::Display;
-
-struct Point {
-	x: i32,
-	y: i32,
-}
-
-impl Display for Point {
-	fn cmp_display(&self) {
-		// do something
-	}
-}
-```
-
-为一个泛型实现 trait
-```rust
-use std::fmt::Display;
-
-struct Point<T> {
-	x: T,
-	y: T,
-}
-
-impl<T: Display> Point<T> {}	// 只实现一种 trait
-
-impl<T: Display + Partialord> Point<T> {}
-
-struct Pair<V,W> {}
-
-impl<V,W> Point<V,W>
-	where V: Display + PartialOrd,	// 这是一种实现多个 trait 的简便写法
-		  W: some_trait + some_trait
-{
-	fn cmp_display(&self) {
-		// do something
-	}
-}
-
-```
-
-##  生命周期
-**生命周期参数名称必须以 `'` 开头**
-```rust
-&i32	// 引用
-&'a i32	// 带有显示生命周期引用
-&'a mut i32	// 带有显示生命周期的可变引用
-```
-
-函数生命周期
-> 这个例子确保函数输入参数和输出参数生命周期一致
-```rust
-fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
-    if x.len() > y.len() {
-        x
-    } else {
-        y
-    }
-}
-```
-
-结构体生命周期
-```rust
-#[derive(Debug)]
-struct Earth {
-    location: String,
-}
-
-#[derive(Debug)]
-struct Dinosaur<'a> {
-    location: &'a Earth,
-    name: String,
-}
-
-fn main() {
-    let new_york = Earth{
-        location: String::from("New York, NY"),
-    };
-
-    let t_rex = Dinosaur{
-        location: &new_york,
-        name: "T Rex".to_string(),
-    };
-
-    println!("{:?}",t_rex);
-}
-```
-> 当一个结构体涉及到引用时，需要给它添加生命周期标识，会使得编译器理解 dinosaur 的生命周期不能比 earth 长。
 
 ## 闭包
 > 闭包以一对 | 开始，在 |params| 中指定参数

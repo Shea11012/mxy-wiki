@@ -3,6 +3,15 @@ tags: ["rust"]
 ---
 # rust
 [rust](https://rustup.rs/) 官网安装rust编译器和工具
+
+预加载类型：不需要导包就可以直接使用的类型,[https://doc.rust-lang.org/std/prelude/](https://doc.rust-lang.org/std/prelude/) ^f4bc7d
+使用 `unimplemented!` 宏，避免报错
+```rust
+fn dada() -> Result<bool,FileError> {
+	unimplemented!();
+}
+```
+
 ## rust工具
 - 更新rust工具：`rustup update`
 - 更新rustup：`rustup self update`
@@ -53,16 +62,44 @@ let y = {
 println!("the value of y is: {}",y);
 ```
 
-### 闭包
-大多数情况下，rust的类型推断，可以检测闭包参数的类型；当rust不能推断时，可以手动指定参数类型
-```rust
-let a = ||();
-let b = |a|();
-```
-
 ### Strings
 - `&str`：指向一个存在的字符串，它可能存在stack、heap 或者 data segment 上。
 - `String`：只会分配在 heap 上。
+
+## const 和 static
+### const
+使用 const 定义的变量时，它们总是会被内联。
+
+### static
+static 拥有固定的内存地址和作为一个单例存在，它们是可变的。读写 static 变量需要在 unsafe 块中
+```rust
+static mut BAZ: u32 = 4;
+static FOO: u8 = 9;
+
+fn main() {
+	unsafe {
+		println!("baz is {}",BAZ);
+		BAZ = 42;
+		println!("baz is now {}",BAZ);
+		println!("foo is {}",FOO);
+	}
+}
+```
+
+### const fn
+`const fn` 会在编译时被执行，传入 `const fn` 的参数必须是不可变的，不能在函数内包含带有对 heap 的操作。
+
+```rust
+const fn salt(a: u32) -> u32 {
+	0xDEADBEEF ^ a
+}
+
+const CHECKSUM: u32 = salt(23);
+
+fn main() {
+	println!("{}",CHECKSUM);	
+}
+```
 
 ### if else
 rust 中 if else 会将最后一行作为返回值，且if else 返回类型必须一致。如果省略else块，则会返回一个 `()` ，rust不允许一个变量具有两种类型。
@@ -146,6 +183,112 @@ for i in 0..=10 {
 ```
 
 ### struct
+定义结构体
+```rust
+struct User {
+    username: String,
+    email: String,
+    sign_in_count: u64,
+    active: bool,
+}
+```
+
+默认创建的结构体是不可变的，如果需要更改结构体内的某个值，需要使结构体可变
+
+```rust
+let mut user1 = User {
+	email: String::from("xx.com"),
+	username: String::from("sfsf"),
+	active: true,
+	sign_in_count: 1,
+};
+```
+
+创建结构体简写语法
+```rust
+
+struct User {
+    username: String,
+    email: String,
+    sign_in_count: u64,
+    active: bool,
+}
+
+fn build_user(email: String, username: String) -> User {
+    User {
+        email,
+        username,
+        active: true,
+        sign_in_count: 1,
+    }
+}
+
+```
+
+结构体更新语法
+```rust
+
+#![allow(unused)]
+fn main() {
+struct User {
+    username: String,
+    email: String,
+    sign_in_count: u64,
+    active: bool,
+}
+
+let user1 = User {
+    email: String::from("someone@example.com"),
+    username: String::from("someusername123"),
+    active: true,
+    sign_in_count: 1,
+};
+
+let user2 = User {
+    email: String::from("another@example.com"),
+    username: String::from("anotherusername567"),
+    ..user1
+};
+}
+
+```
+
+定义结构体方法
+```rust
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+
+fn main() {
+    let rect1 = Rectangle { width: 30, height: 50 };
+
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        rect1.area()
+    );
+}
+```
+
+**关联函数**
+在 impl 块中定义不以 self 作为参数的函数，被称为关联函数
+```rust
+impl Rectangle {
+    fn square(size: u32) -> Rectangle {
+        Rectangle { width: size, height: size }
+    }
+}
+```
+
+每个结构体都允许有多个 impl 块
+
 #### tuple struct
 ```rust
 
@@ -170,6 +313,62 @@ fn main() {
 ```
 
 ### enum
+rust 枚举中的每一个成员都可以处理不同类型和数量的数据
+```rust
+enum IpAddr {
+	V4,
+	V6,
+}
+
+
+struct Ipv4Addr {
+    // --snip--
+}
+
+struct Ipv6Addr {
+    // --snip--
+}
+
+enum IpAddr {
+    V4(Ipv4Addr),
+    V6(Ipv6Addr),
+}
+
+
+enum IpAddr {
+	V4(String),
+	V6(String),
+}
+
+enum IpAddr {
+	V4(u8,u8,u8,u8),
+	V6(String),
+}
+
+enum Message {
+	Quit,
+	Move {x: i32, y: i32},
+	Write(String),
+	ChangeColor(i32,i32,i32),
+}
+
+// 在枚举上定义方法
+impl Message {
+	fn call(&self) {
+		// do something
+	}
+}
+```
+
+> rust 没有 null，使用 option 替代
+```rust
+enum Option<T> {
+	Some(T),
+	None,
+}
+```
+
+
 ```rust
 
 #[derive(Debug)]
@@ -335,169 +534,6 @@ fn main() {
 }
 ```
 
-## 结构体
-定义结构体
-```rust
-struct User {
-    username: String,
-    email: String,
-    sign_in_count: u64,
-    active: bool,
-}
-```
-
-默认创建的结构体是不可变的，如果需要更改结构体内的某个值，需要使结构体可变
-
-```rust
-let mut user1 = User {
-	email: String::from("xx.com"),
-	username: String::from("sfsf"),
-	active: true,
-	sign_in_count: 1,
-};
-```
-
-创建结构体简写语法
-```rust
-
-struct User {
-    username: String,
-    email: String,
-    sign_in_count: u64,
-    active: bool,
-}
-
-fn build_user(email: String, username: String) -> User {
-    User {
-        email,
-        username,
-        active: true,
-        sign_in_count: 1,
-    }
-}
-
-```
-
-结构体更新语法
-```rust
-
-#![allow(unused)]
-fn main() {
-struct User {
-    username: String,
-    email: String,
-    sign_in_count: u64,
-    active: bool,
-}
-
-let user1 = User {
-    email: String::from("someone@example.com"),
-    username: String::from("someusername123"),
-    active: true,
-    sign_in_count: 1,
-};
-
-let user2 = User {
-    email: String::from("another@example.com"),
-    username: String::from("anotherusername567"),
-    ..user1
-};
-}
-
-```
-
-定义结构体方法
-```rust
-#[derive(Debug)]
-struct Rectangle {
-    width: u32,
-    height: u32,
-}
-
-impl Rectangle {
-    fn area(&self) -> u32 {
-        self.width * self.height
-    }
-}
-
-fn main() {
-    let rect1 = Rectangle { width: 30, height: 50 };
-
-    println!(
-        "The area of the rectangle is {} square pixels.",
-        rect1.area()
-    );
-}
-```
-
-**关联函数**
-在 impl 块中定义不以 self 作为参数的函数，被称为关联函数
-```rust
-impl Rectangle {
-    fn square(size: u32) -> Rectangle {
-        Rectangle { width: size, height: size }
-    }
-}
-```
-
-> 每个结构体都允许有多个 impl 块
-
-## 枚举
-rust 枚举中的每一个成员都可以处理不同类型和数量的数据
-```rust
-enum IpAddr {
-	V4,
-	V6,
-}
-
-
-struct Ipv4Addr {
-    // --snip--
-}
-
-struct Ipv6Addr {
-    // --snip--
-}
-
-enum IpAddr {
-    V4(Ipv4Addr),
-    V6(Ipv6Addr),
-}
-
-
-enum IpAddr {
-	V4(String),
-	V6(String),
-}
-
-enum IpAddr {
-	V4(u8,u8,u8,u8),
-	V6(String),
-}
-
-enum Message {
-	Quit,
-	Move {x: i32, y: i32},
-	Write(String),
-	ChangeColor(i32,i32,i32),
-}
-
-// 在枚举上定义方法
-impl Message {
-	fn call(&self) {
-		// do something
-	}
-}
-```
-
-> rust 没有 null，使用 option 替代
-```rust
-enum Option<T> {
-	Some(T),
-	None,
-}
-```
-
 
 ## match 控制流运算符
 ```rust
@@ -546,8 +582,6 @@ impl<T> Point<T> {
 ```
 
 
-
-
 ## 闭包
 > 闭包以一对 | 开始，在 |params| 中指定参数
 
@@ -583,10 +617,3 @@ struct Cacher<T>
 ```rust
 let add = move |x,y| x + y;
 ```
-
-## 智能指针
-一个类型实现了 Deref trait 则允许重载 \* 解引用运算符
-`Box<T>` ：允许将一个值放在堆上，使用场景：
-- 当有一个在编译时未知大小的类型
-- 当有大量数据并希望在确保数据不被拷贝的情况下转移所有权
-- 当希望拥有一个值只关心它的类型是否实现了特定 trait 而不是其具体类型时

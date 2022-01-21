@@ -94,3 +94,20 @@ git fetch origin slave^:master
 
 **Tips：如果 source 不设置，如 git push origin :master 则表示删除master ，而 fetch 则相反，git fetch origin :slave 则会创建一个 slave 的本地分支**
 
+## git 提交规范
+提交语法：
+```shell
+<type>([scope]): <subject>
+```
+
+type类型如下：
+- feat(feature)：新功能
+- fix：修复bug
+- docs：文档注释
+- style：代码格式
+- refactor：重构、优化
+- perf(performence)：性能优化
+- test：测试
+- chore：构建过程或者辅助工具变动
+- revert：回退
+- build：打包

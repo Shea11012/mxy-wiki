@@ -85,8 +85,3 @@
 | 查看指定topic | kafka-topics  --describe --topic test-topic --bootstrap-server :9092 |
 | 产生消息      | kafka-console-producer --topice test-topic --bootstrap-server :9092 |
 | 消费消息      | kafka-console-consumer --topic test-topic --from-beginning --bootstrap-server :9092 --partition 0 |
-|               |                                                              |
-|               |                                                              |
-|               |                                                              |
-|               |                                                              |
-

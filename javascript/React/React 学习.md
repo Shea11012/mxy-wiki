@@ -193,7 +193,7 @@ class Test extends Component {
     }
     render(){
         return (
-        	<div onClick={this.incrment.bind(this) // 3}/> 
+        	<div onClick={this.incrment.bind(this)}/> // 3
         )
     }
 }

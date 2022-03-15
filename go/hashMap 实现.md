@@ -73,7 +73,7 @@ type hmap struct {
 >
 > extra：记录溢出桶信息
 
-![image-20200512205618104](image-20200512205618104.png)
+![image-20200512205618104](go.assets/image-20200512205618104.png)
 
 哈希表 hmap 的桶就是 bmap ，每一个 bmap 都能存储 8 个键值对，当哈希表中存储的数据过多，单个桶无法装满时就会使用 `extra.overflow` 中桶存储溢出的数据。
 
@@ -134,7 +134,7 @@ for ;hit.key != nil;mapiternext(&hit) {
 }
 ```
 
-![image-20200513010937209](image-20200513010937209.png)
+![image-20200513010937209](go.assets/image-20200513010937209.png)
 
 不同的方式遍历哈希插入的语句，上面三种不同的情况会分别向循环体插入不同的赋值语句，遍历哈希表时会使用 `runtime.mapiterinit` 函数初始化遍历开始的元素：
 

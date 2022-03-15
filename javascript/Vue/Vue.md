@@ -112,7 +112,7 @@ inserted 操作 js 相关内容，这步已经渲染到 dom 中
     - beforeDestory
     - destoryed
 
-![](assets/lifecycle.png)
+![](../javascript.assets/lifecycle.png)
 
 ### Vue 动画 transition
 

@@ -18,6 +18,20 @@ Go 语言使用 plan9 汇编
 
 常量总是 64 位无符号整数
 
+### 寄存器
+| AMD64  | GO汇编 |
+| ------ | ------ |
+| rax    | AX     |
+| rbx    | BX     |
+| rcx    | CX     |
+| rdx    | DX     |
+| rsi    | SI     |
+| rdi    | DI     |
+| rbp    | BP     |
+| rsp    | SP     |
+| r8~r15 | R8~R15 |
+| rip    | PC     | 
+
 ### 符号
 
 go 预定义了一些伪寄存器，这些伪寄存器适用所有的架构

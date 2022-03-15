@@ -1,8 +1,5 @@
 ## lru
-````ad-example
-title: lru
-
-~~~go
+```go
 type Node struct {
 	key  string
 	val  int
@@ -109,5 +106,4 @@ func (l *LRUCache) addNode(node *Node) {
 		l.head = node
 	}
 }
-~~~
-````
+```

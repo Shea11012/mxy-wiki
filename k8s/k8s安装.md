@@ -207,7 +207,7 @@ sysctl --system
 	systemctl daemon-reload && systemctl enable --now containerd.service
 
 	# 安装命令行工具
-	export version=0.10.0
+	export version=0.17.0
 	wget https://github.com/containerd/nerdctl/releases/download/v${version}/nerdctl-${version}-linux-amd64.tar.gz
 	tar xvf nerdctl-${version}-linux-amd64.tar.gz -C /usr/local/bin nerdctl
 	nerdctl images

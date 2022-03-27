@@ -11,8 +11,8 @@ prometheus 通过http周期性抓取被监控组件状态，任意组件只要�
 
 不适用场景：实时数据统计
 
+![[Pasted image 20220318183244.png]]
 
-![](https://yunlzheng.gitbook.io/~/files/v0/b/gitbook-28427.appspot.com/o/assets%2F-LBdoxo9EmQ0bJP2BuUi%2F-LPS8BVjkRvEjV8HmbBi%2F-LPS8D1gM9qp1zu_wp8y%2Fprometheus_architecture.png?generation=1540234733609534&alt=media)
 ## Prometheus Server
 负责实现对监控数据的获取、存储以及查询。
 Prometheus Server 本身就是一个时序数据库，将采集到的监控数据按照时间序列的方式存储在本地磁盘中。

@@ -15,7 +15,7 @@ goroutine和 go scheduler 在底层实现上是属于混合线程模型
 表示goroutine，每个goroutine对应一个G结构体，G存储的Goroutine的运行堆栈、状态以及任务函数，可重用。G并非执行体，每个G需要绑定到P才能调度执行。
 ### P
 表示逻辑处理器（Processor），对G来说，P相当于CPU，G只有绑定到P（P的local runq中）才能被调度。对M来说，P提供了相关的执行环境。P的数量决定了系统内最大可并行的G数量，P的数量由GOMAXPROCS决定，但P的最大数量为256.
-p的初始化是在 `schedinit` 函数中调用的，最终调用 `procresize` 实现。P的数量默认等于系统的CPU数。所有的P在程序启动时就已经创建完毕，并用一个 `allp` 维护
+
 ### M
 OS线程抽象，表示真正的执行计算资源，在绑定有效的P后，进入schedule循环。
 schedule循环机制大致是从Global队列、P的local队列以及wait队列中获取G，切换到G的执行栈上并执行G的函数，调用goexit做清理工作并回到M，如此反复。M并不保留G状态，M的数量是不确定的，由Go runtime调整，M的最大数量为 10000 个。
@@ -311,7 +311,8 @@ func newproc1(fn *funcval, callergp *g, callerpc uintptr) *g {
 }
 ```
 
-
+## P的创建
+p的初始化是在 `schedinit` 函数中调用的，最终调用 `procresize` 实现。P的数量默认等于系统的CPU数。所有的P在程序启动时就已经创建完毕，并用一个全局变量 `allp` 维护
 ## M的创建
 通过 `newm` 来新建M，最终通过 `newosproc` 函数来实现新建线程
 ```go

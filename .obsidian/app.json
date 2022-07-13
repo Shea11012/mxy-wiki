@@ -4,12 +4,13 @@
   "promptDelete": false,
   "newFileLocation": "current",
   "newLinkFormat": "relative",
-  "attachmentFolderPath": "./",
+  "attachmentFolderPath": "./attachments",
   "alwaysUpdateLinks": true,
   "foldHeading": true,
   "foldIndent": true,
   "communityThemeSortOrder": "download",
   "autoPairBrackets": false,
   "legacyEditor": true,
-  "livePreview": false
+  "livePreview": false,
+  "useMarkdownLinks": true
 }

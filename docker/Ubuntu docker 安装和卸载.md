@@ -1,3 +1,8 @@
+---
+date created: 2021-11-30 21:22
+date modified: 2021-11-30 21:22
+title: Ubuntu docker 安装和卸载
+---
 # Ubuntu docker 安装和卸载
 
 [官方安装文档](https://docs.docker.com/install/linux/docker-ce/ubuntu/#prerequisites)
@@ -10,11 +15,11 @@
 
 设置存储库
 
-1. 更新`apt`源 	
+1. 更新 `apt` 源 	
 
    `sudo apt-get update`
 
-2. 安装包允许apt通过HTTPS使用存储库
+2. 安装包允许 apt 通过 HTTPS 使用存储库
 
    ```shell
    sudo apt-get install \
@@ -24,7 +29,7 @@
        software-properties-common
    ```
 
-   添加docker官方GPG密钥
+   添加 docker 官方 GPG 密钥
    `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
 
 3. 设置稳定的存储库
@@ -36,23 +41,23 @@
       stable"
    ```
 
-     stable可以改成 edge、test
+     stable 可以改成 edge、test
 
-4. 再更新apt软件包源
+4. 再更新 apt 软件包源
    `sudo atp-get update`
 
-   1. 安装最新版的docker CE
+   1. 安装最新版的 docker CE
       `sudo apt-get install docker-ce`
 
-   2. 或者安装指定版本的docker CE ,先列出可用的版本
+   2. 或者安装指定版本的 docker CE ,先列出可用的版本
 
       `apt-cache madison docker-ce`
-      `sudo apt-get install docker-ce=version`例如docker-ce=18.03.0.ce
+      `sudo apt-get install docker-ce=version` 例如 docker-ce=18.03.0.ce
 
-   3. 测试docker是否安装成功
+   3. 测试 docker 是否安装成功
       `sudo docker run hello-world`
 
-卸载docker CE
+卸载 docker CE
 
 1. docker CE 软件包卸载
 
@@ -66,13 +71,13 @@
 
 ​       
 
-安装docker-compose 
+安装 docker-compose 
 
 ```shell
 sudo curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 ```
 
-   下载的版本自己可以选择[版本](https://github.com/docker/compose/releases)
+   下载的版本自己可以选择 [版本](https://github.com/docker/compose/releases)
 
 分配权限
 

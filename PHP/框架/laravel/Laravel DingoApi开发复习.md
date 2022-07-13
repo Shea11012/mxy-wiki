@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: Laravel DingoApi开发复习
+---
 Api 指定访问版本推荐使用 Accept 头来指定
 
 ```

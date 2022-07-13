@@ -1,3 +1,8 @@
+---
+date created: 2021-06-07 23:53
+date modified: 2021-06-08 21:45
+title: git action
+---
 
 ---
 tags: ["git-action"]
@@ -29,7 +34,7 @@ jobs:
 
 `on:` 选项下制定具体事件
 
-### **选择workflow 运行的平台**
+### **选择 workflow 运行的平台**
 
 `runs-on` 选项指定具体的主机
 

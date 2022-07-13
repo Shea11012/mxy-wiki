@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: Laravel商城
+---
 自定义的辅助函数放在 `bootstrap/helpers.php` ，使用 composer 的 autoload 功能自动引入：
 
 在 composer.json 文件，找到 autoload 段
@@ -23,13 +28,13 @@
 
 用户模块，使用 Laravel 自带的用户认证脚手架 `php artisan make:auth`
 
-调整数据库结构，添加一个字段使用 `php artisan make:migration 表名_add_字段名 --table=表`
+调整数据库结构，添加一个字段使用 `php artisan make:migration 表名_add_ 字段名 --table=表`
 
 ### Model 模型
 
  `$fillable` 属性内的字段表示可以进行批量赋值，`$guarded` 属性内的字段表示不可被批量赋值
 
-`$casts` 属性支持插入或者更新数据时对类型转换  `$date` 属性可以自行定义哪些日期类型字段会被自动转换
+`$casts` 属性支持插入或者更新数据时对类型转换 `$date` 属性可以自行定义哪些日期类型字段会被自动转换
 
 参见 [Eloquent 修改器](https://laravel-china.org/docs/laravel/5.6/eloquent-mutators/1406#attribute-casting)
 
@@ -39,7 +44,7 @@
 
 **创建中间件** `php artisan make:middlerware CheckIfEmailVerified` ，生成文件位于 `app/Http/Middleware` 下
 
-定义好中间件后，需要再去 `app/Http/Kernel.php` 根据用途在不同属性注册该中间件 参考[中间件](https://laravel-china.org/docs/laravel/5.5/middleware/1294#2fb6d2) 
+定义好中间件后，需要再去 `app/Http/Kernel.php` 根据用途在不同属性注册该中间件 参考 [中间件](https://laravel-china.org/docs/laravel/5.5/middleware/1294#2fb6d2) 
 
 使用 Laravel 内置的通知模块 （Notification）来实现验证邮件的发送
 
@@ -61,7 +66,7 @@
 
 | 字段名称      | 描述             | 类型          | 索引 |
 | ------------- | ---------------- | ------------- | ---- |
-| id            | 自增长ID         | unsigned int  | 主键 |
+| id            | 自增长 ID         | unsigned int  | 主键 |
 | user_id       | 该地址所属的用户 | unsigned int  | 外键 |
 | province      | 省               | varchar       | 无   |
 | city          | 市               | varchar       | 无   |
@@ -101,7 +106,7 @@
 
 | 字段名称     | 描述                 | 类型                                          | 索引 |
 | ------------ | -------------------- | --------------------------------------------- | ---- |
-| id           | 自增长ID             | unsigned int                                  | 主键 |
+| id           | 自增长 ID             | unsigned int                                  | 主键 |
 | title        | 商品名称             | varchar                                       | 无   |
 | description  | 商品详情             | text                                          | 无   |
 | image        | 商品封面图片文件路径 | varchar                                       | 无   |
@@ -109,7 +114,7 @@
 | rating       | 商品平均评分         | float，default 5                              | 无   |
 | sold_count   | 销量                 | unsigned int，default 0                       | 无   |
 | review_count | 评价数量             | unsigned int，default 0                       | 无   |
-| price        | SKU 最低价格         | decimal（数值型，不存在精度损失，28个有效位） | 无   |
+| price        | SKU 最低价格         | decimal（数值型，不存在精度损失，28 个有效位） | 无   |
 
 > 商品本身没有固定价格，在商品表放置 price 字段目的是方便用户搜索、排序
 
@@ -117,7 +122,7 @@
 
 | 字段名称    | 描述        | 类型         | 索引 |
 | ----------- | ----------- | ------------ | ---- |
-| id          | 自增长ID    | unsigned int | 主键 |
+| id          | 自增长 ID    | unsigned int | 主键 |
 | title       | SKU 名称    | varchar      | 无   |
 | description | SKU 描述    | varchar      | 无   |
 | price       | SKU 价格    | decimal      | 无   |
@@ -209,7 +214,7 @@ $builder->where(function ($query) use ($like) {
 
 **创建任务** `php artisan make:job CloseOrder` ，任务类保存在 `app/jobs` 目录下，写好任务类后，在 controller 中使用 `dispatch` 辅助函数来分发
 
-使用 reids 队列需要将  `.env` 内的驱动设置 `sync` 改为 `redis`  ，还需要引入 `composer require predis/predis`  ，启动队列处理器 `php artisan queue:work` ，队列详细用法参考 [队列](https://laravel-china.org/docs/laravel/5.5/queues/1324#supervisor-configuration)
+使用 reids 队列需要将 `.env` 内的驱动设置 `sync` 改为 `redis`  ，还需要引入 `composer require predis/predis`  ，启动队列处理器 `php artisan queue:work` ，队列详细用法参考 [队列](https://laravel-china.org/docs/laravel/5.5/queues/1324#supervisor-configuration)
 
 
 
@@ -217,7 +222,7 @@ $builder->where(function ($query) use ($like) {
 
 为了防止 controller 变得臃肿，防止以后 App 端重复写，采用 service 模式来封装代码。
 
-封装功能需要注意  `$request` 不可以出现在控制器和中间件以外的地方，根据职责单一原则，获取数据这个任务应该由控制器来完成。
+封装功能需要注意 `$request` 不可以出现在控制器和中间件以外的地方，根据职责单一原则，获取数据这个任务应该由控制器来完成。
 
 
 
@@ -265,7 +270,7 @@ Laravel 验证服务器回调需要将验证路由加入 CSRF 校验白名单在
 
 | 字段       | 描述                                 | 类型                     | 索引 |
 | ---------- | ------------------------------------ | ------------------------ | ---- |
-| id         | 自增长ID                             | unsigned int             | 主键 |
+| id         | 自增长 ID                             | unsigned int             | 主键 |
 | name       | 优惠卷的标题                         | varchar                  | 无   |
 | code       | 优惠码，用户下单时输入               | varchar                  | 唯一 |
 | type       | 优惠卷类型，支持固定金额和百分比折扣 | varchar                  | 无   |

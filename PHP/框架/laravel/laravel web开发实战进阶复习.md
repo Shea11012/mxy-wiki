@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: laravel web开发实战进阶复习
+---
 ##### 用户认证
 
 `php artisan make:auth`
@@ -41,7 +46,7 @@ class AppServiceProvider extends ServiceProvider
 
 队列系统可以异步执行消耗时间的任务，比如请求一个 API 并等待返回的结果，这样可以有效降低请求响应时间
 
-失败任务，laravel  内置了一个 failed_jobs 表的迁移文件 
+失败任务，laravel 内置了一个 failed_jobs 表的迁移文件 
 
 ```php
 php artisan queue:failed-table // 生成迁移文件
@@ -53,7 +58,7 @@ php artisan queue:failed-table // 生成迁移文件
 php artisan make:jobs TranslateSlug
 ```
 
-注意：在模型监控器中分发任务，任务中需要避免使用  Eloquent 模型接口调用，如：`create，update，save` 等，否则会陷入死循环，模型监控器分发任务-》任务触发模型监控器-》模型监控器再次分发任务-》任务再次触发模型监控器，在这种情况下，使用 DB 类直接对数据库进行操作
+注意：在模型监控器中分发任务，任务中需要避免使用 Eloquent 模型接口调用，如：`create，update，save` 等，否则会陷入死循环，模型监控器分发任务 -》任务触发模型监控器 -》模型监控器再次分发任务 -》任务再次触发模型监控器，在这种情况下，使用 DB 类直接对数据库进行操作
 
 在模型监控器中分发任务
 
@@ -126,7 +131,7 @@ public function toDatabase($notifiable){}
 
 系统每小时计算一次，统计最近 7 天所有用户发的帖子数和评论数，用户每发一个帖子得 4 分，每发一个回复得 1 分，计算出所有得分再倒序，将排名前八的用户显示在活跃用户列表里。
 
-使用laravel 命令调度器对laravel 命令调度
+使用 laravel 命令调度器对 laravel 命令调度
 
 
 

@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: PHP 短路
+---
 # PHP 短路
 
 只有逻辑与和逻辑或存在短路

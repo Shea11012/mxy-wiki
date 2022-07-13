@@ -1,3 +1,8 @@
+---
+date created: 2021-10-27 00:48
+date modified: 2021-10-27 00:48
+title: ldd
+---
 ## ldd
 查看程序依赖库
 ![](https://mxy-imgs.oss-cn-hangzhou.aliyuncs.com/imgs/202110090940866.png)

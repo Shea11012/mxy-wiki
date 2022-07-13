@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2022-01-23 15:09
+title: Nginx URL重写
+---
 ### Rewrite 规则
 
 rewrite 是使用 nginx 提供的全局变量或自己设置的变量，结合正则表达式和标志位实现 URL 重写以及重定向。rewrite 只能放在 `server{},location{},if{}` 中，并且只能对域名后边的除去传递的参数外的字符串起作用。如：
@@ -111,4 +116,4 @@ http {
 }
 ```
 
-对形如`/images/ef/uh7b3/test.png`的请求，重写到`/data?file=test.png`，于是匹配到`location /data`，先看`/data/images/test.png`文件存不存在，如果存在则正常响应，如果不存在则重写tryfiles到新的image404 location，直接返回404状态码
+对形如 `/images/ef/uh7b3/test.png` 的请求，重写到 `/data?file=test.png`，于是匹配到 `location /data`，先看 `/data/images/test.png` 文件存不存在，如果存在则正常响应，如果不存在则重写 tryfiles 到新的 image404 location，直接返回 404 状态码

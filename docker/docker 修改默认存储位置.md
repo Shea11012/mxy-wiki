@@ -1,3 +1,8 @@
+---
+date created: 2021-11-30 21:22
+date modified: 2021-11-30 21:22
+title: docker 修改默认存储位置
+---
 默认情况下 docker 存放位置为：`/var/lib/docker`
 
 ### 软连接
@@ -37,7 +42,7 @@ vim /etc/systemd/system/docker.service.d/docker.conf
 ExecStart=/usr/bin/dockerd --graph="/home/shea/dockerd" --storage-driver=devicemapper
 ```
 
-devicemapper  是当前 docker 所使用的存储驱动，查看当前docker使用的存储驱动 `docker info` 
+devicemapper 是当前 docker 所使用的存储驱动，查看当前 docker 使用的存储驱动 `docker info` 
 
 ```shell
 systemctl daemon-reload

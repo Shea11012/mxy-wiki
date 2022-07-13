@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: flex 布局
+---
 ### 父元素属性
 
 #### justify-content：水平对齐元素

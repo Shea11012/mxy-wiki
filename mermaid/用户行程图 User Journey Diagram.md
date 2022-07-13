@@ -1,3 +1,8 @@
+---
+date created: 2021-11-07 13:16
+date modified: 2021-11-07 13:16
+title: 用户行程图 User Journey Diagram
+---
 ## 用户行程图 User Journey Diagram
 语法：
 `task name: score: [actor,actor,...]`

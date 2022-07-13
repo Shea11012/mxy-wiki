@@ -1,3 +1,8 @@
+---
+date created: 2022-03-26 14:50
+date modified: 2022-04-01 00:14
+title: channel实现
+---
 ## 结构
 ```go
 type hchan struct {
@@ -18,8 +23,8 @@ type hchan struct {
 
 ## 发送数据
 - 当存在等待的接收者时，会直接将数据发送给阻塞的接收者
-- 当缓冲区存在剩余空间时，将发送的数据写入channel的缓冲区
-- 当不存在缓冲区或者缓冲区已满时，等待其他goroutine从channel接收数据
+- 当缓冲区存在剩余空间时，将发送的数据写入 channel 的缓冲区
+- 当不存在缓冲区或者缓冲区已满时，等待其他 goroutine 从 channel 接收数据
 ```go
 // runtime/chan.go
 
@@ -112,8 +117,8 @@ func chansend(c *hchan, ep unsafe.Pointer, block bool, callerpc uintptr) bool {
 ## 接收数据
 接收的三种情况：
 - 当存在等待的发送者时，从阻塞的发送者或者缓冲区中获取数据
-- 当缓冲区存在数据时，从channel的缓冲区中接收数据
-- 当缓冲区中不存在数据时，等待其他goroutine向channel中发送数据
+- 当缓冲区存在数据时，从 channel 的缓冲区中接收数据
+- 当缓冲区中不存在数据时，等待其他 goroutine 向 channel 中发送数据
 
 ```go
 func chanrecv(c *hchan, ep unsafe.Pointer, block bool) (selected, received bool) {

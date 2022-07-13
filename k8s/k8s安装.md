@@ -1,5 +1,8 @@
 ---
 tags: ["k8s"]
+date created: 2021-06-07 23:51
+date modified: 2022-03-13 15:46
+title: k8s 二进制安装
 ---
 # k8s 二进制安装
 ## 环境
@@ -38,7 +41,7 @@ cat >> /etc/hosts <<EOF
 EOF
 ```
 
-3. master生成私钥将公钥分发到node
+3. master 生成私钥将公钥分发到 node
 
 ```bash
 ssh-keygen -t rsa
@@ -57,7 +60,7 @@ done
 dnf install -y epel-release
 dnf install -y conntrack ipvsadm ipset jq sysstat curl iptables libseccomp git vim wget nc
 ```
-5.  关闭swap
+5.  关闭 swap
 
 ```bash
 swapoff -a && sysctl -w vm.swappiness=0 && sed -ri 's/.*swap.*/#&/' /etc/fstab
@@ -69,7 +72,7 @@ swapoff -a && sysctl -w vm.swappiness=0 && sed -ri 's/.*swap.*/#&/' /etc/fstab
 systemctl disable --now firewalld
 ```
 
-7.  关闭selinux
+7.  关闭 selinux
 
 ```bash
 setenforce 0 && sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/selinux/config # reboot后生效
@@ -137,7 +140,7 @@ systemctl enable --now chronyd
 chronyc -a makestep
 ```
 
-12. 优化k8s参数
+12. 优化 k8s 参数
 
 ```bash
 cat >> /etc/sysctl.d/k8s.conf <<EOF
@@ -167,7 +170,7 @@ sysctl --system
 ```
 
 13. 安装容器，二选一
-	1.  安装docker
+	1.  安装 docker
 	```bash
 	dnf install -y dnf-utils device-mapper-persistent-data lvm2 # 安装docker需要的组件
 	yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo # 配置源
@@ -261,7 +264,7 @@ export ETCD_ENDPOINTS="https://192.168.217.134:2379,https://192.168.217.135:2379
 
 ```
 
-创建CA根证书和秘钥
+创建 CA 根证书和秘钥
 ```bash
  cat > ca-config.json <<EOF
  {
@@ -285,8 +288,8 @@ export ETCD_ENDPOINTS="https://192.168.217.134:2379,https://192.168.217.135:2379
  EOF
  ```
  - signing: 表示该证书可用于签名其它证书
- - server auth：表示client可以用该证书对 server 提供的证书进行验证
- - client auth：表示server可以用该证书对 client 提供的证书进行验证
+ - server auth：表示 client 可以用该证书对 server 提供的证书进行验证
+ - client auth：表示 server 可以用该证书对 client 提供的证书进行验证
  - expiry：设置证书有效期
  
  
@@ -381,7 +384,7 @@ kubectl config use-context kubernetes-admin@kubernetes \
 ```
 
 
- 生成etcd CA 证书 和 CA 证书的 key
+ 生成 etcd CA 证书 和 CA 证书的 key
  ```bash
  mkdir -p ssl && cd ssl
  cat > /etcd-ca-csr.json <<EOF
@@ -451,7 +454,7 @@ for node_ip in ${master_ips[@]}; do
 done
  ```
  
- 配置etcd集群
+ 配置 etcd 集群
 ```bash
 cat >> etcd.config.yml.template <<EOF
 name: '~node_name~'
@@ -508,7 +511,7 @@ done
 rm etcd-*.config.yml
 ```
 
-在master节点创建 etcd service
+在 master 节点创建 etcd service
 ```bash
 cat > /usr/lib/systemd/system/etcd.service <<EOF
 [Unit]
@@ -765,7 +768,7 @@ cfssl gencert -initca front-proxy-ca-csr.json | cfssljson -bare /etc/kubernetes/
 cfssl gencert -ca=/etc/kubernetes/pki/front-proxy-ca.pem -ca-key=/etc/kubernetes/pki/front-proxy-ca-key.pem -config=ca-config.json -profile=kubernetes front-proxy-client-csr.json | cfssljson -bare /etc/kubernetes/pki/front-proxy-client
 ```
 
-生成controller manager 证书
+生成 controller manager 证书
 ```bash
 cat > controller-manager-csr.json <<EOF
 {
@@ -1546,5 +1549,5 @@ EOF
 ![](https://mxy-imgs.oss-cn-hangzhou.aliyuncs.com/imgs/20210808233341.png)
 `kubectl exec dnsutils -- ping -c 172.23.119.132`
 
-删除dnsutils
+删除 dnsutils
 `kubectl delete po dnsutils`

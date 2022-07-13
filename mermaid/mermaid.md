@@ -1,6 +1,8 @@
 ---
 date created: 2021-11-05 10:07
 date updated: 2021-11-05 11:39
+date modified: 2021-11-07 13:16
+title: mermaid
 ---
 
 # mermaid
@@ -15,7 +17,7 @@ date updated: 2021-11-05 11:39
 
 [[mermaid/饼状图]]
 
-[[mermaid/UML类图]]
+[[mermaid/UML 类图]]
 
 [[mermaid/状态图]]
 

@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: nftables
+---
 # nftables
 替换 iptables 的网络包过滤工具
 
@@ -43,7 +48,7 @@ nft list chain inet my_table my_filter_chain
 
 规则由语句或表达式构成，包含在链中
 
-`nft add rule inet my_table my_filter_chain tcp dport ssh accept`  表示允许 ssh 登录
+`nft add rule inet my_table my_filter_chain tcp dport ssh accept` 表示允许 ssh 登录
 
 **add** 将规则添加到链尾，**insert**将规则添加到链头
 
@@ -75,8 +80,8 @@ nft add rule inet my_table my_filter_chain ip saddr {
 
 命名集合，创建集合需要指定元素类型，有如下类型：
 
-- ipv4_addr：ipv4地址
-- ipv6_addr：ipv6地址
+- ipv4_addr：ipv4 地址
+- ipv6_addr：ipv6 地址
 - ether_addr：以太网（Ethernet）地址
 - inet_proto：网络协议
 - inet_service：网络服务
@@ -90,7 +95,7 @@ nft add rule inet my_table my_filter_chain ip saddr {
 
 向集合添加元素：`nft add element inet my_table my_set { 10.10.10.22, 10.10.10.33 }`
 
-想在集合内添加一个区间，必须加上一个flag interval，内核必须提前确认该集合存储的数据类型
+想在集合内添加一个区间，必须加上一个 flag interval，内核必须提前确认该集合存储的数据类型
 
 创建一个支持区间的命名集合：
 

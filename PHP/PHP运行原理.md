@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: PHP运行原理
+---
 ## PHP 运行原理
 
 ### PHP 的设计理念及特点
@@ -141,7 +146,7 @@ PHP 的数组通过 Zend HashTable 实现
 
 PHP 的 `zval` 可以表示广泛的数据类型，但是对于自定义的数据类型却很难充分描述。由于没有有效的方式描绘这些复合结构，因此没有办法对它们使用传统的操作符。解决这个问题，需要通过一个本质上任意的标识符（label）引用指针，这种方式被称为资源。
 
-`zval` ，对于 resource，lval 作为指针来使用，直接指向资源所在的地址。Resource 可以是任意的复合结构，如mysqli，fsock，memcached等都是资源。
+`zval` ，对于 resource，lval 作为指针来使用，直接指向资源所在的地址。Resource 可以是任意的复合结构，如 mysqli，fsock，memcached 等都是资源。
 
 如何使用资源：
 

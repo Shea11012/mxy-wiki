@@ -1,16 +1,17 @@
 [
-  "note-refactor-obsidian",
   "obsidian-admonition",
   "obsidian-git",
   "obsidian-outliner",
   "convert-url-to-iframe",
   "media-extended",
   "mx-bili-plugin",
-  "markdown-prettifier",
   "obsidian-kanban",
   "oz-image-plugin",
   "table-editor-obsidian",
   "cm-editor-syntax-highlight-obsidian",
   "url-into-selection",
-  "obsidian-style-settings"
+  "obsidian-style-settings",
+  "dataview",
+  "obsidian-linter",
+  "templater-obsidian"
 ]

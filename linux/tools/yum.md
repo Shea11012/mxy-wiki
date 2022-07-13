@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: yum
+---
 # yum
 #### yum 安装和卸载
 
@@ -40,19 +45,19 @@
 
   - repo_gpgcheck=：检查仓库的元数据的签名信息
 
-  - gpgkey=URL（gpg密钥文件）
+  - gpgkey=URL（gpg 密钥文件）
 
-  - enablegroups={1|0}是否在此仓库使用组来管理程序包
+  - enablegroups={1|0} 是否在此仓库使用组来管理程序包
 
   - failovermethod=roundrobin|priority（对多个 baseurl 做优先级，roundrobin 为轮询，priority 为优先级，默认为轮询，意为随机）
 
-  - keepalive=：如果对方是http1.0 是否要保持连接
+  - keepalive=：如果对方是 http1.0 是否要保持连接
 
   - username=yum 的验证用户
 
-  - password=yum的验证用户密码
+  - password=yum 的验证用户密码
 
-  - cost=默认baseurl 都为 1000
+  - cost=默认 baseurl 都为 1000
 
 ## yum 命令
 
@@ -151,4 +156,4 @@
 
 - `groupupdate`
 
-[yum命令参考链接](
+[yum 命令参考链接](

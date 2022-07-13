@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: Python 的一些实用技巧
+---
 ### 解压可迭代对象赋值给多个变量
 
 ```python
@@ -6,7 +11,7 @@ name,email,*phone_number = record
 # name = 'dave' email = 'xx@example.com' phone_number = ['773-555-1212', '847-555-1212']
 ```
 
-如果解压一些未曾使用到的元素，可以使用约定好的标记 `*_或 *ign`
+如果解压一些未曾使用到的元素，可以使用约定好的标记 `*_ 或 *ign`
 
 ### 字典的运算
 

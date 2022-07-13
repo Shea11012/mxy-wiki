@@ -1,7 +1,12 @@
+---
+date created: 2022-03-10 16:54
+date modified: 2022-03-12 01:27
+title: Deployment
+---
 # Deployment
-deployment 最常用于部署无状态服务。deployment能够更新pod和replicaSet
+deployment 最常用于部署无状态服务。deployment 能够更新 pod 和 replicaSet
 
-## 创建一个deployment
+## 创建一个 deployment
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -43,12 +48,12 @@ kubectl get rs
 kubectl get pods --show-labels
 ```
 
-## 更新deployment
+## 更新 deployment
 ```shell
 kubectl set deployment/nginx-deployment nginx=nginx:1.9.1
 ```
 
-## 回滚deployment
+## 回滚 deployment
 ```shell
 # 检查deployment更新历史
 kubectl rollout history deployment/nginx-deployment
@@ -60,13 +65,13 @@ kubectl rollout undo deployment/nginx-deployment
 kubectl rollout undo deployment/nginx-deployment --to-revision=2
 ```
 
-## 伸缩deployment
+## 伸缩 deployment
 ```shell
 # 伸缩deployment
 kubectl scale deployment/nginx-deployment --replicas=10
 ```
 
-## 暂停和继续deployment
+## 暂停和继续 deployment
 ```shell
 # 暂停
 kubectl rollout pause deployment/nginx-deployment

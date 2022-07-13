@@ -1,13 +1,18 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: Laravel 商城开发复习
+---
 #### 商品类目
 
 | 字段名称     | 描述               | 类型               | 索引 |
 | ------------ | ------------------ | ------------------ | ---- |
-| id           | 自增ID             | unsigned int       | 主键 |
+| id           | 自增 ID             | unsigned int       | 主键 |
 | name         | 类目名称           | varchar            | 无   |
-| parent_id    | 父类目ID           | unsigned int，null | 外键 |
+| parent_id    | 父类目 ID           | unsigned int，null | 外键 |
 | is_directory | 是否拥有子类目     | tinyint            | 无   |
 | level        | 当前类目等级       | unsigned int       | 无   |
-| path         | 该类目所有父类目ID | varchar            | 无   |
+| path         | 该类目所有父类目 ID | varchar            | 无   |
 
 path 字段意义：
 

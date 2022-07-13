@@ -1,3 +1,8 @@
+---
+date created: 2021-09-01 22:08
+date modified: 2021-10-27 00:49
+title: pacman 常用命令
+---
 # pacman 常用命令
 ## 安装包
 - pacman -S 包名：可以同时安装多个以空格分隔

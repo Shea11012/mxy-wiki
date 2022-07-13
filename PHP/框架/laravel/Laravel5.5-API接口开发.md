@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: Laravel5.5-API接口开发
+---
 ### GitHub 的 Restful HTTP API
 
 RESTful 是一种软件设计风格，由 Roy Fielding 提出。
@@ -88,13 +93,13 @@ HTTPS 为接口的安全提供了保障，生产环境推荐使用 HTTPS（非 H
 
 ### 修改话题
 
-`$this->authorize('动作','相关模型')；` ：继承于 `App\Http\Controller\Controller` 这个基类控制器，和 `can`   方法类似，接收想授权的动作和相关的模型作为参数，如果动作没被授权 `authorize` 会抛出一个 `Illuminate\Auth\Access\AuthorizationException` 的异常，Laravel 默认的异常处理器会将这个异常转化成带有 `403` 状态码的 HTTP 响应
+`$this->authorize(' 动作 ',' 相关模型 ')；` ：继承于 `App\Http\Controller\Controller` 这个基类控制器，和 `can` 方法类似，接收想授权的动作和相关的模型作为参数，如果动作没被授权 `authorize` 会抛出一个 `Illuminate\Auth\Access\AuthorizationException` 的异常，Laravel 默认的异常处理器会将这个异常转化成带有 `403` 状态码的 HTTP 响应
 
 ### 话题列表
 
 DinogAPI 的 [Include 机制](https://laravel-china.org/courses/laravel-advance-training-5.5/923/list-of-posts)
 
-当需要返回额外的资源数据时，设置 `protected $availableInclude = ['user','category']` ，数组中每一个参数都对应一个具体的方法，命名规则 `include + user` 驼峰命名，引入额外的资源方式  `?include=user,xxx`  
+当需要返回额外的资源数据时，设置 `protected $availableInclude = ['user','category']` ，数组中每一个参数都对应一个具体的方法，命名规则 `include + user` 驼峰命名，引入额外的资源方式 `?include=user,xxx`  
 
 在 Transformer 中，可以使用：
 

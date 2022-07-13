@@ -1,3 +1,8 @@
+---
+date created: 2021-11-30 21:22
+date modified: 2021-11-30 21:22
+title: 使用docker遇到的问题
+---
 ### 在 centos 开启 firewalld ，使用 docker 访问时报错 nginx 502
 
 解决方法：

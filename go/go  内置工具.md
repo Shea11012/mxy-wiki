@@ -1,3 +1,8 @@
+---
+date created: 2021-09-01 22:08
+date modified: 2021-11-28 21:49
+title: go  内置工具
+---
 ### 输出一个指定的函数的 SSA
 ```go
 func makeSlice() {  
@@ -17,7 +22,7 @@ go tool compile -m -l xxx.go
 go build -gcflags "-m -l" xxx.go
 ```
 
-### 获取go的汇编代码
+### 获取 go 的汇编代码
 ```bash
 go tool compile -NlS  xx.go
 ```

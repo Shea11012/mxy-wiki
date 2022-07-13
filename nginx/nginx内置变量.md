@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2022-01-23 15:09
+title: nginx内置变量
+---
 | 内置变量                                                     |                             意义                             |
 | :----------------------------------------------------------- | :----------------------------------------------------------: |
 | $arg_name                                                    | 请求中的参数名，即？后面的 arg_name=arg_value 形式的 arg_name |
@@ -12,7 +17,7 @@
 | $cookie_name                                                 |                         Cookie 名称                          |
 | $document_root                                               |                  当前请求的文档根目录或别名                  |
 | $document_uri                         |                           同 $uri |                                                              |
-| $host                                                        | 优先级：HTTP请求行的主机名>HOST 请求头字段>符合请求的服务器名 |
+| $host                                                        | 优先级：HTTP 请求行的主机名>HOST 请求头字段>符合请求的服务器名 |
 | $hostname                                                    |                            主机名                            |
 | $http_name                          | 匹配任意请求头字段，变量名中的后半部分 “name” 可以替换成任意请求头字段，如在配置文件中需要获取 http 请求头：“Accept-Language” ，可以写为 “$http_accept_language” |                                                              |
 | $https                                                       |       如果开启了 SSL 安全模式，值为 on，否则为空字符串       |
@@ -30,7 +35,7 @@
 | $remote_user                                                 |                用于 HTTP 基础认证服务的用户名                |
 | $request                                                     |                     代表客户端的请求地址                     |
 | $request_body                                                | 客户端的请求主体，此变量可在 location 中使用，将请求主体通过 proxy_pass，fastcgi_pass 等传递给下一级的代理服务器 |
-| $request_body_file                                           | 将客户端请求主体保存在临时文件中。文件处理结束后，此文件删除。如果需要一直开启此功能，需要设置 client_body_in_file_only。如果将此文件传递个后端代理服务器，需要禁用 request_body，即设置 proxy_pass_request_body off等 |
+| $request_body_file                                           | 将客户端请求主体保存在临时文件中。文件处理结束后，此文件删除。如果需要一直开启此功能，需要设置 client_body_in_file_only。如果将此文件传递个后端代理服务器，需要禁用 request_body，即设置 proxy_pass_request_body off 等 |
 | $request_completion                                          | 如果请求成功，值为 OK，如果请求未完成或者请求不是一个范围请求的最后一部分，则为空。 |
 | $request_filename                                            | 当前连接请求的文件路径，由 root 或 alias 指令与 URI 请求生成 |
 | $request_length                                              |     请求的长度（包括请求的地址，http 请求头和请求主体）      |
@@ -45,7 +50,7 @@
 | $server_protocol                                             |       服务器的 HTTP 版本，通常为 HTTP/1.0 或 HTTP/1.1        |
 | $status                                                      |                        HTTP 响应代码                         |
 | \$tcpinfo_rtt，\$tcpinfo_rttvar，\$tcpinfo_snd_cwnd，\$tcpinfo_rcv_space |                  客户端 TCP 连接的具体信息                   |
-| $time_iso8601                                                |                   服务器时间的ISO 8610格式                   |
+| $time_iso8601                                                |                   服务器时间的 ISO 8610 格式                   |
 | $time_local                                                  |                  服务器时间 LOG Format 格式                  |
 | $uri                             | 请求中的当前 URI（不带请求参数，参数位于 \$args），可以不同于浏览器传递的 \$request_uri 的值，它可以通过内部重定向，或者使用 index 指令进行修改，$uri 不包含主机名，如 “/foo/bar.html” |                                                              |
 | $http_user_agent                                             |                            请求头                            |

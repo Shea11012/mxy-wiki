@@ -1,4 +1,9 @@
-# Composer使用
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: Composer使用
+---
+# Composer 使用
 
 1. composer self-update ：更新 composer 版本
 2. composer install ： 安装当前目录下的 composer.json 文件内的东西

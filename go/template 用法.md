@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: template 用法
+---
 ## 两类 template：text、HTML
 
 . 的作用域：表示当前作用域的对象

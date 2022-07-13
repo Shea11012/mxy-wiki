@@ -1,3 +1,8 @@
+---
+date created: 2021-11-30 21:22
+date modified: 2021-11-30 21:22
+title: docker基础镜像tag的含义
+---
 发行版：
 
 `stretch` 与 `jessie` 代表使用的是 `Debian` 前者表示 `Debian 9` ，后者表示 `Debian 8`

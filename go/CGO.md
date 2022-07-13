@@ -1,6 +1,11 @@
+---
+date created: 2021-11-30 21:22
+date modified: 2022-03-26 14:50
+title: CGO
+---
 ## import "C"
 
-### 内联C代码
+### 内联 C 代码
 
 `import "C"` 表示使用 CGO 特性，紧跟在这行语句前面的注释是一种特殊语法，里面包含正常的 C 语言代码。
 
@@ -20,7 +25,7 @@ func main() {
 }
 ```
 
-### 独立C源代码
+### 独立 C 源代码
 
 ```c
 /** 目录结构
@@ -61,7 +66,7 @@ main.go
 		hello.c
 ```
 
-> 因为c代码不在main.go下，所以hello就需要变成外部库来引用
+> 因为 c 代码不在 main.go 下，所以 hello 就需要变成外部库来引用
 >
 > gcc -c foo.c -o foo.o
 >

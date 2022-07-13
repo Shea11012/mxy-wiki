@@ -1,8 +1,13 @@
-# phpunit使用
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: phpunit使用
+---
+# phpunit 使用
 
-### `@depends`标注来表达依赖关系
+### `@depends` 标注来表达依赖关系
 
-> **`@depends`传递对象是一个引用而不是一个副本，如果需要传递对象的副本而非引用，则应当用`@depends clone`**
+> **`@depends` 传递对象是一个引用而不是一个副本，如果需要传递对象的副本而非引用，则应当用 `@depends clone`**
 
 ```php
 use PHPUnit\Framework\TestCase;

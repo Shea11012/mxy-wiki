@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: webPack学习
+---
 在根目录创建一个文件名为 `webpack.config.js`
 
 使用 `webpack-dev-server` ，安装此扩展需要安装 `webpack` 扩展
@@ -46,7 +51,7 @@ module.exports = {
 }
 ```
 
-**`html-webpack-plugin` 在内存中生成 HTML  的插件**
+**`html-webpack-plugin` 在内存中生成 HTML 的插件**
 
 作用：
 
@@ -84,7 +89,7 @@ module.exports = {
 }
 ```
 
-使用 `url-loader file-loader`  对图片路径处理
+使用 `url-loader file-loader` 对图片路径处理
 
 ```
 file-loader 是 url-loader 内部依赖

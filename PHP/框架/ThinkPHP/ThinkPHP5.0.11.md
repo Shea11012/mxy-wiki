@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: ThinkPHP5.0.11
+---
 5.0.1 以上版本支持自动读取配置文件，需要在 `Application/extra ` 下新建自定义的配置文件。也可以使用 `ENV` 文件读取配置文件。
 
 #### nginx.conf 配置

@@ -1,3 +1,8 @@
+---
+date created: 2021-11-30 21:22
+date modified: 2022-03-24 12:40
+title: go的nil
+---
 ### nil 的零值
 
 在 go 中，任何类型在未初始化时都对应一个零值：

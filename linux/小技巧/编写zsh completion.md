@@ -1,3 +1,8 @@
+---
+date created: 2021-11-28 13:34
+date modified: 2022-02-11 04:58
+title: zsh completion
+---
 # zsh completion
 ## 配置 .zshrc 设置
 ```shell
@@ -8,7 +13,7 @@ compinit
 ````
 
 ## 示例
-在 `$HOME/.zsh-completions` 目录内创建一个 `_quick-start`  文件
+在 `$HOME/.zsh-completions` 目录内创建一个 `_quick-start` 文件
 ```shell
 #compdef _quick-start quick-start
 
@@ -63,18 +68,18 @@ compdef _hello hello1 hello2 hello3
 | `_net_interfaces` | 补全网络接口名称 |
 | `_users` | 补全用户名 |
 | `_groups` | 补全用户组名称 |
-| `_options` | 补全shell名称|
-| `_parameters` | 补全shell参数、变量的名称|
+| `_options` | 补全 shell 名称|
+| `_parameters` | 补全 shell 参数、变量的名称|
 
 ### Action
-`_arguments`，`_regex_arguments`，`_alternative`等最后一个参数都是Action。表示如何补全相应的参数
+`_arguments`，`_regex_arguments`，`_alternative` 等最后一个参数都是 Action。表示如何补全相应的参数
 | 名称 | 描述 |
 | --- | --- |
 | `()` | 参数是必须的，但没有匹配项。相当于占位符|
 | `ITEM1 ITEM2` | 可能的匹配列表 |
 |  `->string` |  将 `$state` 设置为 string 并继续后续逻辑 |
 | `FUNCTION` | 将要调用的方法名称，该方法能够生成匹配项或调用其他 Action |
-| `{EVAL-STRING}` | 将字符串作为shell代码执行，可以生成匹配项。也可以调用工具方法并传入参数 |
+| `{EVAL-STRING}` | 将字符串作为 shell 代码执行，可以生成匹配项。也可以调用工具方法并传入参数 |
 | `=ACTION` | 在不改变补全位置节点的情况下，向补全命令中插入一个伪造单词 |
 
 

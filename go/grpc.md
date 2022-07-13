@@ -1,13 +1,18 @@
+---
+date created: 2021-11-30 21:22
+date modified: 2022-02-28 19:45
+title: grpc
+---
 ### grpc 四种调用方式
 
-- unary rpc：一元rpc，客户端使用stub发送请求等待服务端响应
-- server-side rpc：服务端流式rpc，服务端返回流式数据
-- client-side rpc：客户端流式rpc，客户端发送流式数据
-- bidirectional streaming rpc：双向流式rpc
+- unary rpc：一元 rpc，客户端使用 stub 发送请求等待服务端响应
+- server-side rpc：服务端流式 rpc，服务端返回流式数据
+- client-side rpc：客户端流式 rpc，客户端发送流式数据
+- bidirectional streaming rpc：双向流式 rpc
 
-#### grpc负载均衡策略
+#### grpc 负载均衡策略
 
-grpc负载均衡是基于每个调用进行的，而不是每个连接
+grpc 负载均衡是基于每个调用进行的，而不是每个连接
 
 常见的负载均衡类型：
 

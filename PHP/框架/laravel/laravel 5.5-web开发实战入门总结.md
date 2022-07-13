@@ -1,6 +1,11 @@
-# laravel 5.5-web开发实战入门总结
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: laravel 5.5-web开发实战入门总结
+---
+# laravel 5.5-web 开发实战入门总结
 
-在控制器中指定渲染某个视图，使用view方法，view接受两个参数，第一个是视图的路径名称，第二个是与视图绑定的数据，第二个参数为可选
+在控制器中指定渲染某个视图，使用 view 方法，view 接受两个参数，第一个是视图的路径名称，第二个是与视图绑定的数据，第二个参数为可选
 
 #### laravel 模板
 
@@ -17,13 +22,13 @@
 </html>
 ```
 
-`@yield('content')`表示该占位区域用于显示`content`区块的内容，`content`区块内容由继承自default视图的子视图定义
+`@yield('content')` 表示该占位区域用于显示 `content` 区块的内容，`content` 区块内容由继承自 default 视图的子视图定义
 
-`@yield('title','Sample')`,第一个参数是该区块的变量名称，第二个参数是默认值，表示当指定变量的值为空值时，使用`Sample`来作为默认值，当`@section`传递了第二个参数时，便不再需要通过`@stop`表示来告诉Laravel填充区块会在具体哪个位置结束了。
+`@yield('title','Sample')`,第一个参数是该区块的变量名称，第二个参数是默认值，表示当指定变量的值为空值时，使用 `Sample` 来作为默认值，当 `@section` 传递了第二个参数时，便不再需要通过 `@stop` 表示来告诉 Laravel 填充区块会在具体哪个位置结束了。
 
-`@extends('layouts.default')`使用`@extends`并通过传参来继承父视图`layouts/default.blade.php`模板
+`@extends('layouts.default')` 使用 `@extends` 并通过传参来继承父视图 `layouts/default.blade.php` 模板
 
-使用`@section`和`@stop`代码来填充父视图的`content`区块，所有包含在`@section`和`@stop`中的代码都将被插入到父视图的`content`区块
+使用 `@section` 和 `@stop` 代码来填充父视图的 `content` 区块，所有包含在 `@section` 和 `@stop` 中的代码都将被插入到父视图的 `content` 区块
 
 ```html
 @select('content')
@@ -31,15 +36,15 @@
 @stop
 ```
 
-`@include('layouts._header')`是Blade提供的视图引用方法，可通过传参一个具体的文件路径名称来引用视图
+`@include('layouts._header')` 是 Blade 提供的视图引用方法，可通过传参一个具体的文件路径名称来引用视图
 
 extends：继承后可以覆盖；include：引入后不能覆盖
 
-`npm install`安装laravel里的前端扩展 `npm run dev`和`npm run watch-poll`可以及时对修改的css进行编译和保存
+`npm install` 安装 laravel 里的前端扩展 `npm run dev` 和 `npm run watch-poll` 可以及时对修改的 css 进行编译和保存
 
 #### Laravel Mix
 
-`mix.js('resources/assets/js/app.js','public/js')`：第二个参数是自定义生成js文件的输出目录
+`mix.js('resources/assets/js/app.js','public/js')`：第二个参数是自定义生成 js 文件的输出目录
 
 #### Laravel 路由
 
@@ -60,7 +65,7 @@ Route::get('api/users/{user}',function(App\User $user){
 
 资源路由列表信息：
 
-| HTPP请求 | URL                | 动作                    | 作用                   |
+| HTPP 请求 | URL                | 动作                    | 作用                   |
 | -------- | ------------------ | ----------------------- | ---------------------- |
 | GET      | /users             | UsersController@index   | 显示所有用户列表的月面 |
 | GET      | /users/{user}      | UsersController@show    | 显示用户个人信息的页面 |
@@ -74,7 +79,7 @@ Route::get('api/users/{user}',function(App\User $user){
 
 一对一
 
-`user`模型关联一个`phone`模型
+`user` 模型关联一个 `phone` 模型
 
 ```php
 class User extends Model
@@ -90,7 +95,7 @@ class User extends Model
 
 反向关联
 
-通过``phone`模型查到拥有该电话的`user`模型
+通过 ``phone` 模型查到拥有该电话的 `user` 模型
 
 ```php
 class Phone extends Model
@@ -110,7 +115,7 @@ class Phone extends Model
 
 `guarded` 属性包含的是不想被批量赋值的属性的数，注意 `fillable` 和 `guarded` 二选一
 
-`hidden` 属性里的值，在通过数组或json显示时进行隐藏
+`hidden` 属性里的值，在通过数组或 json 显示时进行隐藏
 
 模型文件默认对应的数据表，是文件名的复数形式「蛇形命名」作为表名，例：`App\Models\User.php` 表名默认为 `users` 
 
@@ -156,10 +161,10 @@ Eloquent 模型的生命周期：`reterieved` 、`creating` 、`created` 、 `up
 
 ### 邮件激活账户「本地测试」
 
-1. 配置`.env`文件`MAIL_DRIVER=log`
+1. 配置 `.env` 文件 `MAIL_DRIVER=log`
 2. 创建一个激活邮件的路由例：`Route::get('signup/confirm/{token}','UsersController@confirmEmail')->name('confirm_email');`
-3. 去`view`目录配置邮件模板
-4. 定义一个发送邮件的方法`sendEmailConfirmationTo`，该方法将邮件发送给指定用户
+3. 去 `view` 目录配置邮件模板
+4. 定义一个发送邮件的方法 `sendEmailConfirmationTo`，该方法将邮件发送给指定用户
 
 ```php
 //如果是在生产环境，#号注释的可以去除
@@ -186,38 +191,38 @@ class UsersController extend Controller
 }
 ```
 
-Mail的send方法接受三个参数
+Mail 的 send 方法接受三个参数
 
 - 第一个参数是包含邮件消息的视图模板
 - 第二个参数是传递给该视图的数据数组
 - 第三个参数是一个接受邮件消息的实例的闭包回调，可以在该回调中定义消息的发送者、接收者、邮件主题
 
-5. 在`__construct`方法里允许未登录用户访问`confirmEmail`方法
-6. 定义`confirmEmail($token)`方法，激活成功后`Auth::login($user)`自动登录，将`activated=true;activation_token=null`
+5. 在 `__construct` 方法里允许未登录用户访问 `confirmEmail` 方法
+6. 定义 `confirmEmail($token)` 方法，激活成功后 `Auth::login($user)` 自动登录，将 `activated=true;activation_token=null`
 
 ### 权限系统
 
-Laravel中间件（Middleware）提供了过滤机制来过滤HTTP应用请求，默认内置了一些中间件，如：身份验证、CSRF保护等。所有的中间件文件都被放在项目的`app\Http\Middleware`文件中。
+Laravel 中间件（Middleware）提供了过滤机制来过滤 HTTP 应用请求，默认内置了一些中间件，如：身份验证、CSRF 保护等。所有的中间件文件都被放在项目的 `app\Http\Middleware` 文件中。
 
 `php artisan make:middleware filename`
 
-在`__construct`方法中调用`middleware`方法，该方法接收两个参数，第一个为中间件 名称，第二个为要进行过滤的动作
+在 `__construct` 方法中调用 `middleware` 方法，该方法接收两个参数，第一个为中间件 名称，第二个为要进行过滤的动作
 
-`except`：设定指定动作不使用Auth中间件进行过滤，意为——除了此处指定动作外，所有其他动作都必须登录用户才能访问。（一般推荐使用这个）
+`except`：设定指定动作不使用 Auth 中间件进行过滤，意为——除了此处指定动作外，所有其他动作都必须登录用户才能访问。（一般推荐使用这个）
 
 `only`：将只过滤指定动作
 
-Auth中间件过滤指定动作，默认会被重定向到`/login`
+Auth 中间件过滤指定动作，默认会被重定向到 `/login`
 
-限制登录用户的操作，使用Laravel的授权策略（Policy）来对用户的操作权限进行验证，对于未经授权操作时将返回403
+限制登录用户的操作，使用 Laravel 的授权策略（Policy）来对用户的操作权限进行验证，对于未经授权操作时将返回 403
 
 `php artisan make:policy filenamePolicy`
 
-生成的授权文件都在`app\Polices`文件夹下
+生成的授权文件都在 `app\Polices` 文件夹下
 
-定义好授权策略文件还需要在`AuthServiceProvider`类中对授权策略进行设置，里面包含了一个`policies`属性
+定义好授权策略文件还需要在 `AuthServiceProvider` 类中对授权策略进行设置，里面包含了一个 `policies` 属性
 
-例如：生成一个`UserPolicy`再将其模型对应到管理它们的授权策略上
+例如：生成一个 `UserPolicy` 再将其模型对应到管理它们的授权策略上
 
 ```php
 namespace App\Policies;
@@ -233,11 +238,11 @@ class UserPolicy
 }
 ```
 
-`update`方法接受两个参数，第一个参数默认为当前登录用户实例，第二个参数则为要进行授权的用户实例
+`update` 方法接受两个参数，第一个参数默认为当前登录用户实例，第二个参数则为要进行授权的用户实例
 
 授权策略需要注意以下两点：
 
-1. 不需要检查`$currentUser`是不是Null，未登录用户，框架会自动为其所有权限返回`false`
+1. 不需要检查 `$currentUser` 是不是 Null，未登录用户，框架会自动为其所有权限返回 `false`
 2. 调用时，默认情况下，我们不需要传递当前登录用户至该方法内，因为框架会自动加载当前登录用户
 
 ```php
@@ -252,15 +257,15 @@ class AuthServiceProvider extends ServiceProvider
 }
 ```
 
-授权策略定义完成之后，便可以通过用户控制器使用`authorize`方法来验证用户授权策略。默认`App\Http\Controllers\Controller`类包含了Laravel的`AuthorizesRequests`trait，此trait提供了`authorize`方法，当无权限运行时会抛出`HttpException`。`authorize`方法接受两个参数，第一个是授权策略名称，第二个是进行授权验证的数据。
+授权策略定义完成之后，便可以通过用户控制器使用 `authorize` 方法来验证用户授权策略。默认 `App\Http\Controllers\Controller` 类包含了 Laravel 的 `AuthorizesRequests`trait，此 trait 提供了 `authorize` 方法，当无权限运行时会抛出 `HttpException`。`authorize` 方法接受两个参数，第一个是授权策略名称，第二个是进行授权验证的数据。
 
 `$this->authorize('update',$user);`
 
-> update是指授权类的update授权方法，$user对应传参update授权方法的第二个参数，默认情况下，不需要传递第一个参数，当前登录用户至该方法内，因为框架会自动加载当前登录用户
+> update 是指授权类的 update 授权方法，$user 对应传参 update 授权方法的第二个参数，默认情况下，不需要传递第一个参数，当前登录用户至该方法内，因为框架会自动加载当前登录用户
 
 ### 友好转向
 
-`redirect()`实例提供一个`intended`方法，该方法可将页面重定向到上一次请求尝试访问的页面上，并接受一个默认跳转地址参数，当上一次请求记录为空时，跳转到默认地址上。
+`redirect()` 实例提供一个 `intended` 方法，该方法可将页面重定向到上一次请求尝试访问的页面上，并接受一个默认跳转地址参数，当上一次请求记录为空时，跳转到默认地址上。
 
 `redirect()->intended(route('users.show',[Auth::user()]));`
 
@@ -270,7 +275,7 @@ class AuthServiceProvider extends ServiceProvider
 
 1. 添加以下路由
 
-| HTTP请求 | URL                     | 动作                                              | 作用                       |
+| HTTP 请求 | URL                     | 动作                                              | 作用                       |
 | -------- | ----------------------- | ------------------------------------------------- | -------------------------- |
 | GET      | /password/reset         | Auth\ForgotPasswordController@showLinkRequestForm | 显示重置密码的邮箱发送页面 |
 | POST     | /password/email         | Auth\ForgotPasswordController@sendResetLinkEmail  | 邮箱发送重设链接           |

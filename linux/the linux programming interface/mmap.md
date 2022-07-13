@@ -1,5 +1,8 @@
 ---
 tags: ["linux","mmap"]
+date created: 2021-10-27 00:48
+date modified: 2022-03-29 15:11
+title: mmap (memory mappings)
 ---
 # mmap (memory mappings)
 mmap 系统调用会在当前进程虚拟空间创建一个新的内存映射空间，这块内存空间可以私有或共享。

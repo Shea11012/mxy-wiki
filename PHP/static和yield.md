@@ -1,4 +1,9 @@
-# static和yield
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: static和yield
+---
+# static 和 yield
 
 ### static
 
@@ -31,7 +36,7 @@ class B extends A
 B::test();
 ```
 
-当调用的时候`self::who()`输出A，`static::who()`输出B
+当调用的时候 `self::who()` 输出 A，`static::who()` 输出 B
 
 ### yield
 
@@ -49,13 +54,13 @@ $data = generateData(1000000)	//得到的是一个迭代器
     }
 ```
 
-如果数据来源非常大，使用yield，数据来源小，可以使用for或foreach
+如果数据来源非常大，使用 yield，数据来源小，可以使用 for 或 foreach
 
 ### Trait
 
 1. 优先级：当前类的方法会覆盖 Trait 中的方法，而 Trait 中的方法会覆盖基类的方法
 2. 多个 Trait 组合：通过逗号分隔，通过 use 关键字列出多个 Trait
-3. 冲突的解决：如果两个 Trait 都插入了一个同名的方法，若没有明确解决冲突将会产生一个致命错误。为了解决多个 Trait 在同一个类中的命名冲突，需要使用 insteadof 操作符来明确指定使用冲突方法中的哪一个。同时可以通过 as  操作符将其中一个冲突的方法以另一个名称来引入。
+3. 冲突的解决：如果两个 Trait 都插入了一个同名的方法，若没有明确解决冲突将会产生一个致命错误。为了解决多个 Trait 在同一个类中的命名冲突，需要使用 insteadof 操作符来明确指定使用冲突方法中的哪一个。同时可以通过 as 操作符将其中一个冲突的方法以另一个名称来引入。
 4. 修改方法的访问控制：使用 as 语法可以用来调整方法的访问控制
 5. Trait 的抽象方法：在 Trait 中可以使用抽象成员，使得类中必须实现这个抽象方法
 6. Trait 的静态成员：在 Trait 中可以用静态方法和静态变量

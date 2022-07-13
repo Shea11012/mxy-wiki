@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2022-01-23 15:09
+title: 创建 /usr/lib/systemd/system/php-fpm.service
+---
 按照 MySQL -> Nginx -> PHP
 
 ### MySQL8.0
@@ -7,7 +12,7 @@
 ![](assets/1547228508486.png)
 
 2. 安装 MySQL 源 
-    - `yum -y localinstall mysql80-xxxx-xxxx-xxxx(这里安装的是上一步下载下来的MySQL源)`
+    - `yum -y localinstall mysql80-xxxx-xxxx-xxxx(这里安装的是上一步下载下来的 MySQL 源)`
     - `yum -y install mysql-community-server`
 3. 启动 MySQL 服务
     - `systemctl start mysqld`
@@ -79,7 +84,7 @@
 
     ##### nginx 追加模块
 
-    1. nginx  -V  查看 nginx 的配置信息
+    1. nginx  -V 查看 nginx 的配置信息
     2. 将 /sbin/nginx 的二进制文件复制备份，此处需要停止 nginx 服务
     3. 切换到以前的源码编译目录，复制 nginx configure 以前的配置，将需要的模块再追加进去，然后 make ，不需要 make install 
     4. make 完成后 将源码 obj 目录下的 nginx 二进制文件复制到 /usr/sbin/ 下
@@ -105,13 +110,13 @@
     make
     make install
     ```
-	**7.4 mbstring 需要该 oniguruma 扩展，centos8 默认是没有开启这个扩展的devel版本，需要去 https://pkgs.org 去这个网址搜索这个扩展的devel版本，进行安装。**
+	**7.4 mbstring 需要该 oniguruma 扩展，centos8 默认是没有开启这个扩展的 devel 版本，需要去 https://pkgs.org 去这个网址搜索这个扩展的 devel 版本，进行安装。**
     5. 完成安装后配置 php.ini 文件
-        - cp php.ini-development  php目录/lib/php.ini （没有指定config path 配置文件就不在 etc 内 而在 lib 内）
-        - cp php目录/etc/php-fpm.conf.default  php目录/etc/php-fpm.conf
-        - cp php目录/etc/php-fpm.d/www.conf.default  php目录/etc/php-fpm.d/www.conf
+        - cp php.ini-development php 目录/lib/php.ini （没有指定 config path 配置文件就不在 etc 内 而在 lib 内）
+        - cp php 目录/etc/php-fpm.conf.default php 目录/etc/php-fpm.conf
+        - cp php 目录/etc/php-fpm.d/www.conf.default php 目录/etc/php-fpm.d/www.conf
 6. 安装完成设置一个软链接
-    7. 配置php-fpm的service（centos)
+    7. 配置 php-fpm 的 service（centos)
 
     ```
 # 创建 /usr/lib/systemd/system/php-fpm.service

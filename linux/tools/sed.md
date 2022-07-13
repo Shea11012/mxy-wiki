@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: sed
+---
 ## sed 编辑器
 sed 编辑器根据命令来处理数据流中的数据，sed 编辑器会执行一下操作：
 - 一次从输入中读取一行数据
@@ -45,7 +50,7 @@ c (change)：修改命令，修改数据流中整行文本的内容
 =：打印行号
 l (list)：列出行
 p (print)：打印文本行
-y (transform)：转换命令，`[address]y/inchars/outchars/`，转换命令会对 inchars 和 outchars 进行一对一的映射。inchars与outchars 必须相等。
+y (transform)：转换命令，`[address]y/inchars/outchars/`，转换命令会对 inchars 和 outchars 进行一对一的映射。inchars 与 outchars 必须相等。
 w (write)：向文件写入行，`[address]w filename`
 r (read): 将一个独立文件读入到数据流中，`[address]r filename`
 

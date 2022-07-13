@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: js小技巧
+---
 #### 复制到剪贴板
 
 ```javascript

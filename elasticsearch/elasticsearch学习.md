@@ -1,6 +1,11 @@
+---
+date created: 2021-11-30 21:22
+date modified: 2022-03-09 19:01
+title: elasticsearch学习
+---
 ## elasticsearch 是什么
 
-elasticsearch 是一个基于 Apache Lucence 的开源搜索引擎，elasticsearch 使用Java 开发并使用 Lucence 作为其核心实现所有索引和搜索的功能
+elasticsearch 是一个基于 Apache Lucence 的开源搜索引擎，elasticsearch 使用 Java 开发并使用 Lucence 作为其核心实现所有索引和搜索的功能
 
 - 分布式的实时文件存储，每个字段都被索引并可被搜索
 - 分布式的实时分析搜索引擎
@@ -18,13 +23,13 @@ logstash、Beat：数据抓取
 
 | 目录    | 配置文件          | 描述                                         |
 | ------- | ----------------- | -------------------------------------------- |
-| bin     |                   | 脚本文件，启动es，安装插件。运行统计数据等。 |
-| config  | elasticsearch.yml | 集群配置文件，user，role相关配置             |
-| JDK     |                   | java运行环境                                 |
+| bin     |                   | 脚本文件，启动 es，安装插件。运行统计数据等。 |
+| config  | elasticsearch.yml | 集群配置文件，user，role 相关配置             |
+| JDK     |                   | java 运行环境                                 |
 | data    | path.data         | 数据文件                                     |
-| lib     |                   | java类库                                     |
+| lib     |                   | java 类库                                     |
 | logs    | path.log          | 日志文件                                     |
-| modules |                   | 包含所有ES模块                               |
+| modules |                   | 包含所有 ES 模块                               |
 | plugins |                   | 包含所有已安装插件                           |
 
 ## Document 文档
@@ -39,7 +44,7 @@ logstash、Beat：数据抓取
 
 - _index 文档所属的索引名
 - _type 文档所属的类型名
-- _id 文档唯一ID
+- _id 文档唯一 ID
 - _source 文档的原始 JSON 数据
 - _version 文档的版本信息
 - _score 相关性打分
@@ -59,19 +64,19 @@ es 不同的集群通过不同的名字来区分，默认 elasticsearch ，也�
 
 ### 节点
 
-节点就是一个es实例，每个节点都有一个名字，通过 node.name=xxx 指定
+节点就是一个 es 实例，每个节点都有一个名字，通过 node.name=xxx 指定
 
-每个节点在启动之后，会分配一个UID，保存在data目录下
+每个节点在启动之后，会分配一个 UID，保存在 data 目录下
 
 #### master-eligible 节点 和 master 节点
 
 > 每个节点启动后，默认就是一个 master eligible 节点。可以通过 node.master: false 禁止
 >
-> master eligible 节点可以参加选主流程，成为master 节点
+> master eligible 节点可以参加选主流程，成为 master 节点
 >
 > 当第一个节点启动时，它会将自己选举成 master 节点
 >
-> 每个节点上都保存了集群的状态，且只有master节点才能修改集群状态信息
+> 每个节点上都保存了集群的状态，且只有 master 节点才能修改集群状态信息
 >
 > - 所有的节点信息
 > - 所有的索引和其相关的 mapping 与 setting 信息
@@ -83,25 +88,25 @@ es 不同的集群通过不同的名字来区分，默认 elasticsearch ，也�
 
 > **data node**
 >
-> 保存数据的节点，叫做data node。负责保存分片数据。在数据的扩张上起到关键作用
+> 保存数据的节点，叫做 data node。负责保存分片数据。在数据的扩张上起到关键作用
 >
 > **coordinating node**
 >
-> 负责接收client请求，将请求分发到合适的节点，最终把结果汇集到一起
+> 负责接收 client 请求，将请求分发到合适的节点，最终把结果汇集到一起
 >
 > 每个节点默认起到 coordinating node 的职责
 
 #### hot & warm node (冷热节点)
 
-> hot 节点配置更高，io和cpu更高
+> hot 节点配置更高，io 和 cpu 更高
 >
 > warm 节点，存储旧数据
 >
-> 通过hot & warm 可以降低集群部署成本
+> 通过 hot & warm 可以降低集群部署成本
 
 #### machine learning node
 
-> 跑机器学习的job，用来做异常检测
+> 跑机器学习的 job，用来做异常检测
 
 ### 配置节点类型
 
@@ -112,7 +117,7 @@ es 不同的集群通过不同的名字来区分，默认 elasticsearch ，也�
 | master eligible   | node.master | true                                                      |
 | data              | node.data   | true                                                      |
 | ingest            | node.ingest | true                                                      |
-| coordinating only | -           | 每个节点默认都是coordinating，需要设置其他类型全部为false |
+| coordinating only | -           | 每个节点默认都是 coordinating，需要设置其他类型全部为 false |
 | machine learning  | node.ml     | true (需额外 enable x-pack)                               |
 
 ### 分片（Primary Shard & Replica Shard）
@@ -123,7 +128,7 @@ es 不同的集群通过不同的名字来区分，默认 elasticsearch ，也�
   - 副本分片数，可以动态调整
   - 增加副本数，可以在一定程度上提高服务的可用性（读取的吞吐）
 
-### 文档的基本crud与批量操作
+### 文档的基本 crud 与批量操作
 
 Create 一个文档
 
@@ -154,7 +159,7 @@ index 和 create 区别：如果文档不存在，就索引新的文档。否则
 POST _bulk
 ```
 
-支持在一次API调用中，对不同的索引进行操作
+支持在一次 API 调用中，对不同的索引进行操作
 
 支持四种类型：index、create、update、delete
 
@@ -183,10 +188,10 @@ POST index/_msearch
 - 单词词典（term dictionary）记录所有文档的单词，记录单词到倒排列表的关联关系
 - 倒排列表（posting list）记录单词对应的文档结合，由倒排索引项组成
   - 倒排索引项（posting）
-    - 文档ID
-    - 词频TF，该单词在文档出现的次数，用于相关性评分
-    - 位置Position，单词在文档中分词的位置。用于语句搜索
-    - 偏移offset，记录单词的开始结束位置，实现高亮显示
+    - 文档 ID
+    - 词频 TF，该单词在文档出现的次数，用于相关性评分
+    - 位置 Position，单词在文档中分词的位置。用于语句搜索
+    - 偏移 offset，记录单词的开始结束位置，实现高亮显示
 
 
 
@@ -280,7 +285,7 @@ GET /index/_search
 
 _source 过滤
 
-- _source  支持通配符
+- _source 支持通配符
 - 如果 _source 没有存储，就只返回匹配文档的元数据
 
 ```
@@ -361,7 +366,7 @@ simple query string
 - 类似 query string，会忽略错误的语法，同时只支持部分查询语法
 
 - 不支持 AND OR NOT，会当做字符串处理
-- Term之间的默认关系是 OR，可以指定operator
+- Term 之间的默认关系是 OR，可以指定 operator
 - 支持部分逻辑：
   - \+ 替代 AND
   - | 替代 OR
@@ -411,9 +416,9 @@ mapping 会把 json 文档映射成 Lucene 所需要的扁平格式
 
 #### dynamic mapping 类型自动识别
 
-| JSON类型 | es类型                                                       |
+| JSON 类型 | es 类型                                                       |
 | -------- | ------------------------------------------------------------ |
-| 字符串   | 匹配日期格式，设置成date<br />配置数字设置为 float 或 long，该选项默认关闭<br />设置为text，并且增加keyword字段 |
+| 字符串   | 匹配日期格式，设置成 date<br />配置数字设置为 float 或 long，该选项默认关闭<br />设置为 text，并且增加 keyword 字段 |
 | 布尔值   | boolean                                                      |
 | 浮点数   | float                                                        |
 | 整数     | long                                                         |
@@ -421,7 +426,7 @@ mapping 会把 json 文档映射成 Lucene 所需要的扁平格式
 | 数组     | 由第一个非空数值类型所决定                                   |
 | 空值     | 忽略                                                         |
 
-##### 更改mapping类型
+##### 更改 mapping 类型
 
 1. 新增字段
    - dynamic 设为 true，一旦有新增字段写入，mapping 同时也被更新
@@ -538,7 +543,7 @@ POST index/_search
 
 #### Bucket Aggregation
 
-按照一定规则，将文档分类到不同的bucket中。
+按照一定规则，将文档分类到不同的 bucket 中。
 
 #### pipeline Aggregation
 
@@ -756,7 +761,7 @@ POST _ingest/pipeline/_simulate   // 使用 simulate api 模拟 pipeline，模�
 
 |                | Logstash                                   | Ingest Node                            |
 | -------------- | ------------------------------------------ | -------------------------------------- |
-| 数据输入与输出 | 支持从不同的数据源读取，并写入不同的数据源 | 支持从es rest api 获取数据，并且写入es |
+| 数据输入与输出 | 支持从不同的数据源读取，并写入不同的数据源 | 支持从 es rest api 获取数据，并且写入 es |
 | 数据缓冲       | 实现了简单的数据队列，支持重写             | 不支持缓冲                             |
 | 数据处理       | 支持插件，支持定制开发                     | 内置插件，开发插件扩展（需要重启）     |
 | 配置使用       | 增加了架构复杂度                           | 无需额外部署                           |
@@ -780,11 +785,11 @@ POST _ingest/pipeline/_simulate   // 使用 simulate api 模拟 pipeline，模�
   - 用于 id，枚举及不需要分词的文本
   - 适用于 filter（精确匹配），排序和聚合
 - 设置多字段类型
-  - 默认会为文本类型设置成text，并且设置一个keyword字段
+  - 默认会为文本类型设置成 text，并且设置一个 keyword 字段
   - 在处理人类语言时，通过增加 “英文”，“拼音” 和 “标准” 分词器，提高搜索结构
 - 枚举类型
   - 设置为 keywrod，即便是数字，可以获得更好的性能
-- 更新频繁，聚合查询频繁的keyword类型字段
+- 更新频繁，聚合查询频繁的 keyword 类型字段
   - 将 eager_global_ordinals 设置为 true
 
 ```http
@@ -868,7 +873,7 @@ POST books/_search
   ```
 
 
-### 索引管理API
+### 索引管理 API
 
 - open/close index：索引关闭后无法进行读写，但是索引数据不会被删除
 - shrink index：可以将索引的主分片数收缩到较小的值

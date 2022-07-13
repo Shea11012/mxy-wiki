@@ -1,5 +1,8 @@
 ---
 tags: ["git"]
+date created: 2021-06-05 00:30
+date modified: 2022-04-22 06:37
+title: Git 常用命令
 ---
 #git 
 
@@ -87,7 +90,7 @@ git merge {branch-name} | 合并 branch-name 分支到当前分支
 ### extra
 命令 | 说明 
 --- | ---
-  git stripspace < [README.md](http://readme.md)|去掉行尾空白符，多个空行压缩成一行，必要时在文件末尾增加一个空行
+  git stripspace |去掉行尾空白符，多个空行压缩成一行，必要时在文件末尾增加一个空行
   git show :/{query} |查询之前所有提交信息，找到条件相匹配的最近一条
   git remote add name url|添加一个远程仓库
   git update-index —assume-unchanged {path} |忽略指定的文件或目录，这样对于该文件的修改不会被 git 追踪到

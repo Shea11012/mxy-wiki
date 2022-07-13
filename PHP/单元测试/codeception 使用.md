@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: Codeception
+---
 # Codeception
 
 [codeception 文档](https://codeception.com/docs)
@@ -17,7 +22,7 @@ codeception 浏览器断言：
  dontsee('内容','节点'); // 反向断言
 ```
 
-每一个 see 方法都有一个对应的 canSee 、dontSee、cantSee  方法。
+每一个 see 方法都有一个对应的 canSee 、dontSee、cantSee 方法。
 
 条件断言默认关闭需要在配置文件启用
 
@@ -25,7 +30,7 @@ codeception 浏览器断言：
 
 codeception 使用 webDriver 可以测试 JavaScript，但是需要使用 wait 等待 js 脚本执行完毕。
 
-配置 wait 时间可以在脚本内使用：`$I-wait(3) // 等待3秒`
+配置 wait 时间可以在脚本内使用：`$I-wait(3) // 等待 3 秒 `
 
 也可以使用配置文件的方式，在 yml 文件内配置：`wait:5`
 

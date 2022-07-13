@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: console 输出技巧
+---
 ### log 输出格式化
 
 | 说明符   | 作用                   |

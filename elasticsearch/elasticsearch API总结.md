@@ -1,3 +1,8 @@
+---
+date created: 2021-11-30 21:22
+date modified: 2022-03-09 19:00
+title: elasticsearch API总结
+---
 `shutdown` API
 
 `curl -X``POST 'http://localhost:9200/_shutdown'`

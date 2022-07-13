@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-26 03:05
+title: 原生JS DOM操作方法
+---
 ### 创建节点
 
 | 方法                                | 说明                                    |
@@ -63,7 +68,7 @@
 
 ### 元素样式尺寸
 
-| 方法                            | `说明`                                                       |
+| 方法                            | ` 说明 `                                                       |
 | ------------------------------- | ------------------------------------------------------------ |
 | `window.getComputedStyle(elem)` | 获取 elem 所有应用了 `css` 后的属性值，返回一个实时的 `CSSStyleDeclaration` 对象 |
 | `elem.getBoundingClientRect()`  | 返回元素的大小以及相对于视口的位置，返回一个 `DOMRect` 对象，包括元素的 `left,right,top,bottom,width,height,x,y` 属性值 |

@@ -1,19 +1,24 @@
+---
+date created: 2022-03-17 19:00
+date modified: 2022-03-17 20:59
+title: IP
+---
 ## IPV4
 ### IPV4 数据包格式
 ![[Pasted image 20220317195329.png]]
-- 版本号（Version）：占4bit，通信双方必须使用一致的版本
-- 首部长度（Internete Header Length，IHL）：占4bit，由于IPv4首部可能包含数目不定的选项，这个字段也用来确定数据的偏移量
+- 版本号（Version）：占 4bit，通信双方必须使用一致的版本
+- 首部长度（Internete Header Length，IHL）：占 4bit，由于 IPv4 首部可能包含数目不定的选项，这个字段也用来确定数据的偏移量
 - 区分服务（Differentitated Service，DS）：
 - 显示拥塞通告（Explicit Congestion Notification，ECN）
 - 全长（Total Length）：报文总长，包含首部和数据
 - 标识符（Identification）：用来唯一的标识一个报文的所有分片，因为分片不一定按序到达，所以在重组是需要知道分片所属的报文
 - 标志（flags）：控制和识别分片：
-	- 位0：保留
-	- 位1：禁止分片
-	- 位2：更多分片
+	- 位 0：保留
+	- 位 1：禁止分片
+	- 位 2：更多分片
 - 分片偏移（Fragment Offset）：指明每个分片相对于原始报文开头的偏移量
-- 存活时间（Time To Live，TTL）：每个报文的存活时间，在报文经过每个路由器时此字段减1，当此字段等于0时，报文被丢弃。
-- 协议（Protocol）：仅当IP数据报到达最终目的地时才会用到，协议号指定了IP数据报的数据部分会交给哪个特定的运输层协议。
+- 存活时间（Time To Live，TTL）：每个报文的存活时间，在报文经过每个路由器时此字段减 1，当此字段等于 0 时，报文被丢弃。
+- 协议（Protocol）：仅当 IP 数据报到达最终目的地时才会用到，协议号指定了 IP 数据报的数据部分会交给哪个特定的运输层协议。
 - 首部校验和（Header Checksum）：只对首部检验，在每一跳中路由器都要对此进行检验。
 - 源地址（Source address）
 - 目的地址（Destination address）
@@ -23,12 +28,12 @@
 ## IPV6
 ### IPV6 数据报格式
 ![[Pasted image 20220317204546.png]]
-- 版本（Version）：IPV6值为6
+- 版本（Version）：IPV6 值为 6
 - 流量类型（Traffic Class）
 - 流标签（Flow Label）：用于标识一条数据报的流，能够对一条流中的某些数据报给出优先权。
-- 有效载荷长度（Payload Length)：指定跟在IPV6中定长的40字节数据报首部后面的字节数量。
-- 下一个首部（Next Header）：标识数据报中的数据部分需要交给哪个协议，与IPV4的 Protocol 字段相同
-- 跳限制（Hop Limit）：转发数据报的路由器对该字段减1，为0则丢弃。
+- 有效载荷长度（Payload Length)：指定跟在 IPV6 中定长的 40 字节数据报首部后面的字节数量。
+- 下一个首部（Next Header）：标识数据报中的数据部分需要交给哪个协议，与 IPV4 的 Protocol 字段相同
+- 跳限制（Hop Limit）：转发数据报的路由器对该字段减 1，为 0 则丢弃。
 - 源地址
 - 目的地址
 

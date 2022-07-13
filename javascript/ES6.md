@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2022-04-29 20:15
+title: ES6
+---
 # ES6
 
 ### 变量的解构赋值
@@ -6,8 +11,6 @@
 let [x = 1] = [undefined];	//x = 1
 let [x = 1] = [null];		//x = null
 ```
-
-ES6 内部使用 `===` ，判断一个位置是否有值，只有当一个数组成员严格等于 `undefined` ，默认值才会生效。
 
 如果是一个表达式，那么这个表达式是惰性求值：只有在会用到的时候，才会求值。
 
@@ -37,7 +40,7 @@ y //world
 
 ### 字符串
 
-JavaScript内部，字符以 UTF-16 格式存储，每个字符固定为 2 个字节，大于 `0xFFFF` 的字符被认为是两个字符
+JavaScript 内部，字符以 UTF-16 格式存储，每个字符固定为 2 个字节，大于 `0xFFFF` 的字符被认为是两个字符
 
 
 
@@ -136,11 +139,11 @@ foo() // undefined 5
 箭头函数注意点：
 
 1. 函数体内的 this 对象，就是定义时所在的对象，而不是使用时所在的对象
-2. 不可以当作构造函数，也就是说，不可以使用new命令，否则会抛出一个错误
+2. 不可以当作构造函数，也就是说，不可以使用 new 命令，否则会抛出一个错误
 3. 不可以使用 arguments 对象，该对象在函数体内不存在。如果要用，可以用 reset 参数代替
 4. 不可以使用 yield 命令，因此箭头函数不能用作 Generator 函数。
 
-**双冒号运算符：**双冒号左边是一个对象，右边是一个函数。该运算符会自动将左边的对象，作为上下文环境（即this对象），绑定到右边的函数上面。
+**双冒号运算符：**双冒号左边是一个对象，右边是一个函数。该运算符会自动将左边的对象，作为上下文环境（即 this 对象），绑定到右边的函数上面。
 
 ```javascript
 foo::bar;
@@ -308,7 +311,7 @@ Object.getOwnPropertyDescriptor(obj,'foo');
 
 ### Symbol
 
-唯一的符号，用于取代会发生冲突的key 和值定义
+唯一的符号，用于取代会发生冲突的 key 和值定义
 
 ```js
 const s = Symbol()
@@ -358,7 +361,7 @@ Set 结构没有键名，只有键值（或者说键名和键值是同一个值�
 
 WeakSet 成员只能是对象，WeakSet 中的对象都是弱引用，即垃圾回收机制不考虑 WeakSet 对该对象的引用，如果其他对象都不再引用该对象，那么垃圾回收机制会自动回收该对象所占用的内存，不考虑该对象还存在于 WeakSet 之中。
 
-因为垃圾回收机制依赖引用计数，如果一个值的引用次数不为0，垃圾回收机制就不会释放这块内存。结束使用该值之后，有时会忘记取消引用，导致没存无法释放，进而可能会引发内存泄漏。WeakSet 里面的引用，都不计入垃圾回收机制，所以就不存在这个问题。因此，WeakSet 适合临时存放一组对象，以及存放跟对象绑定的信息。只要这些对象在外部消失，它在 WeakSet 里面的引用就会自动消失。 WeakSet内部有多少个成员，取决于垃圾回收机制有没有运行，运行前后很可能成员个数不一样，因此 WeakSet 不可遍历。
+因为垃圾回收机制依赖引用计数，如果一个值的引用次数不为 0，垃圾回收机制就不会释放这块内存。结束使用该值之后，有时会忘记取消引用，导致没存无法释放，进而可能会引发内存泄漏。WeakSet 里面的引用，都不计入垃圾回收机制，所以就不存在这个问题。因此，WeakSet 适合临时存放一组对象，以及存放跟对象绑定的信息。只要这些对象在外部消失，它在 WeakSet 里面的引用就会自动消失。 WeakSet 内部有多少个成员，取决于垃圾回收机制有没有运行，运行前后很可能成员个数不一样，因此 WeakSet 不可遍历。
 
 #### Map
 
@@ -401,9 +404,9 @@ if (Reflect.defineProperty()) {
 
 ### Promise 对象
 
-Promise是异步编程的一种解决方案，它有三种状态，pending（进行中），resolved（已完成），rejected（已失败）。
+Promise 是异步编程的一种解决方案，它有三种状态，pending（进行中），resolved（已完成），rejected（已失败）。
 
-当Promise的状态发生变化时会执行相应的方法，并且状态一旦改变，就无法再次改变状态。
+当 Promise 的状态发生变化时会执行相应的方法，并且状态一旦改变，就无法再次改变状态。
 
 ```javascript
 //实例化的promise对象会立即执行
@@ -426,7 +429,7 @@ function promise(){
 }
 ```
 
-`.then()`方法是promise原型链上的方法，它包含两个参数方法，分别是resolve和reject
+`.then()` 方法是 promise 原型链上的方法，它包含两个参数方法，分别是 resolve 和 reject
 
 ```javascript
 promise.then(
@@ -435,7 +438,7 @@ promise.then(
 )
 ```
 
-`.catch()`是捕获Promise错误，Promise的抛错具有冒泡性质，能够不断传递，所以建议不要使用then()的reject回调，而是统一使用catch()来处理错误
+`.catch()` 是捕获 Promise 错误，Promise 的抛错具有冒泡性质，能够不断传递，所以建议不要使用 then() 的 reject 回调，而是统一使用 catch() 来处理错误
 
 ```javascript
 promise.then(
@@ -446,19 +449,19 @@ promise.then(
 //catch()也可以抛出错误，抛出的错误会在下一个catch中捕获处理，因此可以再添加catch()
 ```
 
-#### Promise.resolve()和Promise.reject()
+#### Promise.resolve() 和 Promise.reject()
 
 Promise.resolve()：
 
-- 参数是Promise，原样返回
-- 参数带有then方法，转换为Promise后立即执行then方法
-- 参数不带then方法，不是对象或没有参数，返回resolve状态的Promise
+- 参数是 Promise，原样返回
+- 参数带有 then 方法，转换为 Promise 后立即执行 then 方法
+- 参数不带 then 方法，不是对象或没有参数，返回 resolve 状态的 Promise
 
-Promise.reject()：会直接返回rejected状态的promise
+Promise.reject()：会直接返回 rejected 状态的 promise
 
 #### Promise.all()
 
-参数为Promise对象数组，如果不是promise对象，会通过Promise.resolve()方法转换
+参数为 Promise 对象数组，如果不是 promise 对象，会通过 Promise.resolve() 方法转换
 
 ```javascript
 var promise = Promise.all([p1,p2,p3])
@@ -529,7 +532,7 @@ for(let x of Array.from(arrayLike)){
 
 `for .... in` 循环缺点：
 
-- 数组的键名是数字，但是 for....in 循环是以字符串作为键名0，1，2等。
+- 数组的键名是数字，但是 for....in 循环是以字符串作为键名 0，1，2 等。
 - for...in 循环不仅遍历数字键名，还会遍历手动添加的其他键，甚至包括原型链上的键。
 - 某些情况下，for....in 循环会以任意顺序遍历键名。
 - 主要是为了遍历对象而设计的，不使用遍历数组
@@ -573,9 +576,9 @@ b.next(12)	// {value:8,done:false}
 b.next(13)	// {value:42,done:true}
 ```
 
-当 next 不带参数时，导致 y 的值等于 `2 * undefined` 即 NaN，除以  3 以后还是 NaN，因此返回对象的 value 属性也等于 NaN。第三次运行 next 方法的时候不带参数，所以 Z 等于 undefined ，返回对象的 value 属性等于  `5 + NaN + undefined` 即 NaN。
+当 next 不带参数时，导致 y 的值等于 `2 * undefined` 即 NaN，除以 3 以后还是 NaN，因此返回对象的 value 属性也等于 NaN。第三次运行 next 方法的时候不带参数，所以 Z 等于 undefined ，返回对象的 value 属性等于 `5 + NaN + undefined` 即 NaN。
 
-如果 Next 方法提供参数，返回结果就完全不一样了，第一次调用 Next 返回 `x + 1` 的值 6，第二次调用 next 方法，将上一次 yield 表达式的值设为 12，因此 y 等于 24，返回 `y / 3` 的值，第三次调用  next  方法，将上一次 yield  表达式的值设为 13，因此 z 等于 13，此时，x 等于 5，y 等于 24，z 等于 13，所以 return 语句的值等于 42。
+如果 Next 方法提供参数，返回结果就完全不一样了，第一次调用 Next 返回 `x + 1` 的值 6，第二次调用 next 方法，将上一次 yield 表达式的值设为 12，因此 y 等于 24，返回 `y / 3` 的值，第三次调用 next 方法，将上一次 yield 表达式的值设为 13，因此 z 等于 13，此时，x 等于 5，y 等于 24，z 等于 13，所以 return 语句的值等于 42。
 
 第一次使用 next 方法是，传递参数无效，V8 引擎直接忽略第一次使用 next 方法时的参数
 
@@ -594,7 +597,7 @@ const as = async function(){
 
 async 返回 promise 对象，可以用 then 指定下一步操作。
 
-`for async (const x of items)`  遍历异步的接口，也可以遍历同步接口
+`for async (const x of items)` 遍历异步的接口，也可以遍历同步接口
 
 
 

@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2022-01-23 15:09
+title: Nginx.conf配置说明
+---
 ## Nginx 简介
 
 采用非阻塞异步的套接字，使用 epoll 方式实现事件驱动，同时采用 **一个 master + N 个 worker 进程（默认）的方式处理请求**
@@ -16,7 +21,7 @@ master 进程用于管理 worker 进程，例如接受外界信号、向 worker 
 - 响应数据
 - 断开连接
 
-每个 worker 进程都是平等的，它们都可以去监听套接字。Nginx 采用争抢 accept 互斥锁的方式，只有持有 accept 互斥锁的 worker 进程才有资格将连接请求接到自己的队列中并完成 TCP 连接的建立。只有 worker 进程当前建立的连接数小于 worker_connections 指定的值时（该值的7/8），才允许争抢互斥锁。除了繁忙程度限制资格，还有 epoll_wait 的 timeout 的指标，等待越久的 worker 进程争抢能力越强。**在某一时刻，一定只有一个 worker 进程监听并 accept 新的连接请求**。
+每个 worker 进程都是平等的，它们都可以去监听套接字。Nginx 采用争抢 accept 互斥锁的方式，只有持有 accept 互斥锁的 worker 进程才有资格将连接请求接到自己的队列中并完成 TCP 连接的建立。只有 worker 进程当前建立的连接数小于 worker_connections 指定的值时（该值的 7/8），才允许争抢互斥锁。除了繁忙程度限制资格，还有 epoll_wait 的 timeout 的指标，等待越久的 worker 进程争抢能力越强。**在某一时刻，一定只有一个 worker 进程监听并 accept 新的连接请求**。
 
 ## Nginx 模块及 HTTP 功能
 
@@ -54,7 +59,7 @@ worker_processes 的值和 work_connections 的值决定了最大并发数量。
 
 在反向代理场景中计算方式不同，因为 nginx 既要维持和客户端的连接，又要维持和后端服务的连接，因此处理一次连接要占用 2 个连接，所以最大的并发数计算方式为：`worker_processes * worker_connections / 2` ，还需注意，除了和客户端的连接，与后端服务器的连接，nginx 可能还会打开其他的连接，这些都会占用文件描述符，从而影响并发数量的计算，同时最大并发数量还受 **允许打开的最大文件描述符数量** 限制。
 
-在 main 段使用 worker_cpu_affinity 指令绑定 CPU 核心。nginx 通过位数识别 CPU 核心以及核心数，指定位数上占位符为 1 表示使用核心，为 0 表示不使用该核心。例如 2 核 CPU 的位数分别为 01 和 10，4核的位数分别为 1000，0100，0010，0001，8 核和 16 核 同理 例如：
+在 main 段使用 worker_cpu_affinity 指令绑定 CPU 核心。nginx 通过位数识别 CPU 核心以及核心数，指定位数上占位符为 1 表示使用核心，为 0 表示不使用该核心。例如 2 核 CPU 的位数分别为 01 和 10，4 核的位数分别为 1000，0100，0010，0001，8 核和 16 核 同理 例如：
 
 ```
 # 每个 worker 分别对应 cpu0/cpu1/cpu2/cpu3
@@ -66,7 +71,7 @@ worker_processes	2;
 worker_cpu_affinity 0101 1010
 ```
 
-#### http段
+#### http 段
 
 root 指令将匹配的 URI 追加在 root 路径后
 
@@ -85,7 +90,7 @@ location /i/ {
 }
 ```
 
-如果 alias 指令最后一部分包含了  URI 则最好使用 root 指令
+如果 alias 指令最后一部分包含了 URI 则最好使用 root 指令
 
 它们都能使用相对路径，相对的是 prefix，如 `root html` 是 `/usr/local/nginx/html`
 
@@ -101,13 +106,13 @@ server {
 RealPath: /usr/local/nginx-1.12.1/html
 ```
 
-server_name 指令可以定义多个主机名，第一个名字为虚拟主机的首要主机名。主机名可以含有`*`，以替代名字的开始部分或结尾部分（只能是起始或结尾，如果要实现中间部分的通配，可以使用正则表达式）。
+server_name 指令可以定义多个主机名，第一个名字为虚拟主机的首要主机名。主机名可以含有 `*`，以替代名字的开始部分或结尾部分（只能是起始或结尾，如果要实现中间部分的通配，可以使用正则表达式）。
 
 主机名使用正则表达式，就是在名字前面补个一个 `~` ：`server_name ~^www\d+\.example\.com$`
 
 server_name 允许定义一个空主机名，这种主机名可以让虚拟主机处理没有 `Host` 首部请求
 
-#### stub_status 指令获取nginx状态信息
+#### stub_status 指令获取 nginx 状态信息
 
 ngx_http_stub_status_module 提供的功能可以获取 nginx 运行的状态信息，对应的指令只有一个，即 stub_status ，例：
 
@@ -148,7 +153,7 @@ Reading: 6 Writing: 179 Waitng: 106
 
    ​	    requests 的数量为服务启动以来总的客户端请求数。一个连接可以有多个请求，所以可以计算出平均每个连接发出多少个请求
 
-3. 第四行     reading 数量为 6，表示 nginx 正在读取请求首部的数量，即正在从 socket rec buffer 中读取的数量
+3. 第四行 reading 数量为 6，表示 nginx 正在读取请求首部的数量，即正在从 socket rec buffer 中读取的数量
 
    ​		writing 数量为 179 表示 nginx 正在将响应数据写入 socket send buffer 以返回给客户端的连接数量
 

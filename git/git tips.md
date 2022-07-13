@@ -1,6 +1,11 @@
+---
+date created: 2021-11-30 21:22
+date modified: 2021-11-30 21:22
+title: git tips
+---
 1. auto correction in git
 
-自动修复错误的命令，git会选择运行第一个建议
+自动修复错误的命令，git 会选择运行第一个建议
 
 ```
 git config --global help.autocorrect 1
@@ -16,7 +21,7 @@ git rev-list --count {branch}
 
 3. optimize repo
 
-用于清理仓库中git无法访问或孤立的对象
+用于清理仓库中 git 无法访问或孤立的对象
 
 ```
 git gc --prune=now --aggressive
@@ -32,7 +37,7 @@ git ls-files --others --exclude-standard -z | xargs -0 tar  rvf ~/backup-untrack
 
 5. search in git
 
-在git中搜索
+在 git 中搜索
 
 ```
 git rev-list --all | xargs git grep -F 'xxx'

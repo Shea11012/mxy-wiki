@@ -1,4 +1,9 @@
-## UML类图
+---
+date created: 2021-11-07 13:16
+date modified: 2021-12-26 03:05
+title: UML类图
+---
+## UML 类图
 
 ```mermaid
 classDiagram
@@ -74,11 +79,11 @@ classDiagram
 
 可选的基数
 
-- 1：仅1个
+- 1：仅 1 个
 - 0 .. 1：0 或 1
 - 1 .. *：1 或 多
 - *：多
-- n：n个，n>1
+- n：n 个，n>1
 - 0 .. n：0 或 n
 
 语法：

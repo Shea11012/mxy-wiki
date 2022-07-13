@@ -1,12 +1,17 @@
+---
+date created: 2021-12-14 21:54
+date modified: 2022-03-09 19:02
+title: PromQL
+---
 ## 时间序列
 ### 样本（sample）
-Prometheus将采集到的样本数据以时间序列（time-series）方式保存在内存数据库中，并定时持久化到硬盘。
+Prometheus 将采集到的样本数据以时间序列（time-series）方式保存在内存数据库中，并定时持久化到硬盘。
 向量：时间序列按照时间戳和值的序列顺序存放。
 每条时间序列通过指标名称（metrics-name）和一组标签集（labelset）命名。
 样本由三部分组成：
-- 指标（metric）：mertic name 和描述当前样本特征的labelsets。
+- 指标（metric）：mertic name 和描述当前样本特征的 labelsets。
 - 时间戳（timestamp）：精确到毫秒的时间戳
-- 样本值（value）：float64的浮点型数据表示当前样本的值
+- 样本值（value）：float64 的浮点型数据表示当前样本的值
 
 ```
 <--------------- metric ---------------------><-timestamp -><-value->
@@ -26,7 +31,7 @@ api_http_requests_total{method="POST", handler="/messages"}
 
 
 ## Metrics 类型
-Prometheus定义了4中类型：
+Prometheus 定义了 4 中类型：
 - Counter（计数器）
 - Gauge（仪表盘）
 - Histogram（直方图）
@@ -54,7 +59,7 @@ delta(cpu_temp_celsius{host="zeus"}[2h]
 
 ### Histogram 和 Summary
 Histogram 和 Summary 主要用于统计和分析样本的分布情况
-对于分位数计算，Summary分位数是在客户端计算；Histogram在服务端计算
+对于分位数计算，Summary 分位数是在客户端计算；Histogram 在服务端计算
 
 ## 查询时间序列
 查询该指标下的所有时间序列

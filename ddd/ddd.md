@@ -1,3 +1,8 @@
+---
+date created: 2021-11-28 13:34
+date modified: 2022-03-09 19:00
+title: DDD
+---
 # DDD
 
 ## ValueObject

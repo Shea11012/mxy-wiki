@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: iptables 和 firewalld
+---
 ## iptables
 
 iptables 服务把用于处理或过滤流量的策略条目称为规则，多条规则可以组成一个规则链，规则链则依据数据包处理位置的不同进行分类：
@@ -29,7 +34,7 @@ iptables 服务把用于处理或过滤流量的策略条目称为规则，多�
 | -d          | 匹配目标地址                     |
 | -i 网卡名称 | 匹配从这块网卡流入的数据         |
 | -o 网卡名称 | 匹配从这块网卡流出的数据         |
-| -p          | 匹配协议，TCP、UDP、ICMP等       |
+| -p          | 匹配协议，TCP、UDP、ICMP 等       |
 | --dport num | 匹配目标端口号                   |
 | --sport num | 匹配来源端口号                   |
 

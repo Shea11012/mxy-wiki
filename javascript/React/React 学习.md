@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2022-03-09 19:09
+title: React 学习
+---
 ## 虚拟 DOM
 
 - **React 虚拟 DOM：**用 JS 对象来模拟页面上的 DOM 和 DOM 嵌套，为了实现页面中 DOM 元素的高效更新
@@ -18,7 +23,7 @@ import ReactDOM from 'react-dom' // 把创建好的组件和虚拟 DOM 放到页
 
 ## React 生命周期
 
-[React生命周期介绍](https://juejin.im/post/5c9b57d65188251d081cba4a)
+[React 生命周期介绍](https://juejin.im/post/5c9b57d65188251d081cba4a)
 
 #### mounting 组件的挂载
 
@@ -27,7 +32,7 @@ import ReactDOM from 'react-dom' // 把创建好的组件和虚拟 DOM 放到页
 - getDerivedStateFromProps 渲染前调用的最后一个方法，仅用于设置状态
   - 常见用法在 mount 期间，根据初始 props 返回状态对象
 - render 渲染
-- componentDidMount  第一次渲染组件之后，触发此方法
+- componentDidMount 第一次渲染组件之后，触发此方法
   - 加载数据在此处执行
   - 组件渲染完成可以访问 DOM 节点，添加事件侦听器
 

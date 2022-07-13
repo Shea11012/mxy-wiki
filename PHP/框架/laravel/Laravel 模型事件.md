@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: Laravel 模型事件
+---
 ## Eloquent 模型
 
 模型会触发事件（Event），可以对模型的生命周期多个时间点进行监控：

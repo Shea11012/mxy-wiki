@@ -1,3 +1,8 @@
+---
+date created: 2022-03-16 13:56
+date modified: 2022-03-16 13:57
+title: trie树
+---
 trie 树的简单实现
 ```go
 package main

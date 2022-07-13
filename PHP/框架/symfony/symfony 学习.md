@@ -1,10 +1,15 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: 路由
+---
 # 路由
 
 使用注解路由
 
 `composer require annotation`
 
-使用注解路由的控制器需要  `use Symfony\Component\Routing\Annotation\Route`
+使用注解路由的控制器需要 `use Symfony\Component\Routing\Annotation\Route`
 
 ```php
 /**
@@ -40,13 +45,13 @@ methods={"GET"}
 
 
 
-#### 模板的tag
+#### 模板的 tag
 
 `{% extend xxxx %}` 继承某个模板
 
 `{% block xxxx%}xxxx{% endblock %}` 继承的子模板可修改区域
 
-`{{ parent() }}` 从父模板中获取 block  的内容
+`{{ parent() }}` 从父模板中获取 block 的内容
 
 `{{ include() }}` 包含一个其他模板
 

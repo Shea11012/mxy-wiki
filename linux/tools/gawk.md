@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: gawk
+---
 ## gawk
 ```bash
 gawk options program file
@@ -12,7 +17,7 @@ gawk options program file
 
 gawk 数据字段变量：`$0` 代表整行，`$1 -$n` 代表文本行中的 n 个数据字段。每个数据字段都是通过**字段分隔符划分** 。gawk 默认字段分隔符是任意的空白字符
 
-在处理数据前运行脚本 `BEGIN`关键字，`gawk 'BEGIN {print "Hello World!"}'` 
+在处理数据前运行脚本 `BEGIN` 关键字，`gawk 'BEGIN {print "Hello World!"}'` 
 
 在处理数据后运行脚本 `END` 关键字
 

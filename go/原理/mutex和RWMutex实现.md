@@ -1,10 +1,15 @@
+---
+date created: 2022-03-26 14:50
+date modified: 2022-03-31 18:23
+title: mutex和RWMutex实现
+---
 ## Mutex
 锁易错场景：
 - Lock/Unlock 不是成对出现
-- copy 已使用的mutex
-> mutex是一个有状态的对象，state字段记录了锁的状态，如果是复制的，则会把state的状态也一并复制过去
+- copy 已使用的 mutex
+> mutex 是一个有状态的对象，state 字段记录了锁的状态，如果是复制的，则会把 state 的状态也一并复制过去
 - 重入
-> mutex 没有记录哪个goroutine拥有这把锁，任何goroutine都可以随意的Unlock这把锁，没有办法计算重入条件
+> mutex 没有记录哪个 goroutine 拥有这把锁，任何 goroutine 都可以随意的 Unlock 这把锁，没有办法计算重入条件
 - 死锁
 
 

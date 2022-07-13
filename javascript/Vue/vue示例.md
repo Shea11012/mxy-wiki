@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: vue示例
+---
 ### 在 vue 内创建一个弹窗
 
 ```js

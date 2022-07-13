@@ -1,8 +1,13 @@
+---
+date created: 2021-11-30 21:22
+date modified: 2022-03-05 14:15
+title: go plan9 汇编
+---
 ## Plan9
 
 Go 语言使用 plan9 汇编
 
-### 获取go的汇编方式
+### 获取 go 的汇编方式
 
 - `go tool compile -N -l -S xx.go`
 
@@ -19,7 +24,7 @@ Go 语言使用 plan9 汇编
 常量总是 64 位无符号整数
 
 ### 寄存器
-| AMD64  | GO汇编 |
+| AMD64  | GO 汇编 |
 | ------ | ------ |
 | rax    | AX     |
 | rbx    | BX     |
@@ -43,19 +48,19 @@ go 预定义了一些伪寄存器，这些伪寄存器适用所有的架构
 
 #### SB
 
-> 用户定义的符号都会按照偏移量写在 FP 和 SB中
+> 用户定义的符号都会按照偏移量写在 FP 和 SB 中
 >
 > SB 可以被看做是起始内存，foo(SB) foo 是一个内存地址中的别名。经常当做全局函数和变量。
 >
-> foo<>(SB) 使这个foo仅在当前的 source file 可见
+> foo<>(SB) 使这个 foo 仅在当前的 source file 可见
 >
-> foo+4(SB) 指从foo这个地址偏移4个字节
+> foo+4(SB) 指从 foo 这个地址偏移 4 个字节
 
 #### FP
 
 > FP 是一个虚拟的栈帧指针，用来引用函数参数
 >
-> 0(FP) 是函数的第一个参数，8(FP) 是函数的第二个参数( 64 bit 机器)
+> 0(FP) 是函数的第一个参数，8(FP) 是函数的第二个参数 ( 64 bit 机器)
 >
 > 如果这样调用 0(FP) 是会报错，它们需要一个具体的名字来使用 first_arg+0(FP) 表示第一个函数的地址。
 >
@@ -70,7 +75,7 @@ go 预定义了一些伪寄存器，这些伪寄存器适用所有的架构
 > - x-8(SP) 表示一个伪寄存器
 > - -8(SP) 实际寄存器
 >
-> 一般 SP 和 PC 都是一个物理寄存器的别名。在 go 汇编中区别对待了它们。go中使用需要一个 symbol，first_arg+0(FP)，而为了访问实际寄存器上的值，需要使用 R 。如 R13，R15
+> 一般 SP 和 PC 都是一个物理寄存器的别名。在 go 汇编中区别对待了它们。go 中使用需要一个 symbol，first_arg+0(FP)，而为了访问实际寄存器上的值，需要使用 R 。如 R13，R15
 
 #### TLS
 
@@ -96,7 +101,7 @@ TEXT runtime·profileloop(SB),NOSPLIT,$8
 
 如果没有 NOSPLIT 在 text 中，则参数大小必须指定
 
-符号名字使用 *·* 分隔组件和名字。如 `$runtime·profileloop1(SB)` 表示这个函数会调用来自runtime包的一个变量名为 profileloop 的变量
+符号名字使用 *·* 分隔组件和名字。如 `$runtime·profileloop1(SB)` 表示这个函数会调用来自 runtime 包的一个变量名为 profileloop 的变量
 
 #### DATA
 
@@ -122,7 +127,7 @@ runtime·tlsoffset，4 byte，不包含指针，隐式清零
 
 可能会有一个或者两个指令，如果有两个，第一个表示位掩码标记。
 
-它们的被定义在 `#include textflag.h`  中：
+它们的被定义在 `#include textflag.h` 中：
 
 - DUPOK = 2
 
@@ -134,7 +139,7 @@ runtime·tlsoffset，4 byte，不包含指针，隐式清零
 
 - RODATA = 8
 
-  > 针对 DATA 和 GLOBL。因为这个数据不包含指针所以不需要gc扫描
+  > 针对 DATA 和 GLOBL。因为这个数据不包含指针所以不需要 gc 扫描
 
 - WRAPPER = 32
 
@@ -154,7 +159,7 @@ runtime·tlsoffset，4 byte，不包含指针，隐式清零
 
 - NOFRAME = 512
 
-  > 针对 TEXT。不要插入指令去分配栈帧并保存/恢复返回地址。仅在函数声明了一个大小为0的栈帧。
+  > 针对 TEXT。不要插入指令去分配栈帧并保存/恢复返回地址。仅在函数声明了一个大小为 0 的栈帧。
 
 - TOPFRAME = 2048
 
@@ -181,11 +186,11 @@ runtime·tlsoffset，4 byte，不包含指针，隐式清零
 > - FUNCDATA_LocalsPointermaps 表示局部指针信息表
 > - FUNCDATA_InlTree 表示被内联展开的指针信息表
 >
-> FUNC表格，可以让Go的垃圾回收期跟踪全部指针的生命周期，同时根据指针指向的地址是否在被移动的栈范围来确定是否要进行指针移动
+> FUNC 表格，可以让 Go 的垃圾回收期跟踪全部指针的生命周期，同时根据指针指向的地址是否在被移动的栈范围来确定是否要进行指针移动
 
 ### interacting with Go Types and constants
 
-如果一个包有 `.s` 文件，则在编译时会直接调用 `go_asm.h` ，然后这个 `.s` 文件会被  `#include`
+如果一个包有 `.s` 文件，则在编译时会直接调用 `go_asm.h` ，然后这个 `.s` 文件会被 `#include`
 
 
 

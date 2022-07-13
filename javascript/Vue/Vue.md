@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2022-02-28 19:47
+title: Vue
+---
 
 
 ### v-on 事件修饰符
@@ -53,7 +58,7 @@
 
 v-for 循环现在 key 属性是必须，用来标识唯一身份
 
-### Vue watch computed  methods 区别
+### Vue watch computed methods 区别
 
 - watch 用来监听特定数据的变化，可以看做是 computed 和 methods 结合体
 - computed 属性的结果会被缓存，主要当做属性使用
@@ -116,7 +121,7 @@ inserted 操作 js 相关内容，这步已经渲染到 dom 中
 
 ### Vue 动画 transition
 
->动画6个时间点
+>动画 6 个时间点
 >
 >v-enter： 进入之前，元素的起始状态，动画未开始
 >
@@ -184,7 +189,7 @@ Vue 提供了 component 标签来展示对应名称的组件
 
 ##### 父子组件传值与调用
 
-> 父组件，在引用子组件时，通过 属性绑定 v-bind  把需要传递给子组件的数据，以属性绑定的形式，传递到子组件内部，给子组件使用
+> 父组件，在引用子组件时，通过 属性绑定 v-bind 把需要传递给子组件的数据，以属性绑定的形式，传递到子组件内部，给子组件使用
 
 ```
 <div id='app'>

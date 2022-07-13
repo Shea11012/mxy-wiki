@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: JWT 
+---
 JWT token 是一个字符串，有三部分组成，头部、载荷与签名，中间用 `.` 分隔
 
 ##### 头部（header）

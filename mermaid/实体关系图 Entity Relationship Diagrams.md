@@ -1,5 +1,7 @@
 ---
 date created: 2021-11-05 11:40
+date modified: 2021-11-07 13:16
+title: 实体关系图 Entity Relationship Diagrams
 ---
 
 ## 实体关系图 Entity Relationship Diagrams
@@ -28,9 +30,9 @@ erDiagram
 
 | Value left | value right | description |
 | ---------- | ----------- | ----------- |
-| \|o | o\| |0 或1 |
+| \|o | o\| |0 或 1 |
 | \|\| \|\| | 仅一个 |
-| )o | o( | 0个或多个 |
+| )o | o( | 0 个或多个 |
 | }\| \|{ | 一个或多个 |
 
 ```mermaid

@@ -1,16 +1,21 @@
-Pickle模块中最常用的的函数为：
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: 数据存储 pickle模块
+---
+Pickle 模块中最常用的的函数为：
 
-1. pickl.dump(obj,file,[protocol])：将obj对象序列化存入已经打开的file中
+1. pickl.dump(obj,file,[protocol])：将 obj 对象序列化存入已经打开的 file 中
 
-   - obj：想要序列化的obj对象
+   - obj：想要序列化的 obj 对象
    - file：文件名称
-   - protocol：序列化使用的协议。如果该项省略，则默认为0。如果为负值或HIGHEST_PROTOCOL，则使用最高的协议版本
-2. pickle.load(file)：将file中的对象序列化读出
+   - protocol：序列化使用的协议。如果该项省略，则默认为 0。如果为负值或 HIGHEST_PROTOCOL，则使用最高的协议版本
+2. pickle.load(file)：将 file 中的对象序列化读出
    -  file：文件名称
-3. pickle.dumps(obj,[protocol])：将obj对象序列化为string形式，而不是存入文件
-   -  obj：想要序列化的obj对象
-   -  protocol：序列化使用的协议。如果该项省略，则默认为0。如果为负值或HIGHEST_PROTOCOL，则使用最高的协议版本
-4. pickle.loads(string)：从string中读出序列化前的obj对象
+3. pickle.dumps(obj,[protocol])：将 obj 对象序列化为 string 形式，而不是存入文件
+   -  obj：想要序列化的 obj 对象
+   -  protocol：序列化使用的协议。如果该项省略，则默认为 0。如果为负值或 HIGHEST_PROTOCOL，则使用最高的协议版本
+4. pickle.loads(string)：从 string 中读出序列化前的 obj 对象
    - string：文件名称
 
 ```python

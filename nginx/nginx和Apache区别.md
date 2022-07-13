@@ -1,9 +1,14 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: nginx和Apache区别
+---
 ### Apache 和 Nginx 功能比较
 
 - 在功能实现上，Apache 的所有模块都支持动、静态编译，而 Nginx 模块支持静态编译
 - 对 FastCGI 的支持，Apache 对 FastCGI 的支持不好，而 Nginx 对 FastCGI 的支持非常好
-- 在处理连接方式上，Nginx的 epoll 模型对静态请求的处理有很高的性能，而 Apache 的 select 模型对动态请求有较好的支持
-- 在空间使用上，Nginx 安装包只有几百K，Apache则要大很多。
+- 在处理连接方式上，Nginx 的 epoll 模型对静态请求的处理有很高的性能，而 Apache 的 select 模型对动态请求有较好的支持
+- 在空间使用上，Nginx 安装包只有几百 K，Apache 则要大很多。
 
 ### Nginx 相对 Apache 的优点
 
@@ -53,11 +58,11 @@ MPM（Multi-Processing Modules，多重处理模块）是 Apache 的核心组件
 
 ### Apache 运行
 
-在启动阶段，Apache 主要进行配置文件解析（http.conf以及 include）、模块加载（mod_php.so）和系统资源初始化（日志文件、共享内存段）。在这个阶段，Apache 为了获得系统最大的使用权限，将以超级管理员用户完成启动。
+在启动阶段，Apache 主要进行配置文件解析（http.conf 以及 include）、模块加载（mod_php.so）和系统资源初始化（日志文件、共享内存段）。在这个阶段，Apache 为了获得系统最大的使用权限，将以超级管理员用户完成启动。
 
 ![1555267223450](assets/1555267223450.png)
 
-Apache将请求处理循环分为11个阶段，依次是：Post-Read-Request，URI Translation，Header Parsing，Access Control，Authentication，Authorization，MIME Type Checking，FixUp，Response，Logging，CleanUp
+Apache 将请求处理循环分为 11 个阶段，依次是：Post-Read-Request，URI Translation，Header Parsing，Access Control，Authentication，Authorization，MIME Type Checking，FixUp，Response，Logging，CleanUp
 
 
 

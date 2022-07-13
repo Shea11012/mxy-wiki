@@ -1,4 +1,9 @@
-defer 会在当前函数返回前执行传入的函数，经常被用于关闭文件描述符、关闭数据库以及解锁资源、捕获panic
+---
+date created: 2022-03-31 23:30
+date modified: 2022-04-05 04:24
+title: defer实现
+---
+defer 会在当前函数返回前执行传入的函数，经常被用于关闭文件描述符、关闭数据库以及解锁资源、捕获 panic
 
 defer 会对函数参数进行预计算，即如果函数参数是一个表达式会立即求值并进行参数拷贝
 
@@ -33,7 +38,7 @@ type _defer struct {
 ```
 
 ## 执行方式
-defer有三种执行方式：
+defer 有三种执行方式：
 - 堆分配
 - 栈分配
 - 开放编码
@@ -42,19 +47,19 @@ defer有三种执行方式：
 
 
 ### 栈分配
-当defer关键字在函数体中最多执行一次时，编译期间会将结构体分配到栈上调用
+当 defer 关键字在函数体中最多执行一次时，编译期间会将结构体分配到栈上调用
 
 ### 开放编码
-使用代码内联优化defer关键字，并引入函数数据funcdata管理panic调用
+使用代码内联优化 defer 关键字，并引入函数数据 funcdata 管理 panic 调用
 
-如果defer关键字的执行可以在编译期间确定，会在函数返回前直接插入相应的代码
+如果 defer 关键字的执行可以在编译期间确定，会在函数返回前直接插入相应的代码
 
-通过使用 `deferbits` 延迟比特判断条件分支是否执行。延迟比特为8个bit，所以最多只能优化8个defer
+通过使用 `deferbits` 延迟比特判断条件分支是否执行。延迟比特为 8 个 bit，所以最多只能优化 8 个 defer
 
 满足开放编码的条件：
-- 函数的defer数量<=8
-- 函数的defer关键字不能在循环中执行
-- 函数的return语句与defer语句的乘积<=5
+- 函数的 defer 数量<=8
+- 函数的 defer 关键字不能在循环中执行
+- 函数的 return 语句与 defer 语句的乘积<=5
 
 refs:
 - [理解 Go 语言 defer 关键字的原理 | Go 语言设计与实现 (draveness.me)](https://draveness.me/golang/docs/part2-foundation/ch05-keyword/golang-defer/)

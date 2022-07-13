@@ -1,6 +1,11 @@
+---
+date created: 2021-11-30 21:22
+date modified: 2022-03-24 12:39
+title: go包管理
+---
 go module 生成的目录下会出现两个文件
 
-- `go.mod` 声明模块名称、go的版本、该模块的依赖信息
+- `go.mod` 声明模块名称、go 的版本、该模块的依赖信息
 - `go.sum` 该模块的所有依赖项的校验和。go 在编译前会下载并检查校验和，如果不一致将会拒绝编译。
 
 go module 相关的环境变量
@@ -13,7 +18,7 @@ GONOPROXY="XXX"
 GONOSUNDB="XXX"
 ```
 
-- `GOPROXY` 指示镜像递增和获取顺序，每个镜像URL之间用 `,` 分隔，按照优先顺序排列。direct 表示源站。
+- `GOPROXY` 指示镜像递增和获取顺序，每个镜像 URL 之间用 `,` 分隔，按照优先顺序排列。direct 表示源站。
   - `GOPROXY=off` 表示禁止从互联网下载任何依赖
   - `GOPROXY=direct` 表示依赖一律从源站下载
 - `GOSUMDB` 指示校验和服务器的地址和公钥，对于地址 `sum.golang.org`，公钥可以省略（内置）
@@ -41,13 +46,13 @@ go 使用协议约定的格式获取模块信息，并缓存到 **GOPATH/pkg/mod
    >
    > {“Version”:”v1.1.1”,”Time”:”2019-02-27T21:05:49Z”}
 
-3. 获取go.mod文件
+3. 获取 go.mod 文件
 
-   > 响应 GET $GOPROXY/<module>/@v/<version>.md 请求，返回当前代理服务器特定版本模块的go.mod 文件
+   > 响应 GET $GOPROXY/<module>/@v/<version>.md 请求，返回当前代理服务器特定版本模块的 go.mod 文件
    >
    > 如：curl https://proxy.golang.org/github.com/google/uuid/@v/v1.1.1.mod
    >
-   > module github.com/google/uuid # 该模块如果无依赖，则只会包含一个module名称
+   > module github.com/google/uuid # 该模块如果无依赖，则只会包含一个 module 名称
 
 4. 获取代码压缩包
 
@@ -61,7 +66,7 @@ go 使用协议约定的格式获取模块信息，并缓存到 **GOPATH/pkg/mod
    >
    > go 命令获取模块最新的可用版本，通常是通过 $GOPROXY/<module>/@v/list 获取版本列表，计算出最新的版本。
    >
-   > 只有当list不可用时，才会使用 latest
+   > 只有当 list 不可用时，才会使用 latest
    >
    > **所以这是代理服务器唯一的可选协议**
 
@@ -73,24 +78,24 @@ go 使用协议约定的格式获取模块信息，并缓存到 **GOPATH/pkg/mod
 
 GOSUMDB 用于 go 命令校验模块时应该信赖哪个数据库。
 
-完整的GOSUMDB配置
+完整的 GOSUMDB 配置
 
 > GOSUMDB=“<checksum database name>+<public key><checksum database service url>”
 >
-> 其中数据库名字和公钥必须指定，校验和数据库服务url则是可以选的，默认是 https://<checksum database name>
+> 其中数据库名字和公钥必须指定，校验和数据库服务 url 则是可以选的，默认是 https://<checksum database name>
 
 **GOSUMDB 不能确保模块是否包含恶意代码，只能保证构建的一致性**
 
-> go 命令会通过 https://<checksum database service url>/lookup/<module>@<version> 来查询特定模块版本的hash值
+> go 命令会通过 https://<checksum database service url>/lookup/<module>@<version> 来查询特定模块版本的 hash 值
 >
-> 校验和数据库通过存储hash值，给特定的模块版本提供了公证服务
+> 校验和数据库通过存储 hash 值，给特定的模块版本提供了公证服务
 
 ##### 校验流程
 
-1. 模块被下载后，go命令会对下载的模块做hash运算，然后与校验和数据库中的数据进行对比，依此确保下载的模块是否合法
-2. 模块hash被写入到go.sum 文件之前，对缓存在本地的模块做hash运算，与校验和数据库中的进行对比，确保本地的模块没有被篡改
+1. 模块被下载后，go 命令会对下载的模块做 hash 运算，然后与校验和数据库中的数据进行对比，依此确保下载的模块是否合法
+2. 模块 hash 被写入到 go.sum 文件之前，对缓存在本地的模块做 hash 运算，与校验和数据库中的进行对比，确保本地的模块没有被篡改
 
-**如果校验某模块时，校验和数据库没有收录该模块，则会先拉取该模块版本，计算hash，存入数据库中。因此官方的校验和数据库只能收录公开的模块。**
+**如果校验某模块时，校验和数据库没有收录该模块，则会先拉取该模块版本，计算 hash，存入数据库中。因此官方的校验和数据库只能收录公开的模块。**
 
 ##### 校验和数据库代理
 
@@ -153,7 +158,7 @@ go 包管理工具：
 
 使用 go 提供的一个指令 `//go:linkname localname importpath.name`，这个指令为函数或者变量 `localname` 使用 `importpath` 作为目标文件的符号名。**因为这个指令破坏了类型系统和包的模块化，所以它只能在 `import unsafe` 的情况下才能使用**
 
-`importpath.name`格式：`/a/b/c/d/pkg.foo` ，此时在 `/a/b/c/d/pkg` 包中就可以使用这个函数 `foo`
+`importpath.name` 格式：`/a/b/c/d/pkg.foo` ，此时在 `/a/b/c/d/pkg` 包中就可以使用这个函数 `foo`
 
 
 

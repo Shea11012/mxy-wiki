@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: controller和model优化
+---
 对于中大型项目的 controller 和 model 的优化
 
 使用 service 将外部行为注入到 service，在 service 使用外部行为，将 service 注入到 controller

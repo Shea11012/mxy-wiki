@@ -1,11 +1,16 @@
+---
+date created: 2021-11-30 21:22
+date modified: 2021-11-30 21:22
+title: 会话
+---
 # 会话
 
 | 命令行                   | 说明                         |
 | ------------------------ | ---------------------------- |
-| tmux new -s xxx          | 新建一个名称为xxx的会话      |
+| tmux new -s xxx          | 新建一个名称为 xxx 的会话      |
 | tmux detach              | 断开当前会话                 |
-| tmux a -t xxx            | 进入到名称为xxx的会话        |
-| tmux kill-session -t xxx | 关闭xxx会话                  |
+| tmux a -t xxx            | 进入到名称为 xxx 的会话        |
+| tmux kill-session -t xxx | 关闭 xxx 会话                  |
 | tmux kill-server         | 关闭服务器，所有会话都会关闭 |
 | tmux ls                  | 查看所有会话                 |
 

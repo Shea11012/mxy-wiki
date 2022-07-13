@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: Redux
+---
 [redux 文档](https://redux.js.org/)
 
 创建一个 store，store 管理全局的 state

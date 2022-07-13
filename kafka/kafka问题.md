@@ -1,4 +1,9 @@
-### 从宿主机连接访问容器内的kafka
+---
+date created: 2021-12-03 20:20
+date modified: 2022-03-09 19:03
+title: kafka问题
+---
+### 从宿主机连接访问容器内的 kafka
 
 docker compose file 文件配置
 

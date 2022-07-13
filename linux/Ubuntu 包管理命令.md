@@ -1,8 +1,13 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: Ubuntu 包管理命令
+---
 ### Ubuntu 软件安装方法
 
 1. apt 方式
    1. 普通安装：apt-get install softname1 softname2 ....
-   2. 修复安装：apt-get -f install  softname1 softname2 ....
+   2. 修复安装：apt-get -f install softname1 softname2 ....
    3. 重新安装：apt-get -reinstall install softname1 softname2 ...
 2. Dpkg 方式
    1. dpkg -i package_name.deb

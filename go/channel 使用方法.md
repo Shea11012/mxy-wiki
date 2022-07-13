@@ -1,3 +1,8 @@
+---
+date created: 2021-11-30 21:22
+date modified: 2022-03-26 14:49
+title: channel
+---
 # channel
 
 ```go
@@ -15,13 +20,13 @@ c <- "a" // panic
 
 - 管道无缓冲区
 - 管道的缓冲区中无数据
-- 管道的值为nil
+- 管道的值为 nil
 
 写入管道时，阻塞条件：
 
 - 管道无缓冲区
 - 管道的缓冲区已满
-- 管道的值为nil
+- 管道的值为 nil
 
 ### done channel
 

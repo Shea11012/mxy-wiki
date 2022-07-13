@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: IOC容器理解
+---
 依赖实例
 
 ```php

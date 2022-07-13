@@ -1,7 +1,9 @@
 ---
 tags: ["linux","ssh"]
+date created: 2021-06-07 23:50
+date modified: 2022-05-07 14:03
+title: ssh
 ---
-#linux #ssh
 
 ## 管理多个私钥 免密登录
 

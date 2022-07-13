@@ -2,6 +2,9 @@
 
 kanban-plugin: basic
 
+date created: 2021-11-28 22:00
+date modified: 2021-12-03 20:25
+title: todo
 ---
 
 ## todo
@@ -12,7 +15,7 @@ kanban-plugin: basic
 
 ## done
 
-- [ ] 学习gdb,dlv
+- [ ] 学习 gdb,dlv
 
 
 

@@ -1,4 +1,9 @@
-### 配置多账号git
+---
+date created: 2021-11-30 21:22
+date modified: 2021-11-30 21:22
+title: 配置多账号git
+---
+### 配置多账号 git
 
 1. `git config --global user.name` 和 `git config --global user.email` 不能存在值，若存在
 
@@ -31,7 +36,7 @@ IdentityFile ~/.ssh/gitlab_id_rsa
 
 4. 配置完将 `xx_id_rsa.pub` 公钥复制到对应的网站即可，随后测试 `ssh -T git@github.com`
 
-#### 让git 的 ssh 协议走socks5代理
+#### 让 git 的 ssh 协议走 socks5 代理
 
 > 首先下载 connect ，可以使用 scoop 下载
 >

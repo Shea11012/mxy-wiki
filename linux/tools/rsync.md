@@ -1,7 +1,9 @@
 ---
 tags: ["linux","rsync"]
+date created: 2021-06-07 23:12
+date modified: 2022-04-16 00:18
+title: rsync
 ---
-#linux #rsync
 
 ## rsync
 ```bash

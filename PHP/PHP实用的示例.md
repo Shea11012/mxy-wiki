@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: PHP实用的示例
+---
 计算还差多少天过生日
 
 ```php

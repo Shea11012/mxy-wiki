@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: CSS 技巧
+---
 ### CSS 三大特性
 
 层叠性，继承性，优先级，特殊性
@@ -47,7 +52,7 @@ float 默认让元素转化为行内块
 
 
 
-### 定位position
+### 定位 position
 
 静态定位（static）：作用取消定位 `position：static`
 
@@ -290,7 +295,7 @@ text-overflow:ellipsis;	// 超出的内容显示省略号
 
 **原理：**
 
-先设置背景图为渐变色，然后通过 `backgroun-clip` 属性将文字之外的区域都裁剪掉，最后通过 `color:transparent`  将文字设置为透明色，将后面的背景色显示出来
+先设置背景图为渐变色，然后通过 `backgroun-clip` 属性将文字之外的区域都裁剪掉，最后通过 `color:transparent` 将文字设置为透明色，将后面的背景色显示出来
 
 2. 
 

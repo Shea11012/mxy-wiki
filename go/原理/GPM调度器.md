@@ -1,46 +1,51 @@
+---
+date created: 2022-02-28 19:47
+date modified: 2022-03-28 13:24
+title: GPM调度器
+---
 ## Goroutine & Scheduler
 ### 操作系统三种线程模型：
 #### 内核级线程模型
-此模型下线程的切换调度由系统内核完成，系统内核负责将多个线程执行的任务映射到各个cpu中执行，直接使用操作系统内核来创建、销毁、切换和调度，对性能影响很大。
+此模型下线程的切换调度由系统内核完成，系统内核负责将多个线程执行的任务映射到各个 cpu 中执行，直接使用操作系统内核来创建、销毁、切换和调度，对性能影响很大。
 #### 用户级线程模型
-多个用户线程一般从属于单个进程且多线程的调度是由用户自己完成的。这种实现方式相比内核线程很轻量，对系统资源的消耗很小，上下文切换代价也很小。但是并不能真正意义上做到并发，如果进程内的某个线程发生阻塞调用从而被CPU调度，会导致整个进程被挂起。
+多个用户线程一般从属于单个进程且多线程的调度是由用户自己完成的。这种实现方式相比内核线程很轻量，对系统资源的消耗很小，上下文切换代价也很小。但是并不能真正意义上做到并发，如果进程内的某个线程发生阻塞调用从而被 CPU 调度，会导致整个进程被挂起。
 #### 混合线程模型
-一个进程可以与多个内核线程KSE（kernel schedule entity）关联。进程里的线程并不与KSE唯一绑定，而是多个用户线程映射到同一个KSE，当某个KSE因为其绑定的线程阻塞操作被内核调度出CPU时，其关联的进程中其余用户线程可以重新与其它KSE绑定运行。
-goroutine和 go scheduler 在底层实现上是属于混合线程模型
+一个进程可以与多个内核线程 KSE（kernel schedule entity）关联。进程里的线程并不与 KSE 唯一绑定，而是多个用户线程映射到同一个 KSE，当某个 KSE 因为其绑定的线程阻塞操作被内核调度出 CPU 时，其关联的进程中其余用户线程可以重新与其它 KSE 绑定运行。
+goroutine 和 go scheduler 在底层实现上是属于混合线程模型
 
 ## GPM 模型
-每个OS线程的大小根据操作系统的不同大约在1~8MB，这对于goroutine来说很大。
-在Go中，每一个goroutine的初始大小为2kb，采取动态扩容的方式，随着任务执行按需增长，且完全由 Go Scheduler 调度。
+每个 OS 线程的大小根据操作系统的不同大约在 1~8MB，这对于 goroutine 来说很大。
+在 Go 中，每一个 goroutine 的初始大小为 2kb，采取动态扩容的方式，随着任务执行按需增长，且完全由 Go Scheduler 调度。
 ### G
-表示goroutine，每个goroutine对应一个G结构体，G存储的Goroutine的运行堆栈、状态以及任务函数，可重用。G并非执行体，每个G需要绑定到P才能调度执行。
+表示 goroutine，每个 goroutine 对应一个 G 结构体，G 存储的 Goroutine 的运行堆栈、状态以及任务函数，可重用。G 并非执行体，每个 G 需要绑定到 P 才能调度执行。
 ### P
-表示逻辑处理器（Processor），对G来说，P相当于CPU，G只有绑定到P（P的local runq中）才能被调度。对M来说，P提供了相关的执行环境。P的数量决定了系统内最大可并行的G数量，P的数量由GOMAXPROCS决定，但P的最大数量为256.
+表示逻辑处理器（Processor），对 G 来说，P 相当于 CPU，G 只有绑定到 P（P 的 local runq 中）才能被调度。对 M 来说，P 提供了相关的执行环境。P 的数量决定了系统内最大可并行的 G 数量，P 的数量由 GOMAXPROCS 决定，但 P 的最大数量为 256.
 
 ### M
-OS线程抽象，表示真正的执行计算资源，在绑定有效的P后，进入schedule循环。
-schedule循环机制大致是从Global队列、P的local队列以及wait队列中获取G，切换到G的执行栈上并执行G的函数，调用goexit做清理工作并回到M，如此反复。M并不保留G状态，M的数量是不确定的，由Go runtime调整，M的最大数量为 10000 个。
+OS 线程抽象，表示真正的执行计算资源，在绑定有效的 P 后，进入 schedule 循环。
+schedule 循环机制大致是从 Global 队列、P 的 local 队列以及 wait 队列中获取 G，切换到 G 的执行栈上并执行 G 的函数，调用 goexit 做清理工作并回到 M，如此反复。M 并不保留 G 状态，M 的数量是不确定的，由 Go runtime 调整，M 的最大数量为 10000 个。
 
 ![[Pasted image 20220326150634.png]]
 
 ## 调度时机
-### 使用go关键字
-使用关键字go，一旦一个新的协程创建，会给调度器一个机会去执行调度
+### 使用 go 关键字
+使用关键字 go，一旦一个新的协程创建，会给调度器一个机会去执行调度
 
 ### GC
-因为GC时会运行一组自己的goroutines，这些goroutines需要时间去M上运行。这时调度器会做出调度
+因为 GC 时会运行一组自己的 goroutines，这些 goroutines 需要时间去 M 上运行。这时调度器会做出调度
 
 ### system calls
-如果一个goroutine发生系统调用将导致M阻塞，此时调度器会将goroutine解绑换一个新的goroutine到M上执行
+如果一个 goroutine 发生系统调用将导致 M 阻塞，此时调度器会将 goroutine 解绑换一个新的 goroutine 到 M 上执行
 
 ### 同步和编排
-如果一个atomic、mutex、channel导致goroutine阻塞，调度器会切换一个新的goroutine去运行。一旦可运行了就会重新入队等待被执行。
+如果一个 atomic、mutex、channel 导致 goroutine 阻塞，调度器会切换一个新的 goroutine 去运行。一旦可运行了就会重新入队等待被执行。
 
 ### 系统监控
-go程序启动时会有一个 sysmon 线程进行监控（定期垃圾回收和调度）
+go 程序启动时会有一个 sysmon 线程进行监控（定期垃圾回收和调度）
 
 
-## go进程启动
-go中的入口函数在 `asm_amd64.s` 中定义，main包中的main函数是由`runtime.main` 启动的
+## go 进程启动
+go 中的入口函数在 `asm_amd64.s` 中定义，main 包中的 main 函数是由 `runtime.main` 启动的
 runtime/asm_amd64.s
 ```s
 // runtime·rt0_go
@@ -90,28 +95,28 @@ RET
 
 ```
 主要分为四步：
-1. 调用`runtime.osinit` 获取系统的CPU个数
-2. 调用`runtime.schedinit` 初始化调度系统，进行p的初始化
-3. `runtime.newproc`新建一个goroutine，参数fn为`runtime.main`,建好后插入m0绑定的p的本地队列中
-4. `runtime.mstart` 启动m，进入调度系统
+1. 调用 `runtime.osinit` 获取系统的 CPU 个数
+2. 调用 `runtime.schedinit` 初始化调度系统，进行 p 的初始化
+3. `runtime.newproc` 新建一个 goroutine，参数 fn 为 `runtime.main`,建好后插入 m0 绑定的 p 的本地队列中
+4. `runtime.mstart` 启动 m，进入调度系统
 
 ### mstart
 `runtime.mstart` 由两个子函数组成：
 - `runtime.mstart0`: 初始化栈边界
 - `runtime.mstart1`: 初始化信号，并执行 `runtime.main` 
 
-### getg函数
-getg 返回只想当前的g的指针，由汇编指令实现（可能来自TLS或专用寄存器）。
-获取当前用户堆栈的g，使用 `getg().m.curg`。当在系统或信号堆栈上执行时，则分别返回当前m的g0或gsignal。要确定g是在用户堆栈或是系统堆栈上，可以使用 `getg() == getg().m.curg`,相等表示在用户态堆栈，不想等表示在系统堆栈。
+### getg 函数
+getg 返回只想当前的 g 的指针，由汇编指令实现（可能来自 TLS 或专用寄存器）。
+获取当前用户堆栈的 g，使用 `getg().m.curg`。当在系统或信号堆栈上执行时，则分别返回当前 m 的 g0 或 gsignal。要确定 g 是在用户堆栈或是系统堆栈上，可以使用 `getg() == getg().m.curg`,相等表示在用户态堆栈，不想等表示在系统堆栈。
 
 ### g0 和 m0
 #### m0
-- m0 表示进程启动的第一个线程，它是通过汇编直接复制给m0
-- 其他的m都是runtime内创建的
-- 一个go进程只有一个m0
+- m0 表示进程启动的第一个线程，它是通过汇编直接复制给 m0
+- 其他的 m 都是 runtime 内创建的
+- 一个 go 进程只有一个 m0
 
 #### g0
-每个m都有一个g0，因为每个线程都有一个系统堆栈，g0与其它g的区别在栈的差别。g0是系统分配的栈，在Linux上默认大小为8MB，不能扩展也不能缩小。而其余的g一开始大小只有2KB。g0上没有任务函数也没有状态，并且不能被调度程序抢占。因为调度就是运行在g0上的
+每个 m 都有一个 g0，因为每个线程都有一个系统堆栈，g0 与其它 g 的区别在栈的差别。g0 是系统分配的栈，在 Linux 上默认大小为 8MB，不能扩展也不能缩小。而其余的 g 一开始大小只有 2KB。g0 上没有任务函数也没有状态，并且不能被调度程序抢占。因为调度就是运行在 g0 上的
 
 ```go
 // runtime/proc.go
@@ -120,8 +125,8 @@ var (
 	g0           g
 )
 ```
-全局变量上的m0代表主线程，g0代表主线程的堆栈
-### schedule函数
+全局变量上的 m0 代表主线程，g0 代表主线程的堆栈
+### schedule 函数
 ```go
 // runtime/proc.go
 
@@ -144,12 +149,12 @@ if gp == nil {
 
 execute(gp, inheritTime)
 ```
-调度器查找g的流程如下：
-1. 每隔61次调度从全局队列中找，避免全局队列G饿死
-2. 从p.runnext获取g，从p的本地队获取
-3. 调用 `findrunnable` 找g，找不到的话就将m休眠，等待唤醒
+调度器查找 g 的流程如下：
+1. 每隔 61 次调度从全局队列中找，避免全局队列 G 饿死
+2. 从 p.runnext 获取 g，从 p 的本地队获取
+3. 调用 `findrunnable` 找 g，找不到的话就将 m 休眠，等待唤醒
 
-找到一个g后，就会调用 `execute` 去执行g
+找到一个 g 后，就会调用 `execute` 去执行 g
 
 ### runtime.main 函数执行
 ```go
@@ -181,20 +186,20 @@ fn := main_main // make an indirect call, as the linker doesn't know the address
 fn()
 ```
 
-### G的创建
+### G 的创建
 ```go
 go func(){}()
 ```
 
-g一旦被创建就被保存进 `allgs` 全局变量中，且不会被销毁
-g的创建调用了 `runtime.newproc`,具体流程如下：
-1. 用 `systemstack` 切换到系统堆栈，调用 `newproc1` 获取g
-2. 尝试从 p 的本地空闲链表和全局空闲链表中找到一个g的实例
-3. 如果未找到，则调用 `malg` 生成新的g实例，且分配g的栈和设置栈边界，在添加到 `allgs` 中
-4. 保存g切换的上下文
-5. 生成唯一的gid
-6. 调用 `runqput` 将g插入队列中，如果本地队列还有剩余位置，将G插入本地队列，否则插入全局队列
-7. 如果有空闲的 p 且 m 没有处于自旋且 `main goroutine` 已经启动，则唤醒或新建一个m来执行任务
+g 一旦被创建就被保存进 `allgs` 全局变量中，且不会被销毁
+g 的创建调用了 `runtime.newproc`,具体流程如下：
+1. 用 `systemstack` 切换到系统堆栈，调用 `newproc1` 获取 g
+2. 尝试从 p 的本地空闲链表和全局空闲链表中找到一个 g 的实例
+3. 如果未找到，则调用 `malg` 生成新的 g 实例，且分配 g 的栈和设置栈边界，在添加到 `allgs` 中
+4. 保存 g 切换的上下文
+5. 生成唯一的 gid
+6. 调用 `runqput` 将 g 插入队列中，如果本地队列还有剩余位置，将 G 插入本地队列，否则插入全局队列
+7. 如果有空闲的 p 且 m 没有处于自旋且 `main goroutine` 已经启动，则唤醒或新建一个 m 来执行任务
 
 ```go
 // runtime/proc.go
@@ -311,10 +316,10 @@ func newproc1(fn *funcval, callergp *g, callerpc uintptr) *g {
 }
 ```
 
-## P的创建
-p的初始化是在 `schedinit` 函数中调用的，最终调用 `procresize` 实现。P的数量默认等于系统的CPU数。所有的P在程序启动时就已经创建完毕，并用一个全局变量 `allp` 维护
-## M的创建
-通过 `newm` 来新建M，最终通过 `newosproc` 函数来实现新建线程
+## P 的创建
+p 的初始化是在 `schedinit` 函数中调用的，最终调用 `procresize` 实现。P 的数量默认等于系统的 CPU 数。所有的 P 在程序启动时就已经创建完毕，并用一个全局变量 `allp` 维护
+## M 的创建
+通过 `newm` 来新建 M，最终通过 `newosproc` 函数来实现新建线程
 ```go
 // runtime/proc.go
 
@@ -341,16 +346,16 @@ func newm1(mp *m) {
 }
 ```
 
-M是真正的执行者，它负责整个调度工作，调度的本质就是查找可以运行的G，然后去执行G上的任务函数。可以理解为M循环执行着 `schedule` 函数，schedule 中 `findrunable` 函数执行流程：
-1. 调用runqget，尝试从p本地队列获取G，获取到就返回
-2. 调用 globalrunqget，尝试从全局队列获取G，获取到就返回
-3. 从网络轮询器中找到就绪的G，把这个G变为可运行的G并返回
-4. 如果不是所有的P都是空闲，随机选一个P（最多四次），尝试从这个P中偷去一些G，获取到就返回
-5. 上面都找不到G，判断此时P是否处于GC mark阶段，是则可以进行扫描和标记对象
-6. 再次从全局队列中获取G
-7. 再次检查所有P，查看有没有可运行的G
+M 是真正的执行者，它负责整个调度工作，调度的本质就是查找可以运行的 G，然后去执行 G 上的任务函数。可以理解为 M 循环执行着 `schedule` 函数，schedule 中 `findrunable` 函数执行流程：
+1. 调用 runqget，尝试从 p 本地队列获取 G，获取到就返回
+2. 调用 globalrunqget，尝试从全局队列获取 G，获取到就返回
+3. 从网络轮询器中找到就绪的 G，把这个 G 变为可运行的 G 并返回
+4. 如果不是所有的 P 都是空闲，随机选一个 P（最多四次），尝试从这个 P 中偷去一些 G，获取到就返回
+5. 上面都找不到 G，判断此时 P 是否处于 GC mark 阶段，是则可以进行扫描和标记对象
+6. 再次从全局队列中获取 G
+7. 再次检查所有 P，查看有没有可运行的 G
 8. 再次检查网络轮询器
-9. 实在找不到可运行的G，进入休眠 `stopm`
+9. 实在找不到可运行的 G，进入休眠 `stopm`
 
 ```go
 // Finds a runnable goroutine to execute.
@@ -738,7 +743,7 @@ func retake(now int64) uint32 {
 }
 ```
 
-`retake` 函数会遍历所有的P，如果一个P处于 running 或 syscall 状态且运行时间超过了10ms，调用 `preemptone` 设置p的 `gp.stackguard0=stackPreempt` 和 `gp.preempt = true` （导致该P正在执行的G进行下一次函数调用时栈空间检查失败，触发morestack然后进行一系列的系统调用，最终调用 `goschedImpl` 解除P与当前M的关联，让该G进入 \_Grunnable 状态，插入全局队列），处于阻塞状态调用 `handoff` 检查该P下是否有其他可运行的G，如果有的话则调用 `startm` 来获取或新建一个M来服务。
+`retake` 函数会遍历所有的 P，如果一个 P 处于 running 或 syscall 状态且运行时间超过了 10ms，调用 `preemptone` 设置 p 的 `gp.stackguard0=stackPreempt` 和 `gp.preempt = true` （导致该 P 正在执行的 G 进行下一次函数调用时栈空间检查失败，触发 morestack 然后进行一系列的系统调用，最终调用 `goschedImpl` 解除 P 与当前 M 的关联，让该 G 进入 \_Grunnable 状态，插入全局队列），处于阻塞状态调用 `handoff` 检查该 P 下是否有其他可运行的 G，如果有的话则调用 `startm` 来获取或新建一个 M 来服务。
 ```mermaid
 graph LR
 	morestack --> newstack -->gopreempt_m --> goschedImpl --> schedule

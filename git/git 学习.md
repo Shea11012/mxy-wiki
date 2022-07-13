@@ -1,3 +1,8 @@
+---
+date created: 2021-11-30 21:22
+date modified: 2022-01-23 15:09
+title: 远程仓库
+---
 git rebase ref 创建一个线性提交，是将当前 HEAD 指向的提交移动到指定的 ref 下
 
 
@@ -32,7 +37,7 @@ git cherry-pick c2 c4
 
 ### 交互式 rebase
 
-git rebase -i HEAD~4 ：这样就会选择4个提交来进行位置的移动
+git rebase -i HEAD~4 ：这样就会选择 4 个提交来进行位置的移动
 
 ### 标签 tag
 
@@ -92,7 +97,7 @@ git fetch origin slave^:master
 # 表示从远程分支的 slave 上获取父级提交更新到 master 分支上
 ```
 
-**Tips：如果 source 不设置，如 git push origin :master 则表示删除master ，而 fetch 则相反，git fetch origin :slave 则会创建一个 slave 的本地分支**
+**Tips：如果 source 不设置，如 git push origin :master 则表示删除 master ，而 fetch 则相反，git fetch origin :slave 则会创建一个 slave 的本地分支**
 
 ## git 提交规范
 提交语法：
@@ -100,9 +105,9 @@ git fetch origin slave^:master
 <type>([scope]): <subject>
 ```
 
-type类型如下：
+type 类型如下：
 - feat(feature)：新功能
-- fix：修复bug
+- fix：修复 bug
 - docs：文档注释
 - style：代码格式
 - refactor：重构、优化

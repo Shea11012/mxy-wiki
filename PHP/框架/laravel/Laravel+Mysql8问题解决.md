@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: Laravel+Mysql8问题解决
+---
 ```mysql
 Syntax error or access violation: 1231 Variable 'sql_mode'  
    can't be set to the value of 'NO_AUTO_CREATE_USER'

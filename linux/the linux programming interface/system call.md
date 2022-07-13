@@ -1,5 +1,8 @@
 ---
-tags: ["linux","systemCall"]
+tags: ["linux"]
+date created: 2021-10-27 00:48
+date modified: 2021-10-27 00:48
+title: system call
 ---
 # system call
 - 系统调用会改变进程状态，从用户态进入内核态，这样 CPU 才可以保护内核空间

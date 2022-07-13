@@ -1,3 +1,8 @@
+---
+date created: 2021-11-28 13:34
+date modified: 2021-12-03 20:20
+title: shell
+---
 # shell
 [[linux/shell/shell 基础]]
 
@@ -5,7 +10,7 @@
 
 [[linux/shell/Linux 文件权限]]
 
-[[linux/shell/基础shell编程]]
+[基础shell编程](基础shell编程.md)
 
 [[linux/shell/结构化命令]]
 

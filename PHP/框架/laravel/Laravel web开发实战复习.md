@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: Laravel web开发实战复习
+---
 ### web 开发实战
 
 ##### laravel 解决浏览器缓存问题
@@ -31,7 +36,7 @@ laravel 提供全局辅助函数 `old` 帮助在 blade 模板显示旧输入数�
 
 `{{ csrf_field() }}` 可以防止 post 提交受到 CSRF (跨站请求伪造)
 
-> laravel 默认会将所有的验证信息进行闪存，当检测到错误存在时，laravel 会自动将这些错误消息绑定到视图上，因此可以在所有视图上使用  `errors` 变量来显示错误信息，Tips：使用 `errors` 变量时 先使用 `count($errors)` 检查其值是否为空
+> laravel 默认会将所有的验证信息进行闪存，当检测到错误存在时，laravel 会自动将这些错误消息绑定到视图上，因此可以在所有视图上使用 `errors` 变量来显示错误信息，Tips：使用 `errors` 变量时 先使用 `count($errors)` 检查其值是否为空
 
 ```php
 redirect()->route('users.show',[$user]);
@@ -49,14 +54,14 @@ session()->flash('success','欢迎，您将在这里开启一段新的旅程');
 session()->get('success');
 ```
 
- laravel 提供了 `Auth` 的 `attempt` 方法可以很方便的完成用户的身份认证，详细的用户认证查看 [laravel -用户认证章节](https://learnku.com/docs/laravel/5.7/authentication/2269)
+ laravel 提供了 `Auth` 的 `attempt` 方法可以很方便的完成用户的身份认证，详细的用户认证查看 [laravel - 用户认证章节](https://learnku.com/docs/laravel/5.7/authentication/2269)
 
 ```php
 return redirect()->back()->withInput();
 # 使用 withInput() 后模板里的 old() 方法将能获取到上一次用户提交的内容
 ```
 
-`method_field('DELETE')`  由于浏览器不支持发送 DELETE 请求，而 RESTful 架构中会使用 DELETE 请求来删除一个资源，所以使用了隐藏域来伪造 DELETE 请求
+`method_field('DELETE')` 由于浏览器不支持发送 DELETE 请求，而 RESTful 架构中会使用 DELETE 请求来删除一个资源，所以使用了隐藏域来伪造 DELETE 请求
 
 ```html
 <input type="hidden" name="_method" value="DELETE">
@@ -64,7 +69,7 @@ return redirect()->back()->withInput();
 
 laravel 默认配置中，如果用户登录后没有使用记住我功能，则登录状态只会被记住两个小时
 
-[laravel 中间件](https://learnku.com/docs/laravel/5.7/middleware/2254)为过滤进入应用程序的 HTTP 请求提供了一种方便的机制
+[laravel 中间件](https://learnku.com/docs/laravel/5.7/middleware/2254) 为过滤进入应用程序的 HTTP 请求提供了一种方便的机制
 
 laravel 提供了一个 Auth 中间件，在控制器的 `__construct` 方法中调用
 
@@ -77,9 +82,9 @@ public function __construct()
 }
 ```
 
-laravel 提供的 Auth 中间件在过滤指定动作时，会将未通过身份验证的用户重定向到 `/login`  登录页面
+laravel 提供的 Auth 中间件在过滤指定动作时，会将未通过身份验证的用户重定向到 `/login` 登录页面
 
-**用户只能编辑自己的资料，需要限制已登录用户的操作，当 ID 为 1 的用户尝试更新 ID 为 2 的用户信息时，应该返回一个 403 禁止访问的异常。laravel 的 [授权策略](https://learnku.com/docs/laravel/5.7/authorization/2271#policies)可以对用户的操作权限进行验证**
+**用户只能编辑自己的资料，需要限制已登录用户的操作，当 ID 为 1 的用户尝试更新 ID 为 2 的用户信息时，应该返回一个 403 禁止访问的异常。laravel 的 [授权策略](https://learnku.com/docs/laravel/5.7/authorization/2271#policies) 可以对用户的操作权限进行验证**
 
 ```php
 php artisan make:policy UserPolicy // 生成至 app/Policies 文件夹下

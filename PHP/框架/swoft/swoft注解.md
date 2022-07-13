@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2021-12-03 20:20
+title: swoft注解
+---
 ## swoft 注解类
 
 | 注解标记          | 说明                                                         |
@@ -13,7 +18,7 @@
 | @Middlewares()    | 配置一组 @Middleware 按照顺序执行                            |
 | @View()           | 使用视图                                                     |
 | @WebSocket()      | 表明允许 ws 连接                                             |
-| @Value()          | 给属性赋值，@Value("ceshi") === @Value(value="ceshi") ，赋值顺序是  env > name > value |
+| @Value()          | 给属性赋值，@Value("ceshi") === @Value(value="ceshi") ，赋值顺序是 env > name > value |
 | @Task()           | 定义一个任务类，参数 name 默认类名且必须唯一，coroutine 是否以协程运行任务 |
 | @Scheduled        | 定义一个任务的执行时间：秒 分 时 日 月 周，定时任务所在的 task 任务不能以协程方式运行 |
 | @Process()        | 前置进程必须设置 boot = true 通常放置于 app/Boot 目录 自定义进程通常放置于 app/process 目录，用户自定义进程使用 ProcessBuilder::create('name')->start() 创建它 |

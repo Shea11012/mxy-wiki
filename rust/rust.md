@@ -1,8 +1,11 @@
 ---
 tags: ["rust"]
+date created: 2021-06-25 21:32
+date modified: 2022-01-23 15:09
+title: rust
 ---
 # rust
-[rust](https://rustup.rs/) 官网安装rust编译器和工具
+[rust](https://rustup.rs/) 官网安装 rust 编译器和工具
 
 预加载类型：不需要导包就可以直接使用的类型,[https://doc.rust-lang.org/std/prelude/](https://doc.rust-lang.org/std/prelude/) ^f4bc7d
 使用 `unimplemented!` 宏，避免报错
@@ -12,11 +15,11 @@ fn dada() -> Result<bool,FileError> {
 }
 ```
 
-## rust工具
-- 更新rust工具：`rustup update`
-- 更新rustup：`rustup self update`
+## rust 工具
+- 更新 rust 工具：`rustup update`
+- 更新 rustup：`rustup self update`
 - 展示当前工具链：`rustup show`
-- 切换rust版本：`rustup override set nightly`
+- 切换 rust 版本：`rustup override set nightly`
 - 安装指定版本：`rustup install nightly-2016-06-03`
 
 ## rust 概要
@@ -26,7 +29,7 @@ fn dada() -> Result<bool,FileError> {
 - usize：无符号类型；如：u8、u16、u32、u64、u128
 - f32
 - f64
-- `[T;N]`：固定大小的数组；元素类型为 T，N在编译时确定
+- `[T;N]`：固定大小的数组；元素类型为 T，N 在编译时确定
 - `[T]`：动态大小的连续序列
 - str：字符串切片
 - `(T,U,..)`：有限序列，T 和 U 可以是不同类型
@@ -63,7 +66,7 @@ println!("the value of y is: {}",y);
 ```
 
 ### Strings
-- `&str`：指向一个存在的字符串，它可能存在stack、heap 或者 data segment 上。
+- `&str`：指向一个存在的字符串，它可能存在 stack、heap 或者 data segment 上。
 - `String`：只会分配在 heap 上。
 
 ## const 和 static
@@ -102,7 +105,7 @@ fn main() {
 ```
 
 ### if else
-rust 中 if else 会将最后一行作为返回值，且if else 返回类型必须一致。如果省略else块，则会返回一个 `()` ，rust不允许一个变量具有两种类型。
+rust 中 if else 会将最后一行作为返回值，且 if else 返回类型必须一致。如果省略 else 块，则会返回一个 `()` ，rust 不允许一个变量具有两种类型。
 ```rust
 let resutl = if 1==2 {
 	"wait,what?"

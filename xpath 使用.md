@@ -1,3 +1,8 @@
+---
+date created: 2021-11-30 21:22
+date modified: 2021-11-30 21:22
+title: xpath 使用
+---
 ```xpath
 //tagname[@attribute='value']
 ```

@@ -1,24 +1,43 @@
 ---
 tags: ["k8s"]
+date created: 2021-06-12 17:10
+date modified: 2022-05-12 08:47
+title: k8s
 ---
-# 基本概念
-## k8s master node
-- kube-apiserver ：k8s 前端控制面板和暴露k8s API。它设计为水平扩展。
-- etcd：k8s 存储所有集群信息
-- kube-scheduler：监控新创建的 pods，如果没有一个 node 在上面运行则为它选择一个
-- kube-controller-manager：逻辑上每一个控制器都是一个独立的进程。为了减少复杂度，讲它们编译进了一个独立的二进制文件且作为一个单一的进程运行。控制器包含：`node controller,replication controller,endpoints controller,service account,token controller`
 
-## k8s worker node
-- kubelet：运行在集群中每个node的客户端，它保证了容器运行在 pod 中。
-- kube-proxy：通过设置主机上的网络开启了k8s的抽象服务，执行网络转发。
-- container runtime：container runtime是一个软件负责容器运行。k8s 支持的运行时容器：`docker、rkt、runc 和任何实现了 OCI 的容器`
-## service
-- 拥有一个唯一指定的名字
-- 拥有一个虚拟IP
-- 能够提供某种远程服务能力
-- 被映射到了提供这种服务能力的一组容器上
+## k8s 架构
+![](attachments/Pasted%20image%2020220511040305.png)
 
-service 的服务进程是基于 socket 通信方式对外提供服务。一个 service 通常由多个相关的服务进程来提供服务，每个 service 都有一个独立的访问地址。
+## 主要组件
+### master 节点
+- [APIServer](APIServer.md)：kubernetes 控制面板中唯一带有用户可以可访问 API 以及用户可交互的组件。API 服务会暴露 RESTful 的 kubernetes API。
+- etcd：kubernetes 使用 etcd 作为存储
+- [Controller Manager](Controller%20Manager.md)Controller Manager：运行着所有集群日常任务的控制器。包括节点控制器、副本控制器、端点控制器以及服务账户等。
+- [Scheduler](Scheduler.md)：调度器会监控新建 Pod 并将其分配给节点。
 
-为了更好的管理服务，k8s 将每个服务都包装到相应的 pod 中，通过给每个 pod 贴上一个标签`name=mysql`，指定一个 service 作用于所有包含`name=mysql`的pod，解决了 service与pod的关联问题。
+### worker 节点
+- [kubelet](kubelet.md)：负责调度到对应节点的 Pod 的生命周期管理，执行任务并将 Pod 状态报告给主节点的渠道，通过容器运行时（拉取镜像、启停容器）来运行这些容器。它还会定期执行被请求的容器的健康探测程序。
+- [kube Proxy](kube%20Proxy.md)：负责节点网络，在主机上维护网络规则并执行连接转发；负责对正在服务的 pods 进行负载均衡。
+
+## API 对象
+
+API 对象是 kubernetes 集群中的管理操作单元，每个 API 对象都有四大类属性：
+
+- TypeMeta
+- MetaData
+- Spec
+- Status
+
+## Pod
+
+Pod 是一组紧密关联的容器集合，它们共享 PID、IPC、Network 和 UTS namespace，是 kubernetes 调度的基本单位。
+
+Pod 支持多个容器在一个 Pod 中共享网络和文件系统，可以通过进程间通信和文件共享方式组合完成服务。
+
+同一个 Pod 中不同的容器可共享资源：
+- 共享网络 Namespace
+- 通过挂载存储卷共享存储
+- 共享 Security Context
+
+[pod](pod.md)
 

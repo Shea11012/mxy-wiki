@@ -1,8 +1,11 @@
 ---
 tags: ["linux","ipc"]
+date created: 2021-10-27 00:48
+date modified: 2022-03-29 15:11
+title: IPC（interprocess communication)
 ---
 # IPC（interprocess communication)
-linux 中每个进程都是相互独立的，为了实现进程间通信和同步操作，类UNIX 提供了一组 IPC 工具。
+linux 中每个进程都是相互独立的，为了实现进程间通信和同步操作，类 UNIX 提供了一组 IPC 工具。
 - signals： 用来表示某一个事件被触发
 - pipes：在两个进程间传递消息
 - sockets：通过网络实现在进程间通信

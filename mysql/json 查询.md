@@ -1,3 +1,8 @@
+---
+date created: 2021-12-03 20:20
+date modified: 2022-03-07 18:14
+title: json 查询
+---
 
 ```sql
 create table person (
@@ -25,15 +30,15 @@ select id, attr->"$.sex" from person;
 select id, attr->>"$.sex" from person;
 ```
 
-访问json内的数组
+访问 json 内的数组
 ```sql
 select id, JSON_EXTRACT(attr,'$[0]') from person;
 ```
 
 json 数据修改
-**JSON_SET**：替换现有KEY的值，插入不存在的key的值
-**JSON_INSERT**：插入不存在的key的值，已经存在的不修改
-**JSON_REPLACE**：只替换已存在的key值，不存在的不做插入
+**JSON_SET**：替换现有 KEY 的值，插入不存在的 key 的值
+**JSON_INSERT**：插入不存在的 key 的值，已经存在的不修改
+**JSON_REPLACE**：只替换已存在的 key 值，不存在的不做插入
 ```sql
 update person set attr = JSON_SET(attr,"$.city","wixi","$.height",123) where id = 1;
 
@@ -42,7 +47,7 @@ update person set attr = JSON_INSERT(attr,"$.city","wuxi","$.height",123) where 
 update person set attr = JSON_REPLACE(attr,"$.city","wuxi","$.height",123) where id = 1;
 ```
 
-**JSON_REMOVE**：删除JSON对象中的指定key
+**JSON_REMOVE**：删除 JSON 对象中的指定 key
 ```sql
 update person set attr = JSON_REMOVE(attr,"$.age") where id = 1;
 ```

@@ -1,15 +1,20 @@
+---
+date created: 2022-03-08 19:44
+date modified: 2022-03-08 19:58
+title: Linux测试磁盘IO性能
+---
 使用工具 <font color="red">fio</font>
 fio 参数
 - filename：测试文件名称，文件需要在待测试盘
-- direct=1：测试过程绕过机器自带buffer
+- direct=1：测试过程绕过机器自带 buffer
 - rw=randwrite：测试随机写
 - rw=randrw：测试随机写和读
-- bs=16K：单次IO的块文件大小
+- bs=16K：单次 IO 的块文件大小
 - size=300MB：测试文件大小
 - numjobs=10：测试线程
 - runtime=60：测试时间
-- ioengine=psync：指定io引擎
-- rwmixwrite=30：在混合读写模式下，写占30%
+- ioengine=psync：指定 io 引擎
+- rwmixwrite=30：在混合读写模式下，写占 30%
 - group_reporting：显示结果
 
 随机读

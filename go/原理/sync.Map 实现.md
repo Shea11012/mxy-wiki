@@ -1,3 +1,8 @@
+---
+date created: 2022-04-04 04:53
+date modified: 2022-04-05 01:56
+title: sync.Map 实现
+---
 ## 结构
 ```go
 // sync/map.go

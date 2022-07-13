@@ -1,3 +1,8 @@
+---
+date created: 2021-11-30 21:22
+date modified: 2021-11-30 21:22
+title: Mbps 和 MBps 区别
+---
 ## Mbps 与 MBps 区别
 
 **b** 表示 bit

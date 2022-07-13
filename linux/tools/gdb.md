@@ -1,3 +1,8 @@
+---
+date created: 2021-10-27 00:48
+date modified: 2021-10-27 00:48
+title: gdb
+---
 ## gdb 调试工具
 调试可执行文件
 ```shell
@@ -10,37 +15,37 @@ gdb program
 - next（n）：单步跟踪程序，当遇到函数时，不会进入函数体，而是直接调用函数
 - step（s）：单步调试，遇到函数会进入函数体内
 - until：运行程序直至退出循环体
-- until+行号：运行至某行
+- until+ 行号：运行至某行
 - finish：运行程序，直到当前函数完成返回，并打印函数返回时的堆栈地址和返回值及参数值等信息
 - call：调用程序中可见的函数，并传递参数; `call test(55)`
-- quit（q）：退出gdb
+- quit（q）：退出 gdb
 
 ### 设置断点
-- break n（b n）：在第n行处设置断点，可以带上代码路径和代码名称 `b test.go:14`
+- break n（b n）：在第 n 行处设置断点，可以带上代码路径和代码名称 `b test.go:14`
 - b fn1 if a > b：条件断点设置
-- break func：在函数func() 入口处设置断点，`break test`
-- delete n：删除第n个断点
-- disable n：暂停第n个断点
-- enable n：开启第n个断点
-- clear n：清除第n行断点
+- break func：在函数 func() 入口处设置断点，`break test`
+- delete n：删除第 n 个断点
+- disable n：暂停第 n 个断点
+- enable n：开启第 n 个断点
+- clear n：清除第 n 行断点
 - info b：显示当前程序的断点设置情况
 - delete breakpoints：清除所有断点
 
 ### 查看源代码
-- list（l）：列出程序的源代码，默认每次显示10行
-- list 行号：显示当前文件以行号为中心的前后10行代码
+- list（l）：列出程序的源代码，默认每次显示 10 行
+- list 行号：显示当前文件以行号为中心的前后 10 行代码
 - list 函数名：显示函数名的源代码
-- list：接着上次list命令，继续输出下面的内容
+- list：接着上次 list 命令，继续输出下面的内容
 
 ### 打印表达式
 - print（p）：表达式可以是任何当前正在被测试程序的有效表达式
-- print a：显示a的值
-- print ++a：将a的值加1显示
-- print name：显示name的值
-- print test(22)：将22作为参数调用 test 函数
-- print test(a)：将变量a作为参数调用 test 函数
-- display 表达式：使用display设置一个表达式后，将在每次单步进行指令后，紧接着输出被设置的表达式及值。如：`display a`
-- watch 表达式：设置一个监视点，一旦被监视的表达式值改变，gdb将终止正在被调试的程序
+- print a：显示 a 的值
+- print ++a：将 a 的值加 1 显示
+- print name：显示 name 的值
+- print test(22)：将 22 作为参数调用 test 函数
+- print test(a)：将变量 a 作为参数调用 test 函数
+- display 表达式：使用 display 设置一个表达式后，将在每次单步进行指令后，紧接着输出被设置的表达式及值。如：`display a`
+- watch 表达式：设置一个监视点，一旦被监视的表达式值改变，gdb 将终止正在被调试的程序
 - whatis：查询变量或函数
 - info func：查询函数
 - info locals：显示当前堆栈页的所有变量
@@ -57,6 +62,6 @@ gdb program
 - layout：分割窗口
 - layout src：显示源代码窗口
 - layout asm：显示反汇编窗口
-- layout regs：显示源代码/反汇编和CPU寄存器窗口
+- layout regs：显示源代码/反汇编和 CPU 寄存器窗口
 - layout split：显示源代码和反汇编窗口
 - ctrl+L：刷新窗口

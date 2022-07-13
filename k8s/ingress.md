@@ -1,3 +1,8 @@
+---
+date created: 2022-03-13 23:16
+date modified: 2022-03-13 23:42
+title: ingress
+---
 # ingress
 ingress 是 kubernetes 的一种 API 对象，将集群内部的 service 通过 HTTP/HTTPS 方式暴露到集群外部，并通过规则定义 HTTP/HTTPS 的路由。
 ingress 特性：集群外部可访问的 URL、负载均衡、SSL Termination、按域名路由。
@@ -42,7 +47,7 @@ type: LoadBalancer
 # after
 type: ClusterIP
 ```
-上述修改让ingress使用宿主机网络，且可以通过label选择指定的node部署ingress
+上述修改让 ingress 使用宿主机网络，且可以通过 label 选择指定的 node 部署 ingress
 
 > 如果拉取不到 k8s.gcr.io 镜像，可以使用 image-syncer 工具将镜像同步至国内阿里云，再修改 values.yaml 内的 registry
 

@@ -1,3 +1,8 @@
+---
+date created: 2021-11-30 21:22
+date modified: 2021-11-30 21:22
+title: MakeFile
+---
 # MakeFile
 
 ```makefile
@@ -48,7 +53,7 @@ VPATH = src:../headers
 
 ### 伪目标
 
-创建Makefile时应该为所有自定义的命令设置伪目标，这样可以避免有同名的文件在项目中
+创建 Makefile 时应该为所有自定义的命令设置伪目标，这样可以避免有同名的文件在项目中
 
 伪目标不是一个文件，只是一个标签。伪目标一般没有依赖的文件，但是我们可以为伪目标指定所依赖的文件。伪目标同样可以作为默认目标，只要将其放在第一个。
 
@@ -69,7 +74,7 @@ prog3: prog3.o sort.o utils.o
 
 ### 前置条件 Prerequisite
 
-当vendor命令不是伪目标时，在composer.json 或 composer.lock 发生改动时将会执行composer install，所以在伪目标一行将 vendor 排除
+当 vendor 命令不是伪目标时，在 composer.json 或 composer.lock 发生改动时将会执行 composer install，所以在伪目标一行将 vendor 排除
 
 ```makefile
 .PHONY: $(filter-out vendor,$(MAKECMDGOALS))
@@ -178,7 +183,7 @@ bar := $(foo:.o=.c) # a.c b.c c.c
 
 ### override 指示符
 
-如果有变量是通过 make 命令行设置的，那么makefile 中对这个变量的赋值就会被忽略，语法是：
+如果有变量是通过 make 命令行设置的，那么 makefile 中对这个变量的赋值就会被忽略，语法是：
 
 ```makefile
 override variable := value

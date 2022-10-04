@@ -32,16 +32,11 @@ _quick-start
 
 ## 工具方法
 ### compdef
-````ad-note
-compdef function command command command
+>[!note]
+> compdef function command command command
+>> [!example]
+>> compdef _hello hello1 hello2 hello3
 
-```ad-example
-~~~shell
-compdef _hello hello1 hello2 hello3
-~~~
-```
-```
-````
 
 ### 整体补全
 | 名称 | 描述|

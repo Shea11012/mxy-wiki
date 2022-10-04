@@ -10,7 +10,7 @@
   "foldIndent": true,
   "communityThemeSortOrder": "download",
   "autoPairBrackets": false,
-  "legacyEditor": true,
-  "livePreview": false,
+  "legacyEditor": false,
+  "livePreview": true,
   "useMarkdownLinks": true
 }

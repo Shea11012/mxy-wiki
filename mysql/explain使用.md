@@ -1,6 +1,6 @@
 ---
 date created: 2022-03-08 16:04
-date modified: 2022-06-11 12:56
+date modified: 2022-08-08 15:03
 title: explain使用
 ---
 
@@ -27,10 +27,7 @@ explain select * from test1 t1 where t1.id = (select id from test1 t2 where t2.i
 id 即有相同的也有不同的时候，先按照序号从大到下执行，遇到相同的再从上到下执行。
 
 ```mysql
-explain  
-select t1.* from test1 t1  
-inner join (select max(id) mid from test1 group by id) t2  
-on t1.id=t2.mid
+explain select t1.* from test1 t1 inner join (select max(id) mid from test1 group by id) t2 on t1.id=t2.mid
 ```
 
 ![](attachments/Pasted%20image%2020220610193823.png)

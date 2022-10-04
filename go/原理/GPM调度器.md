@@ -106,7 +106,7 @@ RET
 - `runtime.mstart1`: 初始化信号，并执行 `runtime.main` 
 
 ### getg 函数
-getg 返回只想当前的 g 的指针，由汇编指令实现（可能来自 TLS 或专用寄存器）。
+getg 返回指向当前的 g 的指针，由汇编指令实现（可能来自 TLS 或专用寄存器）。
 获取当前用户堆栈的 g，使用 `getg().m.curg`。当在系统或信号堆栈上执行时，则分别返回当前 m 的 g0 或 gsignal。要确定 g 是在用户堆栈或是系统堆栈上，可以使用 `getg() == getg().m.curg`,相等表示在用户态堆栈，不想等表示在系统堆栈。
 
 ### g0 和 m0
@@ -346,6 +346,7 @@ func newm1(mp *m) {
 }
 ```
 
+## findrunable
 M 是真正的执行者，它负责整个调度工作，调度的本质就是查找可以运行的 G，然后去执行 G 上的任务函数。可以理解为 M 循环执行着 `schedule` 函数，schedule 中 `findrunable` 函数执行流程：
 1. 调用 runqget，尝试从 p 本地队列获取 G，获取到就返回
 2. 调用 globalrunqget，尝试从全局队列获取 G，获取到就返回

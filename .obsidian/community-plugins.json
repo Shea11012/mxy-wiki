@@ -1,5 +1,4 @@
 [
-  "obsidian-admonition",
   "obsidian-git",
   "obsidian-outliner",
   "convert-url-to-iframe",
@@ -13,5 +12,6 @@
   "obsidian-style-settings",
   "dataview",
   "obsidian-linter",
-  "templater-obsidian"
+  "templater-obsidian",
+  "obsidian-code-block-enhancer"
 ]

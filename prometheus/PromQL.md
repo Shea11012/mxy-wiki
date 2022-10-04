@@ -128,34 +128,26 @@ aggregation-opeartor([parameter],vector) [without|by (label list)]
 
 
 ### 瞬时数据查询
-````ad-note
-title: API
-GET /api/v1/query
+> [!note] API
+> GET /api/v1/query
+>
+>> [!note] URL param
+>> - query: PromQL 表达式
+>> - time：指定计算PromQL 时间戳。可选参数，默认当前系统时间
+>> - timeout: 超时设置。可选参数，默认使用 -query.timeout 全局设置
 
-```ad-note
-title: URL param
-- query: PromQL 表达式
-- time：指定计算PromQL 时间戳。可选参数，默认当前系统时间
-- timeout: 超时设置。可选参数，默认使用 -query.timeout 全局设置
-```
-````
 
 ### 区间查询
-````ad-note
-title: API
-GET /api/v1/query_range
-
-```ad-tip
-query_range API中的查询表达式只能使用瞬时向量选择器类型表达式
-```
-
-```ad-note
-title: URL Param
-- query：PromQL 表达式
-- start：起始时间
-- end：结束时间
-- step：查询步长
-- timeout：超时设置
-```
-````
-
+> [!note] API
+> GET /api/v1/query_range
+> 
+>> [!tip]
+>> query_range API中的查询表达式只能使用瞬时向量选择器类型表达式
+>>
+>>
+>> [!note] URL Param
+>> - query：PromQL 表达式
+>> - start：起始时间
+>> - end：结束时间
+>> - step：查询步长
+>> - timeout：超时设置

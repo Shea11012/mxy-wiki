@@ -1,8 +1,9 @@
 ---
 date created: 2021-11-30 21:22
-date modified: 2021-11-30 21:22
+date modified: 2022-08-31 22:51
 title: win10 wsl2 使用
 ---
+
 wsl2 因为使用了 hyper-v 的虚拟机，所以和宿主机不在同一个网段中，在使用宿主机的 vpn 时，需要先获取宿主机的 ip：
 
 ```bash
@@ -67,3 +68,9 @@ eval `keychain --eval --agents ssh id_rsa`
 kernelCommandLine = vsyscall=emulate
 ```
 
+#### wsl 不能 ping 通宿主机
+
+```shell
+# 直接放开 `vEthernet (WSL)` 这张网卡的防火墙
+New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL)" -Action Allow
+```

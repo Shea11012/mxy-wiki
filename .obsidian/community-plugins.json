@@ -13,5 +13,6 @@
   "dataview",
   "obsidian-linter",
   "templater-obsidian",
-  "obsidian-code-block-enhancer"
+  "obsidian-code-block-enhancer",
+  "obsidian-image-toolkit"
 ]

@@ -2,5 +2,9 @@
   "baseFontSize": 16,
   "theme": "obsidian",
   "cssTheme": "Obsidian Nord",
-  "translucency": false
+  "translucency": false,
+  "accentColor": "",
+  "interfaceFontFamily": "Microsoft YaHei",
+  "textFontFamily": "Microsoft YaHei",
+  "monospaceFontFamily": "JetBrainsMono NF"
 }

@@ -28,8 +28,8 @@ scoop config proxy 127.0.0.1:38002
 自用 scoop 工具
 
 ```shell
-scoop install 7zip dark innounp sudo
+scoop install 7zip dark innounp sudo sfsu
 scoop install git jetbrainsMono-NF dbeaver
-scoop install everything copyq marktext netch obsidian quicklook snipaste sumatrapdf
+scoop install everything copyq obsidian quicklook snipaste sumatrapdf
 ```
 

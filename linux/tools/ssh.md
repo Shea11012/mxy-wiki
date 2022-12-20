@@ -1,24 +1,25 @@
 ---
-tags: ["linux","ssh"]
+tags: ["linux", "ssh"]
 date created: 2021-06-07 23:50
-date modified: 2022-05-07 14:03
+date modified: 2022-12-20 07:57
 title: ssh
 ---
+## 转义符
+- `%d` 本地用户目录
+- `%u` 本地用户名称
+- `%l` 本地主机名
+- `%h` 远程主机名
+- `%r` 远程用户名
 
 ## 管理多个私钥 免密登录
 
 在 .ssh 文件夹下创建一个 config 文件：
 
 ```bash
-Host github.com # 别名
-HostName github.com
+Host gitlab.com github.com
+HostName %h # 不同主机使用相同秘钥登录
 User shea
-IdentityFile ～/.ssh/github_id_rsa
-
-Host gitlab.com
-HostName gitlab.com
-User shea
-IdentityFile ~/.ssh/gitlab_id_rsa
+IdentityFile ~/.ssh/id_rsa
 ProxyCommand nc -X 5 -x host:port %h %p # proxycommand 可以针对指定的 ssh 实现代理
 
 # 倒入其他目录下的config配置，可以更加灵活的配置
@@ -51,4 +52,10 @@ ssh -L local_addr:local_port:remote_addr:remote_port middle_host
 # 再与远程主机的端口 host2：80 通信
 # -g 表示允许外界主机连接本地转发端口，不指定 -g 则默认地址为环回地址
 ssh -g -L 2222:host2:80 host3
+```
+
+## 从 github 获取公钥写入 authorized_keys
+```shell
+PUB_KEY=curl -fsSL https://github.com/${UserName}.keys
+echo -e "${PUB_KEY}\n" > ${HOME}/.ssh/authorized_keys
 ```

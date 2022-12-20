@@ -1,9 +1,8 @@
 ---
+tags: []
 date created: 2021-11-30 21:22
-date modified: 2021-11-30 21:22
-title: 配置多账号git
+date modified: 2022-12-20 07:36
 ---
-### 配置多账号 git
 
 1. `git config --global user.name` 和 `git config --global user.email` 不能存在值，若存在
 
@@ -12,7 +11,7 @@ title: 配置多账号git
 2. 配置 `sshKey` 
 
 ```
-ssh-keygen -t rsa -C 'email';
+ssh-keygen -t ecdsa -b 521 -C 'email';
 // Enter file in which to save the key (/c/Users/Excailbur/.ssh/id_rsa):这里的名字根据需要自定义；如：
 /c/Users/Excailbur/.ssh/git_id_rsa
 // 后面的提示可以直接 enter 过
@@ -42,7 +41,7 @@ IdentityFile ~/.ssh/gitlab_id_rsa
 >
 > Host github.com
 > 	HostName github.com
-> 	User shea  # 这个名字随便命
+> 	User shea # 这个名字随便命
 > 	IdentityFile ~/.ssh/github_id_rsa
 >
 > ProxyCommand connect -S 127.0.0.1:51837 %h %p

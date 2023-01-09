@@ -1,7 +1,7 @@
 ---
 tags: ["rust"]
 date created: 2021-06-25 21:32
-date modified: 2022-12-02 10:08
+date modified: 2023-01-08 22:56
 ---
 # rust
 
@@ -880,6 +880,7 @@ fn useless<'a>(first: &'a i32, second: &'a i32) {}
 #### 生命周期约束语法
 
 ```rust
+// 'a: 'b 表示 ‘a 至少要活得和 'b 一样久
 fn longest<'a:'b,'b>(first: &'a str, second: &'b str) -> &'b str {
     if first.len() > second.len() {
         return first;

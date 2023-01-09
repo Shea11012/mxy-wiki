@@ -32,3 +32,9 @@ Get-AppxPackage -Name "{app-name}" -AllUsers | Remove-AppxPackage -AllUsers
 # 进入管理员shell
 iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI"
 ```
+
+## 针对PATH变量的操作
+### 格式化输出
+```powershell
+$env:PATH -split ';'
+```

@@ -1,7 +1,7 @@
 ---
-tags: []
+tags: ["git", "ssh"]
 date created: 2021-11-30 21:22
-date modified: 2022-12-20 07:36
+date modified: 2023-01-01 20:38
 ---
 
 1. `git config --global user.name` 和 `git config --global user.email` 不能存在值，若存在

@@ -1,9 +1,10 @@
 ---
 tags: []
 date created: 2021-11-30 21:22
-date modified: 2023-01-10 03:11
+date modified: 2023-01-10 18:15
 title: docker 安装和卸载
 ---
+
 # 安装和卸载
 
 [官方安装文档](https://docs.docker.com/install/linux/docker-ce/ubuntu/#prerequisites)
@@ -137,6 +138,8 @@ Environment="NO_PROXY=localhost,127.0.0.1,aliyuncs.com,.cn,tencentyun.com"
 配置 dockerd
 
 ```conf
+# /etc/systemd/system/docker.service.d/docker.conf
+
 [Service]
 ExecStart=
 ExecStart=/usr/bin/dockerd -H unix:///var/run/docker.sock -H tcp://0.0.0.0:2376

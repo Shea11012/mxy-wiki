@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docker/常用的docker命令.md",
+                "file": "win/win10 wsl2 使用.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "46441ebdbd9af6cf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "win/宿主机使用 wsl2 里的 docker.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -63,7 +76,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docker/常用的docker命令.md"
+                "file": "win/宿主机使用 wsl2 里的 docker.md"
               }
             }
           }
@@ -87,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docker/常用的docker命令.md",
+                "file": "win/宿主机使用 wsl2 里的 docker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,17 +157,17 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "e0b44ecce785e5d7",
+  "active": "46441ebdbd9af6cf",
   "lastOpenFiles": [
+    "win/win10 wsl2 使用.md",
+    "win/宿主机使用 wsl2 里的 docker.md",
     "docker/docker 安装和卸载.md",
+    "linux/vim使用.md",
+    "docker/常用的docker命令.md",
     "linux/Untitled.md",
     "win/powershell命令.md",
-    "win/win10 wsl2 使用.md",
     "k8s/k8s安装.md",
     "linux/tools/gawk.md",
-    "linux/arch_linux/pacman.md",
-    "linux/shell/结构化命令.md",
-    "linux/shell/变量.md",
-    "linux/shell/shell 基础.md"
+    "linux/arch_linux/pacman.md"
   ]
 }

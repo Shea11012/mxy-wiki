@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "46441ebdbd9af6cf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "win/宿主机使用 wsl2 里的 docker.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -76,7 +63,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "win/宿主机使用 wsl2 里的 docker.md"
+                "file": "win/win10 wsl2 使用.md"
               }
             }
           }
@@ -100,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "win/宿主机使用 wsl2 里的 docker.md",
+                "file": "win/win10 wsl2 使用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,10 +144,10 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "46441ebdbd9af6cf",
+  "active": "e0b44ecce785e5d7",
   "lastOpenFiles": [
-    "win/win10 wsl2 使用.md",
     "win/宿主机使用 wsl2 里的 docker.md",
+    "win/win10 wsl2 使用.md",
     "docker/docker 安装和卸载.md",
     "linux/vim使用.md",
     "docker/常用的docker命令.md",

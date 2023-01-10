@@ -79,5 +79,4 @@ kernelCommandLine = vsyscall=emulate
 New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL)" -Action Allow
 ```
 
-## 宿主机使用 wsl2 里的 docker
 

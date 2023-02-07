@@ -1,7 +1,8 @@
 ---
 date created: 2021-11-30 21:22
-date modified: 2021-11-30 21:22
+date modified: 2023-01-13 00:54
 title: xpath 使用
+tags: ["xpath"]
 ---
 ```xpath
 //tagname[@attribute='value']

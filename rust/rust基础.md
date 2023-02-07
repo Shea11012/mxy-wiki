@@ -1,8 +1,9 @@
 ---
 tags: ["rust"]
 date created: 2021-06-25 21:32
-date modified: 2023-01-08 22:56
+date modified: 2023-01-21 14:11
 ---
+
 # rust
 
 [rust](https://rustup.rs/) 官网安装 rust 编译器和工具
@@ -18,6 +19,7 @@ fn dada() -> Result<bool,FileError> {
 ```
 
 ## rust 工具
+
 - 更新 rust 工具：`rustup update`
 - 更新 rustup：`rustup self update`
 - 展示当前工具链：`rustup show`
@@ -25,6 +27,7 @@ fn dada() -> Result<bool,FileError> {
 - 安装指定版本：`rustup install nightly-2016-06-03`
 
 ## rust 概要
+
 - bool
 - char
 - isize：有符号类型；如：i8、i16、i32、i64、i128
@@ -74,6 +77,7 @@ println!("the value of y is: {}",y);
 ```
 
 ## const 和 static
+
 ### const
 
 使用 const 定义的变量时，它们总是会被内联。
@@ -112,9 +116,10 @@ fn main() {
 }
 ```
 
-
 ## 复合类型
+
 ### 字符串
+
 - `str`：是被硬编码进二进制文件的，通常以 `&str` 形式出现
 - `String`：可增长、可改变且具有所有权的 UTF-8 字符串，被分配在堆上
 
@@ -269,8 +274,6 @@ fn main() {
 }
 ```
 
-
-
 ### enum
 
 **枚举类型是一个类型，它包含所有可能的枚举成员，而枚举值是该类型中的具体某个成员实例**
@@ -328,6 +331,7 @@ if let Message::Move{x:a, y:b} = msg  {
 ```
 
 #### Option 枚举用于处理空值
+
 ```rust
 enum Option<T> {
 	Some(T),
@@ -372,8 +376,6 @@ fn main() {
 }
 ```
 
-
-
 ### 数组
 
 rust 中有两种数组，一种是长度固定的 array，第二种是可动态增长的 vector
@@ -381,6 +383,7 @@ rust 中有两种数组，一种是长度固定的 array，第二种是可动态
 **数组存储在栈上，vector 存储在堆上**
 
 #### array
+
 ```rust
 // 创建数组的几种方式
 let a = [1,2,3,4];
@@ -416,7 +419,6 @@ fn main() {
 }
 ```
 
-
 #### slices
 
 slices 表示为：`&[T]`
@@ -439,8 +441,8 @@ fn main() {
 }
 ```
 
-
 ### 流程控制
+
 #### if
 
 rust 中 if else 会将最后一行作为返回值，且 if else 返回类型必须一致。如果省略 else 块，则会返回一个 `()` ，rust 不允许一个变量具有两种类型。
@@ -460,6 +462,7 @@ println!("You Know what? {}",result);
 rust 支持三种循环：loop、while、for
 
 ##### loop
+
 ```rust
 let mut x = 1024;
 loop {
@@ -488,6 +491,7 @@ let mut x = 0;
 ```
 
 ##### while
+
 ```rust
 let mut x = 1000;
 while x > 0 {
@@ -516,8 +520,8 @@ for i in 0..=10 {
 }
 ```
 
-
 ## 模式匹配
+
 - match 匹配需要穷举出所有可能，因此可以用 `_` 代表未列出的所有可能性
 - match 的每一个分支都必须是一个表达式，且所有分支表达式最终返回值类型都必须相同
 - `X|Y` 类似运算符，代表分支可以匹配 x 也可以匹配 y，只要满足一个即可
@@ -581,12 +585,12 @@ let foo = 'f';
 assert!(matches!(foo,'A'..='Z' | 'a'..='z');
 ```
 
-
 ## 方法
 
 rust 使用 `impl` 来定义方法
 
 ### impl blocks for struct
+
 ```rust
 struct Player {
     name: String,
@@ -669,10 +673,63 @@ fn main() {
 }
 ```
 
+## 所有权和移动
+
+### 可变性
+
+当所有权转移时，数据的可变性可能发生改变
+```rust
+let immutable_box = Box::new(5u32);
+// 不可变，重新赋值会报错
+// *immutable_box = 4;
+
+// 移动box，改变所有权和可变性
+let mut mutable_box = immutable_box;
+// 修改变量
+*mutable_box = 4;
+```
+
+### 部分移动
+
+单个变量解构，可以使用模式绑定，意味着变量的某些部分将被移动，而其他部分将保留。
+这种情况下，后面不能整体使用父级变量，但是任然可以使用只引用的部分。
+```rust
+#[derive(Debug)]
+struct Person {
+	name: String,
+	age: u8,
+}
+
+let person = Person {
+	name: String::from("alice"),
+	age: 20,
+};
+
+// name所有权被转移，age只是引用
+let Person { name, ref age} = person;
+
+// 报错，因为 name 的所有权被转移，person发生了部分借用
+// println!("person: {:?}",person);
+
+// person age 可以继续使用
+// println!("person age: {}", person.age);
+```
+
+## 借用
+
+使用 `&T` 来访问数据，而不是直接获取数据的所有权
+编译器通过借用检查，静态的保证引用总是指向有效的对象，当存在引用指向一个对象时，该对象不能被销毁。
+
+### 可变性
+
+可变数据使用 `&mut T` 叫做可变借用，`&T` 叫做不可变借用
+
+可变借用与不可变借用不能同时存在，且同一时间内只允许一次可变借用
 
 ## 泛型、trait、生命周期
 
 ### 泛型
+
 ```rust
 struct Point<T> {
 	x: T,
@@ -689,8 +746,8 @@ impl<T> Point<T> {
 }
 ```
 
-
 ### trait
+
 ```rust
 pub trait Animal {
 	eat();
@@ -710,7 +767,9 @@ pub fn action(animal: &impl Animal) {
 	animal.bar();
 }
 ```
+
 #### 多重约束
+
 ```rust
 // 多重约束
 pub fn notify(item: &(impl Animal + Display)) {}
@@ -728,6 +787,10 @@ fn some_function<T,U>(t: &T, u: &U) -> i32
 		  U: Clone + Debug
 	{}
 ```
+
+#### 虚类型参数
+
+在运行时不出现，仅在编译时进行静态检查的类型参数
 
 #### 特征对象
 
@@ -795,6 +858,7 @@ fn main() {
 ```
 
 #### 调用同名方法
+
 ```rust
 trait Pilot {
 	fn fly(&self);
@@ -864,8 +928,6 @@ fn main() {
 }
 ```
 
-
-
 ### 生命周期
 
 生命周期的主要作用是避免悬垂引用，避免程序引用了不该引用的数据
@@ -879,8 +941,11 @@ fn useless<'a>(first: &'a i32, second: &'a i32) {}
 
 #### 生命周期约束语法
 
+`T: 'a`，在 T 中的所有引用都必须比 `'a` 活得更长
+`T: Trait + 'a` ：T 类型必须实现 `Trait`，并且在 T 中的所有引用都必须比 `'a` 活得更长
+
 ```rust
-// 'a: 'b 表示 ‘a 至少要活得和 'b 一样久
+// 'a: 'b 表示 'a 至少要活得和 'b 一样久
 fn longest<'a:'b,'b>(first: &'a str, second: &'b str) -> &'b str {
     if first.len() > second.len() {
         return first;
@@ -911,6 +976,7 @@ let s: &'static str = "静态生命周期";
 ```
 
 ## 类型转换
+
 ### as 转换
 
 >[!note]
@@ -947,6 +1013,7 @@ println!("{:?}",values);
 使用 `panic!()` 宏，触发 panic
 
 ### 传播错误
+
 ```rust
 fn read_username_from_file() -> Result<String,io::Error> {
 	let mut f = File::open("hello.txt")?; // 错误传播
@@ -976,12 +1043,14 @@ fn open_file() -> Result<File, Box<dyn std::error::Error>> {
 ```
 
 ## 包和 package
+
 - 项目（Package）：用来构建、测试和分享包
 - 工作空间（workspace）：大型项目，可以进一步将多个包联合在一起，组织成工作空间
 - 包（Crate）：一个由多个模块组成的树形结构，可以将作为第三方库进行分发，也可以生成可执行文件
 - 模块（Module）：一个文件多个模块，或一个文件一个模块，模块可以被认为是真实项目中的代码组织单元
 
 ### 路径引用模块
+
 - 绝对路径：从包根开始，路径名以包名或 `crate` 作为开头
 - 相对路径：
 	- self
@@ -1004,6 +1073,7 @@ fn open_file() -> Result<File, Box<dyn std::error::Error>> {
 - `pub(in <path>)` 在某个路径的模块中可见，path 必须是父模块或者祖先模块
 
 ## 函数式编程
+
 ### 闭包
 
 闭包是一种匿名函数，不同于函数的是，它可以捕获调用者作用域的值

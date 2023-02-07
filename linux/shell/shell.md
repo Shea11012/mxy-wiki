@@ -8,7 +8,7 @@ title: shell
 
 [[变量]]
 
-[[linux/shell/Linux 文件权限]]
+[[Linux 权限操作]]
 
 [基础shell编程](基础shell编程.md)
 

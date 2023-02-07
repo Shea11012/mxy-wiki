@@ -8,18 +8,43 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e0b44ecce785e5d7",
+            "id": "47ba83945e6cd4e0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "win/win10 wsl2 使用.md",
+                "file": "win/宿主机使用 wsl2 里的 docker.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a44e5e37dc32ed40",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/shell/获取用户输入和控制输出.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fa6823b4f9ce5e7e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/Linux文件权限管理.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -63,7 +88,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "win/win10 wsl2 使用.md"
+                "file": "linux/shell/获取用户输入和控制输出.md"
               }
             }
           }
@@ -87,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "win/win10 wsl2 使用.md",
+                "file": "linux/shell/获取用户输入和控制输出.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,17 +169,17 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "e0b44ecce785e5d7",
+  "active": "a44e5e37dc32ed40",
   "lastOpenFiles": [
+    "linux/shell/Linux 权限操作.md",
+    "linux/Linux文件权限管理.md",
     "win/宿主机使用 wsl2 里的 docker.md",
-    "win/win10 wsl2 使用.md",
     "docker/docker 安装和卸载.md",
-    "linux/vim使用.md",
-    "docker/常用的docker命令.md",
-    "linux/Untitled.md",
-    "win/powershell命令.md",
+    "linux/shell/结构化命令.md",
+    "docker/docker 修改默认存储位置.md",
+    "docker/docker 使用.md",
     "k8s/k8s安装.md",
-    "linux/tools/gawk.md",
-    "linux/arch_linux/pacman.md"
+    "docker/使用docker遇到的问题.md",
+    "linux/shell/文件系统.md"
   ]
 }

@@ -2,7 +2,7 @@
 date created: 2021-11-30 21:22
 date modified: 2022-10-01 01:37
 title: win工具
-tags: ["win"]
+tags: ["win"，"tools"]
 ---
 - sumarpdf：pdf、epub、mobi 等格式阅读工具
 - neat-reader：epub、mobi 等阅读工具
@@ -18,3 +18,5 @@ tags: ["win"]
 - clash：vpn
 - copyq：剪切板
 - deepl：翻译工具
+- Aria2-Pro-Docker：[aria2 下载工具](https://github.com/P3TERX/Aria2-Pro-Docker)
+- trafficmonitor：流量监控工具

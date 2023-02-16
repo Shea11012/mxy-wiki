@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/shell/获取用户输入和控制输出.md",
+                "file": "linux/arch_linux/pacman.md",
                 "mode": "source",
                 "source": false
               }
@@ -88,7 +88,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/shell/获取用户输入和控制输出.md"
+                "file": "linux/arch_linux/pacman.md"
               }
             }
           }
@@ -112,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/shell/获取用户输入和控制输出.md",
+                "file": "linux/arch_linux/pacman.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,15 +171,15 @@
   },
   "active": "a44e5e37dc32ed40",
   "lastOpenFiles": [
+    "linux/shell/获取用户输入和控制输出.md",
+    "win/powershell命令.md",
+    "win/宿主机使用 wsl2 里的 docker.md",
+    "win/powershell字符串操作.md",
     "linux/shell/Linux 权限操作.md",
     "linux/Linux文件权限管理.md",
-    "win/宿主机使用 wsl2 里的 docker.md",
     "docker/docker 安装和卸载.md",
     "linux/shell/结构化命令.md",
     "docker/docker 修改默认存储位置.md",
-    "docker/docker 使用.md",
-    "k8s/k8s安装.md",
-    "docker/使用docker遇到的问题.md",
-    "linux/shell/文件系统.md"
+    "docker/docker 使用.md"
   ]
 }

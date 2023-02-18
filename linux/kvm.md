@@ -1,8 +1,10 @@
 ---
+tags: 
 date created: 2021-12-03 20:20
-date modified: 2021-12-03 20:20
+date modified: 2023-02-18 02:51
 title: kvm
 ---
+
 # kvm
 
 ## arch 安装 kvm
@@ -10,7 +12,7 @@ title: kvm
 ### qemu 安装
 
 ```bash
-sudo pacman -S qemu qemu-arch-extra ovmf bridge-utils dnsmasq vde2 openbsd-netcat ebtables iptables
+sudo paru -S qemu qemu-arch-extra ovmf bridge-utils dnsmasq vde2 openbsd-netcat ebtables iptables
 ```
 
 - ovmf：UEFI bios 和 Secure Boot 启动
@@ -20,14 +22,14 @@ sudo pacman -S qemu qemu-arch-extra ovmf bridge-utils dnsmasq vde2 openbsd-netca
 - openbsd-netcat：网络测试工具
 - ebtables 和 iptables：创建包路由和防火墙
 
-## virt-manager  && libvirtd service
+## virt-manager && libvirtd service
 
 virt-manager 是创建 vm 的可视化工具 
 
 virt-viewer 打开 vm 实例
 
 ```bash
-sudo pacman -S virt-manager virt-viewer
+sudo paru -S virt-manager virt-viewer
 ```
 
 ## 开启服务
@@ -84,8 +86,6 @@ sudo virsh net-start br10
 ```bash
 sudo usermod -a -G libvirt $(whoami)
 ```
-
-
 
 ## 参考
 

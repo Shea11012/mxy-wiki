@@ -1,12 +1,12 @@
 ---
-tags: []
+tags: ['docker']
 date created: 2023-01-10 19:22
-date modified: 2023-01-10 19:34
+date modified: 2023-02-19 02:23
 ---
 
 ## 安装 docker
 
-[docker 安装和卸载](../docker/docker%20安装和卸载.md)
+[docker 安装和卸载](../container/docker/docker%20安装和卸载.md)
 
 为 windows 构建 docker cli
 ```bash

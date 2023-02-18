@@ -1,8 +1,10 @@
 ---
+tags: 
 date created: 2021-11-30 21:22
-date modified: 2021-11-30 21:22
+date modified: 2023-02-19 02:18
 title: 使用docker遇到的问题
 ---
+
 ### 在 centos 开启 firewalld ，使用 docker 访问时报错 nginx 502
 
 解决方法：
@@ -55,3 +57,15 @@ services:
 ### docker 容器访问宿主机服务
 
 将宿主机地址直接写成 `host.docker.internal` ，需要 docker 版本大于 18.03
+
+### linux 无法访问宿主机
+
+**linux 中无法使用 host.docker.internal 访问宿主机**
+解决：
+- 使用 docker 命令行增加 `--add-host=host.docker.internal:host-gateway`
+- 使用 docker-compose 文件，给对应的 service 增加以下
+
+```yaml
+extra-hosts:
+   - "host.docker.internal:host-gateway"
+```

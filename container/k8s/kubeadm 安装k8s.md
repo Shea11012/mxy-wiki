@@ -1,17 +1,19 @@
 ---
-tags: [arch,k8s]
+tags: [arch, k8s]
 date created: 2022-05-10 03:09
-date modified: 2022-05-10 17:37
+date modified: 2023-02-18 02:51
 title: kubeadm 安装k8s
 ---
 
 ## 环境
+
 - 系统：archlinux
 - CPU：4 核
 - 内存：16G 内存
 - 磁盘：30G 磁盘
 
 ## 前置准备
+
 ### 设置主机名
 
 ```shell
@@ -25,14 +27,16 @@ echo "<自己的机器的当前IP地址> k8s.master" | sudo tee /etc/hosts
 ```
 
 ### 容器安装
+
 任选一个
 <font style="color: red">tips：</font>国内环境安装时，最好设置代理，从 kubeadm config 里的获取到的镜像不是全部镜像，还会有几个镜像需要下载，不走代理很可能会卡住
 
 #### docker
+
 安装 docker
 
 ```shell
-sudo pacman -S docker
+sudo paru -S docker
 ```
 
 修改配置
@@ -58,10 +62,11 @@ sudo systemctl enable --now docker
 ```
 
 #### containerd
+
 安装 containerd
 
 ```shell
-sudo pacman -S containerd
+sudo paru -S containerd
 ```
 
 配置
@@ -81,10 +86,11 @@ sudo systemctl enable --now containerd
 ## 安装依赖
 
 ```shell
-sudo pacman -S ebtables ethtool conntrack-tools socat
+sudo paru -S ebtables ethtool conntrack-tools socat
 ```
 
 ## 安装 kubeadm、kubelet、kubectl
+
 > aur 源中 kubeadm，会将 kubelet 作为依赖安装
 
 ```shell

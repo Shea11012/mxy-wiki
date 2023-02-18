@@ -1,10 +1,10 @@
 {
   "baseFontSize": 16,
   "theme": "obsidian",
-  "cssTheme": "Obsidian Nord",
+  "cssTheme": "Minimal",
   "translucency": false,
   "accentColor": "",
-  "interfaceFontFamily": "Microsoft YaHei",
-  "textFontFamily": "Microsoft YaHei",
-  "monospaceFontFamily": "JetBrainsMono NF"
+  "interfaceFontFamily": "JetBrainsMono Nerd Font",
+  "textFontFamily": "FiraCodeNerdFontCompleteM Nerd Font",
+  "monospaceFontFamily": "FiraCode Nerd Font"
 }

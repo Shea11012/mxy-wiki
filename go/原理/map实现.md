@@ -70,6 +70,6 @@ map 的数据转移是扩容后逐步进行的，在访问或者删除时做至�
 获取 key 的 hash，判断是否在扩容，是则执行一次扩容操作，根据 hash 找桶，执行清除操作、计数减 1 等
 
 
-ref:
+## ref:
 [Golang 底层实现系列——map 的底层实现 - SegmentFault 思否](https://segmentfault.com/a/1190000040269520)
 [理解 Golang 哈希表 Map 的原理 | Go 语言设计与实现 (draveness.me)](https://draveness.me/golang/docs/part2-foundation/ch03-datastructure/golang-hashmap/#33-%E5%93%88%E5%B8%8C%E8%A1%A8)

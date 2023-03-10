@@ -1,7 +1,7 @@
 ---
-tags: 
+tags: ["kvm", "virtual"]
 date created: 2021-12-03 20:20
-date modified: 2023-02-18 02:51
+date modified: 2023-02-19 18:39
 title: kvm
 ---
 
@@ -11,8 +11,12 @@ title: kvm
 
 ### qemu 安装
 
+virt-manager 是创建 vm 的可视化工具 
+
+virt-viewer 打开 vm 实例
+
 ```bash
-sudo paru -S qemu qemu-arch-extra ovmf bridge-utils dnsmasq vde2 openbsd-netcat ebtables iptables
+sudo paru -S qemu virt-manager virt-viewer bridge-utils dnsmasq vde2 openbsd-netcat ebtables iptables
 ```
 
 - ovmf：UEFI bios 和 Secure Boot 启动
@@ -22,20 +26,17 @@ sudo paru -S qemu qemu-arch-extra ovmf bridge-utils dnsmasq vde2 openbsd-netcat 
 - openbsd-netcat：网络测试工具
 - ebtables 和 iptables：创建包路由和防火墙
 
-## virt-manager && libvirtd service
+### 安装 libguestfs
 
-virt-manager 是创建 vm 的可视化工具 
-
-virt-viewer 打开 vm 实例
-
+libguestfs 提供访问和修改 vm 磁盘的工具
 ```bash
-sudo paru -S virt-manager virt-viewer
+paru -S libguestfs
 ```
 
-## 开启服务
+### 开启服务
 
 ```bash
-sudo systemctl enable libvirtd.service && sudo systemctl start libvirtd.service
+sudo systemctl enable --now libvirtd.service
 ```
 
 ## 配置 kvm
@@ -48,7 +49,7 @@ unix_sock_group = "libvirt"
 unix_sock_rw_perms = "0770"
 ```
 
-## 给 vm 创建一个桥接网络
+### 给 vm 创建一个桥接网络
 
 ```bash
 vim /tmp/br10.xml
@@ -71,7 +72,7 @@ vim /tmp/br10.xml
 </network>
 ```
 
-## 注册桥接网络
+### 注册桥接网络
 
 ```bash
 注册网络
@@ -81,7 +82,7 @@ sudo virsh net-define /tmp/br10.xml
 sudo virsh net-start br10
 ```
 
-## 将当前用户加入到 libvirt 组
+### 将当前用户加入到 libvirt 组
 
 ```bash
 sudo usermod -a -G libvirt $(whoami)
@@ -89,7 +90,8 @@ sudo usermod -a -G libvirt $(whoami)
 
 ## 参考
 
-[kvm 安装视频](https://www.youtube.com/watch?v=itZf5FpDcV0)
+- [install-kvm-qemu-virt-manager-arch-manjar](https://computingforgeeks.com/install-kvm-qemu-virt-manager-arch-manjar)
+- [kvm 安装视频](https://www.youtube.com/watch?v=itZf5FpDcV0)
+- [kvm virtmanager](https://boseji.com/posts/manjaro-kvm-virtmanager/)
 
-[kvm virtmanager](https://boseji.com/posts/manjaro-kvm-virtmanager/)
-
+s

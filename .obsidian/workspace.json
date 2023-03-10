@@ -4,34 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "5129830dd79fbe1d",
+        "id": "17188e031607a996",
         "type": "tabs",
         "children": [
           {
-            "id": "47ba83945e6cd4e0",
+            "id": "6b23412288bdd4ee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "git/Git 常用命令.md",
+                "file": "计算机网络/协议/TCP.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "afce80f1eebef560",
+            "id": "4cf1107e38557cfb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/Linux终端工具.md",
+                "file": "计算机网络/三握、四挥.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -75,7 +76,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "git/Git 常用命令.md"
+                "file": "计算机网络/三握、四挥.md"
               }
             }
           }
@@ -99,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "git/Git 常用命令.md",
+                "file": "计算机网络/三握、四挥.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +143,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -156,17 +158,43 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "47ba83945e6cd4e0",
+  "active": "4cf1107e38557cfb",
   "lastOpenFiles": [
-    "win/宿主机使用 wsl2 里的 docker.md",
-    "分布式/分布式系统.md",
-    "微服务/基础概念.md",
-    "redis/缓存击穿、缓存穿透等问题.md",
-    "redis/缓存设计.md",
-    "todo/todo.md",
-    "container/docker/docker PHP环境搭建遇到问题.md",
-    "container/docker/使用docker遇到的问题.md",
-    "工具/Linux终端工具.md",
-    "container/docker/使用docker中遇到的问题.md"
+    "计算机网络/协议/TCP.md",
+    "计算机网络/三握、四挥.md",
+    "计算机网络/attachments/tcp挥手.png",
+    "计算机网络/常见面试问题.md",
+    "计算机网络/TCP实现可靠数据传输机制.md",
+    "计算机网络/TCP.md",
+    "计算机网络/TCP连接资源限制.md",
+    "计算机网络/internet 地址结构.md",
+    "计算机网络/DNS的原理和作用.md",
+    "计算机网络/attachments/Pasted image 20230309052244.png",
+    "计算机网络/深入理解Linux网络笔记.md",
+    "计算机网络/深入理解Linux网络/内核如何接受网络包.md",
+    "计算机网络/attachments/Pasted image 20230308183224.png",
+    "计算机网络/深入理解Linux网络/内核如何与用户进程协作.md",
+    "计算机网络/tcpdump 和 wireshark 使用.md",
+    "计算机网络/三握四挥.canvas",
+    "计算机网络/attachments/tcp握手.png",
+    "计算机网络/attachments/tcp握手.drawio.png",
+    "计算机网络/协议分层.md",
+    "计算机网络/attachments/Pasted image 20230306051835.png",
+    "计算机网络/attachments/Pasted image 20230306051428.png",
+    "计算机网络/attachments/Pasted image 20230306045324.png",
+    "计算机网络/attachments/Pasted image 20230306045253.png",
+    "计算机网络/attachments",
+    "go/原理/map实现.md",
+    "linux/tools/rsync.md",
+    "正则/常用正则表达式.md",
+    "数据结构和算法/查找算法/二分查找.md",
+    "linux/tools/ssh.md",
+    "container/docker/docker 安装和卸载.md",
+    "linux/Linux系统用户组管理.md",
+    "container/cgroup/cgroups.md",
+    "go/数组和切片.md",
+    "linux/kvm.md",
+    "container/cgroup/namespace.md",
+    "git/Git 常用命令.md"
   ]
 }

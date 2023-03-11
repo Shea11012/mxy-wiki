@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "计算机网络/三握、四挥.md",
+                "file": "计算机基础/CPU.md",
                 "mode": "source",
                 "source": false
               }
@@ -76,7 +76,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "计算机网络/三握、四挥.md"
+                "file": "计算机基础/CPU.md"
               }
             }
           }
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "计算机网络/三握、四挥.md",
+                "file": "计算机基础/CPU.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,8 +143,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -160,8 +159,17 @@
   },
   "active": "4cf1107e38557cfb",
   "lastOpenFiles": [
-    "计算机网络/协议/TCP.md",
+    "计算机基础/attachments/Pasted image 20230312061926.png",
+    "计算机基础/零拷贝.md",
+    "计算机基础/编码.md",
+    "计算机基础/内存对齐.md",
+    "计算机基础/内存管理.md",
+    "计算机基础/内存一致性协议.md",
+    "计算机基础/内存.md",
+    "计算机基础/CPU.md",
+    "git/git提交规范.md",
     "计算机网络/三握、四挥.md",
+    "计算机网络/协议/TCP.md",
     "计算机网络/attachments/tcp挥手.png",
     "计算机网络/常见面试问题.md",
     "计算机网络/TCP实现可靠数据传输机制.md",
@@ -187,14 +195,6 @@
     "go/原理/map实现.md",
     "linux/tools/rsync.md",
     "正则/常用正则表达式.md",
-    "数据结构和算法/查找算法/二分查找.md",
-    "linux/tools/ssh.md",
-    "container/docker/docker 安装和卸载.md",
-    "linux/Linux系统用户组管理.md",
-    "container/cgroup/cgroups.md",
-    "go/数组和切片.md",
-    "linux/kvm.md",
-    "container/cgroup/namespace.md",
-    "git/Git 常用命令.md"
+    "数据结构和算法/查找算法/二分查找.md"
   ]
 }

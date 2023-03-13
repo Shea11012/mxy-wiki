@@ -1,7 +1,7 @@
 ---
 date created: 2021-12-03 20:20
 date modified: 2022-03-02 21:50
-title: proto
+title: protoc
 ---
 ### protoc 命令
 
@@ -20,7 +20,7 @@ protoc --proto_path=. --go_out=plugins=grpc,paths=source_relative:. ./proto/*.pr
 
 WARNING: Missing 'go_package' option 
 
-需要在 proto 文件中添加 option go_package 配置，如果当前 module 是 `github.com/Shea11012/learn-grpc` 中，proto 的文件是写在 `proto` 目录下
+需要在 proto 文件中添加 option go_package 配置，例：当前 module 是 `github.com/Shea11012/learn-grpc` 中，proto 的文件是写在 `proto` 目录下
 
 ```protobuf
 package a

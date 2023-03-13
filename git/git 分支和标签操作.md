@@ -1,6 +1,7 @@
 ---
+tags: []
 date created: 2021-11-30 21:22
-date modified: 2022-01-23 15:09
+date modified: 2023-03-13 00:04
 title: 远程仓库
 ---
 git rebase ref 创建一个线性提交，是将当前 HEAD 指向的提交移动到指定的 ref 下
@@ -9,7 +10,7 @@ git rebase ref 创建一个线性提交，是将当前 HEAD 指向的提交移�
 
 git checkout HEAD^ 父级，HEAD 相当于指针，HEAD -> Branch Name -> commit
 
-git branch -f  {Branch Name} HEAD~3 ：强制将分支移动到 c1 
+git branch -f {Branch Name} HEAD~3 ：强制将分支移动到 c1 
 
 ![](1566318785031.png)
 
@@ -24,8 +25,6 @@ git revert 实际是创建一个与上一个提交一样的新提交
 
 
 git reset 把分支记录回退几个提交记录来实现撤销修改
-
-
 
 ## 选择提交记录
 
@@ -98,21 +97,3 @@ git fetch origin slave^:master
 ```
 
 **Tips：如果 source 不设置，如 git push origin :master 则表示删除 master ，而 fetch 则相反，git fetch origin :slave 则会创建一个 slave 的本地分支**
-
-## git 提交规范
-提交语法：
-```shell
-<type>([scope]): <subject>
-```
-
-type 类型如下：
-- feat(feature)：新功能
-- fix：修复 bug
-- docs：文档注释
-- style：代码格式
-- refactor：重构、优化
-- perf(performence)：性能优化
-- test：测试
-- chore：构建过程或者辅助工具变动
-- revert：回退
-- build：打包

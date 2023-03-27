@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"type":"text","text":"linux性能调试和优化","id":"f140009bd55b74f4","x":-980,"y":-160,"width":250,"height":60,"color":"2"},
+		{"type":"text","text":"CPU","id":"92add327ca086ae9","x":-240,"y":-780,"width":250,"height":50,"color":"1"},
+		{"type":"file","file":"linux/CPU性能指标.md","id":"3487a925bb61dc54","x":560,"y":-1340,"width":400,"height":400},
+		{"id":"d7f334a708b4bd7d","x":560,"y":-730,"width":400,"height":400,"type":"file","file":"linux/CPU工具汇总.md"},
+		{"type":"text","text":"网络","id":"bbd74252db042ef2","x":-240,"y":420,"width":250,"height":60,"color":"5"},
+		{"id":"1e6b2eb87a208163","x":560,"y":50,"width":400,"height":400,"type":"file","file":"linux/网络性能指标.md"},
+		{"id":"1ea63a0dd7b4e924","x":560,"y":880,"width":400,"height":400,"type":"file","file":"linux/网络工具汇总.md"}
+	],
+	"edges":[
+		{"id":"fbdfc5448b29d397","fromNode":"f140009bd55b74f4","fromSide":"right","toNode":"92add327ca086ae9","toSide":"left"},
+		{"id":"15e5f52f31b75265","fromNode":"f140009bd55b74f4","fromSide":"right","toNode":"bbd74252db042ef2","toSide":"left"},
+		{"id":"c6227780978b198f","fromNode":"92add327ca086ae9","fromSide":"right","toNode":"3487a925bb61dc54","toSide":"left"},
+		{"id":"98e44ea31ad26949","fromNode":"92add327ca086ae9","fromSide":"right","toNode":"d7f334a708b4bd7d","toSide":"left"},
+		{"id":"8e974806b1be5975","fromNode":"bbd74252db042ef2","fromSide":"right","toNode":"1e6b2eb87a208163","toSide":"left"},
+		{"id":"dd0401cdbe7484fc","fromNode":"bbd74252db042ef2","fromSide":"right","toNode":"1ea63a0dd7b4e924","toSide":"left"}
+	]
+}

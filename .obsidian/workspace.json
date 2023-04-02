@@ -4,74 +4,50 @@
     "type": "split",
     "children": [
       {
-        "id": "17188e031607a996",
+        "id": "e451bfb212d4db23",
         "type": "tabs",
         "children": [
           {
-            "id": "6b23412288bdd4ee",
+            "id": "5f6b27d56613167b",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
-                "file": "linux/linux性能调优.canvas",
+                "file": "mysql/MySQL总结.canvas",
                 "viewState": {
-                  "x": 945.8764157926992,
-                  "y": 251.94338823931736,
-                  "zoom": -0.7366666666666666
+                  "x": 627,
+                  "y": 368,
+                  "zoom": 0
                 }
               }
             }
           },
           {
-            "id": "d354a550937ddc9f",
+            "id": "1010f9e4648ee847",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/网络性能指标.md",
+                "file": "mysql/索引失效.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "7db4f9075ae48c7a",
+            "id": "341f6afaf670a551",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/网络性能指标.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9129553e97fd3e3b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "linux/CPU工具汇总.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c6acff6c6126f520",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "linux/CPU性能指标.md",
+                "file": "mysql/索引.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -115,7 +91,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux/网络性能指标.md"
+                "file": "mysql/索引失效.md"
               }
             }
           }
@@ -139,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux/网络性能指标.md",
+                "file": "mysql/索引失效.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -196,10 +172,32 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "f0fd45d70edbf663",
+  "active": "1010f9e4648ee847",
   "lastOpenFiles": [
-    "linux/网络工具汇总.md",
+    "mysql/索引.md",
+    "mysql/索引失效.md",
+    "mysql/mysql面试问题.md",
+    "mysql/MySQL总结.canvas",
+    "linux/tools/ssh.md",
+    "linux/shell/shell.md",
+    "linux/shell/基础shell编程.md",
+    "linux/shell/shell 基础.md",
+    "linux/shell/变量.md",
+    "linux/shell/结构化命令.md",
+    "mysql/Untitled",
+    "mysql/explain使用.md",
+    "mysql/mysql索引失效.md",
+    "mysql/mysql优化.md",
+    "mysql/InnoDB/文件结构.md",
+    "mysql/InnoDB/attachments/Pasted image 20230329185340.png",
+    "mysql/MySQL执行流程.md",
+    "mysql/InnoDB.md",
+    "mysql/InnoDB/attachments/Pasted image 20230329183155.png",
+    "mysql/InnoDB/attachments",
+    "计算机网络/三握、四挥.md",
+    "kafka/kafka.md",
     "linux/linux性能调优.canvas",
+    "linux/网络工具汇总.md",
     "linux/网络性能指标.md",
     "linux/CPU工具汇总.md",
     "linux/CPU性能指标.md",
@@ -207,23 +205,6 @@
     "linux/控制台输出颜色控制.md",
     "linux/Linux测试磁盘IO性能.md",
     "linux/编写zsh completion.md",
-    "linux/常用命令.md",
-    "linux/小技巧/常用命令.md",
-    "linux/系统状态统计和查看.md",
-    "go/go时间处理.md",
-    "kafka/kafka.md",
-    "kafka/常用命令.md",
-    "kafka/避免消息丢失.md",
-    "kafka/kafka问题.md",
-    "工具/开发工具.md",
-    "计算机网络/三握、四挥.md",
-    "linux/tools/rsync.md",
-    "计算机网络/协议/TCP.md",
-    "go/protoc.md",
-    "go/protobuf 使用.md",
-    "计算机基础/IO模型.md",
-    "计算机基础/栈和堆.md",
-    "go/实用库.md",
     "计算机基础/attachments/Pasted image 20230312061926.png",
     "计算机网络/attachments/tcp挥手.png",
     "计算机网络/attachments/Pasted image 20230309052244.png",
@@ -233,8 +214,6 @@
     "计算机网络/attachments/tcp握手.drawio.png",
     "计算机网络/attachments/Pasted image 20230306051835.png",
     "计算机网络/attachments/Pasted image 20230306051428.png",
-    "计算机网络/attachments/Pasted image 20230306045324.png",
-    "计算机网络/attachments/Pasted image 20230306045253.png",
     "计算机网络/attachments"
   ]
 }

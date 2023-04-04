@@ -12,6 +12,6 @@
   "autoPairBrackets": false,
   "legacyEditor": false,
   "livePreview": true,
-  "useMarkdownLinks": true,
+  "useMarkdownLinks": false,
   "defaultViewMode": "source"
 }

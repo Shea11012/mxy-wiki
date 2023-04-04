@@ -1,15 +1,25 @@
 {
 	"nodes":[
 		{"type":"text","text":"MySQL","id":"e7add8fbf2231c11","x":-420,"y":-220,"width":250,"height":60},
-		{"type":"file","file":"mysql/MySQL执行流程.md","id":"ca10a8af68b6d3ec","x":0,"y":-620,"width":400,"height":400},
-		{"type":"file","file":"mysql/索引.md","id":"f03b3104f0f7c80e","x":0,"y":-60,"width":400,"height":400},
-		{"id":"e5076bdcdcbe729b","x":660,"y":-220,"width":400,"height":400,"type":"file","file":"mysql/explain使用.md"},
-		{"id":"f2d551a729967d94","x":640,"y":320,"width":400,"height":400,"type":"file","file":"mysql/索引失效.md"}
+		{"type":"file","file":"mysql/索引.md","id":"f03b3104f0f7c80e","x":240,"y":-680,"width":400,"height":400},
+		{"type":"file","file":"mysql/explain使用.md","id":"e5076bdcdcbe729b","x":1360,"y":-1200,"width":400,"height":400},
+		{"type":"file","file":"mysql/索引失效.md","id":"f2d551a729967d94","x":1360,"y":-480,"width":400,"height":400},
+		{"type":"file","file":"mysql/InnoDB/事务.md","id":"a23c3979f547d00f","x":240,"y":40,"width":400,"height":400},
+		{"type":"file","file":"mysql/InnoDB/锁.md","id":"6642c9f0ed7158f0","x":240,"y":760,"width":400,"height":400},
+		{"type":"file","file":"mysql/MySQL执行流程.md","id":"ca10a8af68b6d3ec","x":240,"y":-1400,"width":400,"height":400},
+		{"type":"file","file":"mysql/InnoDB/日志.md","id":"e70360a6902e92d1","x":240,"y":1440,"width":400,"height":400},
+		{"id":"fe4b402ec7d06f99","x":1280,"y":1440,"width":400,"height":400,"type":"file","file":"mysql/主从复制.md"},
+		{"id":"b314123c12eaa5b3","x":240,"y":2160,"width":400,"height":400,"type":"file","file":"mysql/InnoDB/bufferPool.md"}
 	],
 	"edges":[
 		{"id":"a8668e2ffaeb5835","fromNode":"e7add8fbf2231c11","fromSide":"right","toNode":"ca10a8af68b6d3ec","toSide":"left"},
 		{"id":"45e1fc2d8111d86b","fromNode":"e7add8fbf2231c11","fromSide":"right","toNode":"f03b3104f0f7c80e","toSide":"left"},
 		{"id":"ad74eb42ec298178","fromNode":"f03b3104f0f7c80e","fromSide":"right","toNode":"e5076bdcdcbe729b","toSide":"left"},
-		{"id":"31b4d8d0ad483df3","fromNode":"f03b3104f0f7c80e","fromSide":"right","toNode":"f2d551a729967d94","toSide":"left"}
+		{"id":"31b4d8d0ad483df3","fromNode":"f03b3104f0f7c80e","fromSide":"right","toNode":"f2d551a729967d94","toSide":"left"},
+		{"id":"4449d0cb36d4df41","fromNode":"e7add8fbf2231c11","fromSide":"right","toNode":"a23c3979f547d00f","toSide":"left"},
+		{"id":"ad0bb2453949a664","fromNode":"e7add8fbf2231c11","fromSide":"right","toNode":"6642c9f0ed7158f0","toSide":"left"},
+		{"id":"d8b6d4bcee9430e6","fromNode":"e7add8fbf2231c11","fromSide":"right","toNode":"e70360a6902e92d1","toSide":"left"},
+		{"id":"79d9c1e56c255468","fromNode":"e70360a6902e92d1","fromSide":"right","toNode":"fe4b402ec7d06f99","toSide":"left"},
+		{"id":"082daba64197d31d","fromNode":"e7add8fbf2231c11","fromSide":"right","toNode":"b314123c12eaa5b3","toSide":"left"}
 	]
 }

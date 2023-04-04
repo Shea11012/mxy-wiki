@@ -11,24 +11,21 @@
             "id": "5f6b27d56613167b",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "mysql/MySQL总结.canvas",
-                "viewState": {
-                  "x": 627,
-                  "y": 368,
-                  "zoom": 0
-                }
+                "file": "mysql/binlog日志.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
           {
-            "id": "1010f9e4648ee847",
+            "id": "8ca833e678e79a54",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mysql/索引失效.md",
+                "file": "mysql/InnoDB/bufferPool.md",
                 "mode": "source",
                 "source": false
               }
@@ -38,16 +35,31 @@
             "id": "341f6afaf670a551",
             "type": "leaf",
             "state": {
+              "type": "canvas",
+              "state": {
+                "file": "mysql/MySQL总结.canvas",
+                "viewState": {
+                  "x": 670,
+                  "y": 1047.5198599766627,
+                  "zoom": -1.484464549301724
+                }
+              }
+            }
+          },
+          {
+            "id": "533ddcd9d235fe3f",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "mysql/索引.md",
+                "file": "mysql/两阶段提交.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -91,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "mysql/索引失效.md"
+                "file": "mysql/MySQL总结.canvas"
               }
             }
           }
@@ -115,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "mysql/索引失效.md",
+                "file": "mysql/MySQL总结.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,12 +184,27 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "1010f9e4648ee847",
+  "active": "341f6afaf670a551",
   "lastOpenFiles": [
+    "mysql/InnoDB/bufferPool.md",
+    "mysql/InnoDB/attachments/Pasted image 20230405043056.png",
+    "mysql/InnoDB/日志.md",
+    "mysql/MySQL总结.canvas",
+    "mysql/主从复制.md",
+    "mysql/binlog日志.md",
+    "mysql/InnoDB/redo日志.md",
+    "mysql/两阶段提交.md",
+    "mysql/attachments/主丛复制.png",
+    "计算机基础/硬件.md",
+    "mysql/InnoDB/undo日志.md",
+    "mysql/InnoDB/锁.md",
+    "mysql/InnoDB/attachments/Pasted image 20230404020853.png",
     "mysql/索引.md",
+    "mysql/InnoDB/事务.md",
+    "mysql/InnoDB/attachments/不可重复读.png",
+    "mysql/InnoDB/attachments/Pasted image 20230403213608.png",
     "mysql/索引失效.md",
     "mysql/mysql面试问题.md",
-    "mysql/MySQL总结.canvas",
     "linux/tools/ssh.md",
     "linux/shell/shell.md",
     "linux/shell/基础shell编程.md",
@@ -195,25 +222,11 @@
     "mysql/InnoDB/attachments/Pasted image 20230329183155.png",
     "mysql/InnoDB/attachments",
     "计算机网络/三握、四挥.md",
-    "kafka/kafka.md",
     "linux/linux性能调优.canvas",
-    "linux/网络工具汇总.md",
-    "linux/网络性能指标.md",
-    "linux/CPU工具汇总.md",
-    "linux/CPU性能指标.md",
-    "linux/遇到过的问题.md",
-    "linux/控制台输出颜色控制.md",
-    "linux/Linux测试磁盘IO性能.md",
-    "linux/编写zsh completion.md",
     "计算机基础/attachments/Pasted image 20230312061926.png",
     "计算机网络/attachments/tcp挥手.png",
     "计算机网络/attachments/Pasted image 20230309052244.png",
-    "计算机网络/attachments/Pasted image 20230308183224.png",
     "计算机网络/三握四挥.canvas",
-    "计算机网络/attachments/tcp握手.png",
-    "计算机网络/attachments/tcp握手.drawio.png",
-    "计算机网络/attachments/Pasted image 20230306051835.png",
-    "计算机网络/attachments/Pasted image 20230306051428.png",
     "计算机网络/attachments"
   ]
 }

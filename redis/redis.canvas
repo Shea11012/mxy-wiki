@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"type":"file","file":"redis/概述.md","id":"af8c50e7105a35d1","x":-760,"y":-300,"width":400,"height":400},
+		{"type":"file","file":"redis/数据类型.md","id":"933185dfb07658a1","x":20,"y":-880,"width":400,"height":400},
+		{"type":"file","file":"redis/内部结构.md","id":"c18189eca5189b70","x":960,"y":-880,"width":400,"height":400},
+		{"type":"file","file":"redis/持久化.md","id":"6aae1e495a93ecca","x":20,"y":-300,"width":400,"height":400},
+		{"id":"30ebe086a71f3602","x":20,"y":240,"width":400,"height":400,"type":"file","file":"redis/过期删除和内存淘汰策略.md"},
+		{"type":"file","file":"redis/缓存设计.md","id":"46b021739b8a863a","x":20,"y":800,"width":400,"height":400},
+		{"type":"file","file":"redis/集群.md","id":"402d0b519049a32b","x":20,"y":1400,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"0c389df78fa84d47","fromNode":"933185dfb07658a1","fromSide":"right","toNode":"c18189eca5189b70","toSide":"left"},
+		{"id":"24bfc119083dac76","fromNode":"af8c50e7105a35d1","fromSide":"right","toNode":"933185dfb07658a1","toSide":"left"},
+		{"id":"41af69a11f9cf0bb","fromNode":"af8c50e7105a35d1","fromSide":"right","toNode":"6aae1e495a93ecca","toSide":"left"},
+		{"id":"363120561e3b3095","fromNode":"af8c50e7105a35d1","fromSide":"right","toNode":"402d0b519049a32b","toSide":"left"},
+		{"id":"ca4dc6343c6767c9","fromNode":"af8c50e7105a35d1","fromSide":"right","toNode":"46b021739b8a863a","toSide":"left"},
+		{"id":"f92969368494cb95","fromNode":"af8c50e7105a35d1","fromSide":"right","toNode":"30ebe086a71f3602","toSide":"left"}
+	]
+}

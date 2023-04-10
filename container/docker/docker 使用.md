@@ -1,8 +1,10 @@
 ---
+tags: 
 date created: 2021-11-30 21:22
-date modified: 2021-12-14 21:54
+date modified: 2023-04-10 19:16
 title: docker 使用
 ---
+
 # docker 使用
 
 更改镜像源，下面两个镜像源提供了更换方法
@@ -13,6 +15,7 @@ title: docker 使用
 [Docker 快速上手](https://segmentfault.com/a/1190000008822648)
 
 ### 镜像与容器
+
 | 命令                                                | 说明                                                         |
 | --------------------------------------------------- | ------------------------------------------------------------ |
 | docker search $mirror-name                          | 搜索镜像                                                     |
@@ -32,6 +35,7 @@ title: docker 使用
 | docker inspect \$container-name                      | 查看容器详情                                                 |
 | docker rm \$container-name-1 ,[container-name-2] ... | 删除容器 (可以加入一个或多个批量删除)                         |
 | docker rm \$(docker ps -aq)                          | 删除全部容器                                                 |
+
 ### docker 网络
 
 | 命令                                                           | 说明                                                                                                                                                                                                                 |
@@ -51,6 +55,7 @@ title: docker 使用
   之后可以使用 ping 指令测试容器间的网络连通情况。没有 ping 指令的容器需要安装 iputils
 
 ### Docker 存储
+
 讲容器的部分存储映射到宿主机器中，以便对配置文件、日志文件、数据文件等进行备份
 
 | 命令                                                            | 说明                                 |
@@ -75,8 +80,6 @@ title: docker 使用
 | docker port \$container-name | 查看指定的容器端口 |
 
 `docker ps -a` 中的 `PORTS` 栏看到端口映射情况。注意只有处于运行中的容器才会有实际的端口映射。
-
-
 
 ### docker-compose
 
@@ -132,94 +135,5 @@ networks:
 |----|----|
 |docker commit -m $commit-msg -a author container-id namespace/mirror-name:tag| 生成镜像，例：docker commit -m 'install nginx' -a 'shea' abcd1234 shea/nginx:test |
 | docker push $namespace/mirror-name:tag | 提交镜像 |
-国内使用 DaoCloud 或阿里 Docker 服务，具体推送方法去服务商网站查看
 
-### Dockerfile
-Dockerfile 可以指定新镜像的原镜像来源，对原镜像的操作、环境变量、以及以此创建容器时执行的指令等。
-样例
-```dockerfile
-# 新镜像基于的原镜像
-FROM centos:centos6.8
-
-# 指明维护者
-MAINTAINER dailybird <dailybird@mail.com>
-
-# 设置一些环境变量，使用 \ 表示连接多个设置
-ENV NGINX_VERSION 1.11.11 \
-    TEST_ENV hello
-
-# 指定暴露的端口号，
-EXPOSE 80 443
-
-# 在原镜像基础上进行的修改
-RUN yum install -y wget iputils \
-    && wget http://nginx.org/download/nginx-1.11.11.tar.gz
-
-# 以此镜像创建并启动时，容器执行的指令，通常用于启动服务
-CMD ["echo", "hello world"]
-```
-比如使用以下配置可以在 centos 中安装 nginx：
-
-```dockerfile
-FROM centos:centos6.8
-
-MAINTAINER dailybird <dailybird@mail.com>
-
-EXPOSE 80 443
-
-RUN cd / \
-    && mkdir data \
-    && cd data \
-    && mkdir nmp \
-    && cd nmp \
-    && yum install -y wget pcre-devel gcc gcc-c++ \
-       ncurses-devel perl make zlib zlib-devel \
-       openssl openssl--devel iputils \
-    && wget http://nginx.org/download/nginx-1.11.11.tar.gz \
-    && tar zxf nginx-1.11.11.tar.gz \
-    && cd nginx-1.11.11 \
-    && ./configure --prefix=/usr/local/nginx \
-    && make && make install && make clean \
-```
-
-更多的 Dockerfile 指令可以参考 [Dockerfile 指令](http://wiki.jikexueyuan.com/project/docker-technology-and-combat/instructions.html)
-
-**Dockerfile 的使用**
-
-新建一个名为 Dockerfile 的文件（没有后缀），并写入一些配置内容，然后再该文件的目录中，通过以下指令创建镜像：
-
-`docker build --tag $namespace/$mirror-name:$tag $dockerfile-dir`
-
-其中，$dockerfile-dir 为 Dockerfile 所在目录，比如执行：
-
-`docker build --tag shea/nginx-demo:demo ./`
-
-**docker-compose 中使用 Dockerfile**
-
-当我们需要启动一个新镜像时，可以先将此镜像创建出来，然后在 `docker-compose.yml` 文件中通过 `image` 指定新镜像；也可以直接通过以下方式将这两个步骤合并： 
-
-```yaml
-version: '2.0'
-services: 
-  web1:
-    # build 后的参数为 Dockerfile 文件所在的目录位置，替换原先的 image
-    build: ./
-    ports:
-      - "80"
-    networks:
-      - "mynetwork"
-      
-# ...
-# 其他配置
-```
-
-此后，可以通过以下指令创建容器：
-
-`docker-compose build`
-
-`docker-compose up`
-
-或者直接执行：
-
-`docker-compose up --build`
 

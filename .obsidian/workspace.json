@@ -8,34 +8,10 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f7595fb75cbba7a3",
+            "id": "4588ab86905114a0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "go/原理/map实现.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "77920ee71f006039",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "go/原理/内存管理.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f26468e52d2ae35a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
                 "file": "rust/rust基础.md",
                 "mode": "source",
@@ -67,6 +43,7 @@
               }
             }
           }
+        ]
         ],
         "currentTab": 4
       }
@@ -111,9 +88,15 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "go/原理/hashMap 实现.md"
-              }
+              "state": {}
+            }
+          },
+          {
+            "id": "0b8aa02f122f3774",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
             }
           },
           {
@@ -128,7 +111,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 371.5
+    "width": 291.5
   },
   "right": {
     "id": "b8b1b70302a4f1a3",
@@ -144,7 +127,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "go/原理/hashMap 实现.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -187,7 +169,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -201,35 +184,35 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "f0fd45d70edbf663",
+  "active": "4588ab86905114a0",
   "lastOpenFiles": [
-    "go/原理/sync.Pool.md",
-    "go/原理/mutex和RWMutex实现.md",
-    "go/原理/map实现.md",
-    "git/Git 常用命令.md",
-    "数据结构和算法/datastructure/跳表.md",
-    "linux/tools/ssh.md",
-    "git/生成公私钥&配置config.md",
-    "prometheus/prometheus.md",
-    "linux/Linux文件权限管理.md",
-    "linux/shell/结构化命令.md",
-    "go/原理/垃圾回收.md",
-    "todo/todo.md",
-    "linux/tools/sed.md",
-    "go/原理/内存管理.md",
-    "go/原理/GPM调度器.md",
-    "计算机基础/进程和线程.md",
-    "go/go plan9 汇编.md",
-    "go/原理/sync.Map 实现.md",
-    "go/原理/sync.WaitGroup.md",
-    "go/原理/slice.md",
+    "kafka/kafka如何实现精确一次.md",
+    "go/原理/hashMap 实现.md",
     "go/原理/channel.md",
-    "linux/常用命令.md",
-    "go/常见面试题.md",
+    "git/git 分支和标签操作.md",
     "redis/redis.canvas",
-    "redis/缓存.md",
-    "redis/集群.md",
-    "container/docker/dockerfile.md",
+    "kafka/kafka.md",
+    "kafka/常见面试问题.md",
+    "go/原理/sync.Map 实现.md",
+    "go/原理/内存管理.md",
+    "mysql/MySQL执行流程.md",
+    "mysql/InnoDB/事务.md",
+    "mysql/InnoDB/日志.md",
+    "mysql/InnoDB/undo日志.md",
+    "mysql/InnoDB/redo日志.md",
+    "mysql/binlog日志.md",
+    "go/原理/GC.md",
+    "mysql/索引.md",
+    "mysql/主从复制.md",
+    "mysql/mysql优化.md",
+    "mysql/索引失效.md",
+    "mysql/mysql面试问题.md",
+    "redis/数据类型.md",
+    "redis/持久化.md",
+    "redis/概述.md",
+    "redis/过期删除和内存淘汰策略.md",
+    "计算机网络/协议/HTTP、HTTPS.md",
+    "计算机网络/协议/DNS.md",
     "mysql/InnoDB/attachments/Pasted image 20230405043056.png",
     "mysql/MySQL总结.canvas",
     "mysql/attachments/主丛复制.png",

@@ -1,13 +1,12 @@
 ---
+tags: 
 date created: 2021-06-07 23:53
-date modified: 2021-06-08 21:45
+date modified: 2023-05-14 23:41
 title: git action
 ---
 
----
-tags: ["git-action"]
----
 # git action
+
 workflow 针对仓库可以自动构建、测试、打包、发布或部署任何项目
 
 workflow 文件存储在 `.github/workflow` 仓库根目录，workflow 至少需要一个 job，job 是包含多个 steps 的 task，每个 steps 可以允许命令或者使用一个 action
@@ -50,8 +49,8 @@ jobs:
 
 ### **为 workflow 选择 actions 的类型**
 
--   docker container actions
--   JavaScript actions
+- docker container actions
+- JavaScript actions
 
 当选择了 actions 的类型后，会自动去发现一些符合当前仓库的 actions
 

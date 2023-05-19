@@ -4,48 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "867430cbb7d065f8",
+        "id": "e65bd678c4cfb86c",
         "type": "tabs",
         "children": [
           {
-            "id": "4588ab86905114a0",
+            "id": "57b50399ac461c43",
             "type": "leaf",
             "state": {
-              "type": "canvas",
-              "state": {
-                "file": "rust/rust基础.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9400da0221164b74",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "go/常见面试题.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "975b2e9708f09e40",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "go/原理/hashMap 实现.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
-        ],
-        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -93,14 +63,6 @@
           },
           {
             "id": "0b8aa02f122f3774",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {}
-            }
-          },
-          {
-            "id": "533e5079ed0d9379",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -184,15 +146,17 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "4588ab86905114a0",
+  "active": "57b50399ac461c43",
   "lastOpenFiles": [
+    "go/原理/GC.md",
+    "计算机网络/协议/HTTP、HTTPS.md",
+    "kafka/常见面试问题.md",
     "kafka/kafka如何实现精确一次.md",
     "go/原理/hashMap 实现.md",
     "go/原理/channel.md",
     "git/git 分支和标签操作.md",
     "redis/redis.canvas",
     "kafka/kafka.md",
-    "kafka/常见面试问题.md",
     "go/原理/sync.Map 实现.md",
     "go/原理/内存管理.md",
     "mysql/MySQL执行流程.md",
@@ -201,7 +165,6 @@
     "mysql/InnoDB/undo日志.md",
     "mysql/InnoDB/redo日志.md",
     "mysql/binlog日志.md",
-    "go/原理/GC.md",
     "mysql/索引.md",
     "mysql/主从复制.md",
     "mysql/mysql优化.md",
@@ -211,7 +174,6 @@
     "redis/持久化.md",
     "redis/概述.md",
     "redis/过期删除和内存淘汰策略.md",
-    "计算机网络/协议/HTTP、HTTPS.md",
     "计算机网络/协议/DNS.md",
     "mysql/InnoDB/attachments/Pasted image 20230405043056.png",
     "mysql/MySQL总结.canvas",

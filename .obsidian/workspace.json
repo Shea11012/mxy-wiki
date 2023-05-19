@@ -4,38 +4,71 @@
     "type": "split",
     "children": [
       {
-        "id": "e451bfb212d4db23",
+        "id": "867430cbb7d065f8",
         "type": "tabs",
         "children": [
           {
-            "id": "4f0e3c0ccf5eb9e7",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "redis/redis.canvas",
-                "viewState": {
-                  "x": 300,
-                  "y": 320,
-                  "zoom": -1.4442006790879967
-                }
-              }
-            }
-          },
-          {
-            "id": "f3e3cfd8f966c277",
+            "id": "f7595fb75cbba7a3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "redis/集群.md",
+                "file": "go/原理/map实现.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "77920ee71f006039",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "go/原理/内存管理.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f26468e52d2ae35a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "rust/rust基础.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9400da0221164b74",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "go/常见面试题.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "975b2e9708f09e40",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "go/原理/hashMap 实现.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -79,8 +112,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "redis/集群.md"
+                "file": "go/原理/hashMap 实现.md"
               }
+            }
+          },
+          {
+            "id": "533e5079ed0d9379",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
             }
           }
         ]
@@ -103,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "redis/集群.md",
+                "file": "go/原理/hashMap 实现.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,40 +201,41 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "f3e3cfd8f966c277",
+  "active": "f0fd45d70edbf663",
   "lastOpenFiles": [
+    "go/原理/sync.Pool.md",
+    "go/原理/mutex和RWMutex实现.md",
+    "go/原理/map实现.md",
+    "git/Git 常用命令.md",
+    "数据结构和算法/datastructure/跳表.md",
+    "linux/tools/ssh.md",
+    "git/生成公私钥&配置config.md",
+    "prometheus/prometheus.md",
+    "linux/Linux文件权限管理.md",
+    "linux/shell/结构化命令.md",
+    "go/原理/垃圾回收.md",
+    "todo/todo.md",
+    "linux/tools/sed.md",
+    "go/原理/内存管理.md",
+    "go/原理/GPM调度器.md",
+    "计算机基础/进程和线程.md",
+    "go/go plan9 汇编.md",
+    "go/原理/sync.Map 实现.md",
+    "go/原理/sync.WaitGroup.md",
+    "go/原理/slice.md",
+    "go/原理/channel.md",
+    "linux/常用命令.md",
+    "go/常见面试题.md",
     "redis/redis.canvas",
-    "container/docker/dockerfile.md",
-    "container/docker/docker 使用.md",
+    "redis/缓存.md",
     "redis/集群.md",
-    "redis/过期删除和内存淘汰策略.md",
-    "redis/持久化.md",
-    "redis/缓存设计.md",
-    "redis/缓存击穿、缓存穿透等问题.md",
-    "redis/内部结构.md",
-    "redis/数据类型.md",
-    "redis/概述.md",
-    "redis/Untitled Kanban.md",
-    "计算机基础/IO模型.md",
-    "计算机基础/零拷贝.md",
-    "mysql/binlog日志.md",
-    "mysql/InnoDB/bufferPool.md",
+    "container/docker/dockerfile.md",
     "mysql/InnoDB/attachments/Pasted image 20230405043056.png",
-    "mysql/InnoDB/日志.md",
     "mysql/MySQL总结.canvas",
-    "mysql/主从复制.md",
-    "mysql/InnoDB/redo日志.md",
-    "mysql/两阶段提交.md",
     "mysql/attachments/主丛复制.png",
-    "计算机基础/硬件.md",
-    "mysql/InnoDB/undo日志.md",
-    "mysql/InnoDB/锁.md",
     "mysql/InnoDB/attachments/Pasted image 20230404020853.png",
-    "mysql/索引.md",
-    "mysql/InnoDB/事务.md",
     "mysql/InnoDB/attachments/不可重复读.png",
     "mysql/InnoDB/attachments/Pasted image 20230403213608.png",
-    "mysql/索引失效.md",
     "mysql/Untitled",
     "mysql/InnoDB/attachments/Pasted image 20230329185340.png",
     "mysql/InnoDB/attachments/Pasted image 20230329183155.png",

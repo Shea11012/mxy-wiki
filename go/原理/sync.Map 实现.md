@@ -1,9 +1,12 @@
 ---
+tags: []
 date created: 2022-04-04 04:53
-date modified: 2022-04-05 01:56
-title: sync.Map 实现
+date modified: 2023-04-13 02:33
+go version: 1.20
 ---
+
 ## 结构
+
 ```go
 // sync/map.go
 
@@ -35,6 +38,7 @@ type entry struct {
 ```
 
 ## store
+
 ```go
 func (m *Map) Store(key, value interface{}) {
 	read, _ := m.read.Load().(readOnly)
@@ -70,12 +74,14 @@ func (m *Map) Store(key, value interface{}) {
 	m.mu.Unlock()
 }
 ```
+
 ## load
+
 ```go
 func (m *Map) Load(key interface{}) (value interface{}, ok bool) {
 	read, _ := m.read.Load().(readOnly)
 	e, ok := read.m[key]
-	// key不存在且dirty不为nil
+	// key不存在且dirty包含read不存在的值
 	if !ok && read.amended {
 		m.mu.Lock()
 		read, _ = m.read.Load().(readOnly)
@@ -95,7 +101,9 @@ func (m *Map) Load(key interface{}) (value interface{}, ok bool) {
 	return e.load()
 }
 ```
+
 ## delete
+
 ```go
 func (m *Map) LoadAndDelete(key interface{}) (value interface{}, loaded bool) {
 	read, _ := m.read.Load().(readOnly)

@@ -1,7 +1,7 @@
 ---
 tags: ["rust"]
 date created: 2021-06-25 21:32
-date modified: 2023-01-21 14:11
+date modified: 2023-07-13 00:36
 ---
 
 # rust
@@ -81,6 +81,10 @@ println!("the value of y is: {}",y);
 ### const
 
 使用 const 定义的变量时，它们总是会被内联。
+
+### \*const
+
+`*const T` 是指针类型，rust 中被称为 row pointer(裸指针)。它们不受 rust 的安全限制
 
 ### static
 
@@ -522,6 +526,8 @@ for i in 0..=10 {
 
 ## 模式匹配
 
+### match
+
 - match 匹配需要穷举出所有可能，因此可以用 `_` 代表未列出的所有可能性
 - match 的每一个分支都必须是一个表达式，且所有分支表达式最终返回值类型都必须相同
 - `X|Y` 类似运算符，代表分支可以匹配 x 也可以匹配 y，只要满足一个即可
@@ -562,6 +568,20 @@ let num = match coin {
 		println!("state quarter from {:?}",state);
 		25
 	};
+}
+```
+
+@绑定匹配
+```rust
+struct Rgb {
+	red: u8,
+	green: u8,
+	blue: u8,
+}
+let color = (234,255,255);
+match color {
+	(red @ 0..=255, green @ 0..=255, blue @ 0..=255) => Color { red, green,blue},
+	_ => panic!("rgb must be 0~255")
 }
 ```
 
@@ -926,53 +946,6 @@ fn main() {
 	// 因为函数不带&self,想打印小白的调用方法如下
 	println!("{}",<Dog as Animal>::name());
 }
-```
-
-### 生命周期
-
-生命周期的主要作用是避免悬垂引用，避免程序引用了不该引用的数据
-
-生命周期语法：以 `'` 开头，如 `'a mut i32`
-
-```rust
-// 表示first和second，至少需要有一个共同的'a生命周期，而'a生命周期，取first和second中较小的一个
-fn useless<'a>(first: &'a i32, second: &'a i32) {}
-```
-
-#### 生命周期约束语法
-
-`T: 'a`，在 T 中的所有引用都必须比 `'a` 活得更长
-`T: Trait + 'a` ：T 类型必须实现 `Trait`，并且在 T 中的所有引用都必须比 `'a` 活得更长
-
-```rust
-// 'a: 'b 表示 'a 至少要活得和 'b 一样久
-fn longest<'a:'b,'b>(first: &'a str, second: &'b str) -> &'b str {
-    if first.len() > second.len() {
-        return first;
-    }
-
-    second
-}
-
-// 约束语法，也可以使用 where 表示
-fn longest<'a,'b>(first: &'a str, second: &'b str) -> &'b str 
-where
-	'a: 'b,
-{
-		.
-		.
-		.
-}
-
-// 'a:'b 表示'a 必须活的比 'b 久
-```
-
-#### 静态生命周期
-
-静态生命周期的引用，存活的和程序一样久
-
-```rust
-let s: &'static str = "静态生命周期";
 ```
 
 ## 类型转换

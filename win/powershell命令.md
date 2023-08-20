@@ -9,7 +9,7 @@ title: powershell命令
 
 ```shell
 # 10点关机，只执行一次的定时任务
-schtasks /create /sc once /tr "shutdown -s -t 0" /rn "shutdown" /st 10:00
+schtasks /create /sc once /tr "shutdown -s -t 0" /tn "shutdown" /st 10:00
 ```
 
 ## 卸载 win store 里的 APP

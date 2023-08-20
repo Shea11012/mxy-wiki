@@ -7,7 +7,7 @@ title: mysql常见面试问题
 
 ## mysql 执行流程
 
-![MySQL执行流程](MySQL执行流程.md)
+[MySQL执行流程](MySQL执行流程.md)
 
 ## 索引的类型
 
@@ -38,8 +38,8 @@ title: mysql常见面试问题
 
 ### 事务隔离级别
 
-![事务隔离级别](InnoDB/事务.md#事务隔离级别)
+[事务隔离级别](InnoDB/事务.md#事务隔离级别)
 
 ### mvcc
 
-![MVCC](InnoDB/事务.md#MVCC)
+[MVCC](InnoDB/事务.md#MVCC)

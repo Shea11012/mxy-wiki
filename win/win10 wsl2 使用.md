@@ -1,7 +1,7 @@
 ---
 tags: []
 date created: 2021-11-30 21:22
-date modified: 2023-01-10 04:41
+date modified: 2023-09-06 22:13
 title: win10 wsl2 使用
 ---
 
@@ -17,10 +17,9 @@ cat /etc/resolv.conf | grep 'nameserver' | awk '{print $2}'
 
 ## 改变 wsl 的默认登录用户
 
+>[!note]
 > wsl -l # 查询版本
->
 > \# 如 ubuntu20.04
->
 > ubuntu2004 config --default-user shea # 需要保证 shea 这个用户已经被创建在该版本中
 
 ## wsl2 与 trojan 搭配使用时遇到的端口被占用问题
@@ -35,32 +34,6 @@ netsh int ipv4 show dynamicport tcp
 
 # 查看hyper-v 启动后的保留端口范围
 netsh interface ipv4 show excludedportrange protocol=tcp  # 根据这个命令的输出，可以看到Trojan的默认socks5的端口是被占用了，所以更改Trojan默认的socks5的端口即可解决
-```
-
-## wsl2 使用 git 时每次登录都需要手动添加 key 的解决办法
-
-在没有 key 的时候，可以将 win 上的 key 复制到 wsl 上， `cp -r /mnt/c/Users/<username>/.ssh ~/.ssh`
-
-win 上的 key 权限在 linux 下不适用，需要修改权限
-
-```shell
-chmod 700 ~/.ssh
-chmod 600 ~/.ssh/id_rsa
-```
-
-> 上面步骤如果发生 permission denid，则需要在 /etc/wsl.conf （没有则新建）添加
->
-> [automount]
->		enabled = true
-> 		options = "metadata,umask=22,fmask=11"
-
-为了不再每次打开一个新 tab 时，都需要手动添加 key：
-
-```
-sudo apt install keychain
-
-# 将下面的内容写到 bashrc 内
-eval `keychain --eval --agents ssh id_rsa`
 ```
 
 ## wsl2 docker exit 139
@@ -79,4 +52,43 @@ kernelCommandLine = vsyscall=emulate
 New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL)" -Action Allow
 ```
 
+## wsl2 固定 ip
 
+使用 hyper-v 创建一个虚拟交换机
+![[attachments/Pasted image 20230906215557.png]]
+
+>[!tip]
+> 需要重启电脑。如果使用了透明代理，需要在网络适配器中，找到该交换器修改 ipv4
+
+在宿主机中，添加
+```conf
+# ~/.wslconfig
+[wsl2]
+networkingMode=bridged
+vmSwitch=WSLBridge
+```
+
+在对应的 wsl 中，添加
+```conf
+# /etc/wsl.conf
+[boot]
+systemd=true
+[network]
+generateResolveConf=false
+```
+
+执行 `wsl --shutdown`
+
+在 **Arch Linux** 中，添加
+```network
+# /etc/systemd/network/80-wsl-external.network
+[Match]
+Name=eth0
+[Network]
+Description=wsl bridge
+Address=192.168.32.24/24
+Gateway=192.168.32.100
+DNS=192.168.32.100
+```
+
+执行 `systemctl enable --now systemd-networkd`

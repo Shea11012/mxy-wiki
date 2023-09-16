@@ -3,7 +3,12 @@
   "debug": false,
   "stickCursor": true,
   "betterEnter": false,
+  "betterTab": true,
   "selectAll": true,
+  "listLines": false,
+  "listLineAction": "toggle-folding",
+  "dnd": true,
+  "previousRelease": "4.8.0",
   "disableZoomNotification": false,
   "hideWarning": false
 }

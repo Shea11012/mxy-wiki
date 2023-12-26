@@ -4,7 +4,8 @@ date modified: 2022-03-16 21:44
 title: UDP
 ---
 ## UDP 报文结构
-![[Pasted image 20220316212233.png]]
+![[../../assets/计算机网络/协议/UDP/IMG-20231107105433949.png]]
+
 
 ## UDP 校验和
 举例：

@@ -1,9 +1,12 @@
 ---
+tags: 
 date created: 2021-11-28 13:34
-date modified: 2021-12-03 20:20
+date modified: 2023-10-06 03:17
 title: shell
 ---
+
 # shell
+
 [[linux/shell/shell 基础]]
 
 [[变量]]
@@ -19,7 +22,9 @@ title: shell
 [[linux/shell/获取用户输入和控制输出]]
 
 ## 创建临时文件
+
 ### 创建本地临时文件
+
 mktemp 会在 /tmp 目录创建一个唯一的临时文件。
 mktemp 需要指定一个文件名模板，只需要在文件名后面加 2 个以上 X。
 ```shell
@@ -29,7 +34,9 @@ mktemp testing.XXXXX
 -d 创建临时目录 `mktemp -d dir.XXXXX`
 
 ## 控制脚本
+
 ### 捕获信号
+
 ```shell
 trap commands signals
 ```
@@ -52,6 +59,20 @@ echo "This is the end of the test script" #
 ```
 
 ### 删除已设置好的捕获
+
 ```shell
 trap -- SIGINT
+```
+
+## 模式匹配
+
+1. `*`：匹配任意长度，包括空字符
+2. `?`：匹配任意一个字符
+3. `[]`：匹配集合内任意一个字符
+
+如：
+```bash
+if [[ $string == *[AaBbCc]* ]]; then
+	echo '111'
+fi
 ```

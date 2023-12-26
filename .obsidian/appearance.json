@@ -1,10 +1,10 @@
 {
-  "baseFontSize": 16,
-  "theme": "obsidian",
-  "cssTheme": "Obsidianite",
+  "baseFontSize": 18,
+  "theme": "moonstone",
+  "cssTheme": "Blue Topaz",
   "translucency": false,
   "accentColor": "",
-  "interfaceFontFamily": "JetBrainsMono Nerd Font",
-  "textFontFamily": "FiraCode Nerd Font Mono",
+  "interfaceFontFamily": "JetBrainsMono Nerd Font,LXGW WenKai GB Screen",
+  "textFontFamily": "Segoe UI Emoji,LXGW WenKai GB Screen,FiraCode Nerd Font Mono",
   "monospaceFontFamily": "FiraCode Nerd Font"
 }

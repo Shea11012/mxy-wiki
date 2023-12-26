@@ -1,40 +1,47 @@
 ---
-tags: []
+tags:
+  - go
+  - 协程
 date created: 2022-02-28 19:47
-date modified: 2023-04-14 04:41
+date modified: 2023-10-31 19:45
 ---
 
-## Goroutine & Scheduler
+# 操作系统三种线程模型：
 
-### 操作系统三种线程模型：
-
-#### 内核级线程模型
+## 内核级线程模型
 
 此模型下线程的切换调度由系统内核完成，系统内核负责将多个线程执行的任务映射到各个 cpu 中执行，直接使用操作系统内核来创建、销毁、切换和调度，对性能影响很大。
 
-#### 用户级线程模型
+## 用户级线程模型
 
 多个用户线程一般从属于单个进程且多线程的调度是由用户自己完成的。这种实现方式相比内核线程很轻量，对系统资源的消耗很小，上下文切换代价也很小。但是并不能真正意义上做到并发，如果进程内的某个线程发生阻塞调用从而被 CPU 调度，会导致整个进程被挂起。
 
-#### 混合线程模型
+## 混合线程模型
 
 一个进程可以与多个内核线程 KSE（kernel schedule entity）关联。进程里的线程并不与 KSE 唯一绑定，而是多个用户线程映射到同一个 KSE，当某个 KSE 因为其绑定的线程阻塞操作被内核调度出 CPU 时，其关联的进程中其余用户线程可以重新与其它 KSE 绑定运行。
 goroutine 和 go scheduler 在底层实现上是属于混合线程模型
 
-## GPM 模型
+# GPM 模型
+
+>[!note] GM 模型
+>GM 模型 Go 的最初调度模型，由 M 直接获取 G 执行，这种模型有几个缺点：
+>- 创建、销毁、调度 G 都需要每个 M 获取锁，锁开销很大
+>- M 转移 G 会造成延迟和额外的系统负载。如当 G 中包含创建新协程时，M 创建 G'，为了继续执行 G，需要把 G' 交给 M' 执行，造成很差的局部性，因为 G 和 G' 是相关的，最好放在 M 上执行，而不是其他 M' 上的。
+>- 系统调用（CPU 在 M 之间切换）导致频繁的线程阻塞和取消阻塞操作增加系统开销
+
 
 每个 OS 线程的大小根据操作系统的不同大约在 1~8MB，这对于 goroutine 来说很大。
 在 Go 中，每一个 goroutine 的初始大小为 2kb，采取动态扩容的方式，随着任务执行按需增长，且完全由 Go Scheduler 调度。
 
-### G
+## G
 
 表示 goroutine，每个 goroutine 对应一个 G 结构体，G 存储的 Goroutine 的运行堆栈、状态以及任务函数，可重用。G 并非执行体，每个 G 需要绑定到 P 才能调度执行。
 
-### P
+## P
 
 表示逻辑处理器（Processor），对 G 来说，P 相当于 CPU，G 只有绑定到 P（P 的 local runq 中）才能被调度。对 M 来说，P 提供了相关的执行环境。P 的数量决定了系统内最大可并行的 G 数量，P 的数量由 GOMAXPROCS 决定，但 P 的最大数量为 256.
 
-### M
+## M
 
 OS 线程抽象，表示真正的执行计算资源，在绑定有效的 P 后，进入 schedule 循环。
 schedule 循环机制大致是从 Global 队列、P 的 local 队列以及 wait 队列中获取 G，切换到 G 的执行栈上并执行 G 的函数，调用 goexit 做清理工作并回到 M，如此反复。M 并不保留 G 状态，M 的数量是不确定的，由 Go runtime 调整，M 的最大数量为 10000 个。
@@ -43,7 +50,7 @@ schedule 循环机制大致是从 Global 队列、P 的 local 队列以及 wait 
 
 ## 调度时机
 
-- 使用 go 关键字：使用关键字 go，一旦一个新的协程创建，会给调度器一个机会去执行调度
+- 使用 go 关键字：一旦一个新的协程创建，会给调度器一个机会去执行调度
 - GC：因为 GC 时会运行一组自己的 goroutines，这些 goroutines 需要时间去 M 上运行。这时调度器会做出调度
 - 系统调用：如果一个 goroutine 发生系统调用将导致 M 阻塞，此时调度器会将 goroutine 解绑换一个新的 goroutine 到 M 上执行
 - 内存同步访问：如果一个 atomic、mutex、channel 导致 goroutine 阻塞，调度器会切换一个新的 goroutine 去运行。一旦可运行了就会重新入队等待被执行。
@@ -105,30 +112,32 @@ RET
 3. `runtime.newproc` 新建一个 goroutine，参数 fn 为 `runtime.main`,建好后插入 m0 绑定的 p 的本地队列中
 4. `runtime.mstart` 启动 m，进入调度系统
 
-### mstart
+## mstart
 
 `runtime.mstart` 由两个子函数组成：
 - `runtime.mstart0`: 初始化栈边界
 - `runtime.mstart1`: 初始化信号，并执行 `runtime.main` 
 
-### getg 函数
+## getg 函数
 
 getg 的实现是直接嵌入到 Go 编译器的，具体实现搜索 `OpGetG -> Op386LoweredGetG -> obj6.go`
 
 getg 返回指向当前的 g 的指针。
 获取当前用户堆栈的 g，使用 `getg().m.curg`。当在系统或信号堆栈上执行时，则分别返回当前 m 的 g0 或 gsignal。要确定 g 是在用户堆栈或是系统堆栈上，可以使用 `getg() == getg().m.curg`,相等表示在用户态堆栈，不想等表示在系统堆栈。
 
-### g0 和 m0
+## g0 和 m0
 
-#### m0
+### m0
 
 - m0 表示进程启动的第一个线程，它是通过汇编直接复制给 m0
 - 其他的 m 都是 runtime 内创建的
 - 一个 go 进程只有一个 m0
 
-#### g0
+### g0
 
-每个 m 都有一个 g0，因为每个线程都有一个系统堆栈，g0 与其它 g 的区别在栈的差别。g0 是系统分配的栈，在 Linux 上默认大小为 8MB，不能扩展也不能缩小。而其余的 g 一开始大小只有 2KB。g0 上没有任务函数也没有状态，并且不能被调度程序抢占。因为调度就是运行在 g0 上的
+每个 m 都有一个 g0，g0 仅负责调度 G，g0 不指向任何执行的函数，在调度或系统调用时会使用 g0 的栈空间。
+
+g0 是系统分配的栈，在 Linux 上默认大小为 8MB，不能扩展也不能缩小。而其余的 g 一开始大小只有 2KB。g0 上没有任务函数也没有状态，并且不能被调度程序抢占。因为调度就是运行在 g0 上的
 
 ```go
 // runtime/proc.go
@@ -139,7 +148,7 @@ var (
 ```
 全局变量上的 m0 代表主线程，g0 代表主线程的堆栈
 
-### schedule 函数
+## schedule 函数
 
 ```go
 // runtime/proc.go
@@ -170,7 +179,7 @@ execute(gp, inheritTime)
 
 找到一个 g 后，就会调用 `execute` 去执行 g
 
-### runtime.main 函数执行
+## runtime.main 函数执行
 
 ```go
 // runtime/proc.go
@@ -201,7 +210,7 @@ fn := main_main // make an indirect call, as the linker doesn't know the address
 fn()
 ```
 
-### G 的创建
+## G 的创建
 
 ```go
 go func(){}()

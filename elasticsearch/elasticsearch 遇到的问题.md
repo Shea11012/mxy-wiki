@@ -1,9 +1,13 @@
 ---
+tags:
+  - elasticsearch
+  - wsl
 date created: 2021-11-30 21:22
-date modified: 2022-03-29 15:11
+date modified: 2023-10-11 02:49
 title: elasticsearch 遇到的问题
 ---
-### max_map_count 问题
+
+# max_map_count 问题
 
 修改 vm.max_map_count=262144
 
@@ -20,9 +24,7 @@ wsl -d docker-desktop sysctl -w vm.max_map_count=262144
 这样每次电脑开机都会执行这个脚本了
 ```
 
-
-
-#### 索引别名
+# 索引别名
 
 **tips：别名查询也是有一定限制的**
 

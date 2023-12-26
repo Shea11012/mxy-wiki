@@ -92,3 +92,23 @@ DNS=192.168.32.100
 ```
 
 执行 `systemctl enable --now systemd-networkd`
+
+## 配置wsl2局域网可访问
+### 获取wsl ip
+```powershell
+wsl ip -o -4 --brief -json addr show eth0 | ConvertFrom-Json | %{ $_[0].addr_info.local }
+```
+
+### 增加需要转发的端口
+```powershell
+netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport={port} connectaddress={wslIP} connectport={port}
+```
+### 添加防火墙规则
+```powershell
+netsh advfirewall firewall add rule name=”Open Port 22 for WSL2” dir=in action=allow protocol=TCP localport=22
+```
+
+### 清空转发端口
+```powershell
+netsh interface portproxy reset
+```

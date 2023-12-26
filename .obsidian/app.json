@@ -4,7 +4,7 @@
   "promptDelete": false,
   "newFileLocation": "current",
   "newLinkFormat": "relative",
-  "attachmentFolderPath": "./attachments",
+  "attachmentFolderPath": "/",
   "alwaysUpdateLinks": true,
   "foldHeading": true,
   "foldIndent": true,

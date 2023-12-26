@@ -1,3 +1,5 @@
 {
-  "floating-toc-styles@@enable-outline-style": "float-curves-outline-style"
+  "floating-toc-styles@@enable-outline-style": "default-outline-style",
+  "floating-toc-styles@@enable-bar-icon": false,
+  "floating-toc-styles@@enable-bar-heading-text": true
 }

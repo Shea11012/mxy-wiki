@@ -1,12 +1,12 @@
 ---
-tags: ["git"]
+tags:
+  - git
 date created: 2021-06-05 00:30
-date modified: 2022-04-22 06:37
-title: Git 常用命令
+date modified: 202321-0104-72522 06:37
 ---
-#git 
 
 ### clone
+
 命令 | 说明 
 --- | ---
    git clone -b {branch} | {url} 克隆一个指定分支
@@ -21,12 +21,14 @@ git commit —amed |修改最后一次提交的注释信息
    git reset —soft commit-id |只移动 head 指向，但不会将快照回滚到暂存区
 
 ### log
+
 命令 | 说明 
 --- | ---
   git log —decorate —all —graph —online |查看分支合并图
    git reflog |查看所有执行过的指令
 
 ### checkout
+
 命令 | 说明 
 --- | ---
    git rm —cached {filename} |只删除暂存区文件，取消追踪
@@ -37,6 +39,7 @@ git commit —amed |修改最后一次提交的注释信息
    git checkout —track origin/branch-name |跟踪指定上游分支
 
 ### branch
+
 命令 | 说明 
 --- | ---
 git branch {branch-name}|创建分支
@@ -49,11 +52,13 @@ git branch {branch-name}|创建分支
   git branch -f branch commit-id |-f 强制改变分支的指向，将分支指向指定的 commit-id
 
 ### merge
+
 命令 | 说明 
 --- | ---
 git merge {branch-name} | 合并 branch-name 分支到当前分支
 
 ### stash
+
 命令 | 说明 
 --- | ---
   git stash| 把当前工作区储藏
@@ -62,6 +67,7 @@ git merge {branch-name} | 合并 branch-name 分支到当前分支
   git stash drop name |删除储藏
 
 ### tag
+
 命令 | 说明 
 --- | ---
   git tag|看所有标签
@@ -73,6 +79,7 @@ git merge {branch-name} | 合并 branch-name 分支到当前分支
   git tag tag-name commit-id |给指定的提交添加标签
 
 ### push && fetch
+
 命令 | 说明 
 --- | ---
   git push {remote\_name} source:destination | 将 source 分支推送到远程的 destination 分支，remote\_name 一般为 origin
@@ -82,12 +89,14 @@ git merge {branch-name} | 合并 branch-name 分支到当前分支
   git fetch {remote\_name} :slave | 创建一个 slave 本地分支
 
 ### merge && rebase && cherry-pick
+
 命令 | 说明 
 --- | ---
   git merge {branch}  | 合并指定分支到当前分支
   git rebase {branch} | 合并分支，创造线性的提交历史，将 branch 分支合并到当前分支
 
 ### extra
+
 命令 | 说明 
 --- | ---
   git stripspace |去掉行尾空白符，多个空行压缩成一行，必要时在文件末尾增加一个空行

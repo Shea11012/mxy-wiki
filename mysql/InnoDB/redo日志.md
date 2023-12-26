@@ -1,7 +1,9 @@
 ---
-tags: []
+tags:
+  - 数据库
+  - mysql
 date created: 2022-03-29 15:49
-date modified: 2023-04-04 17:01
+date modified: 2023-11-21 15:21
 title: redo日志
 ---
 
@@ -11,7 +13,7 @@ redo log 保证了事务的持久性。
 
 为了避免修改一个字节就将脏也刷到磁盘，将一个修改操作按照一定的格式记录下来，当服务器发生崩溃后能使用 redo 日志复原结果，这就是 redo 日志。
 
-redo log 写入方式使用追加操作，所以磁盘操作是顺序写，而写入数据的操作时随机写，因此 redo log 写入磁盘的开销更小。
+redo log 写入方式使用追加操作，所以磁盘操作是顺序写。MySQL 写入数据的操作是随机写，因此 redo log 写入磁盘的开销更小。
 
 redo log 也有缓存，**redo log buffer**，每当产生一条 redo log 时，会先写入到 redo log buffer 中，然后再持久化到磁盘。
 

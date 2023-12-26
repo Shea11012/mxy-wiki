@@ -1,5 +1,7 @@
 ---
-tags: []
+tags:
+  - tcp
+  - network
 date created: 2021-11-30 21:22
 date modified: 2023-03-09 06:02
 ---

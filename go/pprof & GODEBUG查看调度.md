@@ -1,11 +1,11 @@
 ---
+tags: 
 date created: 2021-11-30 21:22
-date modified: 2022-03-09 19:24
+date modified: 2023-10-31 16:40
 title: pprof & GODEBUG查看调度
 ---
 
-
-### PProf
+# PProf
 
 采样方式：
 
@@ -39,7 +39,7 @@ title: pprof & GODEBUG查看调度
 - profile：默认进行 30s 的 CPU profiling
 - threadcreate：查看创建新 OS 线程的堆栈跟踪
 
-#### 使用方式
+## 使用方式
 
 > 1. 通过浏览器访问
 >
@@ -57,24 +57,22 @@ title: pprof & GODEBUG查看调度
 >
 >    go tool pprof 下载的文件
 
-
-
-#### CPU profiling
+## CPU profiling
 
 > go tool pprof http://127.0.0.1:6060/debug/pprof/profile?second=60
 
 参数含义：
 
-- flat：函数自身运行耗时
-- flat%：函数自身占 CPU 运行总耗时的比例
-- sum%：函数自身累积使用占 CPU 运行总耗时比例
-- cum：函数自身及其调用函数的运行总耗时
-- cum%：函数自身及其调用函数占 CPU 运行总耗时的比例
+- flat：函数运行耗时
+- flat%：函数占 CPU 运行总耗时的比例
+- sum%：函数累积占 CPU 运行总耗时比例
+- cum：函数及调用函数占用 CPU 总耗时
+- cum%：函数及调用函数占 CPU 运行总耗时的比例
 - Name：函数名
 
 > 在 pprof 终端内，执行 list 命令查看堆栈分析时，其默认的依赖时当前运行主机上得源码路径，也就是二进制文件的路径。从远程拉取的 profile，本机和原本运行主机的路径一般是不同的，此时会导致 list 命令不可用需。 go tool pprof 指定 source_path 参数
 
-#### Heap profiling
+## Heap profiling
 
 > go tool pprof http://127.0.0.1:6060/debug/pprof/heap
 >
@@ -90,7 +88,7 @@ title: pprof & GODEBUG查看调度
 >
 > // alloc_space 查看每个函数分配内存空间大小
 
-#### Goroutine Profiling
+## Goroutine Profiling
 
 > go tool pprof http://127.0.0.1:6060/debug/pprof/goroutine
 >
@@ -98,7 +96,7 @@ title: pprof & GODEBUG查看调度
 >
 > 调用栈的展示顺序是自下而上的
 
-#### Mutex Profiling
+## Mutex Profiling
 
 > go tool pprof http://127.0.0.1:6060/debug/pprof/mutex
 >
@@ -108,7 +106,7 @@ title: pprof & GODEBUG查看调度
 >
 > list func|address 查看具体的函数，以及锁开销的位置
 
-#### Block Profiling
+## Block Profiling
 
 > go tool pprof http://127.0.0.1:6060/debug/pprof/block
 >
@@ -116,7 +114,7 @@ title: pprof & GODEBUG查看调度
 >
 > 查看方式等同 mutex
 
-#### 使用可视化界面查看
+## 使用可视化界面查看
 
 >先下载一个文件，使用 wget 或 curl
 >
@@ -126,7 +124,7 @@ title: pprof & GODEBUG查看调度
 >
 >Could not execute dot; may need to install graphviz.
 
-#### 测试用例分析
+## 测试用例分析
 
 通过测试用例可以跟精准的分析流程和函数
 
@@ -146,7 +144,7 @@ func BenchmarkAdd(b *testing.B) {
 // 执行完毕后，可以看到cpu.profile 文件
 ```
 
-#### 通过 Lookup 写入文件进行分析
+## 通过 Lookup 写入文件进行分析
 
 pprof 提供了 lookup 方法对相关内容进行采集和调用，一共支持 6 中类型：
 
@@ -160,9 +158,7 @@ pprof 提供了 lookup 方法对相关内容进行采集和调用，一共支持
 pprof.Lookup(name) // 此处的 name 就是上述类型
 ```
 
-
-
-### Trace
+# Trace
 
 > wget 或 curl 下载 http://127.0.0.1:6060/debug/pprof/trace?seconds=60 trace.out
 >
@@ -182,9 +178,9 @@ pprof.Lookup(name) // 此处的 name 就是上述类型
 - user defined regions：用户自定义区域
 - minimum mutator utilization：最低 mutator 利用率
 
+## GODEBUG
 
-
-### GODEBUG 查看调度跟踪
+### schedtrace
 
 参数：
 
@@ -239,7 +235,41 @@ p 的状态
 | Pgcstop  | 3    | 暂停运行，此时系统正在进行 GC，直至 GC 结束后才会进入下一阶段 |
 | Pdead    | 4    | 废弃，不再使用                                             |
 
-### gops 进程诊断工具
+### gctrace
+
+`GODEBUG='gctrace=1' exec`
+设置 `gctrace=1` 使垃圾回收器每次回收时汇总所回收内存大小及耗时，并输出
+
+输出格式
+```
+gc # @#s #%: #+#+# ms clock, #+#/#/#+# ms cpu, #->#-># MB, # MB goal, # P
+```
+
+|             | 含义                               |
+| ----------- | ---------------------------------- |
+| gc #        | GC 次数编号，每次 GC 递增             |
+| @\#s        | 距离程序开始执行时的时间           |
+| \#%         | GC 占用执行时间百分比               |
+| \#\+...\+\# | GC 使用时间                         |
+| \#->#-># MB | GC 开始，结束，及当前活跃堆内存大小 |
+| # MB goal   | 全局堆内存大小                     |
+| # P         | processor 数量                      |
+>[!tip]
+>如果以 `(forced)` 结尾，则是由 `runtime.GC` 触发
+
+
+>[!example]
+> `gc 17 @0.149s 1%: 0.004+36+0.003 ms clock, 0.009+0/0.051/36+0.006 ms cpu, 181->181->101 MB, 182 MB goal, 2 P`
+> 
+> `gc 17`：GC 编号 17
+> `@0.149s`：程序已经执行 0.149s
+> `1%`：gc 占用 1% 时间
+> `0.004+36+0.003 ms clock`：垃圾回收时间，分别为 STW 清扫时间 + 并发标记和扫描时间 +STW 标记时间
+> `0.009+0/0.051/36+0.006 ms cpu`：垃圾回收占用 CPU 时间
+> `181->181->101 MB`：GC 开始前堆内存 181M，GC 结束后堆内存 181M，当前活跃堆内存 101M
+> `182 MB goal`：全局堆内存大小
+
+## gops 进程诊断工具
 
 gops (go process status)。gops 由 google 官方推出的一个命令行工具
 

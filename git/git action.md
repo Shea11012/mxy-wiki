@@ -1,7 +1,9 @@
 ---
-tags: 
+tags:
+  - git
+  - ci
 date created: 2021-06-07 23:53
-date modified: 2023-05-14 23:41
+date modified: 2023-10-10 07:52
 title: git action
 ---
 

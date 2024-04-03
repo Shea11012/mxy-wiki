@@ -208,7 +208,7 @@ class Test extends Component {
 
 #### props 使用
 
-```react
+```javascript
 class Mouse extends React.Component {
     constructor(props){
         super(props);

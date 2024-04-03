@@ -1,24 +1,38 @@
 ---
 date created: 2021-12-03 20:20
-date modified: 2021-12-03 20:20
+date modified: 2023-12-30 02:52
 title: iptables 和 firewalld
+tags:
+  - linux
+  - iptables
 ---
-## iptables
+
+# iptables
 
 iptables 服务把用于处理或过滤流量的策略条目称为规则，多条规则可以组成一个规则链，规则链则依据数据包处理位置的不同进行分类：
+
+## 链
 
 - PREROUTING：在进行路由选择前处理数据包
 - INPUT：处理流入的数据包
 - OUTPUT：处理流出的数据包
-- FORWARD：处理转发的数据包
+- FORWARD：处理转发的数据包，需要开启 ip_forward
 - POSTROUTING：在进行路由选择后处理数据包
 
-拒绝动作：
+## 表
+
+- filter：过滤数据包
+- nat：网络地址转换
+- mangle：修改数据包的特定字段
+- raw：禁止内核对数据包进行处理
+
+## 动作
 
 - ACCEPT：允许流量通过
 - REJECT：拒绝流量通过，有响应
 - LOG：记录日志信息
 - DROP：丢弃流量，无响应
+- MASQUERADE: 对数据包进行源 IP 地址伪装（SNAT)，将源 IP 地址改为路由器地址
 
 **iptables 常用参数**
 
@@ -34,13 +48,12 @@ iptables 服务把用于处理或过滤流量的策略条目称为规则，多�
 | -d          | 匹配目标地址                     |
 | -i 网卡名称 | 匹配从这块网卡流入的数据         |
 | -o 网卡名称 | 匹配从这块网卡流出的数据         |
-| -p          | 匹配协议，TCP、UDP、ICMP 等       |
+| -p          | 匹配协议，TCP、UDP、ICMP 等      |
 | --dport num | 匹配目标端口号                   |
 | --sport num | 匹配来源端口号                   |
+| -j          | 执行动作                                 |
 
-
-
-## firewalld
+# firewalld
 
 区域的概念：是 firewalld 预先准备了几套防火墙策略集合，可以根据生产场景不同而选择合适的策略集合，从而实现防火墙策略的快速切换。 
 

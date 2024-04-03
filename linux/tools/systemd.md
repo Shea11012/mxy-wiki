@@ -1,6 +1,7 @@
 ---
+tags: 
 date created: 2021-09-11 14:54
-date modified: 2021-09-24 23:32
+date modified: 2024-02-03 22:29
 title: systemd
 ---
 | 命令 | 动作 | 备注 |
@@ -30,5 +31,7 @@ title: systemd
 | systemctl hybrid-sleep | 休眠或者挂起 | |
 
 ### unit file 位置
+
 `/usr/lib/systemd/system` : 一般是安装包写入 unit files 的位置
 `/etc/systemd/system` : 由系统管理员写入
+`.config/systemd/user`: 用户级别的 systemd

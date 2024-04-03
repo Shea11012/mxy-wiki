@@ -12,5 +12,7 @@
   "excludedPaths": "",
   "excludePathsArray": [],
   "excludeSubpaths": false,
-  "overridePath": {}
+  "originalNameStorage": [],
+  "overridePath": {},
+  "disableNotification": false
 }

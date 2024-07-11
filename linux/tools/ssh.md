@@ -1,8 +1,9 @@
 ---
-tags: ["linux", "ssh"]
-date created: 2021-06-07 23:50
-date modified: 2022-12-20 07:57
-title: ssh
+tags:
+  - linux
+  - ssh
+created: 2021-06-07 23:50
+updated: 2022-12-20 07:57
 ---
 ## 转义符
 - `%d` 本地用户目录

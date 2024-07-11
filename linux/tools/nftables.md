@@ -1,10 +1,12 @@
 ---
-date created: 2021-12-03 20:20
-date modified: 2021-12-03 20:20
-title: nftables
+created: 2021-12-03
+tags: [nftables,linux]
+updated: 2024-07-05
 ---
+
 # nftables
-替换 iptables 的网络包过滤工具
+
+替换 iptables 的网络包过滤工具，官方 [[https://wiki.nftables.org/wiki-nftables/index.php/Main_Page|wiki]]
 
 nfttables 和 iptables 一样，由表（table）、链（chain）、规则（rule）组成，其中表包含链，链包含规则。
 
@@ -58,7 +60,7 @@ nft list chain inet my_table my_filter_chain
 
 ## 删除规则
 
-单个规则只能通过句柄删除：`nft --handle list ruleset`  handle 参数列出句柄值
+单个规则只能通过句柄删除：`nft --handle list ruleset` handle 参数列出句柄值
 
 使用句柄值删除规则：`nft delete rule inet my_talbe my_filter_chain handle 8`
 

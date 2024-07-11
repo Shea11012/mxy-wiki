@@ -1,11 +1,9 @@
 [
   "obsidian-git",
   "obsidian-outliner",
-  "convert-url-to-iframe",
   "media-extended",
   "oz-image-plugin",
   "table-editor-obsidian",
-  "url-into-selection",
   "obsidian-style-settings",
   "dataview",
   "obsidian-linter",
@@ -13,9 +11,11 @@
   "obsidian-image-toolkit",
   "obsidian-minimal-settings",
   "floating-toc",
-  "attachment-management",
   "obsidian-hider",
   "obsidian-excalidraw-plugin",
   "nl-fast-image-cleaner",
-  "tag-wrangler"
+  "tag-wrangler",
+  "quickadd",
+  "obsidian-tasks-plugin",
+  "obsidian-local-images-plus"
 ]

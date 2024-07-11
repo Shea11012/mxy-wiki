@@ -8,7 +8,15 @@
       "key": "`"
     }
   ],
-  "global-search:open": [],
+  "global-search:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "F"
+    }
+  ],
   "omnisearch:show-modal": [
     {
       "modifiers": [
@@ -35,5 +43,6 @@
       ],
       "key": "E"
     }
-  ]
+  ],
+  "graph:open": []
 }

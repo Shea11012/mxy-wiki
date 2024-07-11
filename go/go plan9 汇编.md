@@ -1,22 +1,21 @@
 ---
 date created: 2021-11-30 21:22
-date modified: 2022-03-05 14:15
+date modified: 2024-05-29 05:38
 title: go plan9 汇编
 ---
+
 ## Plan9
 
 Go 语言使用 plan9 汇编
 
 ### 获取 go 的汇编方式
 
-- `go tool compile -N -l -S xx.go`
+- `go build -gcflags='-N -l -S' main.go`
 
-- ```shell
-  go tool compile -N -l xx.go  # 编译程序
+- go tool compile -N -l xx.go # 编译程序
   go tool objdump xx.o	# 使用 objdump 反汇编出代码
-  go tool objdump -s {symbol} xx.0 # 可以输出指定的symbol
-  ```
-
+  go tool objdump -s {symbol} xx.0 # 可以输出指定的 symbol
+  
 - `go build -gcflags -S xx.go`
 
 ### 常量
@@ -24,6 +23,7 @@ Go 语言使用 plan9 汇编
 常量总是 64 位无符号整数
 
 ### 寄存器
+
 | AMD64  | GO 汇编 |
 | ------ | ------ |
 | rax    | AX     |
@@ -191,8 +191,6 @@ runtime·tlsoffset，4 byte，不包含指针，隐式清零
 ### interacting with Go Types and constants
 
 如果一个包有 `.s` 文件，则在编译时会直接调用 `go_asm.h` ，然后这个 `.s` 文件会被 `#include`
-
-
 
 ### 示例
 

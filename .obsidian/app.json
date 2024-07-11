@@ -4,15 +4,19 @@
   "promptDelete": false,
   "newFileLocation": "current",
   "newLinkFormat": "relative",
-  "attachmentFolderPath": "/",
+  "attachmentFolderPath": "assets",
   "alwaysUpdateLinks": true,
   "foldHeading": true,
   "foldIndent": true,
   "communityThemeSortOrder": "download",
   "autoPairBrackets": false,
   "legacyEditor": false,
-  "livePreview": true,
+  "livePreview": false,
   "useMarkdownLinks": false,
   "defaultViewMode": "source",
-  "spellcheck": false
+  "spellcheck": false,
+  "showRibbon": true,
+  "userIgnoreFilters": [
+    "assets/"
+  ]
 }

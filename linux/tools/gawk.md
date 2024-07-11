@@ -1,11 +1,16 @@
 ---
 date created: 2021-12-03 20:20
-date modified: 2021-12-03 20:20
+date modified: 2024-05-18 11:59
 title: gawk
+tags:
+  - linux
+  - gawk
 ---
+
 ## gawk
+
 ```bash
-gawk options program file
+gawk options 'pattern{action}' file
 ```
 命令行可用选项：
 - -F fs 指定行中划分数据字段的字段分隔符

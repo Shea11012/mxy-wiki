@@ -1,9 +1,11 @@
 ---
-date created: 2021-12-03 20:20
-date modified: 2021-12-03 20:20
-title: sed
+created: 2021-12-03
+updated: 2024-07-12
+tags: [linux,sed]
 ---
+
 ## sed 编辑器
+
 sed 编辑器根据命令来处理数据流中的数据，sed 编辑器会执行一下操作：
 - 一次从输入中读取一行数据
 - 根据所提供的编辑器命令匹配数据
@@ -19,6 +21,7 @@ sed option script file
 - -n 不产生命令输出，使用 print 命令来完成输出
 
 ### 使用地址
+
 在 sed 编辑器中有两种形式的行寻址
 - 数字形式表示行区间
 - 文本模式过滤行
@@ -42,10 +45,11 @@ address {
 ```
 
 ### 命令：
+
 s (substitute)：替换命令 `s/pattern/replacment/flags`
 d (delete)：删除命令
-i (insert)：插入命令
-a (append)：追加命令
+i (insert)：插入命令，在匹配行的前一行添加
+a (append)：追加命令，在匹配行的下一行添加
 c (change)：修改命令，修改数据流中整行文本的内容
 =：打印行号
 l (list)：列出行
@@ -57,6 +61,7 @@ r (read): 将一个独立文件读入到数据流中，`[address]r filename`
 > i a 命令不能在地址区间中使用
 
 #### 替换标记
+
 - 数字：表明新文本将替换第几处模式匹配的地方
 - g，表明新文本将替换所有匹配的文本
 - p,表明打印匹配的内容
@@ -104,6 +109,7 @@ r (read): 将一个独立文件读入到数据流中，`[address]r filename`
  echo "This, is, a, test, to, remove, commas." | sed -n '{:start;s/,//1p; t start}'  
  # t 命令相当于 if 判断，如果 t 成功则跳转到指定标签，否则不跳转
 ```
+
 ### 模式替代
 
 & 符号可以用来代表替换命令中的匹配模式
@@ -112,4 +118,41 @@ r (read): 将一个独立文件读入到数据流中，`[address]r filename`
  echo "The cat sleeps in his hat." | sed 's/.at/"&"/g'  
  # 因为点符号代表的是未知字符，无法使用 .at 这样的字符替换，sed 提供了 & 符号来代表匹配到的整个字符  
  # 也可以使用正则中的组匹配模式 (.at)，需要注意 sed 中使用组匹配模式需要给括号加转义符 \(.at\)
+```
+
+## 示例
+
+### 追加、插入、修改
+
+```bash
+sed '1ahello' test.txt # 向第一行后添加hello
+sed '/22/atest' test.txt # 在匹配到22的下一行添加test
+sed '$atest' test.txt # 最后一行添加，$ 表示最后一行
+
+sed '/22/itest' test.txt # 在匹配到22的上一行添加test
+
+sed '/en/czh' test.txt # 将en替换为zh
+```
+
+### 删除
+
+```bash
+sed '1d' test.txt # 删除第一行
+sed '1~2d' test.txt # 从第1行开始，每隔2行删掉1行
+sed '1,2d' test.txt # 删掉1-2行
+sed '1,2!d' test.txt # 除1-2行外，删除其余行
+sed '/important/!d' test.txt # 删除没有匹配到important的行
+sed '/11/,+1d' test.txt # 从匹配11行开始删除及下一行
+sed '/44/,$d' test.txt # 从匹配44行开始删除到最后一行
+```
+
+### 替换
+
+```bash
+sed 's|like|love|g' test.txt # 将like替换为love
+sed 's|like|love|2' test.txt # 每行第2个匹配到的会被替换
+
+sed '/#/s|,.*||g' test.tx # 匹配有#的行，再将逗号后的内容置为空
+
+sed 's|^#.*||;/^$/d' test.txt # 先将以#开头的行替换为空，再删除空行，使用;分割操作
 ```

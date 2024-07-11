@@ -22,8 +22,8 @@
       "Ensures that fullwidth characters are not followed by whitespace (either single spaces or a tab). Note that this may causes issues with markdown format in some cases.": false
     },
     "escape-yaml-special-characters": {
-      "enabled": true,
-      "try-to-escape-single-line-arrays": true
+      "enabled": false,
+      "try-to-escape-single-line-arrays": false
     },
     "force-yaml-escape": {
       "enabled": false,
@@ -33,8 +33,8 @@
       "enabled": false
     },
     "insert-yaml-attributes": {
-      "enabled": true,
-      "text-to-insert": "tags: "
+      "enabled": false,
+      "text-to-insert": ""
     },
     "remove-yaml-keys": {
       "enabled": false,
@@ -43,17 +43,17 @@
     "yaml-key-sort": {
       "enabled": false,
       "yaml-key-priority-sort-order": "",
-      "priority-keys-at-start-of-yaml": true,
+      "priority-keys-at-start-of-yaml": false,
       "yaml-sort-order-for-other-keys": "None"
     },
     "yaml-timestamp": {
       "enabled": true,
-      "date-created": true,
-      "date-created-key": "date created",
+      "date-created": false,
+      "date-created-key": "created",
       "force-retention-of-create-value": false,
       "date-modified": true,
-      "date-modified-key": "date modified",
-      "format": "YYYY-MM-DD HH:mm"
+      "date-modified-key": "updated",
+      "format": "YYYY-MM-DD"
     },
     "yaml-title": {
       "enabled": false,
@@ -62,9 +62,9 @@
     },
     "yaml-title-alias": {
       "enabled": false,
-      "preserve-existing-alias-section-style": true,
+      "preserve-existing-alias-section-style": false,
       "keep-alias-that-matches-the-filename": false,
-      "use-yaml-key-to-keep-track-of-old-filename-or-heading": true
+      "use-yaml-key-to-keep-track-of-old-filename-or-heading": false
     },
     "capitalize-headings": {
       "enabled": false,
@@ -207,16 +207,16 @@
     },
     "format-yaml-array": {
       "enabled": false,
-      "alias-key": true,
-      "tag-key": true,
+      "alias-key": false,
+      "tag-key": false,
       "default-array-style": "single-line",
-      "default-array-keys": true,
+      "default-array-keys": false,
       "force-single-line-array-style": "",
       "force-multi-line-array-style": ""
     },
     "move-tags-to-yaml": {
       "enabled": false,
-      "how-to-handle-existing-tags": "Nothing",
+      "how-to-handle-existing-tags": "Remove whole tag",
       "tags-to-ignore": ""
     },
     "headings-start-line": {
@@ -254,7 +254,31 @@
       "characters-to-remove-space-after": "¿¡‘“(["
     },
     "space-between-chinese-japanese-or-korean-and-english-or-numbers": {
-      "enabled": true
+      "enabled": true,
+      "english-symbols-punctuation-before": "-+;:'\"°%$)]",
+      "english-symbols-punctuation-after": "-+'\"([¥$"
+    },
+    "add-blank-line-after-yaml": {
+      "enabled": false
+    },
+    "dedupe-yaml-array-values": {
+      "enabled": false,
+      "dedupe-alias-key": false,
+      "dedupe-tag-key": false,
+      "dedupe-array-keys": false,
+      "ignore-keys": ""
+    },
+    "sort-yaml-array-values": {
+      "enabled": false,
+      "sort-alias-key": false,
+      "sort-tag-key": false,
+      "sort-array-keys": false,
+      "ignore-keys": "",
+      "sort-order": "Ascending Alphabetical"
+    },
+    "default-language-for-code-fences": {
+      "enabled": false,
+      "default-language": ""
     }
   },
   "lintOnSave": true,
@@ -263,7 +287,11 @@
   "lintOnFileChange": false,
   "displayLintOnFileChangeNotice": false,
   "settingsConvertedToConfigKeyValues": true,
-  "foldersToIgnore": [],
+  "foldersToIgnore": [
+    "Excalidraw",
+    "assets",
+    "config"
+  ],
   "linterLocale": "system-default",
   "logLevel": "ERROR",
   "lintCommands": [],

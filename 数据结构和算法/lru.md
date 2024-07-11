@@ -1,9 +1,11 @@
 ---
+tags: 
 date created: 2021-11-30 21:22
-date modified: 2022-03-27 18:56
-title: lru
+date modified: 2024-05-23 10:39
 ---
-## LRU(Least Recently Used)
+
+# LRU(Least Recently Used)
+
 LRU，如果数据最近被访问过，那么将来访问的频率也会变高。
 实现：
 - 使用 map 存储键和值的映射关系，这样查找效率为 O(1)

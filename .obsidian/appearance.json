@@ -4,7 +4,7 @@
   "cssTheme": "Blue Topaz",
   "translucency": false,
   "accentColor": "",
-  "interfaceFontFamily": "JetBrainsMono Nerd Font,LXGW WenKai GB Screen",
-  "textFontFamily": "Segoe UI Emoji,LXGW WenKai GB Screen,FiraCode Nerd Font Mono",
-  "monospaceFontFamily": "FiraCode Nerd Font"
+  "interfaceFontFamily": "",
+  "textFontFamily": "",
+  "monospaceFontFamily": ""
 }

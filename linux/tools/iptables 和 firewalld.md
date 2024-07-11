@@ -1,10 +1,9 @@
 ---
-date created: 2021-12-03 20:20
-date modified: 2023-12-30 02:52
-title: iptables 和 firewalld
+created: 2021-12-03
 tags:
   - linux
   - iptables
+updated: 2024-07-05
 ---
 
 # iptables

@@ -2,6 +2,7 @@
 tags: ["linux 权限"]
 date created: 2021-11-28 13:34
 date modified: 2023-02-08 00:31
+updated: 2024-08-13
 ---
 
 ## 添加用户 useradd

@@ -1,7 +1,7 @@
 ---
-tags: ["nc", "netcat"]
-date created: 2022-12-21 18:20
-date modified: 2022-12-21 18:48
+tags: [tool,"nc", "netcat"]
+created: 2022-12-21 18:20
+updated: 2024-08-09
 ---
 
 参数：
@@ -11,6 +11,7 @@ date modified: 2022-12-21 18:48
 - n 不使用 DNS 反向查询 IP 地址域名
 
 ## 端口扫描
+
 ```bash
 # 范围扫描
 nc -zvn ip port-port
@@ -20,6 +21,7 @@ nc -zv ip port
 ```
 
 ## 文件传输
+
 ```bash
 # server 将file输出到1567端口
 nc -l 1567 < file.txt
@@ -29,6 +31,7 @@ nc -n server_ip 1567 > file.txt
 ```
 
 ## 目录传输
+
 ```bash
 # server 压缩目录然后将内容发送到1567端口
 tar -cvf - dir_name | nc -l 1567
@@ -37,8 +40,8 @@ tar -cvf - dir_name | nc -l 1567
 nc -n server_ip 1567 | tar -xvf -
 ```
 
-
 ## 加密发送
+
 ```bash
 # server 服务端发送加密后的数据
 nc -n client_ip 1567 | mcrypt -flush -bare -F -q -d -m ecb > file.txt

@@ -1,7 +1,7 @@
 ---
-tags: 
-date created: 2021-12-03 20:20
-date modified: 2024-05-03 15:09
+tags: ['css']
+created: 2021-12-03 20:20
+updated: 2024-07-23
 title: flex 布局
 ---
 ![[../assets/H5+C3/flex 布局/IMG-20240503150917441.png]]

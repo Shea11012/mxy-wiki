@@ -2,6 +2,7 @@
 date created: 2021-11-30 21:22
 date modified: 2024-05-29 05:38
 title: go plan9 汇编
+updated: 2024-10-17
 ---
 
 ## Plan9
@@ -46,11 +47,11 @@ go 预定义了一些伪寄存器，这些伪寄存器适用所有的架构
 - SB：Static base pointer（静态指针）：global symbols
 - SP：Stack pointer（栈顶指针）：top of stack
 
-#### SB
+#### SB（static base）
 
-> 用户定义的符号都会按照偏移量写在 FP 和 SB 中
+> 用于指示符号的相对地址，使得符号地址可以在不同的编译和链接过程保持一致。
 >
-> SB 可以被看做是起始内存，foo(SB) foo 是一个内存地址中的别名。经常当做全局函数和变量。
+> SB 可以被看做是起始内存，·foo(SB) ·foo 表示变量别名，(SB) 表示 foo 地址是相对于 SB
 >
 > foo<>(SB) 使这个 foo 仅在当前的 source file 可见
 >
@@ -109,11 +110,12 @@ TEXT runtime·profileloop(SB),NOSPLIT,$8
 
 每个 DATA 指令都会初始化一块对应的内存，没有明确初始化的内存会被清零
 
-```assembly
+```asm
 DATA	symbol+offset(SB)/width, value
 # symbol 在 SB 的 offset 上，value 的大小是 width
 
-DATA divtab<>+0(SB)/4, $1
+// 定义了一个divtab变量或数组，每个元素大小为4字节，并在偏移0字节的位置，初始化第一个元素为 1
+DATA ·divtab<>+0(SB)/4, $1
 ```
 
 #### GLOBL

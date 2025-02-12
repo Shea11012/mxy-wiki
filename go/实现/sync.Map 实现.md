@@ -3,6 +3,7 @@ tags: []
 date created: 2022-04-04 04:53
 date modified: 2023-04-13 02:33
 go version: 1.20
+updated: 2024-11-27
 ---
 
 ## 结构
@@ -24,8 +25,9 @@ type Map struct {
 }
 
 type readOnly struct {
+	// 只读，无锁访问
 	m       map[interface{}]*entry
-	amended bool // 当dirty中包含read没有的数据时为true
+	amended bool // 当dirty中包含 m 中没有的数据时为true
 }
 
 // 标识此项是已经删掉的指针，当map中的一个项目被删除了，只是把它的值标记为expunged，以后才有机会真正删除
@@ -36,6 +38,9 @@ type entry struct {
 	p unsafe.Pointer // *interface{}
 }
 ```
+
+`sync.Map` 通过使用两个独立的 map`readonly.m 和 dirty`。
+`readonly.m` 面向无锁访问，`dirty` 加锁访问操作，当击穿 readonly 时，才加锁访问 dirty 进行兜底。通过读写分离机制，将更多的读操作引导到 readonly 模块减少锁的获取，提高访问性能。
 
 ## store
 

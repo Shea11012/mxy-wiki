@@ -1,9 +1,10 @@
 ---
-tags: []
+tags: go
 date created: 2023-04-13 00:57
 date modified: 2023-04-13 02:05
-go version: 1.20
+version: 1.20
 ---
+
 ```go
 type Pool struct {
 	noCopy noCopy

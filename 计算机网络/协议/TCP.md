@@ -9,10 +9,10 @@ title: TCP
 
 TCP 是一个可靠的 (reliable)、面向连接 (connection-oriented)、基于字节流 (byte-stream)、全双工 (full-duplex) 的协议。发送端在发送数据后启动一个定时器，如果超时没有收到对端确认会进行重传，接收端利用序列号对收到的包进行排序、丢弃重复的数据，TCP 还提供了流量控制、拥塞控制等机制保证稳定性。
 
-![](https://mxy-imgs.oss-cn-hangzhou.aliyuncs.com/imgs/202110211708548.webp)
+![[../../assets/3e8bd120d6ed301056a28a0a8452289e_MD5.webp]]
 
 
-![](https://mxy-imgs.oss-cn-hangzhou.aliyuncs.com/imgs/202110211652294.webp)
+![[../../assets/ddfda9a29bc19d87ddc009d3b1fa8d1a_MD5.webp]]
 
 # TCP 四元组
 
@@ -42,7 +42,7 @@ TCP flag 定义为 8 位
 
 # IP 分段
 
-![ip|740](https://mxy-imgs.oss-cn-hangzhou.aliyuncs.com/imgs/202110261153584.webp)
+![[../../assets/b87e694731f4885611040b0eead1f0ba_MD5.webp]]
 
 ipv4 数据包最大为 65535 字节。当一个 IP 数据包大于 MTU 时，IP 会把数据报文进行切割为多个小的片段，使得这些小的报文可以通过链路层进行传输。
 
@@ -53,7 +53,7 @@ MSS 计算公式：`MSS= MTU - IP Header Size - TCP header size`
 
 # 可选项
 
-![](https://mxy-imgs.oss-cn-hangzhou.aliyuncs.com/imgs/202110261115291.webp)
+![[../../assets/efce700a6e45329f41a689fd795a9afb_MD5.webp]]
 
 ## TCP 头部时间戳可选项（TCP Timestamps Option,TSopt）
 

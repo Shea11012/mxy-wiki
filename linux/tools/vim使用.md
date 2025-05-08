@@ -1,4 +1,4 @@
----
+e---
 tags:
   - vim
 date created: 2021-12-03 20:20
@@ -166,7 +166,7 @@ updated: 2024-07-06
 
 # 常用按键和组合
 
-[[https://neovim.io/doc/user/quickref.html|neovim-quickref]]
+[quickref](https://neovim.io/doc/user/quickref.html)
 `ctrl+o`: 跳转到上一个位置
 `ctrl+i`：跳转到下一个位置
 `[[`：移动到上一个代码

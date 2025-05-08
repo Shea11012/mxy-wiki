@@ -15,7 +15,6 @@
   "useMarkdownLinks": false,
   "defaultViewMode": "source",
   "spellcheck": false,
-  "showRibbon": true,
   "userIgnoreFilters": [
     "assets/"
   ]

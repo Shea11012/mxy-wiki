@@ -6,5 +6,6 @@
   "accentColor": "",
   "interfaceFontFamily": "",
   "textFontFamily": "",
-  "monospaceFontFamily": ""
+  "monospaceFontFamily": "",
+  "showRibbon": true
 }

@@ -17,5 +17,6 @@
   "spellcheck": false,
   "userIgnoreFilters": [
     "assets/"
-  ]
+  ],
+  "uriCallbacks": false
 }

@@ -1,0 +1,23 @@
+---
+title: "system call"
+created: 2026-01-13
+updated: 2026-07-22
+status: needs-review
+type: source-summary
+tags:
+  - linux
+  - linux/system-programming
+collection: "The Linux Programming Interface"
+collection_kind: book
+collection_order: 1
+collection_home: "The Linux Programming Interface（总览）"
+confidence: INFERRED
+---
+
+# system call
+- 系统调用会改变进程状态，从用户态进入内核态，这样 CPU 才可以保护内核空间
+- 一组系统调用是固定的
+- 每个系统调用会将数据从用户态传入内核态
+- 所有的系统调用会以同样的方法进入内核，系统调用数字会写入 %eax 寄存器中
+
+`ldd <execute file>` 会列出可执行文件的动态库依赖

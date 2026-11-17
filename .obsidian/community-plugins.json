@@ -1,21 +1,18 @@
 [
-  "obsidian-git",
   "obsidian-outliner",
-  "media-extended",
-  "oz-image-plugin",
   "table-editor-obsidian",
   "obsidian-style-settings",
   "dataview",
   "obsidian-linter",
   "templater-obsidian",
-  "obsidian-image-toolkit",
   "obsidian-minimal-settings",
   "floating-toc",
   "obsidian-hider",
   "obsidian-excalidraw-plugin",
   "nl-fast-image-cleaner",
-  "tag-wrangler",
   "quickadd",
   "obsidian-tasks-plugin",
-  "obsidian-local-images-plus"
+  "obsidian42-brat",
+  "albus-imagine",
+  "tldraw"
 ]

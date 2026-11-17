@@ -1,0 +1,255 @@
+{
+  "scope": "计算机基础",
+  "created": "2026-07-22",
+  "backup_dir": "/home/mxy/.hermes/backups/mxy-wiki/计算机基础-before-20260722",
+  "metadata_policy": {
+    "created": "preserve explicit ISO date; otherwise migration date",
+    "updated": "2026-07-22",
+    "status": "needs-review",
+    "confidence": "INFERRED",
+    "source": "not invented"
+  },
+  "records": [
+    {
+      "old_path": "计算机基础/GC.md",
+      "new_path": "wiki/computer-science/GC.md",
+      "original_sha256": "537921ada51c2987f63a5c3f89731c42c5618cac6f8b80da8959dc36947bab6d",
+      "final_sha256": "147d977955c6d3f3dca9bde572e82aae9c3fa8d5b38077d9ab582196290657d3",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-science/GC.md",
+      "current_sha256": "147d977955c6d3f3dca9bde572e82aae9c3fa8d5b38077d9ab582196290657d3"
+    },
+    {
+      "old_path": "计算机基础/IO模式.md",
+      "new_path": "wiki/computer-science/IO模式.md",
+      "original_sha256": "476e9ecbcd9c5dd929d9d7ddca5c285ca434117eefbe65f3715a903ced31acb5",
+      "final_sha256": "4307a86decf7a059326490b61ce15817b15272c3548fe6b4f9f079afc402d192",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-science/IO模式.md",
+      "current_sha256": "4307a86decf7a059326490b61ce15817b15272c3548fe6b4f9f079afc402d192"
+    },
+    {
+      "old_path": "计算机基础/Mbps 和 MBps 区别.md",
+      "new_path": "wiki/computer-science/Mbps 和 MBps 区别.md",
+      "original_sha256": "7c184ceea8e85517fa46378b2a63b8610d36b5456ecaebf3153bdde067f3a826",
+      "final_sha256": "59ecbbd572d153dff79c1985428f819e2647f30b0098cbc8c405702601ade3cb",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-science/Mbps 和 MBps 区别.md",
+      "current_sha256": "59ecbbd572d153dff79c1985428f819e2647f30b0098cbc8c405702601ade3cb"
+    },
+    {
+      "old_path": "计算机基础/位运算.md",
+      "new_path": "wiki/computer-science/位运算.md",
+      "original_sha256": "db00d62d655486a5f96b6b0e13064ec736e38ab7552afdd27a3b0c8403dea189",
+      "final_sha256": "ffccf5e5ab110a2fb4a9e46d58d93dd04590f21c7fc7a4cece5180a20f9b2986",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-science/位运算.md",
+      "current_sha256": "63a97fe0455600ca32e1c783e638daa3ee28b804503eff8720aa1502efd31414"
+    },
+    {
+      "old_path": "计算机基础/内存对齐.md",
+      "new_path": "wiki/computer-science/内存对齐.md",
+      "original_sha256": "e76c23ef919eae2d778e02e813432583bcfcc646459a98ab6e2bfeff2f3ad136",
+      "final_sha256": "8c9a11efc060b1f6b5b1625b708747f8c85f52589b0e4e3fe60a12f6259547c5",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-science/内存对齐.md",
+      "current_sha256": "8c9a11efc060b1f6b5b1625b708747f8c85f52589b0e4e3fe60a12f6259547c5"
+    },
+    {
+      "old_path": "计算机基础/分布式基础.md",
+      "new_path": "wiki/computer-science/分布式基础.md",
+      "original_sha256": "2a802c04e764b7fff90f550f94de650636c5d0cf84b8cd85a2ec25823c5b430b",
+      "final_sha256": "99d1224808a31e75a41c6fa707af7cdaecf6da167e09ca63e521383f80600883",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-science/分布式基础.md",
+      "current_sha256": "99d1224808a31e75a41c6fa707af7cdaecf6da167e09ca63e521383f80600883"
+    },
+    {
+      "old_path": "计算机基础/压测名词解释.md",
+      "new_path": "wiki/computer-science/压测名词解释.md",
+      "original_sha256": "73245f1b1012bf65ca014b76ee93109a95f40d8bcc8d465d3126ddc7408cb476",
+      "final_sha256": "6dde9aec61ba224292c61b67e1cb48d3ac97050cbf76a58904867e1836d24e34",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-science/压测名词解释.md",
+      "current_sha256": "6dde9aec61ba224292c61b67e1cb48d3ac97050cbf76a58904867e1836d24e34"
+    },
+    {
+      "old_path": "计算机基础/名词解释.md",
+      "new_path": "wiki/computer-science/计算机基础名词解释.md",
+      "original_sha256": "84e7904aa073bcbfc0de6b63ac97a73f9d8120cfbed2a6ca0d0d3a449f17c830",
+      "final_sha256": "8c358b25ec69a8b3e1b445e64aeea828b8c4a17ff722811be7917e96654c6643",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-science/计算机基础名词解释.md",
+      "current_sha256": "8c358b25ec69a8b3e1b445e64aeea828b8c4a17ff722811be7917e96654c6643"
+    },
+    {
+      "old_path": "计算机基础/字符集和字符编码.md",
+      "new_path": "wiki/computer-science/字符集和字符编码.md",
+      "original_sha256": "cf61f6c18965a1d1c6ea08e881f8a6ac0f7ed7e3febe0b207f4490490f388e52",
+      "final_sha256": "99a415edba1e9ef8d137055aa197db8df7e3a2df42d4c80d6f1c259daf0f6ea8",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-science/字符集和字符编码.md",
+      "current_sha256": "99a415edba1e9ef8d137055aa197db8df7e3a2df42d4c80d6f1c259daf0f6ea8"
+    },
+    {
+      "old_path": "计算机基础/字节序.md",
+      "new_path": "wiki/computer-science/字节序.md",
+      "original_sha256": "d40813dedeae2b1b925d29d9379e462749ca554b4f18db0571259a34199328d1",
+      "final_sha256": "d78fd139948e64f9389213cc4a3ab081ec9dca21f9a60648c779bae59e776778",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-science/字节序.md",
+      "current_sha256": "d78fd139948e64f9389213cc4a3ab081ec9dca21f9a60648c779bae59e776778"
+    },
+    {
+      "old_path": "计算机基础/密码加密.md",
+      "new_path": "wiki/computer-science/密码加密.md",
+      "original_sha256": "56e84787084e03ef6e8fe7080d673ab41c31c8e752956a327a567b858f13667a",
+      "final_sha256": "9f6f8af3df52441f0eff05edc57bd42c424c6a2a32785fb22c342099d8608565",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-science/密码加密.md",
+      "current_sha256": "9f6f8af3df52441f0eff05edc57bd42c424c6a2a32785fb22c342099d8608565"
+    },
+    {
+      "old_path": "计算机基础/小数与二进制之间的转换.md",
+      "new_path": "wiki/computer-science/小数与二进制之间的转换.md",
+      "original_sha256": "cc8dea85b4e95eb5dd2c650a3a5d0c771abeac52358279736170d008eab75163",
+      "final_sha256": "ac3b1434a04525be7f572fe4dee26c88e7d0e983c1151f51f8a8d841f3b58319",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-science/小数与二进制之间的转换.md",
+      "current_sha256": "ac3b1434a04525be7f572fe4dee26c88e7d0e983c1151f51f8a8d841f3b58319"
+    },
+    {
+      "old_path": "计算机基础/并发IO模型.md",
+      "new_path": "wiki/computer-science/并发IO模型.md",
+      "original_sha256": "5b6a5aa2c4447eed9fed2e672957455a97ad905e45780c3346a6ed3dc744a1f6",
+      "final_sha256": "092fdff45f944f57cea64e0b4d4069e427f2f52770840b5500e4b72ccc187ef2",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-science/并发IO模型.md",
+      "current_sha256": "092fdff45f944f57cea64e0b4d4069e427f2f52770840b5500e4b72ccc187ef2"
+    },
+    {
+      "old_path": "计算机基础/栈和堆.md",
+      "new_path": "wiki/computer-science/栈和堆.md",
+      "original_sha256": "5039e1e51d9e4316630e7a88ba2836276e09a0e47e22ab96c5e09e29cbde82b2",
+      "final_sha256": "2d736f599853010219dcb97b76c9095561828bb2e2880414857bbb7de20c6869",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-science/栈和堆.md",
+      "current_sha256": "2d736f599853010219dcb97b76c9095561828bb2e2880414857bbb7de20c6869"
+    },
+    {
+      "old_path": "计算机基础/深入理解计算机系统/第 9 章 虚拟内存.md",
+      "new_path": "wiki/computer-science/深入理解计算机系统/第 9 章 虚拟内存.md",
+      "original_sha256": "6e967f2fefaf33ac874198d21e00985a35dfbcf4464534ef1dca0c6e098ef35d",
+      "final_sha256": "09bc022cf2cbe92f3a30bde09fda883b6d7d0fe35063435b41db7fd9c0b2aaa3",
+      "reason": "stable book collection",
+      "status": "active",
+      "current_path": "wiki/computer-science/深入理解计算机系统/第 9 章 虚拟内存.md",
+      "current_sha256": "09bc022cf2cbe92f3a30bde09fda883b6d7d0fe35063435b41db7fd9c0b2aaa3"
+    },
+    {
+      "old_path": "计算机基础/深入理解计算机系统/第1章 计算机系统漫游.md",
+      "new_path": "wiki/computer-science/深入理解计算机系统/第1章 计算机系统漫游.md",
+      "original_sha256": "9cefd6329dc64522b7a2990b8d138acc0bb8aae8655b318508b726e0745b63d2",
+      "final_sha256": "ab418b493fdee3612b840161d5a10f568562826f90ee82ebbebe962df2fe852b",
+      "reason": "stable book collection",
+      "status": "active",
+      "current_path": "wiki/computer-science/深入理解计算机系统/第1章 计算机系统漫游.md",
+      "current_sha256": "ab418b493fdee3612b840161d5a10f568562826f90ee82ebbebe962df2fe852b"
+    },
+    {
+      "old_path": "计算机基础/深入理解计算机系统/第2章 信息的表示和处理.md",
+      "new_path": "wiki/computer-science/深入理解计算机系统/第2章 信息的表示和处理.md",
+      "original_sha256": "fa1655265b6a2bb866faaca05aef07104038e281ecaf96e22c2b9ff30f459e43",
+      "final_sha256": "90661369da88ef01d3f30bc514172b726b51516b10e67aa3528079643eb6096d",
+      "reason": "stable book collection",
+      "status": "active",
+      "current_path": "wiki/computer-science/深入理解计算机系统/第2章 信息的表示和处理.md",
+      "current_sha256": "90661369da88ef01d3f30bc514172b726b51516b10e67aa3528079643eb6096d"
+    },
+    {
+      "old_path": "计算机基础/深入理解计算机系统/第3章 程序的机器级表示.md",
+      "new_path": "wiki/computer-science/深入理解计算机系统/第3章 程序的机器级表示.md",
+      "original_sha256": "29701cef1fd7620e22c2e02a761867a6563ef30dcd91886b62f34f340184a894",
+      "final_sha256": "674cdd802777a60b8140c3315e45f4ab55d583da861656b9bb13fb33b984320d",
+      "reason": "stable book collection",
+      "status": "active",
+      "current_path": "wiki/computer-science/深入理解计算机系统/第3章 程序的机器级表示.md",
+      "current_sha256": "674cdd802777a60b8140c3315e45f4ab55d583da861656b9bb13fb33b984320d"
+    },
+    {
+      "old_path": "计算机基础/深入理解计算机系统/第7章 链接.md",
+      "new_path": "wiki/computer-science/深入理解计算机系统/第7章 链接.md",
+      "original_sha256": "0fa6245387bb00d773995ef08c62e5720ce2b3eeb58c539de5ae8958ed92bf47",
+      "final_sha256": "de23d7b5608b6d54ced5b8761d4f352092b320efe83ce58985b3930ead0bcdf6",
+      "reason": "stable book collection",
+      "status": "active",
+      "current_path": "wiki/computer-science/深入理解计算机系统/第7章 链接.md",
+      "current_sha256": "de23d7b5608b6d54ced5b8761d4f352092b320efe83ce58985b3930ead0bcdf6"
+    },
+    {
+      "old_path": "计算机基础/深入理解计算机系统/第8章 异常控制流.md",
+      "new_path": "wiki/computer-science/深入理解计算机系统/第8章 异常控制流.md",
+      "original_sha256": "48167c765bc2371eb065e7977973caaf2bca6e2b6aec70de85674e3db6eb6042",
+      "final_sha256": "073c1f9cc533586dd0745119606c6182368713d5233326ca1f2af509424d2299",
+      "reason": "stable book collection",
+      "status": "active",
+      "current_path": "wiki/computer-science/深入理解计算机系统/第8章 异常控制流.md",
+      "current_sha256": "073c1f9cc533586dd0745119606c6182368713d5233326ca1f2af509424d2299"
+    },
+    {
+      "old_path": "计算机基础/硬件.md",
+      "new_path": "wiki/computer-science/硬件.md",
+      "original_sha256": "09ca63768bc51cf2dbb2060c0848c7ea94335f3e043083fc46574f8298d66c73",
+      "final_sha256": "89d3eaaf881dd3705b3e54f5aa2f9468e5619b2d73064b3d5c971b61a6c2b98d",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-science/硬件.md",
+      "current_sha256": "89d3eaaf881dd3705b3e54f5aa2f9468e5619b2d73064b3d5c971b61a6c2b98d"
+    },
+    {
+      "old_path": "计算机基础/编码.md",
+      "new_path": "wiki/computer-science/编码.md",
+      "original_sha256": "308d13bbaa9645a98babd0ea64c9a3c818c4a27b37f81370de7760131f4bd9e5",
+      "final_sha256": "01f415e668bcf9c05300a26f0fa1bbee4c0cd8d0616ab566f324cd285f5c91d1",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-science/编码.md",
+      "current_sha256": "01f415e668bcf9c05300a26f0fa1bbee4c0cd8d0616ab566f324cd285f5c91d1"
+    },
+    {
+      "old_path": "计算机基础/进程和线程.md",
+      "new_path": "wiki/computer-science/进程和线程.md",
+      "original_sha256": "196abda55642747db6073367d23d50641a449b1d8b3d2a812652452825ac5315",
+      "final_sha256": "341f9fbcee19253569a02749245cd842e16355f342e352bd5ebc2711c0d10a4f",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-science/进程和线程.md",
+      "current_sha256": "341f9fbcee19253569a02749245cd842e16355f342e352bd5ebc2711c0d10a4f"
+    },
+    {
+      "old_path": "计算机基础/零拷贝.md",
+      "new_path": "wiki/computer-science/零拷贝.md",
+      "original_sha256": "25d6260c1fb149acc9c92b80c1b72f39cb3e3217422d5a554ff06d3b4500ac11",
+      "final_sha256": "485950862be769c205bb857b77cfacf56b169ed921a2294aeeb95b3360e4a623",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-science/零拷贝.md",
+      "current_sha256": "485950862be769c205bb857b77cfacf56b169ed921a2294aeeb95b3360e4a623"
+    }
+  ],
+  "historical_missing_attachments": 15
+}

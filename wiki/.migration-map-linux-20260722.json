@@ -1,0 +1,391 @@
+{
+  "scope": "linux",
+  "created": "2026-07-22",
+  "backup_dir": "/home/mxy/.hermes/backups/mxy-wiki/linux-before-20260722",
+  "managed_root": "wiki",
+  "source_root": "linux",
+  "target_root": "wiki/linux",
+  "created_files": [
+    "wiki/linux/The Linux Programming Interface/The Linux Programming Interface（总览）.md"
+  ],
+  "records": [
+    {
+      "old_path": "linux/CPU工具汇总.md",
+      "new_path": "wiki/linux/CPU工具汇总.md",
+      "original_sha256": "5ad84319fcdc39c3e0404542e8da6e54b543eb6d14fc7b8ab724f1da14383f6f",
+      "final_sha256": "dbd9a92e8b9a01c1623cc1bfd0ceccf4521246e03bd361f0ce28b722d933b546",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/CPU性能指标.md",
+      "new_path": "wiki/linux/CPU性能指标.md",
+      "original_sha256": "e5bb557e9a082404499c6d6b022f4ca3fb7e648c0373815740ad27aca48bdc59",
+      "final_sha256": "71400106dc258d7d844aeb83b075c8cc7e3ff0cc6c310cc2441a05641d0ae589",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/Centos包管理.md",
+      "new_path": "wiki/linux/Centos包管理.md",
+      "original_sha256": "311dc3f078c2b2c44f520b3d6ff05e6d9a66150b7a8beb9a79da795d47b4beeb",
+      "final_sha256": "3ecbfec8446ae46be4d3d1a725e20b3b2b20d6a808fc360e44e2c36565e91a8e",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/Linux 服务管理.md",
+      "new_path": "wiki/linux/Linux 服务管理.md",
+      "original_sha256": "1e3a6d3dcc1afcc5296d6d4155deabfa383166a9c2850a27d5447d9bcb27c842",
+      "final_sha256": "8eb590725f2db0351fac0876e932c2501cae83aea9f0820790b046022bb49a73",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/Linux文件权限管理.md",
+      "new_path": "wiki/linux/Linux文件权限管理.md",
+      "original_sha256": "c0121cd3b44bf89a58069b54d830b2fb61ab28d9ccef2ecdb594839f44b2c34f",
+      "final_sha256": "2afa0ede3427e2d4242fd391b4ce11ca758b84aa071da2dbf17b173d84ee7db1",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/Linux测试磁盘IO性能.md",
+      "new_path": "wiki/linux/Linux测试磁盘IO性能.md",
+      "original_sha256": "0dc241066fed610cfcbfb5e682068a3efb44c5e8ea8da94987415c7994a9fed5",
+      "final_sha256": "569670caed17c159963bb4b24e5e416dae816b65155fd0370338f248ddea8fc9",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/Linux磁盘阵列RAID.md",
+      "new_path": "wiki/linux/Linux磁盘阵列RAID.md",
+      "original_sha256": "16ec7af3aa6d159565746c87d96c737d6c659542d6308d95beaa130cc840e5f1",
+      "final_sha256": "b47b87ab4871d7caa64e3aedc50418d281450146dc5b9f6e4e0f2722c32f9ef4",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/Linux系统用户组管理.md",
+      "new_path": "wiki/linux/Linux系统用户组管理.md",
+      "original_sha256": "b509dbcc80e8cee8b81609e0316d1fd2b9e25dc27d206a6c412357b2727199c7",
+      "final_sha256": "5f40b18d1a9d16812b754a3a10da406a73d5e0071dcd1dc948f583e41f1c4cd3",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/Linux进程和信号.md",
+      "new_path": "wiki/linux/Linux进程和信号.md",
+      "original_sha256": "da01d414277b3f5f2b890bae425889510eb619d9ebb5518256f0146ad9337fe1",
+      "final_sha256": "3c46eceadfb2ffe2cd73bf459729c69803434b6ac30c26a814973ebfcbad12fb",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/Ubuntu 包管理命令.md",
+      "new_path": "wiki/linux/Ubuntu 包管理命令.md",
+      "original_sha256": "6efbbce2f45d5003410056096349e5f4f807e7ed55a695624d6d2a83a44a086d",
+      "final_sha256": "4c663c4b92aecabfc3a6f19f162239492544b96a42b83d873ae63b66c650d5dd",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/ext文件系统机制.md",
+      "new_path": "wiki/linux/ext文件系统机制.md",
+      "original_sha256": "cf3e1c95a17e647edb23088316b54dcd12d59c071b1177aa0a2585c5664ee320",
+      "final_sha256": "70037919c31b78a0211b730edaf8f1a1d8d150093134c91a7a045d39e19c0ae7",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/kvm.md",
+      "new_path": "wiki/linux/kvm.md",
+      "original_sha256": "53e8dd2329f136912c26b7a61c949c3fe2d81336794842b3f05f6080e7b088f3",
+      "final_sha256": "37858d3b3118e64d49386b496de5f2a665358e7e8c53bbb489023087387585ef",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/ping not permitted.md",
+      "new_path": "wiki/linux/ping not permitted.md",
+      "original_sha256": "abaf8552d21e332bbae491e55b3ae0c458883afda6c41cedfb0e67c39ede5724",
+      "final_sha256": "cb70bc0ffdf9751d61f3d99411129083cb87df9b83a2b45d8bb685110253e763",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/shell/Linux 权限操作.md",
+      "new_path": "wiki/linux/Linux 权限操作.md",
+      "original_sha256": "923ceae0ec3a305f8f39e5213509ebcea568a34ddbe1902ee314a46060ccdc3f",
+      "final_sha256": "3635f394c4ec1a6aa357dcb313b8b18282f5eccd04b611d0cb7a922ece489612",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/shell/变量.md",
+      "new_path": "wiki/linux/变量.md",
+      "original_sha256": "dc11292fe5d11bcfdb64930cbd223a121703be68098437719ca304a141eb2a4a",
+      "final_sha256": "dfa3c695e1791462dcd06df0d82cb24fb6c4f06c5fbb3c34b9a9ae4059c36396",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/shell/基础.md",
+      "new_path": "wiki/linux/基础.md",
+      "original_sha256": "fc6fc63a9a46d07866bde59b71014f96dca0bd6190328bcb5d84a7bf9902a007",
+      "final_sha256": "a38d12fc3d08595b7351dfdf5db64ff128428afd76e8cc68a53ea6c9b6da1185",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/shell/文件系统.md",
+      "new_path": "wiki/linux/文件系统.md",
+      "original_sha256": "b57afcc08ae1e839a072fa17efb40ac37b2d980ce3f4e88188fe1ded470c073a",
+      "final_sha256": "96d95f315d620202afcfd8f767793ee793e8d5c82487847f30b0a19dba1346f2",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/shell/结构化命令.md",
+      "new_path": "wiki/linux/结构化命令.md",
+      "original_sha256": "8c1339c4cd13b3614a8100514ed187795a266cd2053e8b5d1f6a78c4833d6d1f",
+      "final_sha256": "ae76bb79420e50692767cebb0763631f114df53ff5e176aa48fcab05bfd0d1f0",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/the linux programming interface/file IO.md",
+      "new_path": "wiki/linux/The Linux Programming Interface/file IO.md",
+      "original_sha256": "6846dc12ff77cee9c4390909c8fec4dd12f228b4e7fd2275d8a5de5277f0067f",
+      "final_sha256": "82a8475c29da4cd0132ce48fb414f31530db2032258246500668e4244a7b4163",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/the linux programming interface/ipc.md",
+      "new_path": "wiki/linux/The Linux Programming Interface/ipc.md",
+      "original_sha256": "a0014b02a1ae37101d191012ee681c7c4cc40683eadd8e984a9f81601cf9c729",
+      "final_sha256": "58f1787599903f074009df489d1eb7f4bec779edf1164f7e43ce54b77586b205",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/the linux programming interface/mmap.md",
+      "new_path": "wiki/linux/The Linux Programming Interface/mmap.md",
+      "original_sha256": "13b862f17c410064829dbe88905962cb67f9d27e8626e807cb0c915b47a01bdd",
+      "final_sha256": "49032c1bf5dbdc927faaf6dec9f4e08536f7916a901a56582919ebe554f51ac3",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/the linux programming interface/process.md",
+      "new_path": "wiki/linux/The Linux Programming Interface/process.md",
+      "original_sha256": "78b03215036f9a5db0fcd9bfee9884db161da9975e28172ed79af061aa5316de",
+      "final_sha256": "52631837e7f021dc6a6ecdc5b2ebdda6e5555140df16be75f0420701731c3ff9",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/the linux programming interface/signals.md",
+      "new_path": "wiki/linux/The Linux Programming Interface/signals.md",
+      "original_sha256": "b527e62c5a64fdd145d5832d58c58e014ee8c3f457eb5ee38f6a74e1b7eb2082",
+      "final_sha256": "b120bcef024eae6b081996a4c40091473bebe6d323bdf7abc6d06f1d9400e020",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/the linux programming interface/system call.md",
+      "new_path": "wiki/linux/The Linux Programming Interface/system call.md",
+      "original_sha256": "104d16d84c652cc7625fdf1b5488c88e5c04d473b04fd60ae44a0f7b1bddc4da",
+      "final_sha256": "c2e7ca6d54d547aafad048f8fa756add145b2e265c383fe5fc2fa9557ef798bf",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/the linux programming interface/threads.md",
+      "new_path": "wiki/linux/The Linux Programming Interface/threads.md",
+      "original_sha256": "e693cf5b256498643d693c8d2e1bb22cd9115b0cbbac7312564e36db7a215d60",
+      "final_sha256": "1745ecd3f5d1bd5e5a81c1e4b7e74d96c5ad026333223b40d8b401e37bba3d64",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/Arch Linux命令.md",
+      "new_path": "wiki/linux/Arch Linux命令.md",
+      "original_sha256": "5e59bf975d3938efec71f676d2ab398298f53363fc5bbdd63aa5b8b556de29ff",
+      "final_sha256": "350f9a5d8556a34d1ec6d3a83b9a68bfc9e67ce8d97abf7c76ad8af5c5917f17",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/fc-list.md",
+      "new_path": "wiki/linux/fc-list.md",
+      "original_sha256": "a5641542dd74b30ccca809eef86d71e3577ca375b9bfe9481f6de6c5d6347d98",
+      "final_sha256": "34305306b1b6e1840da9f497e0dcda2796480822fb92c23071d55dae48b2b146",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/gawk.md",
+      "new_path": "wiki/linux/gawk.md",
+      "original_sha256": "1a25f17d8f6cd3ec32a0d7839e8a51bda1d5f0dff9667b2052b1db94b82b8918",
+      "final_sha256": "17453bcdfdcdc684bfb8c5b4162e637792a19c4127ed5aafc693e55c09de7acd",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/gdb.md",
+      "new_path": "wiki/linux/gdb.md",
+      "original_sha256": "817c1e9932f0e30c54472c0496f55a0b4d3643589fa443d6e926375bf988a604",
+      "final_sha256": "3b7274ce86487579516f3a17a074ea5474020bafdbf8176fc37b0521f9650025",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/iptables 和 firewalld.md",
+      "new_path": "wiki/linux/iptables 和 firewalld.md",
+      "original_sha256": "f2680a209cdbe749f2f6ed1ddbd07526c100c35e7f83ce6e2b449d3f6dc4d319",
+      "final_sha256": "a46622f11f0244074761a84a422e698b4adbcb04f41d2b5bc38807abe1bc3bbb",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/journalctl.md",
+      "new_path": "wiki/linux/journalctl.md",
+      "original_sha256": "db7a606fd3638e5e464133f82d8cc7b16bb6d9b18fa403879b148c3b192c0033",
+      "final_sha256": "a4498883c3db0956a8f37b4de03daff07b889cbdde2ea1b2aefdda9c09857673",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/ldd.md",
+      "new_path": "wiki/linux/ldd.md",
+      "original_sha256": "fe19ce66dfabcbdc4c0bec2976abb1b9250da0b4022e6f81be4a487954c7f694",
+      "final_sha256": "2f2f36f63ccc1e98809a4864e8710b795299867d62afed3c9812514f4cfe2954",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/lsof.md",
+      "new_path": "wiki/linux/lsof.md",
+      "original_sha256": "1a47537df44ce619823b735e3f6636d28ad35ec72068b198c8b86b0713810382",
+      "final_sha256": "84fd778f97ba8d1a35a210ff6662b3338491b6352b0119d8da7284d97a19293e",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/nc.md",
+      "new_path": "wiki/linux/nc.md",
+      "original_sha256": "5fee1071f7a800ac3cfe87f039a47c5e9ac0ec193ea2dd6b0df58e0739d00d94",
+      "final_sha256": "4017a6e8f3b2fca7ae114dea175df98825f306d58506fb6f067e564f32755063",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/nftables.md",
+      "new_path": "wiki/linux/nftables.md",
+      "original_sha256": "b307906decf56bbf6b21eccaf9a1542a6b574e1ee369c97ffe6cc907a94f8a4c",
+      "final_sha256": "6f759165ae5c02254028213535ca2acf17adb9bee0e931551663029b238b9414",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/nmcli 管理网络连接.md",
+      "new_path": "wiki/linux/nmcli 管理网络连接.md",
+      "original_sha256": "754c231c2686dc3c2404ac4e09200804c667aabe839b6542e0f904bf28e9886e",
+      "final_sha256": "fd3161fc955481f9125d1e81427f824157ea886917b2e73a2880d878b39970f8",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/paru.md",
+      "new_path": "wiki/linux/paru.md",
+      "original_sha256": "ef40141a7d6e4f948bc8d16cf3d36367e3424f55b4be27f361250494eb2d60ba",
+      "final_sha256": "84c549a9258480c8e1ec2f59d657394e5f29fbf99bc518c485131dece4c71140",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/qemu.md",
+      "new_path": "wiki/linux/qemu.md",
+      "original_sha256": "0b370a30d889953550dc7176f195d752f3ca6f6d7d2254e0c331e92010af1205",
+      "final_sha256": "8f393c5517672decbfdb8d912c3aaaf59100813490d4cf33d2d520b11f244f95",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/rpm.md",
+      "new_path": "wiki/linux/rpm.md",
+      "original_sha256": "e8d3d663343b9cf8dcdb99f7c31bb2561814940e46184bb0c35661565a48e39b",
+      "final_sha256": "0d2cedd41d5910bf0a4f86ecdf89d5c6bc308dccdd3c1ee9f7c2041b52f515d8",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/rsync.md",
+      "new_path": "wiki/linux/rsync.md",
+      "original_sha256": "c117792b4ff32fe096c77c3900dc08bdb8318fa494ea5d7bd7bc03c30c66838f",
+      "final_sha256": "1cbe8b934512129ace408c1d339a087559c0dccca307f3a1ba4ff34c57d50022",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/sed.md",
+      "new_path": "wiki/linux/sed.md",
+      "original_sha256": "83e6df33f71424ce27b6ba0cc6b98d5bc0bddced6ed6844332b69f13b36ee0af",
+      "final_sha256": "9aabbb9f6f43928bcf3ead4048c094160a442a9e4b1a40230686c6f18693e502",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/ssh.md",
+      "new_path": "wiki/linux/ssh.md",
+      "original_sha256": "c493d66e7200c93b11ae18bc7d004c47a1d062f8985c714d3700a5d6f0acd547",
+      "final_sha256": "f6c2cc62f5a2300c34d30134d4c7e8c97a49528d7da1451e5699bcb028ce3986",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/systemd.md",
+      "new_path": "wiki/linux/systemd.md",
+      "original_sha256": "1aebfaccddd1bc317dcd20fc919a5d986a77a84413939d7e060d275ddf013819",
+      "final_sha256": "ca12b8c703f12092aeafdc26b56ce3cf14734689bafce87bac1abd1b978a1235",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/tmux 使用.md",
+      "new_path": "wiki/linux/tmux 使用.md",
+      "original_sha256": "7a3090d36c91eeb04deb175042e0d86de1070a9b6af5d4dc6b91614852d014f6",
+      "final_sha256": "67f95107a14093c457242479e99fcc602ed914b0a72f5bb3cd3b3eae392cf61e",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/vim使用.md",
+      "new_path": "wiki/linux/vim使用.md",
+      "original_sha256": "833fb8962930e75e3fe8b95a1537eaf21f19fa62213e914426fb53d672f2bcc8",
+      "final_sha256": "0ca6aa6cd9093e35c70bdcd9f617b5f15c53dacc695adf4f7d188cb563448f8d",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/tools/yum.md",
+      "new_path": "wiki/linux/yum.md",
+      "original_sha256": "dbade814152ceaac5afa3cd7e96cde1f04171206bb4fabda26bbea7758b1bb5f",
+      "final_sha256": "6440b02e0f48bb5b6b80a40c21637abb0ec6af860109b16f0acd352cb0746d89",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/常用命令.md",
+      "new_path": "wiki/linux/常用命令.md",
+      "original_sha256": "2d054bf3412b3f7f523c3ecb6fb4c4ac2ce9902b32ad363bd61a15285f59a253",
+      "final_sha256": "c970310bb28b25dd1fdaebf43440fd9e7cc9d70771890b258a9e10664d3b5320",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/控制台输出颜色控制.md",
+      "new_path": "wiki/linux/控制台输出颜色控制.md",
+      "original_sha256": "4661c351929d48447a0e6056009794711cbb70dbba03cec0e604d043226f22fa",
+      "final_sha256": "abd0b1a60c2b2674254d1743cfbb4e872b92cc9548614ada37fdc8049b2bbefb",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/系统状态统计和查看.md",
+      "new_path": "wiki/linux/系统状态统计和查看.md",
+      "original_sha256": "847c33358f967b1c706485b24671ff28695c4693338050b96b95e256cff0928e",
+      "final_sha256": "3418b5282c445e4d591d3ccda6b0e324ec1a8802863da47e6b64486d6da23d98",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/编写zsh completion.md",
+      "new_path": "wiki/linux/编写zsh completion.md",
+      "original_sha256": "7c051d9b6d7406cbfca9507d7eeb469f3861080f50c361ad81fa17b02e2807e2",
+      "final_sha256": "359a786933bd15fca32810e5428b07601bdcde8c66fb43b5e9f2c8ebd3516940",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/网络工具汇总.md",
+      "new_path": "wiki/linux/网络工具汇总.md",
+      "original_sha256": "1c33d699d0ed1780f952649f49482cceed47e5959e3fbbbe8d01c0c6b408ef06",
+      "final_sha256": "651d3ee6e81892cbc409d40653b402f5a20dfb72f37cbd0f16bb502af8fbb08c",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/网络性能指标.md",
+      "new_path": "wiki/linux/网络性能指标.md",
+      "original_sha256": "af2124b6606f9c744da71108c9a1d3609082672ef7501e3af062657f223be265",
+      "final_sha256": "c0adbbc269aec58dfeef82ee2bed66c49318d9e9a425df837accffd4861977e4",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    },
+    {
+      "old_path": "linux/自动挂载smb.md",
+      "new_path": "wiki/linux/自动挂载smb.md",
+      "original_sha256": "7c2d895ba8c9d5bf06c4cd01a24397dea95722f3ae68caad17e0d98f6083157f",
+      "final_sha256": "68d158b297fd1659e897d2955f32d6b1df3c0ee285faa2646a3c19518416d72e",
+      "reason": "legacy linux domain migration; TLPI retained as book collection; tools/shell flattened to metadata"
+    }
+  ],
+  "metadata_policy": {
+    "created": "preserve explicit ISO date; otherwise use migration date 2026-07-22",
+    "updated": "2026-07-22",
+    "status": "needs-review",
+    "confidence": "INFERRED",
+    "source": "not invented"
+  }
+}

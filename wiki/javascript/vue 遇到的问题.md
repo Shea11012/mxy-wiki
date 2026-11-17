@@ -1,0 +1,15 @@
+---
+title: "vue 遇到的问题"
+created: 2021-12-03
+updated: 2026-07-22
+status: needs-review
+type: concept
+tags:
+  - javascript
+  - javascript/vue
+confidence: INFERRED
+---
+### vue 事件监听多次触发
+
+是因为向 `$bus.$on` 中追加监听事件时，在 vue 组件被注销时，往 `$bus.$on` 中添加的事件并没有被移除，当下次再进入对应的 vue 组件时，又会重新向 `$bus` 中添加
+

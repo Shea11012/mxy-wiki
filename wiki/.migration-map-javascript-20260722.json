@@ -1,0 +1,171 @@
+{
+  "scope": "javascript",
+  "created": "2026-07-22",
+  "backup_dir": "/home/mxy/.hermes/backups/mxy-wiki/javascript-before-20260722",
+  "metadata_policy": {
+    "created": "preserve explicit ISO date; otherwise migration date",
+    "updated": "2026-07-22",
+    "status": "needs-review",
+    "confidence": "INFERRED",
+    "source": "preserve only existing source"
+  },
+  "records": [
+    {
+      "old_path": "javascript/ES6.md",
+      "new_path": "wiki/javascript/ES6.md",
+      "original_sha256": "0fc6dd2f6d962b01521b8e5bfdffcc6ab670605d19face22bca9929d37cb78d6",
+      "final_sha256": "416e7527bcbec0acf03cd8800473cb050197a656d2463effb9ba64de2f8ec5d3",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/javascript/ES6.md",
+      "current_sha256": "416e7527bcbec0acf03cd8800473cb050197a656d2463effb9ba64de2f8ec5d3"
+    },
+    {
+      "old_path": "javascript/React/React 学习.md",
+      "new_path": "wiki/javascript/React 学习.md",
+      "original_sha256": "414d60d018edc3bddd967c912cead0807c141b8ed06da13bbf06cbd95eb1aa8a",
+      "final_sha256": "a5e07e7921f2c8d93da656ffc1afef6a2e2ec163c3b01b60740a098b427e74be",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/javascript/React 学习.md",
+      "current_sha256": "a5e07e7921f2c8d93da656ffc1afef6a2e2ec163c3b01b60740a098b427e74be"
+    },
+    {
+      "old_path": "javascript/React/Redux.md",
+      "new_path": "wiki/javascript/Redux.md",
+      "original_sha256": "3074a6a496eb11eb23367978dcb94e9ffa7fbc69eae283f4aaf9e6bb3e0a48f9",
+      "final_sha256": "6e1ce8d533a809ba57c4ae7b08865e290965defebeb7fba4a0282d9c656fbbd1",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/javascript/Redux.md",
+      "current_sha256": "6e1ce8d533a809ba57c4ae7b08865e290965defebeb7fba4a0282d9c656fbbd1"
+    },
+    {
+      "old_path": "javascript/Vue/Vue-router.md",
+      "new_path": "wiki/javascript/Vue-router.md",
+      "original_sha256": "82c21068eacf6522e13c499efc25d92df82dd5d5865965ad24dade1147d73cda",
+      "final_sha256": "a1c1e2c98d4338ec59f6318e1bd917ce363b771244459f7a937151a6690094bf",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/javascript/Vue-router.md",
+      "current_sha256": "a1c1e2c98d4338ec59f6318e1bd917ce363b771244459f7a937151a6690094bf"
+    },
+    {
+      "old_path": "javascript/Vue/Vue.md",
+      "new_path": "wiki/javascript/Vue.md",
+      "original_sha256": "0da8cb20cdfd78ee083138c3a7db9f5cc30c6f4c0b79081cbe87b359042ac561",
+      "final_sha256": "3441829901d6d45cfa32da23eb55cd91d8b9b67385dccb28f2e9d216fc7b046f",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/javascript/Vue.md",
+      "current_sha256": "3441829901d6d45cfa32da23eb55cd91d8b9b67385dccb28f2e9d216fc7b046f"
+    },
+    {
+      "old_path": "javascript/Vue/vue 遇到的问题.md",
+      "new_path": "wiki/javascript/vue 遇到的问题.md",
+      "original_sha256": "e8089fc69264ac50bbc4499653ed6e8d7683a1d5d76cf0c344daa4316e09750a",
+      "final_sha256": "15a633be7a44695d830d2918e806c48febb335fe1a8b1d05fa6635d403bf9696",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/javascript/vue 遇到的问题.md",
+      "current_sha256": "15a633be7a44695d830d2918e806c48febb335fe1a8b1d05fa6635d403bf9696"
+    },
+    {
+      "old_path": "javascript/Vue/vue示例.md",
+      "new_path": "wiki/javascript/vue示例.md",
+      "original_sha256": "09a0f2559f94d4ac0d59a5f1803d72dfebbc0e0aa1023cbe07db4d0d8514ae3f",
+      "final_sha256": "3f67460133562c19a503b7e7cad8b11cb727cb9a1ef4458efbcf964e562c2dde",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/javascript/vue示例.md",
+      "current_sha256": "3f67460133562c19a503b7e7cad8b11cb727cb9a1ef4458efbcf964e562c2dde"
+    },
+    {
+      "old_path": "javascript/console 输出技巧.md",
+      "new_path": "wiki/javascript/console 输出技巧.md",
+      "original_sha256": "9f442321ed04eae5edc8ee0a0fe411bbfd8b161154e696a563d8b5a8bcd7375e",
+      "final_sha256": "8aace8618c4771b2bec4f0fb4d254c54088ab7a0b5cefb016b03cb323b6e692c",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/javascript/console 输出技巧.md",
+      "current_sha256": "8aace8618c4771b2bec4f0fb4d254c54088ab7a0b5cefb016b03cb323b6e692c"
+    },
+    {
+      "old_path": "javascript/jQuery的$和$(this)区别.md",
+      "new_path": "wiki/javascript/jQuery的$和$(this)区别.md",
+      "original_sha256": "e2872bdef82ea820f8bfac1f44b7280378e8038d26ef387357fbe4a1eb5ad938",
+      "final_sha256": "87ff7f94db94f5803666a2ae379540e4988efc9e742b5ba749ef97ee3a8593bb",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/javascript/jQuery的$和$(this)区别.md",
+      "current_sha256": "87ff7f94db94f5803666a2ae379540e4988efc9e742b5ba749ef97ee3a8593bb"
+    },
+    {
+      "old_path": "javascript/js 运行机制.md",
+      "new_path": "wiki/javascript/js 运行机制.md",
+      "original_sha256": "619fcdd690ebccbd7fd6e9e21ff2194eab4d99bc465166817c43082b7ab8ed97",
+      "final_sha256": "8fb49d838faaf422db6269a9ad8667c042a03c23fd4bfbcc033e7e2241224419",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/javascript/js 运行机制.md",
+      "current_sha256": "9c4db5247d180c2a71104ec067b72f43453734408eba1ae5bca1ef0c563815a7"
+    },
+    {
+      "old_path": "javascript/js事件和异步机制.md",
+      "new_path": "wiki/javascript/js事件和异步机制.md",
+      "original_sha256": "bfc1e696cda8ba52975f16226513c400f43c7502aad94572735e1150f11eeb36",
+      "final_sha256": "dc4eb53c3b31ad32c58e8b3fb5104422e2de3a0f605d7a4ca8b53827e0fe0898",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/javascript/js事件和异步机制.md",
+      "current_sha256": "0d40410923ab50f9659cfa433133d48e714cb01ecf0b6ec118e74915d0863e9e"
+    },
+    {
+      "old_path": "javascript/js小技巧.md",
+      "new_path": "wiki/javascript/js小技巧.md",
+      "original_sha256": "3390d656e7b7a648b1ba4b974c656c5e0dad22ac5fc53f41fa020bf012ffaf6e",
+      "final_sha256": "e0db1b2a8a3b31aebae117c5a207c20ef01528ea9c9bdef98046fc5bc4640e61",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/javascript/js小技巧.md",
+      "current_sha256": "e0db1b2a8a3b31aebae117c5a207c20ef01528ea9c9bdef98046fc5bc4640e61"
+    },
+    {
+      "old_path": "javascript/webPack学习.md",
+      "new_path": "wiki/javascript/webPack学习.md",
+      "original_sha256": "e254f0b267049d33b350e2caa2bb87ccea30b30770322d6e3be10f161a5283ab",
+      "final_sha256": "737032838cd672e6e5489bd776f3ceaec9e8266139ecfaad5e928054b6325a87",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/javascript/webPack学习.md",
+      "current_sha256": "737032838cd672e6e5489bd776f3ceaec9e8266139ecfaad5e928054b6325a87"
+    },
+    {
+      "old_path": "javascript/原生JS DOM操作方法.md",
+      "new_path": "wiki/javascript/原生JS DOM操作方法.md",
+      "original_sha256": "0563037ac6d1c3c7079953aee56ce8ba316d341838aafb7144db788c11c13e85",
+      "final_sha256": "b2adc8cefbf677d2a2aeab802c356eacad4d1379082fbb8de714eb350ccbc6bc",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/javascript/原生JS DOM操作方法.md",
+      "current_sha256": "b2adc8cefbf677d2a2aeab802c356eacad4d1379082fbb8de714eb350ccbc6bc"
+    },
+    {
+      "old_path": "javascript/跨域资源共享 CORS.md",
+      "new_path": "wiki/javascript/跨域资源共享 CORS.md",
+      "original_sha256": "f83fae43d279f98900d98f32b6194d74dd701dafe1a5c7f44dc993744f380b9c",
+      "final_sha256": "08939ee0cde1f5b477b2d995bde980552ecd215829ba33fe046bba823212e74d",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/javascript/跨域资源共享 CORS.md",
+      "current_sha256": "08939ee0cde1f5b477b2d995bde980552ecd215829ba33fe046bba823212e74d"
+    }
+  ],
+  "created_files": [
+    {
+      "path": "wiki/javascript/JavaScript 知识地图.md",
+      "sha256": "2687e6022a6d1b20ecb700b4e49c5fa2b234479f1dadbd5f2b12a4d4a6a32278"
+    }
+  ],
+  "historical_missing_attachments": "recorded by /tmp/audit_language_migration.py; unresolved legacy assets only"
+}

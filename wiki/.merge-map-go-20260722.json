@@ -1,0 +1,28 @@
+{
+  "scope": "wiki/go",
+  "created": "2026-07-22",
+  "backup_dir": "/home/mxy/.hermes/backups/mxy-wiki/go-before-merge-20260722",
+  "records": [
+    {
+      "target": "wiki/go/基准测试.md",
+      "target_sha256": "cf22e6966113d94c367cdf63eb7c9ba5d69aeefb34f0382ad91afaaf7017c128",
+      "absorbed": [
+        {
+          "path": "wiki/go/基准测试.md",
+          "sha256": "82fe8a6bc7dd246e436ae5656d14b1712817e2f211af79c93f34c283862cf953"
+        },
+        {
+          "path": "wiki/go/go 基准测试.md",
+          "sha256": "eb3cd22b0a5c692337503b1a2a738f6bfbf7f4ea1cd43b2d2c1f7521a0f1fffa"
+        }
+      ]
+    }
+  ],
+  "deleted_empty": [
+    {
+      "path": "wiki/php/curl库函数.md",
+      "sha256": "f06844869621e380d48d7d7f429b42d30f011a8ffb8cb743870f30406faf2142",
+      "backup_dir": "/home/mxy/.hermes/backups/mxy-wiki/PHP-before-20260722"
+    }
+  ]
+}

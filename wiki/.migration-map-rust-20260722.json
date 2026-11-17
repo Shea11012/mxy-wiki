@@ -1,0 +1,86 @@
+{
+  "scope": "rust",
+  "created": "2026-07-22",
+  "backup_dir": "/home/mxy/.hermes/backups/mxy-wiki/rust-before-20260722",
+  "metadata_policy": {
+    "created": "preserve explicit ISO date; otherwise migration date",
+    "updated": "2026-07-22",
+    "status": "needs-review",
+    "confidence": "INFERRED",
+    "source": "preserve only existing source"
+  },
+  "records": [
+    {
+      "old_path": "rust/atomic.md",
+      "new_path": "wiki/rust/atomic.md",
+      "original_sha256": "b9ef33815c65f468c85e257f1d0cb057ded97c6d98ef0711bdf9a2d69493f6e9",
+      "final_sha256": "091eb4b9cccdb0ba675f195264b7cc82d0ac42ea3f995c8bbaffdfbf6236e7a3",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/rust/atomic.md",
+      "current_sha256": "46c05b6faa6566d282b6c1a2511fbea6e4090708d0d00ed5bb3d9ee9dffc0059"
+    },
+    {
+      "old_path": "rust/rust基础.md",
+      "new_path": "wiki/rust/rust基础.md",
+      "original_sha256": "e79b013a4ff6a7264e59bc2b3ca73d907acbd910ec65d4ec722b8cd6cb5529c2",
+      "final_sha256": "12b51fd5f7622e4b53438d675e5c6d08df26080fd0596f290aef68dfb7010e30",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/rust/rust基础.md",
+      "current_sha256": "12b51fd5f7622e4b53438d675e5c6d08df26080fd0596f290aef68dfb7010e30"
+    },
+    {
+      "old_path": "rust/宏.md",
+      "new_path": "wiki/rust/宏.md",
+      "original_sha256": "d76b89e84253f579ffa52114136022a2f9da9c43556469fe6ba1bc4da45988e7",
+      "final_sha256": "785887c504adc8d0cdb381d563b31b9c2d41c3fb98e5637766648eb92cec4414",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/rust/宏.md",
+      "current_sha256": "785887c504adc8d0cdb381d563b31b9c2d41c3fb98e5637766648eb92cec4414"
+    },
+    {
+      "old_path": "rust/并发.md",
+      "new_path": "wiki/rust/并发.md",
+      "original_sha256": "a43c6a959a32187dc8daf7ebbfea84d8eb206105c76d5795cb6324dcbed42877",
+      "final_sha256": "52a92d269ade0a522ac8e225a1f8b076f84e0fb6ca14bc5f0dfb85cc71104fbc",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/rust/并发.md",
+      "current_sha256": "eafa6fc4a6a1e2bc531b9461b0436d60eac937e6391364261820210145c81e03"
+    },
+    {
+      "old_path": "rust/智能指针.md",
+      "new_path": "wiki/rust/智能指针.md",
+      "original_sha256": "306d6ecfa08193444564fefb3b973150cf3a9a9993846a6743ae62bf12461455",
+      "final_sha256": "db66ee947b212f23fc4944d7039fc9adeaf3d3b2baf1964f4de3bf6b6d4cbc52",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/rust/智能指针.md",
+      "current_sha256": "db66ee947b212f23fc4944d7039fc9adeaf3d3b2baf1964f4de3bf6b6d4cbc52"
+    },
+    {
+      "old_path": "rust/测试.md",
+      "new_path": "wiki/rust/测试.md",
+      "original_sha256": "605b847308a227ecbd3815003650ecbb2273678f1088f3ec6e2331cb6b646a50",
+      "final_sha256": "621ab8c44eb2f9caf464d104b8f4589770ddd86ca68d10b83145e0d6a8ffadca",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/rust/测试.md",
+      "current_sha256": "621ab8c44eb2f9caf464d104b8f4589770ddd86ca68d10b83145e0d6a8ffadca"
+    },
+    {
+      "old_path": "rust/生命周期.md",
+      "new_path": "wiki/rust/生命周期.md",
+      "original_sha256": "78a97c5f4f8cfe7e391ccdf382b079a23aba3dd68067df01e927ab86b2189108",
+      "final_sha256": "f6964997da472c963a77516ea6f48a4574b54cc96f7873cc49d84c996f6023cb",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/rust/生命周期.md",
+      "current_sha256": "f6964997da472c963a77516ea6f48a4574b54cc96f7873cc49d84c996f6023cb"
+    }
+  ],
+  "created_files": [],
+  "historical_missing_attachments": "recorded by /tmp/audit_language_migration.py; unresolved legacy assets only"
+}

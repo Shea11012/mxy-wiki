@@ -1,2 +1,35 @@
 .obsidian/workspace.json
 .obsidian/appearance.json
+
+# Local state and device-specific Obsidian layout.
+.pi/
+.jj/
+.trash/
+cache/
+.cache/
+.DS_Store
+.obsidian/workspace*.json
+
+# Plugin programs are shared; plugin account/settings data stays on each device.
+.obsidian/plugins/*/data.json
+
+# Credentials and private key material never belong in either repository.
+.env
+.env.*
+.ssh/
+.gnupg/
+.aws/
+.kube/
+.npmrc
+.pypirc
+credentials.json
+secrets.json
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore

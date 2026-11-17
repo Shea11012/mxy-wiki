@@ -1,0 +1,154 @@
+{
+  "scope": "wiki/linux",
+  "created": "2026-07-22",
+  "backup_dir": "/home/mxy/.hermes/backups/mxy-wiki/wiki-linux-before-merge-20260722",
+  "records": [
+    {
+      "target": "wiki/linux/CPU 性能指标与分析工具.md",
+      "target_sha256": "5d1d6de0a088c167b0bc54527ecfbc04e62c63c72816dd09ac30ec0a9e5e1bcd",
+      "absorbed": [
+        {
+          "path": "wiki/linux/CPU性能指标.md",
+          "sha256": "71400106dc258d7d844aeb83b075c8cc7e3ff0cc6c310cc2441a05641d0ae589"
+        },
+        {
+          "path": "wiki/linux/CPU工具汇总.md",
+          "sha256": "dbd9a92e8b9a01c1623cc1bfd0ceccf4521246e03bd361f0ce28b722d933b546"
+        }
+      ],
+      "reason": "verified duplicate or complementary pages within one stable Linux topic"
+    },
+    {
+      "target": "wiki/linux/RPM 与 YUM 包管理.md",
+      "target_sha256": "8d6ae1c5e755bc3985194f0f6483a54f31fea6eb11e00e8dab70d75e249c275f",
+      "absorbed": [
+        {
+          "path": "wiki/linux/Centos包管理.md",
+          "sha256": "3ecbfec8446ae46be4d3d1a725e20b3b2b20d6a808fc360e44e2c36565e91a8e"
+        },
+        {
+          "path": "wiki/linux/rpm.md",
+          "sha256": "0d2cedd41d5910bf0a4f86ecdf89d5c6bc308dccdd3c1ee9f7c2041b52f515d8"
+        },
+        {
+          "path": "wiki/linux/yum.md",
+          "sha256": "6440b02e0f48bb5b6b80a40c21637abb0ec6af860109b16f0acd352cb0746d89"
+        }
+      ],
+      "reason": "verified duplicate or complementary pages within one stable Linux topic"
+    },
+    {
+      "target": "wiki/linux/Linux 用户、用户组与文件权限.md",
+      "target_sha256": "d1afa115ab7b0244900ea41daec660eeb1e481a5577fe1ea7baad475b118b185",
+      "absorbed": [
+        {
+          "path": "wiki/linux/Linux系统用户组管理.md",
+          "sha256": "5f40b18d1a9d16812b754a3a10da406a73d5e0071dcd1dc948f583e41f1c4cd3"
+        },
+        {
+          "path": "wiki/linux/Linux文件权限管理.md",
+          "sha256": "2afa0ede3427e2d4242fd391b4ce11ca758b84aa071da2dbf17b173d84ee7db1"
+        },
+        {
+          "path": "wiki/linux/Linux 权限操作.md",
+          "sha256": "3635f394c4ec1a6aa357dcb313b8b18282f5eccd04b611d0cb7a922ece489612"
+        }
+      ],
+      "reason": "verified duplicate or complementary pages within one stable Linux topic"
+    },
+    {
+      "target": "wiki/linux/Linux 服务管理.md",
+      "target_sha256": "d33cb5471da15cc9e7494ab69f49086d9dec088c1db31dffa248a596dcab8342",
+      "absorbed": [
+        {
+          "path": "wiki/linux/Linux 服务管理.md",
+          "sha256": "8eb590725f2db0351fac0876e932c2501cae83aea9f0820790b046022bb49a73"
+        },
+        {
+          "path": "wiki/linux/systemd.md",
+          "sha256": "ca12b8c703f12092aeafdc26b56ce3cf14734689bafce87bac1abd1b978a1235"
+        },
+        {
+          "path": "wiki/linux/journalctl.md",
+          "sha256": "a4498883c3db0956a8f37b4de03daff07b889cbdde2ea1b2aefdda9c09857673"
+        }
+      ],
+      "reason": "verified duplicate or complementary pages within one stable Linux topic"
+    },
+    {
+      "target": "wiki/linux/Linux 网络性能与诊断.md",
+      "target_sha256": "ad74414330bd2684dd1d20b8c983355fb414afe8b123cac8d7bbee9b84258b71",
+      "absorbed": [
+        {
+          "path": "wiki/linux/网络性能指标.md",
+          "sha256": "c0adbbc269aec58dfeef82ee2bed66c49318d9e9a425df837accffd4861977e4"
+        },
+        {
+          "path": "wiki/linux/网络工具汇总.md",
+          "sha256": "651d3ee6e81892cbc409d40653b402f5a20dfb72f37cbd0f16bb502af8fbb08c"
+        }
+      ],
+      "reason": "verified duplicate or complementary pages within one stable Linux topic"
+    },
+    {
+      "target": "wiki/linux/Linux 文件系统基础与 ext 机制.md",
+      "target_sha256": "72d91f6907cda83fe8fe44f69a64578d0b55068be5ef182da9cb4276f9a76e19",
+      "absorbed": [
+        {
+          "path": "wiki/linux/文件系统.md",
+          "sha256": "96d95f315d620202afcfd8f767793ee793e8d5c82487847f30b0a19dba1346f2"
+        },
+        {
+          "path": "wiki/linux/ext文件系统机制.md",
+          "sha256": "70037919c31b78a0211b730edaf8f1a1d8d150093134c91a7a045d39e19c0ae7"
+        }
+      ],
+      "reason": "verified duplicate or complementary pages within one stable Linux topic"
+    }
+  ],
+  "deleted_empty": [
+    {
+      "path": "wiki/linux/qemu.md",
+      "sha256": "8f393c5517672decbfdb8d912c3aaaf59100813490d4cf33d2d520b11f244f95",
+      "reason": "empty body after frontmatter"
+    },
+    {
+      "path": "wiki/linux/The Linux Programming Interface/threads.md",
+      "sha256": "1745ecd3f5d1bd5e5a81c1e4b7e74d96c5ad026333223b40d8b401e37bba3d64",
+      "reason": "empty or heading-only body"
+    },
+    {
+      "path": "wiki/linux/The Linux Programming Interface/signals.md",
+      "sha256": "b120bcef024eae6b081996a4c40091473bebe6d323bdf7abc6d06f1d9400e020",
+      "reason": "empty or heading-only body"
+    }
+  ],
+  "rollback": "verify current target hashes, remove merged targets, then restore backup tree",
+  "post_merge_links": [
+    "CPU 性能指标与分析工具 <-> 系统状态统计和查看 <-> Linux进程和信号",
+    "变量 <-> 基础"
+  ],
+  "created_files": [
+    {
+      "path": "wiki/linux/Linux 知识地图.md",
+      "sha256": "ef1e7d7b8afd4671db8c63e1dfad69c44c76c9bbabacbf22729d8970e6d85853",
+      "reason": "domain MOC after consolidation"
+    }
+  ],
+  "post_merge_modified": [
+    {
+      "path": "wiki/linux/The Linux Programming Interface/The Linux Programming Interface（总览）.md",
+      "sha256": "130b180e76537c48cffc0f53e1d2f9e2c1304efe5af6cdd47d9550bd3fb2178e",
+      "reason": "remove empty collection entries"
+    }
+  ],
+  "second_pass_dedupe": {
+    "date": "2026-07-22",
+    "pages": [
+      "wiki/linux/CPU 性能指标与分析工具.md",
+      "wiki/linux/RPM 与 YUM 包管理.md",
+      "wiki/linux/Linux 用户、用户组与文件权限.md"
+    ],
+    "policy": "remove only repeated subsets; originals remain in backup_dir"
+  }
+}

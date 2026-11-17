@@ -1,0 +1,71 @@
+{
+  "scope": "wiki/computer-network",
+  "created": "2026-07-22",
+  "backup_dir": "/home/mxy/.hermes/backups/mxy-wiki/computer-network-before-merge-20260722",
+  "records": [
+    {
+      "target": "wiki/computer-network/DNS.md",
+      "target_sha256": "0ddf4e1bda8f87d6d86ee0cf124be78bb212ec750613f418327048213fa99470",
+      "absorbed": [
+        {
+          "path": "wiki/computer-network/DNS.md",
+          "sha256": "21a7193e11e20fc21d225a61a265ba98f9d0f3a35f890f039c883d02850f81d2"
+        },
+        {
+          "path": "wiki/computer-network/DNS的原理和作用.md",
+          "sha256": "47dad5bbf940b972572e93f79e900f449d664212f2d828584602441e91edb9c1"
+        }
+      ]
+    },
+    {
+      "target": "wiki/computer-network/IP.md",
+      "target_sha256": "f919ed8cd86d00c3d31d9bc5699c6ae2f313a3ce83573e2b461b3781caf13658",
+      "absorbed": [
+        {
+          "path": "wiki/computer-network/IP.md",
+          "sha256": "7e82e7a7c8a1090a5d715247ae8c7fc7f025efa15adc1182a7db685faec74b27"
+        },
+        {
+          "path": "wiki/computer-network/internet 地址结构.md",
+          "sha256": "d65447b11e3c38f7aaeaf92a83cbad2b4fad932455378de803ecec1d41fa917f"
+        }
+      ]
+    },
+    {
+      "target": "wiki/computer-network/TCP.md",
+      "target_sha256": "62672484d727b2d758095403018da37f1cf0c4dd9ae9cf847500d24dc75ac63b",
+      "absorbed": [
+        {
+          "path": "wiki/computer-network/TCP.md",
+          "sha256": "adf5d08877c280112e6eb7f457427c061142bd297b86ee5c7516f9b2b47e4069"
+        },
+        {
+          "path": "wiki/computer-network/三握、四挥.md",
+          "sha256": "3b140198ceebb6f0c0fe30831e575b7c03d68aa82feb5a3349173435abdea4a8"
+        },
+        {
+          "path": "wiki/computer-network/TCP连接资源限制.md",
+          "sha256": "ff3630a3e2f81727538ae83b81cb29327096e63301483736a6b732675eda1d27"
+        }
+      ]
+    }
+  ],
+  "created_files": [
+    {
+      "path": "wiki/computer-network/计算机网络知识地图.md",
+      "sha256": "a352ac453a5633786e5f4c5afb9a7292a7907047270d7a1792da4b0c061084d7"
+    },
+    {
+      "path": "wiki/computer-network/深入理解 Linux 网络/深入理解Linux网络笔记.md",
+      "sha256": "e3a1f22ca8252390ffefa9c1bf57f5512fda230e5cfe35603848f1eab6ba63f6"
+    },
+    {
+      "path": "wiki/computer-science/计算机基础知识地图.md",
+      "sha256": "ca1435d468277e72c3465caa820d63d90d31c9cda7ae0af4f8bac1218a010da5"
+    },
+    {
+      "path": "wiki/computer-science/深入理解计算机系统/深入理解计算机系统（总览）.md",
+      "sha256": "3ba4dd17b9d7c7bff639833e57f53437fb1f6495d5629d4b46f5c95c88a8c3ba"
+    }
+  ]
+}

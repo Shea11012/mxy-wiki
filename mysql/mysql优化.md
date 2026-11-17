@@ -3,6 +3,7 @@ tags:
 date created: 2022-06-10 17:35
 date modified: 2023-05-18 22:13
 title: mysql优化
+updated: 2025-08-09
 ---
 
 ## Mysql 优化
@@ -92,6 +93,9 @@ select o.* from order o inner join user u on o.user_id = u.id where u.status=1;
 阿里巴巴开发者手册规定，join 表的数量不应该超过 3 个。
 
 #### join 时注意事项
+
+[[../assets/ecf95762480dcbb4795a88277c1efc2d_MD5.jpeg]]
+![[../assets/ecf95762480dcbb4795a88277c1efc2d_MD5.jpeg]]
 
 - `left join`：求两个表的交集外加左表剩下的数据
 - `inner join`：求两个表交集的数据

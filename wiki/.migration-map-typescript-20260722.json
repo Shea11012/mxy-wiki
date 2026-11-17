@@ -1,0 +1,40 @@
+{
+  "scope": "typescript",
+  "created": "2026-07-22",
+  "backup_dir": "/home/mxy/.hermes/backups/mxy-wiki/typescript-before-20260722",
+  "metadata_policy": {
+    "status": "needs-review",
+    "confidence": "INFERRED",
+    "source": "not invented"
+  },
+  "records": [
+    {
+      "old_path": "typescript/基础/关键字.md",
+      "new_path": "wiki/typescript/关键字.md",
+      "original_sha256": "0f11f38c901772fb37e6ddfdf2cdec540929c3518e0cd87940cf50bec09761e8",
+      "final_sha256": "6790a0abf30fae802323a8b29e985f676780521398a76f95dd1ed7f0d2cf34b4",
+      "status": "active",
+      "current_path": "wiki/typescript/关键字.md",
+      "current_sha256": "1d061b95c53011e8b6c2059ee55374797640a683294b95fa9b930fddd43a1915"
+    },
+    {
+      "old_path": "typescript/基础/泛型.md",
+      "new_path": "wiki/typescript/泛型.md",
+      "original_sha256": "ce8b2cb8355ca169f99213d4e28a5d70a19733e9ba8ce6bfe89f370cefb5fb4d",
+      "final_sha256": "8c567b468d5cccd1849a6f0fc7d385b7643c970dc65487de64732c597033a2ca",
+      "status": "active",
+      "current_path": "wiki/typescript/泛型.md",
+      "current_sha256": "8c567b468d5cccd1849a6f0fc7d385b7643c970dc65487de64732c597033a2ca"
+    },
+    {
+      "old_path": "typescript/目录.md",
+      "new_path": "wiki/typescript/TypeScript 知识地图.md",
+      "original_sha256": "17511518835c1dce24adb36ba51faa6499e62127357ead107fe2d8ee094c27df",
+      "final_sha256": "84011e33c6521dd3a890bb3f1f34f73ac1f860fc4adf875792cc11b98d9abd88",
+      "status": "active",
+      "current_path": "wiki/typescript/TypeScript 知识地图.md",
+      "current_sha256": "6790a0abf30fae802323a8b29e985f676780521398a76f95dd1ed7f0d2cf34b4"
+    }
+  ],
+  "historical_missing_attachments": 0
+}

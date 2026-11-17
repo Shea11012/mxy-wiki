@@ -2,6 +2,7 @@
 tags: []
 date created: 2023-03-29 16:30
 date modified: 2023-03-29 17:29
+updated: 2025-08-07
 ---
 MySQL 分为两层：**Server 层和存储引擎层**
 - Server 层负责建立连接、分析和执行 SQL。包括连接器、查询缓存、解析器、预处理器、优化器、执行器等。
@@ -38,4 +39,14 @@ MySQL 解析 SQL 语句，如果是 select 语句，就会先去缓存查找数�
 
 主要负责将 SQL 查询语句的执行方案确定下来。如在表中有多个索引选择时，会基于查询成本考虑，决定使用哪个索引。
 
-### execute阶段
+### execute 阶段
+
+>[!note] SQL 语句的运行顺序
+>from 从哪个表查找数据
+>where 查询条件
+>group by 分组
+>having 对分组结果进行条件过滤
+>select 选择查询字段
+>order by 对查询结果排序
+>limit 从查询结果取出限定行
+

@@ -1,0 +1,96 @@
+{
+  "scope": "H5+C3",
+  "created": "2026-07-22",
+  "backup_dir": "/home/mxy/.hermes/backups/mxy-wiki/H5+C3-before-20260722",
+  "metadata_policy": {
+    "created": "preserve explicit ISO date; otherwise migration date",
+    "updated": "2026-07-22",
+    "status": "needs-review",
+    "confidence": "INFERRED",
+    "source": "preserve only existing source"
+  },
+  "records": [
+    {
+      "old_path": "H5+C3/!important权重.md",
+      "new_path": "wiki/html-css/!important权重.md",
+      "original_sha256": "ab16242197a78b4011415f5149146a70b996c888769a0787269d9588640c3c00",
+      "final_sha256": "397f92332abc3cb9201cbcf2b69dcb63cd282eba118ace7edb62d65f9c3bb0be",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/html-css/!important权重.md",
+      "current_sha256": "397f92332abc3cb9201cbcf2b69dcb63cd282eba118ace7edb62d65f9c3bb0be"
+    },
+    {
+      "old_path": "H5+C3/C3.md",
+      "new_path": "wiki/html-css/C3.md",
+      "original_sha256": "15354b5055b3ca8cc7791bcd34b4a866ef91c7736f331cffc67102b604f0b933",
+      "final_sha256": "0a1caebdc822131fcdfa06f20865d5c8dbb285517676e9b5543c604ad5b9d95a",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/html-css/C3.md",
+      "current_sha256": "0a1caebdc822131fcdfa06f20865d5c8dbb285517676e9b5543c604ad5b9d95a"
+    },
+    {
+      "old_path": "H5+C3/C3框模型.md",
+      "new_path": "wiki/html-css/C3框模型.md",
+      "original_sha256": "00948a8bd94362b18c003406f8830eae7ee61b2689d359afc04cec09566da0d1",
+      "final_sha256": "e68d9f1414cfa26c1c817f8203d2621daf2cb43932ba2c94c0fb3b8c2aad3fc6",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/html-css/C3框模型.md",
+      "current_sha256": "e68d9f1414cfa26c1c817f8203d2621daf2cb43932ba2c94c0fb3b8c2aad3fc6"
+    },
+    {
+      "old_path": "H5+C3/CSS 技巧.md",
+      "new_path": "wiki/html-css/CSS 技巧.md",
+      "original_sha256": "b57e92a4209105bf863868620fd4e434e5f28fa397f7fdcc2786840a3ff7a342",
+      "final_sha256": "7ad27718ae63afe75aeccaea1e1f6d245bf65996150c9375f4f16420b6f87da6",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/html-css/CSS 技巧.md",
+      "current_sha256": "d78aa1683cae9678226781ec0294f4150420e89f105dc01570fea404092c3aab"
+    },
+    {
+      "old_path": "H5+C3/H5 新特性.md",
+      "new_path": "wiki/html-css/H5 新特性.md",
+      "original_sha256": "adb020b749d3f3fb07753ee74060d5f147040dbb8fdaa247b945e8a2abbede59",
+      "final_sha256": "05b6f4b947a188ebb42816944d044fcfd492f1f6ffa044e68272980a2c29d8c3",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/html-css/H5 新特性.md",
+      "current_sha256": "05b6f4b947a188ebb42816944d044fcfd492f1f6ffa044e68272980a2c29d8c3"
+    },
+    {
+      "old_path": "H5+C3/HTML的快速写法.md",
+      "new_path": "wiki/html-css/HTML的快速写法.md",
+      "original_sha256": "ca1354d8fa45236533983b28ebe4b5f25c7d5267b6189e132e5686d573356ccf",
+      "final_sha256": "8fbee367669e0353c2171438607d688a9c56cde754014fffac45dad9442b5247",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/html-css/HTML的快速写法.md",
+      "current_sha256": "8fbee367669e0353c2171438607d688a9c56cde754014fffac45dad9442b5247"
+    },
+    {
+      "old_path": "H5+C3/flex 布局.md",
+      "new_path": "wiki/html-css/flex 布局.md",
+      "original_sha256": "a577e1c41e33669c5ff92947e2e46c7d89e41c70b6439f6556daf60d6b1e36aa",
+      "final_sha256": "d28d9a75c8338f09a5a889289c9a54bd0bbd76a04968dde3324e9d9785b463ed",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/html-css/flex 布局.md",
+      "current_sha256": "d28d9a75c8338f09a5a889289c9a54bd0bbd76a04968dde3324e9d9785b463ed"
+    },
+    {
+      "old_path": "H5+C3/grid布局.md",
+      "new_path": "wiki/html-css/grid布局.md",
+      "original_sha256": "6ed6c5fba1c0a96af48c0c7eeb499496b011cf669f2c4175c12141660e5ba1ff",
+      "final_sha256": "35e5e1f13b50325a6fea0d3d9669f8a5349cce0560693e6cb327a3c73901a9c4",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/html-css/grid布局.md",
+      "current_sha256": "2edde143671b48b2540e51b28a4aa488364577209c258c19e69212507ff5281d"
+    }
+  ],
+  "created_files": [],
+  "historical_missing_attachments": "recorded by /tmp/audit_language_migration.py; unresolved legacy assets only"
+}

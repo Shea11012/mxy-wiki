@@ -1,0 +1,620 @@
+{
+  "scope": "PHP",
+  "created": "2026-07-22",
+  "backup_dir": "/home/mxy/.hermes/backups/mxy-wiki/PHP-before-20260722",
+  "metadata_policy": {
+    "created": "preserve explicit ISO date; otherwise migration date",
+    "updated": "2026-07-22",
+    "status": "needs-review",
+    "confidence": "INFERRED",
+    "source": "preserve only existing source"
+  },
+  "records": [
+    {
+      "old_path": "PHP/Composer使用.md",
+      "new_path": "wiki/php/Composer使用.md",
+      "original_sha256": "22b58dfa7c512386d4949c2b502591bbc8818a024a4cd7c7d9d162c84d076153",
+      "final_sha256": "0c30db7776744690139c60d8edb436d09501e32aff51b7afad3c98bd18acb9c6",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/Composer使用.md",
+      "current_sha256": "0c30db7776744690139c60d8edb436d09501e32aff51b7afad3c98bd18acb9c6"
+    },
+    {
+      "old_path": "PHP/IOC容器理解.md",
+      "new_path": "wiki/php/IOC容器理解.md",
+      "original_sha256": "63d3649b7ffc8ff0291a841f546064434b5f6368eb9469d76f73fa033d3bfdc3",
+      "final_sha256": "a68eecd51da9b3b5fb6ace16173efbe8a38e697fb1b1f8be14bf7816b69a5343",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/IOC容器理解.md",
+      "current_sha256": "a68eecd51da9b3b5fb6ace16173efbe8a38e697fb1b1f8be14bf7816b69a5343"
+    },
+    {
+      "old_path": "PHP/JWT .md",
+      "new_path": "wiki/php/JWT .md",
+      "original_sha256": "d00c90f00aabb33591a56b664aed4ee17ba7d43163bd7a33337d817236b6051f",
+      "final_sha256": "ae58a3cda77483e09d413721185660a5acbf42e567238e08e0cc36c3a0ea0d1e",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/JWT .md",
+      "current_sha256": "ae58a3cda77483e09d413721185660a5acbf42e567238e08e0cc36c3a0ea0d1e"
+    },
+    {
+      "old_path": "PHP/PHP 实用扩展.md",
+      "new_path": "wiki/php/PHP 实用扩展.md",
+      "original_sha256": "56ffbb705bab14aaf463c446eb262c6262bea9f4061343698c8a64305e06a552",
+      "final_sha256": "27975abfb879505172e0e8ca9e5fc63e7d357b77e7b9d2d4e7836437cbc5610e",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/PHP 实用扩展.md",
+      "current_sha256": "27975abfb879505172e0e8ca9e5fc63e7d357b77e7b9d2d4e7836437cbc5610e"
+    },
+    {
+      "old_path": "PHP/PHP 短路.md",
+      "new_path": "wiki/php/PHP 短路.md",
+      "original_sha256": "4fc9394e72123fdfd7c9b003f382371815b2ebfc23e955b7905d36a238dfa520",
+      "final_sha256": "e120615ccc6aa12722cac98c8a7040937812c5ed7ccced5e066946a5f622e4ce",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/PHP 短路.md",
+      "current_sha256": "e120615ccc6aa12722cac98c8a7040937812c5ed7ccced5e066946a5f622e4ce"
+    },
+    {
+      "old_path": "PHP/PHP匿名类.md",
+      "new_path": "wiki/php/PHP匿名类.md",
+      "original_sha256": "d1703bcfadeb1eae30a49599d15995cf66cd3ec2e3962696733eead746b4d590",
+      "final_sha256": "1fdcfc8849039b74d978565a0f964a95c0dcbf55fc98675ed6b28b39e8ffd7be",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/PHP匿名类.md",
+      "current_sha256": "1fdcfc8849039b74d978565a0f964a95c0dcbf55fc98675ed6b28b39e8ffd7be"
+    },
+    {
+      "old_path": "PHP/PHP多人开发环境.md",
+      "new_path": "wiki/php/PHP多人开发环境.md",
+      "original_sha256": "ceff9314abc22ad27b80648f4d6dd58bf0e6d5d47d14238bfaf1b815c81e8b7f",
+      "final_sha256": "9466f13c32e77b35b94c24c3d5cb66a91a138283b01f1d38d5cb5f4c1886f64a",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/PHP多人开发环境.md",
+      "current_sha256": "9466f13c32e77b35b94c24c3d5cb66a91a138283b01f1d38d5cb5f4c1886f64a"
+    },
+    {
+      "old_path": "PHP/PHP实用的示例.md",
+      "new_path": "wiki/php/PHP实用的示例.md",
+      "original_sha256": "cacbe21ab9e4a70acef50c15211f5757119652171cf6b74b2883188563ce5221",
+      "final_sha256": "f2b5d2d94e490ec1c9d0f10058948b09a73833a7426c7021c3a4aa8843f021da",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/PHP实用的示例.md",
+      "current_sha256": "f2b5d2d94e490ec1c9d0f10058948b09a73833a7426c7021c3a4aa8843f021da"
+    },
+    {
+      "old_path": "PHP/PHP常用魔术常量.md",
+      "new_path": "wiki/php/PHP常用魔术常量.md",
+      "original_sha256": "389b4976506bb3404b459681bcbc616a4b203ec38014632b2933efb468f17e87",
+      "final_sha256": "7e64e10cd00a29c2e3d218aab3743b98f4e5ee063d732360a4b8a58fc8990a04",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/PHP常用魔术常量.md",
+      "current_sha256": "7e64e10cd00a29c2e3d218aab3743b98f4e5ee063d732360a4b8a58fc8990a04"
+    },
+    {
+      "old_path": "PHP/PHP设计模式/创建型模式/单例模式.md",
+      "new_path": "wiki/php/单例模式.md",
+      "original_sha256": "e80f46e54f31d1263e81b060d90d4a16b43bb9d8dd57e2d0a067927257d10750",
+      "final_sha256": "86230b7e1b9fd373c8aedd705c138e81ef56ceda6378673b604e6350727018bb",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/单例模式.md",
+      "current_sha256": "86230b7e1b9fd373c8aedd705c138e81ef56ceda6378673b604e6350727018bb"
+    },
+    {
+      "old_path": "PHP/PHP设计模式/创建型模式/原型模式.md",
+      "new_path": "wiki/php/原型模式.md",
+      "original_sha256": "fb90dc746dfbd4487be476a5cbcbfd388d36f3c01738995f45f36c1958c9982a",
+      "final_sha256": "a7e65c5be256916460194233ee2177235552612ce39e16a81fcc70305a4029ee",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/原型模式.md",
+      "current_sha256": "a7e65c5be256916460194233ee2177235552612ce39e16a81fcc70305a4029ee"
+    },
+    {
+      "old_path": "PHP/PHP设计模式/创建型模式/多例模式.md",
+      "new_path": "wiki/php/多例模式.md",
+      "original_sha256": "6c382e757ce47b8af638de442b13ddf9a977d39b13411750eec46cc718c2529a",
+      "final_sha256": "c0186397050c526ce23c9b999dbc2ffaab1b85e481ea6167d5ca593e7efe4cc5",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/多例模式.md",
+      "current_sha256": "c0186397050c526ce23c9b999dbc2ffaab1b85e481ea6167d5ca593e7efe4cc5"
+    },
+    {
+      "old_path": "PHP/PHP设计模式/创建型模式/对象池模式.md",
+      "new_path": "wiki/php/对象池模式.md",
+      "original_sha256": "29526d37c123c7a9c43ee92e34c46e1685c9a7972aa2e7e37cafbbd5980ffdec",
+      "final_sha256": "b36a72e5c0bd2f81968ba864f6fb1aed8857e4927bdf0f4f7dac3f5600d930b3",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/对象池模式.md",
+      "current_sha256": "b36a72e5c0bd2f81968ba864f6fb1aed8857e4927bdf0f4f7dac3f5600d930b3"
+    },
+    {
+      "old_path": "PHP/PHP设计模式/创建型模式/工厂模式.md",
+      "new_path": "wiki/php/工厂模式.md",
+      "original_sha256": "368e7c2b62a81dd141a25f7041865bd43218a6737b4e3bbb29de136cc2f12129",
+      "final_sha256": "9290a58f24521e65deeef3e85214a6942b51a0463e4057903fdc0b8f66b2515a",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/工厂模式.md",
+      "current_sha256": "9290a58f24521e65deeef3e85214a6942b51a0463e4057903fdc0b8f66b2515a"
+    },
+    {
+      "old_path": "PHP/PHP设计模式/创建型模式/建造者模式.md",
+      "new_path": "wiki/php/建造者模式.md",
+      "original_sha256": "1ebd524ea7d708ff3a60efd7a7b50f7486a3f658f221cc7ec651fe6aef82d1ae",
+      "final_sha256": "d3cc8853f083f88d74bcbf8126ae5b8db9bd1161116a6ee4386a6c43d6caa003",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/建造者模式.md",
+      "current_sha256": "d3cc8853f083f88d74bcbf8126ae5b8db9bd1161116a6ee4386a6c43d6caa003"
+    },
+    {
+      "old_path": "PHP/PHP设计模式/创建型模式/抽象工厂模式.md",
+      "new_path": "wiki/php/抽象工厂模式.md",
+      "original_sha256": "824a4786ff165ae374c31e02fa77bb923d71b48f7515f11cb1f7682de0d6d878",
+      "final_sha256": "3e0fc3aaf670a76f97c3046157d93b5176c20c9ca251be45eb0bde7d74e3ee96",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/抽象工厂模式.md",
+      "current_sha256": "3e0fc3aaf670a76f97c3046157d93b5176c20c9ca251be45eb0bde7d74e3ee96"
+    },
+    {
+      "old_path": "PHP/PHP设计模式/创建型模式/简单工厂模式.md",
+      "new_path": "wiki/php/简单工厂模式.md",
+      "original_sha256": "96d35bc68dcf4ae47020055522343e2fd6e2562ba2bdc03a93b9e8a088f12ad2",
+      "final_sha256": "87599d485be456ba36d4094895d80074fd953a398e725d75ca45c3ebcf8fdd26",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/简单工厂模式.md",
+      "current_sha256": "87599d485be456ba36d4094895d80074fd953a398e725d75ca45c3ebcf8fdd26"
+    },
+    {
+      "old_path": "PHP/PHP设计模式/结构型模式/代理模式.md",
+      "new_path": "wiki/php/代理模式.md",
+      "original_sha256": "bb1f5d3e092d49e3ba19ae799a56c8db81a0cb748f96f0c75d7ced4b700eb22f",
+      "final_sha256": "351ff46afd6163d2edfaaa56d49529da418c5d126d6ba7288207b27559cb870e",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/代理模式.md",
+      "current_sha256": "351ff46afd6163d2edfaaa56d49529da418c5d126d6ba7288207b27559cb870e"
+    },
+    {
+      "old_path": "PHP/PHP设计模式/结构型模式/依赖注入模式.md",
+      "new_path": "wiki/php/依赖注入模式.md",
+      "original_sha256": "b96d4a9bf9af61eede683c584a750e4af3fc15d8a197e49e973e14dff4225cc6",
+      "final_sha256": "54511f8cbe18ee9b5621c5c250c7ae366019a208573c64914df9b8139b647987",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/依赖注入模式.md",
+      "current_sha256": "54511f8cbe18ee9b5621c5c250c7ae366019a208573c64914df9b8139b647987"
+    },
+    {
+      "old_path": "PHP/PHP设计模式/结构型模式/桥梁模式.md",
+      "new_path": "wiki/php/桥梁模式.md",
+      "original_sha256": "b67ba80f08ff8a448264adc0d7b7751253be727b5b094e9d76d42530fd582f54",
+      "final_sha256": "1dcf06054dd183714b894996f6e437b13faf69bdfb0bac457ad01c977f9c8f0d",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/桥梁模式.md",
+      "current_sha256": "1dcf06054dd183714b894996f6e437b13faf69bdfb0bac457ad01c977f9c8f0d"
+    },
+    {
+      "old_path": "PHP/PHP设计模式/结构型模式/适配器模式.md",
+      "new_path": "wiki/php/适配器模式.md",
+      "original_sha256": "71503e76319ad4e32e721b1d9ea7011e26a061975945f5202a77c771eb9e77d9",
+      "final_sha256": "f6c2afee8aaa99e3b04ed77047f84ea35ca3380a031169c2f8290e0707c84228",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/适配器模式.md",
+      "current_sha256": "f6c2afee8aaa99e3b04ed77047f84ea35ca3380a031169c2f8290e0707c84228"
+    },
+    {
+      "old_path": "PHP/PHP设计模式/结构型模式/门面模式.md",
+      "new_path": "wiki/php/门面模式.md",
+      "original_sha256": "90090f110ab3676b0779bbcd993ebbfccc0e8666134bbb64908ce1ce18c3febe",
+      "final_sha256": "3f47054453f11932c4613c210c7dc8048302568bdafb23309e6e08ebcc73fea0",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/门面模式.md",
+      "current_sha256": "3f47054453f11932c4613c210c7dc8048302568bdafb23309e6e08ebcc73fea0"
+    },
+    {
+      "old_path": "PHP/PHP设计模式/设计原则.md",
+      "new_path": "wiki/php/设计原则.md",
+      "original_sha256": "03d43b36c931edaef12b214622bedc77da6982bfd460355031621ebb8580772f",
+      "final_sha256": "cb5926afc98fb7355260580ab71e6425788e16363525fe4c18e7925d23a170d3",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/设计原则.md",
+      "current_sha256": "cb5926afc98fb7355260580ab71e6425788e16363525fe4c18e7925d23a170d3"
+    },
+    {
+      "old_path": "PHP/PHP运行原理.md",
+      "new_path": "wiki/php/PHP运行原理.md",
+      "original_sha256": "c29aaeda79116b01dcf2664ec71d89c92243f11a9aad7f1218e4eba714a1cd31",
+      "final_sha256": "fc58c99507d4f876a2bbd413ca73e6a1867e4f2685f52d9a3070ebf62a950e4a",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/PHP运行原理.md",
+      "current_sha256": "3be6240f24530312c4c73d72cab55d488841977428900cd17ce5307cb531b9d0"
+    },
+    {
+      "old_path": "PHP/PHP错误和异常处理.md",
+      "new_path": "wiki/php/PHP错误和异常处理.md",
+      "original_sha256": "7515059cc79878223bba5846c873fb5efc666bf24732428703a758be64540503",
+      "final_sha256": "627a838f39ef502e7a63f8432d6057224e353a32fb6f2ba0fc7df5538bdc3f5a",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/PHP错误和异常处理.md",
+      "current_sha256": "627a838f39ef502e7a63f8432d6057224e353a32fb6f2ba0fc7df5538bdc3f5a"
+    },
+    {
+      "old_path": "PHP/controller和model优化.md",
+      "new_path": "wiki/php/controller和model优化.md",
+      "original_sha256": "c53fa0dc9b3c00b989122dc71f6de8521a98d1bea9346e63f2e6d6b2f695634a",
+      "final_sha256": "aac919350dc840419ab1a04056835e1f052730d66632f66a22c70d0e58863583",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/controller和model优化.md",
+      "current_sha256": "aac919350dc840419ab1a04056835e1f052730d66632f66a22c70d0e58863583"
+    },
+    {
+      "old_path": "PHP/curl库函数.md",
+      "new_path": "wiki/php/curl库函数.md",
+      "original_sha256": "4b76cc22004e0419cd7ca3e25240fd0475d9954861a13fbb2a25360a57458fd2",
+      "final_sha256": "f06844869621e380d48d7d7f429b42d30f011a8ffb8cb743870f30406faf2142",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "deleted-empty",
+      "deleted_reason": "frontmatter-only page; original in backup"
+    },
+    {
+      "old_path": "PHP/lnmp编译安装.md",
+      "new_path": "wiki/php/lnmp编译安装.md",
+      "original_sha256": "38e99bc20384c84dff12dd7a2652df90934ad5e06150726eee5cfe7ab5ebc5b0",
+      "final_sha256": "b8eac62242600da2ef58a4fb8fdcad8794cabc5703e8106f334d3d89fbbf8aac",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/lnmp编译安装.md",
+      "current_sha256": "b8eac62242600da2ef58a4fb8fdcad8794cabc5703e8106f334d3d89fbbf8aac"
+    },
+    {
+      "old_path": "PHP/php web安全.md",
+      "new_path": "wiki/php/php web安全.md",
+      "original_sha256": "c7fcc0e8c941b312819c04f4c87f6cf6f546d040d83421c51f21de640f9036b2",
+      "final_sha256": "fdd5e536ab06864c5fc2733e1c8f095f1dbde7d9d38c01f3dc6408e23f7af600",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/php web安全.md",
+      "current_sha256": "fdd5e536ab06864c5fc2733e1c8f095f1dbde7d9d38c01f3dc6408e23f7af600"
+    },
+    {
+      "old_path": "PHP/phpdoc.md",
+      "new_path": "wiki/php/phpdoc.md",
+      "original_sha256": "5d4f19eb63339203136b976bcff9489cb8f1119dc9ebdd9df839f29b6a84be8f",
+      "final_sha256": "bb056aef8ab1bf9d6487a92b15166cf6d38e128c21530a913dd0b97131bfb17b",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/phpdoc.md",
+      "current_sha256": "bb056aef8ab1bf9d6487a92b15166cf6d38e128c21530a913dd0b97131bfb17b"
+    },
+    {
+      "old_path": "PHP/phpunit使用.md",
+      "new_path": "wiki/php/phpunit使用.md",
+      "original_sha256": "adb23f2d10438f406f1cb8a77ce7d78b6de5aa7ae33d36b73b8087f6f761fc0f",
+      "final_sha256": "d1874c122fc0b9df73d00698bed5a798be7bd70cfa91985b384b80c8307d1044",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/phpunit使用.md",
+      "current_sha256": "d1874c122fc0b9df73d00698bed5a798be7bd70cfa91985b384b80c8307d1044"
+    },
+    {
+      "old_path": "PHP/static和yield.md",
+      "new_path": "wiki/php/static和yield.md",
+      "original_sha256": "28438d472d77cee59ae2a0b3c0f1eed03f32f5c30e38f0e3ff19e47bca7d6df4",
+      "final_sha256": "a55dc522bd8225114bbd22dbd8bb6c1a179fcde7aa6b2db3e78904f0dd8afa98",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/static和yield.md",
+      "current_sha256": "a55dc522bd8225114bbd22dbd8bb6c1a179fcde7aa6b2db3e78904f0dd8afa98"
+    },
+    {
+      "old_path": "PHP/单元测试/codeception 使用.md",
+      "new_path": "wiki/php/codeception 使用.md",
+      "original_sha256": "b9df6bd086fb9f87e864fb34c8e2df7fef5cda7d5c379f2654fa9978d7ab1c47",
+      "final_sha256": "1c557507c7857af10384d5a643ffc02933d0721d7bc86c11a2822b96546ea498",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/codeception 使用.md",
+      "current_sha256": "1c557507c7857af10384d5a643ffc02933d0721d7bc86c11a2822b96546ea498"
+    },
+    {
+      "old_path": "PHP/多维数组的操作.md",
+      "new_path": "wiki/php/多维数组的操作.md",
+      "original_sha256": "0d41c32a5bc0482bc22051a3c98f2950a5c97da429affaa1054659d8b712ef87",
+      "final_sha256": "4cbd22a4d9a26f38ea2c651b7e050748ea507ee5affb3be0144786c561666020",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/多维数组的操作.md",
+      "current_sha256": "4cbd22a4d9a26f38ea2c651b7e050748ea507ee5affb3be0144786c561666020"
+    },
+    {
+      "old_path": "PHP/框架/ThinkPHP/ThinkPHP5.0.11.md",
+      "new_path": "wiki/php/ThinkPHP5.0.11.md",
+      "original_sha256": "737569d71a46e3d18f435730fdba2b5844422fb5c5b70b560531c0201c204813",
+      "final_sha256": "a51a774e79954430e635007738687f5100869e3b63e3371e6d1e853a7229bb75",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/ThinkPHP5.0.11.md",
+      "current_sha256": "a51a774e79954430e635007738687f5100869e3b63e3371e6d1e853a7229bb75"
+    },
+    {
+      "old_path": "PHP/框架/Yaf/Yaf学习.md",
+      "new_path": "wiki/php/Yaf学习.md",
+      "original_sha256": "29e70e1fe5e87f6b5e142ff882c49fa30b5ecd6127c0c863e83c699de5ea2a04",
+      "final_sha256": "63cc22db080b6c93fbd00534254210ae67dd8f72698a2a0d76e290b366f00838",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/Yaf学习.md",
+      "current_sha256": "63cc22db080b6c93fbd00534254210ae67dd8f72698a2a0d76e290b366f00838"
+    },
+    {
+      "old_path": "PHP/框架/laravel/HTTP 响应.md",
+      "new_path": "wiki/php/HTTP 响应.md",
+      "original_sha256": "01f0ac1e56cb5cf76ca059351caeb13f097f0084efcb73392a9a5350fbc41fa7",
+      "final_sha256": "95c57c4c1661f27059d563d4a089b64c5dd76eb5726854d7495c28734065c308",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/HTTP 响应.md",
+      "current_sha256": "95c57c4c1661f27059d563d4a089b64c5dd76eb5726854d7495c28734065c308"
+    },
+    {
+      "old_path": "PHP/框架/laravel/Laravel DingoApi开发复习.md",
+      "new_path": "wiki/php/Laravel DingoApi开发复习.md",
+      "original_sha256": "c6cff3cf93c574b1da9fb188b518faf8b6f01d544fa8bb6b99e115f825dc3e6b",
+      "final_sha256": "63d4dd210203ba59c653ee43d53b45f56a83f342aa84e32511f95e5ee126d5cf",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/Laravel DingoApi开发复习.md",
+      "current_sha256": "63d4dd210203ba59c653ee43d53b45f56a83f342aa84e32511f95e5ee126d5cf"
+    },
+    {
+      "old_path": "PHP/框架/laravel/Laravel web开发实战复习.md",
+      "new_path": "wiki/php/Laravel web开发实战复习.md",
+      "original_sha256": "a2c1c5e963f72eb7d4135e8f922533023ad937392c9b1f737885cb00c3db49fd",
+      "final_sha256": "e2ff8a4a639d56221cb8d160431ad4d2fdca739047109e7827f9de12c4504d23",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/Laravel web开发实战复习.md",
+      "current_sha256": "e2ff8a4a639d56221cb8d160431ad4d2fdca739047109e7827f9de12c4504d23"
+    },
+    {
+      "old_path": "PHP/框架/laravel/Laravel 商城开发复习.md",
+      "new_path": "wiki/php/Laravel 商城开发复习.md",
+      "original_sha256": "ef4b0f6cd9ced3de9bf6e2b6b7294ce37b0317ca1db96d6e4db8491c275ac018",
+      "final_sha256": "e7207f2e5019336cbeb7d20ddf6ca2622f2754869915543542c888e518b1b639",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/Laravel 商城开发复习.md",
+      "current_sha256": "e7207f2e5019336cbeb7d20ddf6ca2622f2754869915543542c888e518b1b639"
+    },
+    {
+      "old_path": "PHP/框架/laravel/Laravel 所有教程的总结.md",
+      "new_path": "wiki/php/Laravel 所有教程的总结.md",
+      "original_sha256": "ec26d4febf56a868a8c9968ee5e01bc5960b2631cc8be91dcbc092b5bfaffacb",
+      "final_sha256": "f1f5ad1260590f377475a9ebe6b4ed4455ded11b3d31ba4951056680ac1c1664",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/Laravel 所有教程的总结.md",
+      "current_sha256": "f1f5ad1260590f377475a9ebe6b4ed4455ded11b3d31ba4951056680ac1c1664"
+    },
+    {
+      "old_path": "PHP/框架/laravel/Laravel 模型事件.md",
+      "new_path": "wiki/php/Laravel 模型事件.md",
+      "original_sha256": "fcbcf80bc30884cfcddc4bd0f935dc43e88c6912645b02d2aab66a6544a02462",
+      "final_sha256": "6515b99a99f2b4260690090f0f75fa1ce69666d5136ee64ad90747dcef40e0b2",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/Laravel 模型事件.md",
+      "current_sha256": "6515b99a99f2b4260690090f0f75fa1ce69666d5136ee64ad90747dcef40e0b2"
+    },
+    {
+      "old_path": "PHP/框架/laravel/Laravel+Mysql8问题解决.md",
+      "new_path": "wiki/php/Laravel+Mysql8问题解决.md",
+      "original_sha256": "5865b96867d48e16e72f37221193cd57e191dbfc80755a3c9a95f6a1b13045e3",
+      "final_sha256": "5a6ff6820afc108867dbcd0150b09c66f31b3b4a29066125391b2816aa206281",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/Laravel+Mysql8问题解决.md",
+      "current_sha256": "5a6ff6820afc108867dbcd0150b09c66f31b3b4a29066125391b2816aa206281"
+    },
+    {
+      "old_path": "PHP/框架/laravel/Laravel5.5-API接口开发.md",
+      "new_path": "wiki/php/Laravel5.5-API接口开发.md",
+      "original_sha256": "08c3893bf9c79e2d004ca24e9fc58a8f719af9f8c762caf085247448ebd2a6b4",
+      "final_sha256": "64a553b34a6cdb6fe167d4b3f254547022ed3bf58a3ac17f131acbfabb306e09",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/Laravel5.5-API接口开发.md",
+      "current_sha256": "64a553b34a6cdb6fe167d4b3f254547022ed3bf58a3ac17f131acbfabb306e09"
+    },
+    {
+      "old_path": "PHP/框架/laravel/Laravel5.5-开发实战进阶.md",
+      "new_path": "wiki/php/Laravel5.5-开发实战进阶.md",
+      "original_sha256": "a74b0374058dbce0c2dcad152a2599b0616342dca7fa95d72b26b33ed965706c",
+      "final_sha256": "a186239a03f2e64bfb7dda9f56d60d169b8fcdfd53c9336d2401902b895dfdea",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/Laravel5.5-开发实战进阶.md",
+      "current_sha256": "a186239a03f2e64bfb7dda9f56d60d169b8fcdfd53c9336d2401902b895dfdea"
+    },
+    {
+      "old_path": "PHP/框架/laravel/Laravel商城.md",
+      "new_path": "wiki/php/Laravel商城.md",
+      "original_sha256": "a6850b68a0402de136c5f2f9835627ec299d56ed8b5eb9abfcd3bb50996e4954",
+      "final_sha256": "5c1550185b4b78aeac2240e044b20a013c04c07d285d2d35dffe22abe95da90a",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/Laravel商城.md",
+      "current_sha256": "5c1550185b4b78aeac2240e044b20a013c04c07d285d2d35dffe22abe95da90a"
+    },
+    {
+      "old_path": "PHP/框架/laravel/Laravel的生命周期.md",
+      "new_path": "wiki/php/Laravel的生命周期.md",
+      "original_sha256": "aa0e427cfdb9c51afaa09b4fbd77fd0096345b828c72f0f79c7972bd16e581bd",
+      "final_sha256": "5bfd603ba0d9c4801fec00b032861ffea13f7f6ed5b500b63a4695928192c78e",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/Laravel的生命周期.md",
+      "current_sha256": "5bfd603ba0d9c4801fec00b032861ffea13f7f6ed5b500b63a4695928192c78e"
+    },
+    {
+      "old_path": "PHP/框架/laravel/laravel 5.5-web开发实战入门总结.md",
+      "new_path": "wiki/php/laravel 5.5-web开发实战入门总结.md",
+      "original_sha256": "edbd9164884394c63440384bcfe5f435b5daf0dec3c09de3ce6f503905536c28",
+      "final_sha256": "532e44f2210049c426fcbde381860940ffc456716a63a6e0a9e1a61d72857c80",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/laravel 5.5-web开发实战入门总结.md",
+      "current_sha256": "532e44f2210049c426fcbde381860940ffc456716a63a6e0a9e1a61d72857c80"
+    },
+    {
+      "old_path": "PHP/框架/laravel/laravel Artisan 命令.md",
+      "new_path": "wiki/php/laravel Artisan 命令.md",
+      "original_sha256": "5532e9d6a8574f330b07001e8d5ca29107561ac9906c355aed3f789d6611e4e3",
+      "final_sha256": "f15bc1b2e3f6ece052108939680972640caf82a37673300e260d40def4465ec1",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/laravel Artisan 命令.md",
+      "current_sha256": "f15bc1b2e3f6ece052108939680972640caf82a37673300e260d40def4465ec1"
+    },
+    {
+      "old_path": "PHP/框架/laravel/laravel web开发实战进阶复习.md",
+      "new_path": "wiki/php/laravel web开发实战进阶复习.md",
+      "original_sha256": "96813f080468085db69047b0ebe28975fd457385b6f01ca24a5638c5a1beff36",
+      "final_sha256": "4dcc79c2cd8b2a7899c42be398b045e2257df65ac6b4afefc39d18b81aea7309",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/laravel web开发实战进阶复习.md",
+      "current_sha256": "4dcc79c2cd8b2a7899c42be398b045e2257df65ac6b4afefc39d18b81aea7309"
+    },
+    {
+      "old_path": "PHP/框架/laravel/laravel 定时任务注意事项.md",
+      "new_path": "wiki/php/laravel 定时任务注意事项.md",
+      "original_sha256": "6ba87525aa5287fa738507d2f869a43a0b8129672317f19ab992a7223f31db5c",
+      "final_sha256": "593abbf87c69e205892e9c4658090e033f9bced4ae34551a18d6472f1818e114",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/laravel 定时任务注意事项.md",
+      "current_sha256": "593abbf87c69e205892e9c4658090e033f9bced4ae34551a18d6472f1818e114"
+    },
+    {
+      "old_path": "PHP/框架/laravel/laravel 框架源码解读/将 laravel 的各个组件单独安装 .md",
+      "new_path": "wiki/php/将 laravel 的各个组件单独安装 .md",
+      "original_sha256": "0014d23ff114c3bf0b1c70feeefa913c196d4480b737d2a11740b195e21aa46a",
+      "final_sha256": "e72e4b187715fe5343e9eaf519807e4e6c78abca3e643ff5c276e361963dbe31",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/将 laravel 的各个组件单独安装 .md",
+      "current_sha256": "e72e4b187715fe5343e9eaf519807e4e6c78abca3e643ff5c276e361963dbe31"
+    },
+    {
+      "old_path": "PHP/框架/laravel/laravel 高级查询的用法.md",
+      "new_path": "wiki/php/laravel 高级查询的用法.md",
+      "original_sha256": "ddb65c856dbbda6ecba9ebd8b93b8fd0089567351aebd54150842f30e0f4d4fb",
+      "final_sha256": "fe0c7470c3f2933e17edb6f17b9e7b84a36149abe2b3549b52b2802b7b63e9d2",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/laravel 高级查询的用法.md",
+      "current_sha256": "fe0c7470c3f2933e17edb6f17b9e7b84a36149abe2b3549b52b2802b7b63e9d2"
+    },
+    {
+      "old_path": "PHP/框架/laravel/关联表模型和多对多关系.md",
+      "new_path": "wiki/php/关联表模型和多对多关系.md",
+      "original_sha256": "3027ad434176b3e2fe251ba22b5116bd07e606f8c9142ce6d61aaec339116a94",
+      "final_sha256": "48d3a648807ac94f702cfd6c0786ae7dbec2fd276a78b8d03769a44556183e9a",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/关联表模型和多对多关系.md",
+      "current_sha256": "48d3a648807ac94f702cfd6c0786ae7dbec2fd276a78b8d03769a44556183e9a"
+    },
+    {
+      "old_path": "PHP/框架/laravel/写一个简单的框架.md",
+      "new_path": "wiki/php/写一个简单的框架.md",
+      "original_sha256": "5e7a1eb0d1111637988ada03591e98af054bbb2102e568421b060c2f1a057e5a",
+      "final_sha256": "14b65200b7060e99306f73ca7ef13d261641ace86f14fa24f09fb116ab1eb3e9",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/写一个简单的框架.md",
+      "current_sha256": "14b65200b7060e99306f73ca7ef13d261641ace86f14fa24f09fb116ab1eb3e9"
+    },
+    {
+      "old_path": "PHP/框架/laravel/常用模型属性.md",
+      "new_path": "wiki/php/常用模型属性.md",
+      "original_sha256": "a7638dcfe86e817a288542678c836e3f567f82530582c95ba714e05116a959aa",
+      "final_sha256": "b498b053dc4df477b271bed466fc89272c3c99bcd425a6ad4fd23eef4c4023ea",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/常用模型属性.md",
+      "current_sha256": "b498b053dc4df477b271bed466fc89272c3c99bcd425a6ad4fd23eef4c4023ea"
+    },
+    {
+      "old_path": "PHP/框架/laravel/扩展包.md",
+      "new_path": "wiki/php/扩展包.md",
+      "original_sha256": "9b3ed89356996ce4fade0f89d8aa03d2050bfff384972e7fb3bab228df38344d",
+      "final_sha256": "b880315fd979231b8caa24e7e806ff0eb955f99db5f932a216b54c15881a3eb9",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/扩展包.md",
+      "current_sha256": "b880315fd979231b8caa24e7e806ff0eb955f99db5f932a216b54c15881a3eb9"
+    },
+    {
+      "old_path": "PHP/框架/swoft/swoft注解.md",
+      "new_path": "wiki/php/swoft注解.md",
+      "original_sha256": "4a02e1c07c8b60f14353287757c950e47b1f383f4098a8ab2f2779ae8b6223ae",
+      "final_sha256": "7bc88ff4b78a84284166433ce26cb872fdafa71b6f4a636625f69e85ccb4f997",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/swoft注解.md",
+      "current_sha256": "7bc88ff4b78a84284166433ce26cb872fdafa71b6f4a636625f69e85ccb4f997"
+    },
+    {
+      "old_path": "PHP/框架/symfony/symfony 学习.md",
+      "new_path": "wiki/php/symfony 学习.md",
+      "original_sha256": "2ce4d0b893624a7334b1718f4f2235627855f05eeba0248fd7e71e13dc5f1120",
+      "final_sha256": "15d3bdd2a1b18ae4cde611710cc73fc5f23d3be8212a4b3644f3b1b125dacbaf",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/symfony 学习.md",
+      "current_sha256": "15d3bdd2a1b18ae4cde611710cc73fc5f23d3be8212a4b3644f3b1b125dacbaf"
+    },
+    {
+      "old_path": "PHP/编写高效PHP.md",
+      "new_path": "wiki/php/编写高效PHP.md",
+      "original_sha256": "64752fd63e86e70c06b47aa7adb3424dab4af46e940d251dc481e40243ce5f40",
+      "final_sha256": "072396e88a511e24918db97326691776827e462846d794fd3f2a5fb10cd21184",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/php/编写高效PHP.md",
+      "current_sha256": "072396e88a511e24918db97326691776827e462846d794fd3f2a5fb10cd21184"
+    }
+  ],
+  "created_files": [
+    {
+      "path": "wiki/php/PHP 知识地图.md",
+      "sha256": "10eac40ea334ebde917eb8ed6e7bf543ea26e04076a7bdebe547716a96687f71"
+    }
+  ],
+  "historical_missing_attachments": "recorded by /tmp/audit_language_migration.py; unresolved legacy assets only"
+}

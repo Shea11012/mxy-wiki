@@ -1,0 +1,390 @@
+{
+  "scope": "go",
+  "created": "2026-07-22",
+  "backup_dir": "/home/mxy/.hermes/backups/mxy-wiki/go-before-20260722",
+  "metadata_policy": {
+    "created": "preserve explicit ISO date; otherwise migration date",
+    "updated": "2026-07-22",
+    "status": "needs-review",
+    "confidence": "INFERRED",
+    "source": "preserve only existing source"
+  },
+  "records": [
+    {
+      "old_path": "go/CGO.md",
+      "new_path": "wiki/go/CGO.md",
+      "original_sha256": "2ad30cfbb45818f2048ecc0e5ccfff05619329df1e979bcf852a4fd6c4e7d648",
+      "final_sha256": "200b8789883d91995c9a421b7da5ed2e1bd6b228dcf1b6dcfb7af12a3f7dbdb7",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/CGO.md",
+      "current_sha256": "200b8789883d91995c9a421b7da5ed2e1bd6b228dcf1b6dcfb7af12a3f7dbdb7"
+    },
+    {
+      "old_path": "go/Go性能优化常见模式.md",
+      "new_path": "wiki/go/Go性能优化常见模式.md",
+      "original_sha256": "41d3c55931a4a7a163ef70ff45667d581fddfff6860d03f906354978d913bf45",
+      "final_sha256": "4daf60bce5dd98934f403cf2d9c5ee211790a7b2e75d09f666b70999ece8560a",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/Go性能优化常见模式.md",
+      "current_sha256": "4daf60bce5dd98934f403cf2d9c5ee211790a7b2e75d09f666b70999ece8560a"
+    },
+    {
+      "old_path": "go/Go网络编程性能优化实践.md",
+      "new_path": "wiki/go/Go网络编程性能优化实践.md",
+      "original_sha256": "c09cf5c626ac1d355435c042213a2b635b45ab8cce7e4e380ed168f2c3d2d3cb",
+      "final_sha256": "cf6751b37cfbcefcf82feaa87c94bf174843fe0aed7516c476621f73f3131a8b",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/Go网络编程性能优化实践.md",
+      "current_sha256": "cf6751b37cfbcefcf82feaa87c94bf174843fe0aed7516c476621f73f3131a8b"
+    },
+    {
+      "old_path": "go/channel 使用方法.md",
+      "new_path": "wiki/go/channel 使用方法.md",
+      "original_sha256": "e2e83829d878e75a03cf328e567163354e619fbd63f7ca034e5a4026302f9b79",
+      "final_sha256": "3319ccc14559fd5651112d0c8376a057b47e1a4d7ee85bd6b9045221cc6b9cf5",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/channel 使用方法.md",
+      "current_sha256": "905a7879509db67d721fd5a52b2fa105a8f531c81b800b1e686006a8cc72d401"
+    },
+    {
+      "old_path": "go/go  内置工具.md",
+      "new_path": "wiki/go/go  内置工具.md",
+      "original_sha256": "eaf8c4d0f48cbcd3a795c95458c311b8bd8f1f787f385b1fb75da95aa9d81d7a",
+      "final_sha256": "8f9e3c0e99545f3e4b794305beace52c30fd1b1cbe7323c93916f86583ff9a9a",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/go  内置工具.md",
+      "current_sha256": "8f9e3c0e99545f3e4b794305beace52c30fd1b1cbe7323c93916f86583ff9a9a"
+    },
+    {
+      "old_path": "go/go plan9 汇编.md",
+      "new_path": "wiki/go/go plan9 汇编.md",
+      "original_sha256": "6e59c5341c16f46285180505e81fce552fc6640305d25cc9e173ed64c86732d9",
+      "final_sha256": "7160a7420c9c6301fa2e58549822594c64220b344e6e73fc2cf8b8f5ec404369",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/go plan9 汇编.md",
+      "current_sha256": "7160a7420c9c6301fa2e58549822594c64220b344e6e73fc2cf8b8f5ec404369"
+    },
+    {
+      "old_path": "go/go 基准测试.md",
+      "new_path": "wiki/go/go 基准测试.md",
+      "original_sha256": "1d2b3f5cf7e68a43f4aacffc410a4800ba6bf568f5d38d3816c8a93cc9485fc6",
+      "final_sha256": "eb3cd22b0a5c692337503b1a2a738f6bfbf7f4ea1cd43b2d2c1f7521a0f1fffa",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "absorbed",
+      "absorbed_into": "wiki/go/基准测试.md"
+    },
+    {
+      "old_path": "go/go包管理.md",
+      "new_path": "wiki/go/go包管理.md",
+      "original_sha256": "3ac855490867212fec26db671fb37882d45c5bbe0319710819c656e19f5ff020",
+      "final_sha256": "74a3984122f36ddd676eb43427e6779b9079efc2a2277056721cf42c037910b7",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/go包管理.md",
+      "current_sha256": "74a3984122f36ddd676eb43427e6779b9079efc2a2277056721cf42c037910b7"
+    },
+    {
+      "old_path": "go/go时间处理.md",
+      "new_path": "wiki/go/go时间处理.md",
+      "original_sha256": "9426c24d6804cf20edce7ec54fd0879272b164541faa83b159c550fbd742211e",
+      "final_sha256": "81156a4799cb1da01d45197509da219902c024aaa8e03bee6b4a3cd484eef4c0",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/go时间处理.md",
+      "current_sha256": "81156a4799cb1da01d45197509da219902c024aaa8e03bee6b4a3cd484eef4c0"
+    },
+    {
+      "old_path": "go/go的nil.md",
+      "new_path": "wiki/go/go的nil.md",
+      "original_sha256": "80ad3f292aff0dd9b76af5a4d15123a6963a184c2ed6e97d3a2cefe85144a2a8",
+      "final_sha256": "86f7d0c84b9480e1dfa16acb80738c50a4a7f138b7ec1b730e9a92b1f8ad85f8",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/go的nil.md",
+      "current_sha256": "a1952d308d25d1867eb80df9c2e3151b716bdfefa81962677ca9478f3698b020"
+    },
+    {
+      "old_path": "go/grpc.md",
+      "new_path": "wiki/go/grpc.md",
+      "original_sha256": "4861eb23323e11cd7a599bde63eecd546d382ac86c202420ecdf6078ec5d7650",
+      "final_sha256": "69fca2eec27d77675d199b6fbd144c1cf74901b690c8ab9fb3f02dd466f52a6c",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/grpc.md",
+      "current_sha256": "69fca2eec27d77675d199b6fbd144c1cf74901b690c8ab9fb3f02dd466f52a6c"
+    },
+    {
+      "old_path": "go/pprof & GODEBUG查看调度.md",
+      "new_path": "wiki/go/pprof & GODEBUG查看调度.md",
+      "original_sha256": "605817082b4955b035d50a95755ca243902839fcd948d2f8fd60f7a37fcbd122",
+      "final_sha256": "fc642c9878137ef84bc927df63cf6596c4a373b4365b1ba9bfbbe716d2cf82b0",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/pprof & GODEBUG查看调度.md",
+      "current_sha256": "fc642c9878137ef84bc927df63cf6596c4a373b4365b1ba9bfbbe716d2cf82b0"
+    },
+    {
+      "old_path": "go/protobuf 使用.md",
+      "new_path": "wiki/go/protobuf 使用.md",
+      "original_sha256": "e9c71d03bee0405612e26894cdb3049531498852aa50502dd3f3cbb7ba008ac3",
+      "final_sha256": "320f38dab6957a028f44966dd8bb39316035b6092da866010679ef31e9f99f7b",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/protobuf 使用.md",
+      "current_sha256": "320f38dab6957a028f44966dd8bb39316035b6092da866010679ef31e9f99f7b"
+    },
+    {
+      "old_path": "go/protoc.md",
+      "new_path": "wiki/go/protoc.md",
+      "original_sha256": "8ce962d0439d284c33a6b93437a36a80e7df5865a7d57bf9472c5d711b8c7c07",
+      "final_sha256": "3407138aa4dd1918cbf4f9a12c1c5bf5ecd868b8f56a49e342ac486f54248724",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/protoc.md",
+      "current_sha256": "3407138aa4dd1918cbf4f9a12c1c5bf5ecd868b8f56a49e342ac486f54248724"
+    },
+    {
+      "old_path": "go/template 用法.md",
+      "new_path": "wiki/go/template 用法.md",
+      "original_sha256": "1f80c7d932b525f8d695288d367c641ccdd3904a604b02e49cb6eb0dba07151d",
+      "final_sha256": "1d35119bc0dab6a3481270c62eea865d74ceec084d23dac4a18b7fef7a32ad56",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/template 用法.md",
+      "current_sha256": "1d35119bc0dab6a3481270c62eea865d74ceec084d23dac4a18b7fef7a32ad56"
+    },
+    {
+      "old_path": "go/关于文件操作的包.md",
+      "new_path": "wiki/go/关于文件操作的包.md",
+      "original_sha256": "0e56046345c7a690fd455fd9d241a87f873579410f0fbcb38bbb00722b41f616",
+      "final_sha256": "ca62f90fe6c0c85964420cc45c70b793d206f1073fba48ef4856229630713a75",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/关于文件操作的包.md",
+      "current_sha256": "ca62f90fe6c0c85964420cc45c70b793d206f1073fba48ef4856229630713a75"
+    },
+    {
+      "old_path": "go/基准测试.md",
+      "new_path": "wiki/go/基准测试.md",
+      "original_sha256": "357afadb7ac08a06d2d886a8cf7d076b4e18e7c15a97151dc631b612b9eba07d",
+      "final_sha256": "82fe8a6bc7dd246e436ae5656d14b1712817e2f211af79c93f34c283862cf953",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/基准测试.md",
+      "current_sha256": "cf22e6966113d94c367cdf63eb7c9ba5d69aeefb34f0382ad91afaaf7017c128"
+    },
+    {
+      "old_path": "go/实现/GPM调度器.md",
+      "new_path": "wiki/go/GPM调度器.md",
+      "original_sha256": "4e4f4f43f28811df5df6044895a3441491a087a9680c515738728df4e5d7cf4e",
+      "final_sha256": "51623654ea94b17350c4ae54bd8f44b60b300c17ec3fcdc2c28bf2f91471630a",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/GPM调度器.md",
+      "current_sha256": "51623654ea94b17350c4ae54bd8f44b60b300c17ec3fcdc2c28bf2f91471630a"
+    },
+    {
+      "old_path": "go/实现/channel.md",
+      "new_path": "wiki/go/channel.md",
+      "original_sha256": "71ef680a96815f45a617b1aa28320508092d804e737b01224617b5a59db20313",
+      "final_sha256": "7003b0107c4c40ae40c7a4935695f64f157b9b0f8eb6bf5a006b35d8758c784f",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/channel.md",
+      "current_sha256": "b71f8c89e1a0cc8d6071c25623b028a666ac00796b72b82b7d0d5aa4b4da9680"
+    },
+    {
+      "old_path": "go/实现/defer实现.md",
+      "new_path": "wiki/go/defer实现.md",
+      "original_sha256": "72f33d4c11295b38a323fbe4d36be2a79a8b212febb4279d1565bf19c557cd2f",
+      "final_sha256": "aa33a57fd07dcc62818be9145d1b1c5f6cdbd0b50ae525b09b3c3a052c432601",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/defer实现.md",
+      "current_sha256": "e3efc81044b9eec23a09dad511974be23b713a03f33b03bf4b10a5ccb174fb79"
+    },
+    {
+      "old_path": "go/实现/interface实现.md",
+      "new_path": "wiki/go/interface实现.md",
+      "original_sha256": "77e82ef37031fcd5aceefba07863a44c5af997da8aeba4ed05c79f516d6a1a08",
+      "final_sha256": "1f3dc63179009749c873be45a7375e3159321cd55d735c47835dc8f8ff8c8390",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/interface实现.md",
+      "current_sha256": "fd77b328f5690e33c672a80a88578018a13072d7ad1ad5aa8a197ac44cf1ff02"
+    },
+    {
+      "old_path": "go/实现/map实现（Swiss Table）.md",
+      "new_path": "wiki/go/map实现（Swiss Table）.md",
+      "original_sha256": "fa8f4efa6be9d06e347b13e18915bfb50bfffcda6dadebde4bde2b96ff50dd7c",
+      "final_sha256": "83c779c4b7f74e4eeb50d4edd6d64c30d6d30e51c884b06795eff4044daff42f",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/map实现（Swiss Table）.md",
+      "current_sha256": "83c779c4b7f74e4eeb50d4edd6d64c30d6d30e51c884b06795eff4044daff42f"
+    },
+    {
+      "old_path": "go/实现/map实现（旧 Go1.20 拉链法）.md",
+      "new_path": "wiki/go/map实现（旧 Go1.20 拉链法）.md",
+      "original_sha256": "d109b5ec44f5ffbd460abfdf3b9b5b737c319e18d3fd7076301c08792cc610f4",
+      "final_sha256": "8f722f6a1cac2fa594c6b8a83025f1eafea67a7d7aa4c72500616e33e24718b7",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/map实现（旧 Go1.20 拉链法）.md",
+      "current_sha256": "8f722f6a1cac2fa594c6b8a83025f1eafea67a7d7aa4c72500616e33e24718b7"
+    },
+    {
+      "old_path": "go/实现/mutex和RWMutex实现.md",
+      "new_path": "wiki/go/mutex和RWMutex实现.md",
+      "original_sha256": "3a45e80bc3eeea208ddf7d452649aae31438b6a12266e2d5e2fb7bd87f38db77",
+      "final_sha256": "609551fab3795af7dde7b4a0fa07209cd44b26dde91c4a499a462ba8cede4830",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/mutex和RWMutex实现.md",
+      "current_sha256": "609551fab3795af7dde7b4a0fa07209cd44b26dde91c4a499a462ba8cede4830"
+    },
+    {
+      "old_path": "go/实现/panic和recover.md",
+      "new_path": "wiki/go/panic和recover.md",
+      "original_sha256": "3dd6778553a93fd83100d1e78b489efe7f499b017f1020bcb521eff9634b571e",
+      "final_sha256": "2fc7dfc9b662cf34970eda4424d6537fd7d60ce73aead0c0d5fa93b0c5e13ecf",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/panic和recover.md",
+      "current_sha256": "317bc4682a66c1ad5b99fcd288138c31de9bc2caf09908ae90594c09be0c47fa"
+    },
+    {
+      "old_path": "go/实现/slice.md",
+      "new_path": "wiki/go/slice.md",
+      "original_sha256": "4a674a6450af4d9886416bfcc355ccd453b48184228a440f779eded86c7ee988",
+      "final_sha256": "e9650d394638602765149d0894d1dda982f15a8dcac23acbe1fe20a98d113026",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/slice.md",
+      "current_sha256": "e9650d394638602765149d0894d1dda982f15a8dcac23acbe1fe20a98d113026"
+    },
+    {
+      "old_path": "go/实现/sync.Map 实现.md",
+      "new_path": "wiki/go/sync.Map 实现.md",
+      "original_sha256": "cb3712376131df3d02fbc572eaed869d751e50219576d30392b05209e2520aed",
+      "final_sha256": "3e5ba271105cef6b14926de166f4fa1c270c2978f4afbd18fec4b18e17bd6830",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/sync.Map 实现.md",
+      "current_sha256": "3e5ba271105cef6b14926de166f4fa1c270c2978f4afbd18fec4b18e17bd6830"
+    },
+    {
+      "old_path": "go/实现/sync.Pool.md",
+      "new_path": "wiki/go/sync.Pool.md",
+      "original_sha256": "db87a3ea5aa11c729730bd2fb7a45cfb76c08c3fddec5975462566739f062e84",
+      "final_sha256": "c94831a5c0841b20e638b1053af556e07038c426be481f742d442985660a6193",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/sync.Pool.md",
+      "current_sha256": "c94831a5c0841b20e638b1053af556e07038c426be481f742d442985660a6193"
+    },
+    {
+      "old_path": "go/实现/sync.WaitGroup.md",
+      "new_path": "wiki/go/sync.WaitGroup.md",
+      "original_sha256": "786732b929e72a3a4adcb2da97dac4bead95160a9649e0c02b736ec1b13c97ea",
+      "final_sha256": "f64a9feddb09d5bf6d881a49dac9ab589f832b2d24468551632a502731f7941e",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/sync.WaitGroup.md",
+      "current_sha256": "f64a9feddb09d5bf6d881a49dac9ab589f832b2d24468551632a502731f7941e"
+    },
+    {
+      "old_path": "go/实现/内存管理.md",
+      "new_path": "wiki/go/内存管理.md",
+      "original_sha256": "6b32bd1bd0976731b6f105a34688e6b522caf7b61e3ac3496c1f6575f93af6d2",
+      "final_sha256": "938fe2bf920b140ade0dacd012fcc8c8b755785e577bb2ec90ac70e19e126fd2",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/内存管理.md",
+      "current_sha256": "938fe2bf920b140ade0dacd012fcc8c8b755785e577bb2ec90ac70e19e126fd2"
+    },
+    {
+      "old_path": "go/实现/垃圾回收.md",
+      "new_path": "wiki/go/垃圾回收.md",
+      "original_sha256": "60cb24a7a00d584d16c749b5c735957a71761588b87b0cf827681f0953f07944",
+      "final_sha256": "016c99cbe3ff64c7540281fbe0b13cb4d693cb6267ad81b894dd2d9f912e32fd",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/垃圾回收.md",
+      "current_sha256": "016c99cbe3ff64c7540281fbe0b13cb4d693cb6267ad81b894dd2d9f912e32fd"
+    },
+    {
+      "old_path": "go/实现/过时sync.Map 实现.md",
+      "new_path": "wiki/go/过时sync.Map 实现.md",
+      "original_sha256": "ebaf99f8f118206a13e87262408eadd33d3ae7ce8a5d67042645c6060eec390e",
+      "final_sha256": "dabc856f655ead5f73886c87952b7bb7284c39f4c8184a57cb6087eb8c4f65d5",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/过时sync.Map 实现.md",
+      "current_sha256": "dabc856f655ead5f73886c87952b7bb7284c39f4c8184a57cb6087eb8c4f65d5"
+    },
+    {
+      "old_path": "go/实现/逃逸分析.md",
+      "new_path": "wiki/go/逃逸分析.md",
+      "original_sha256": "38d9a030acdfa6c7121be185e7cdb28b18f9a97f405d528f5d9f06e4a857fdd8",
+      "final_sha256": "f220fd7b4d1d9ad127adfb1934f57ffba3763ec4606e81eef90c6cc14e7b8363",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/逃逸分析.md",
+      "current_sha256": "f220fd7b4d1d9ad127adfb1934f57ffba3763ec4606e81eef90c6cc14e7b8363"
+    },
+    {
+      "old_path": "go/实用库.md",
+      "new_path": "wiki/go/实用库.md",
+      "original_sha256": "cddff095e1742625a26e8df7e5785c8637d11b0d12c1d013b4b8f23ee7512778",
+      "final_sha256": "f21b7e34b1d109055a461783e4f4764b3fa61a81aca7675458b5303b3c2e5ac8",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/实用库.md",
+      "current_sha256": "f21b7e34b1d109055a461783e4f4764b3fa61a81aca7675458b5303b3c2e5ac8"
+    },
+    {
+      "old_path": "go/常见面试题.md",
+      "new_path": "wiki/go/常见面试题.md",
+      "original_sha256": "b67597a292dfc6657e3d2a1847a1ef629778f76d949c0af27db21a0c7209cfd8",
+      "final_sha256": "8891b9ba5d86c18c7c4e913c3c2702146fcdd5cf482d26e29f74c7c702c74b16",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/常见面试题.md",
+      "current_sha256": "8891b9ba5d86c18c7c4e913c3c2702146fcdd5cf482d26e29f74c7c702c74b16"
+    },
+    {
+      "old_path": "go/并发编程.md",
+      "new_path": "wiki/go/并发编程.md",
+      "original_sha256": "8566c6d044e85729cf82e121df480e25ac3caa48db467956be79d4b80be57796",
+      "final_sha256": "b2c8f98d1536efae44aee6046ec32c585c21c1d81c83b897ae9775d245faf60f",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/并发编程.md",
+      "current_sha256": "b2c8f98d1536efae44aee6046ec32c585c21c1d81c83b897ae9775d245faf60f"
+    },
+    {
+      "old_path": "go/数组和切片.md",
+      "new_path": "wiki/go/数组和切片.md",
+      "original_sha256": "023a528896da82dcf2b26ecea866be45c2cbb4e8d22f21523c542f2526a38b58",
+      "final_sha256": "d231e846d7445dfaff248f9985d4197190d35adba577ef6135ea088b7bb432d0",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/go/数组和切片.md",
+      "current_sha256": "d231e846d7445dfaff248f9985d4197190d35adba577ef6135ea088b7bb432d0"
+    }
+  ],
+  "created_files": [
+    {
+      "path": "wiki/go/Go 知识地图.md",
+      "sha256": "038941f9794c3216e269c8290b3f640a047caeca0a6d49c8547d421e4fe6a5ea"
+    }
+  ],
+  "historical_missing_attachments": "recorded by /tmp/audit_language_migration.py; unresolved legacy assets only"
+}

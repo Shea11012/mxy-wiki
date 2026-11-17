@@ -1,0 +1,200 @@
+{
+  "scope": "计算机网络",
+  "created": "2026-07-22",
+  "backup_dir": "/home/mxy/.hermes/backups/mxy-wiki/计算机网络-before-20260722",
+  "metadata_policy": {
+    "created": "preserve explicit ISO date; otherwise migration date",
+    "updated": "2026-07-22",
+    "status": "needs-review",
+    "confidence": "INFERRED",
+    "source": "not invented"
+  },
+  "records": [
+    {
+      "old_path": "计算机网络/DNS的原理和作用.md",
+      "new_path": "wiki/computer-network/DNS的原理和作用.md",
+      "original_sha256": "3ee7b9b73bd896b9b795f0b3a5974e6431f70bd208f3fcc56cf9b8e0bc9e4da2",
+      "final_sha256": "47dad5bbf940b972572e93f79e900f449d664212f2d828584602441e91edb9c1",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "absorbed",
+      "absorbed_into": "wiki/computer-network/DNS.md",
+      "current_path": "wiki/computer-network/DNS.md",
+      "current_sha256": "0ddf4e1bda8f87d6d86ee0cf124be78bb212ec750613f418327048213fa99470"
+    },
+    {
+      "old_path": "计算机网络/TCP连接资源限制.md",
+      "new_path": "wiki/computer-network/TCP连接资源限制.md",
+      "original_sha256": "9a4cae7d7c662f1666201d04c6e0ebb6c28d1e72ba42d87bee1b214ae0f228c4",
+      "final_sha256": "ff3630a3e2f81727538ae83b81cb29327096e63301483736a6b732675eda1d27",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "absorbed",
+      "absorbed_into": "wiki/computer-network/TCP.md",
+      "current_path": "wiki/computer-network/TCP.md",
+      "current_sha256": "62672484d727b2d758095403018da37f1cf0c4dd9ae9cf847500d24dc75ac63b"
+    },
+    {
+      "old_path": "计算机网络/internet 地址结构.md",
+      "new_path": "wiki/computer-network/internet 地址结构.md",
+      "original_sha256": "9379dcd27dab97ed5854e79c6e9c6e8708cfdd9995c0c383c7fd7029a03a414c",
+      "final_sha256": "d65447b11e3c38f7aaeaf92a83cbad2b4fad932455378de803ecec1d41fa917f",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "absorbed",
+      "absorbed_into": "wiki/computer-network/IP.md",
+      "current_path": "wiki/computer-network/IP.md",
+      "current_sha256": "f919ed8cd86d00c3d31d9bc5699c6ae2f313a3ce83573e2b461b3781caf13658"
+    },
+    {
+      "old_path": "计算机网络/tcpdump 和 wireshark 使用.md",
+      "new_path": "wiki/computer-network/tcpdump 和 wireshark 使用.md",
+      "original_sha256": "646d5ffe09904b268dcf54ede30d3b01eed2b031820c9a71866c80b21f731120",
+      "final_sha256": "975ea2e72492d2c2ad85c817ecb74899183d8ae282b00f4b2c3f239852730a0d",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-network/tcpdump 和 wireshark 使用.md",
+      "current_sha256": "975ea2e72492d2c2ad85c817ecb74899183d8ae282b00f4b2c3f239852730a0d"
+    },
+    {
+      "old_path": "计算机网络/三握、四挥.md",
+      "new_path": "wiki/computer-network/三握、四挥.md",
+      "original_sha256": "baf3d507f63c32c17c3a23e731fba62fc7eae0ef13326f98fb9b31891feff77e",
+      "final_sha256": "3b140198ceebb6f0c0fe30831e575b7c03d68aa82feb5a3349173435abdea4a8",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "absorbed",
+      "absorbed_into": "wiki/computer-network/TCP.md",
+      "current_path": "wiki/computer-network/TCP.md",
+      "current_sha256": "62672484d727b2d758095403018da37f1cf0c4dd9ae9cf847500d24dc75ac63b"
+    },
+    {
+      "old_path": "计算机网络/协议/DNS.md",
+      "new_path": "wiki/computer-network/DNS.md",
+      "original_sha256": "80edda939d369895ef25b7cf3fc7c2b03b2e6be1f2c3a2397b1af277dd32b2f6",
+      "final_sha256": "0ddf4e1bda8f87d6d86ee0cf124be78bb212ec750613f418327048213fa99470",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-network/DNS.md",
+      "current_sha256": "0ddf4e1bda8f87d6d86ee0cf124be78bb212ec750613f418327048213fa99470"
+    },
+    {
+      "old_path": "计算机网络/协议/Ethernet.md",
+      "new_path": "wiki/computer-network/Ethernet.md",
+      "original_sha256": "c97fc15815eba913b30d96dffdca4cd12fb9fedae235a51e354e4679e8f5d77d",
+      "final_sha256": "2c6d4154255bf3165940bac8b6169aabdbcdbc9c85bc7dd3a3d62dec7ec0c057",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-network/Ethernet.md",
+      "current_sha256": "2c6d4154255bf3165940bac8b6169aabdbcdbc9c85bc7dd3a3d62dec7ec0c057"
+    },
+    {
+      "old_path": "计算机网络/协议/HTTP、HTTPS.md",
+      "new_path": "wiki/computer-network/HTTP、HTTPS.md",
+      "original_sha256": "3b9277eeaf3631120ae7dd27cba34fafdec1abed59f12174194bd45c7f7f27e1",
+      "final_sha256": "184a98076cb5a977745d669d80dd8ecaa0bee86f0532df9850ca180ae4428ab5",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-network/HTTP、HTTPS.md",
+      "current_sha256": "184a98076cb5a977745d669d80dd8ecaa0bee86f0532df9850ca180ae4428ab5"
+    },
+    {
+      "old_path": "计算机网络/协议/ICMP.md",
+      "new_path": "wiki/computer-network/ICMP.md",
+      "original_sha256": "3d668f9b995c16943cd744ba0a5242cc8f1c3fc84b3b04d97de078f973013cbe",
+      "final_sha256": "85798226450d69eedae57f95be906d77f2f51339c3fd792fce14056572b4025c",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-network/ICMP.md",
+      "current_sha256": "85798226450d69eedae57f95be906d77f2f51339c3fd792fce14056572b4025c"
+    },
+    {
+      "old_path": "计算机网络/协议/IP.md",
+      "new_path": "wiki/computer-network/IP.md",
+      "original_sha256": "d7e02ae59e9044adcab21b5a2338a24833a59480d02f7272c615120c1520e011",
+      "final_sha256": "f919ed8cd86d00c3d31d9bc5699c6ae2f313a3ce83573e2b461b3781caf13658",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-network/IP.md",
+      "current_sha256": "f919ed8cd86d00c3d31d9bc5699c6ae2f313a3ce83573e2b461b3781caf13658"
+    },
+    {
+      "old_path": "计算机网络/协议/TCP.md",
+      "new_path": "wiki/computer-network/TCP.md",
+      "original_sha256": "c199e93de82ca4bf648fe9fdd5c348b23a0681227a759b02673bc2dee37f3848",
+      "final_sha256": "62672484d727b2d758095403018da37f1cf0c4dd9ae9cf847500d24dc75ac63b",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-network/TCP.md",
+      "current_sha256": "62672484d727b2d758095403018da37f1cf0c4dd9ae9cf847500d24dc75ac63b"
+    },
+    {
+      "old_path": "计算机网络/协议/UDP.md",
+      "new_path": "wiki/computer-network/UDP.md",
+      "original_sha256": "f619dd25b56c8827c6733b11b2c655783edd330bd4f9927c098463d561dc5694",
+      "final_sha256": "1332b4b2a05d8be3d0ef8ccae92c05382c16b18036a24a110d7094d00d3e2f7b",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-network/UDP.md",
+      "current_sha256": "1332b4b2a05d8be3d0ef8ccae92c05382c16b18036a24a110d7094d00d3e2f7b"
+    },
+    {
+      "old_path": "计算机网络/协议分层.md",
+      "new_path": "wiki/computer-network/协议分层.md",
+      "original_sha256": "556cb2d84055420144319ee37cb3f6be9a19bf8dc9925325b909fd2d024b3056",
+      "final_sha256": "de315b37c8322eeed17e0c330e2b7eb773d5ae1c56a62c79adef2f7b43599fb7",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-network/协议分层.md",
+      "current_sha256": "5a124a7de447a28559d5c0115ae47bfdddeef63532af8f8318f0ebc77998f4ca"
+    },
+    {
+      "old_path": "计算机网络/名词解释.md",
+      "new_path": "wiki/computer-network/计算机网络名词解释.md",
+      "original_sha256": "78d3c0fdc538a38ab90bea1459d2eabf69fdd1d48a4fcd54a76cb236e9d1a026",
+      "final_sha256": "3d0c417b35750966e74900196f24bccc83e94eafefd6a51f574553388ae85cec",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-network/计算机网络名词解释.md",
+      "current_sha256": "3d0c417b35750966e74900196f24bccc83e94eafefd6a51f574553388ae85cec"
+    },
+    {
+      "old_path": "计算机网络/常见面试问题.md",
+      "new_path": "wiki/computer-network/常见面试问题.md",
+      "original_sha256": "97067c1f0aa0fb4bfdb490dc973756dbb06b5b940988aaced563517f2fce5115",
+      "final_sha256": "87cf6babb54155ac7fa8bb2460a2a0ff1017697854bba519125761d9fda4f6c9",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/computer-network/常见面试问题.md",
+      "current_sha256": "f5354eefaf6f50e1710af66304702246ebc155a95dfc16e06c38cba207eefdc6"
+    },
+    {
+      "old_path": "计算机网络/深入理解Linux网络/内核如何与用户进程协作.md",
+      "new_path": "wiki/computer-network/深入理解 Linux 网络/内核如何与用户进程协作.md",
+      "original_sha256": "a43f5c59e57f2277a6edd0249c6456dbb5026735d5e4c4c6d3f636cc59377aee",
+      "final_sha256": "65b6a95a51efc347e52a21f6474bca5c4f28d53220ab88e3bd5cf0ec535d963f",
+      "reason": "stable book collection",
+      "status": "active",
+      "current_path": "wiki/computer-network/深入理解 Linux 网络/内核如何与用户进程协作.md",
+      "current_sha256": "65b6a95a51efc347e52a21f6474bca5c4f28d53220ab88e3bd5cf0ec535d963f"
+    },
+    {
+      "old_path": "计算机网络/深入理解Linux网络/内核如何接受网络包.md",
+      "new_path": "wiki/computer-network/深入理解 Linux 网络/内核如何接受网络包.md",
+      "original_sha256": "2e48644ab15e57bf4d18b3ecb55c3e9aec7f2d27ba47d12fed0b9e2c5fe583c5",
+      "final_sha256": "f8c0f04ab40135435188635ba0188792196a1afc2c0a6b27e12d20b46e919aea",
+      "reason": "stable book collection",
+      "status": "active",
+      "current_path": "wiki/computer-network/深入理解 Linux 网络/内核如何接受网络包.md",
+      "current_sha256": "f8c0f04ab40135435188635ba0188792196a1afc2c0a6b27e12d20b46e919aea"
+    },
+    {
+      "old_path": "计算机网络/深入理解Linux网络笔记.md",
+      "new_path": "wiki/computer-network/深入理解Linux网络笔记.md",
+      "original_sha256": "bbfd245d31888fa62b93fbb013d50ce55d934cce92c15b78d1f139bbe59fe505",
+      "final_sha256": "8ebbfcd3fde345f1257b7289a6730cd3a223cd9f20eea56cf7760979364e96b1",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "moved",
+      "moved_to": "wiki/computer-network/深入理解 Linux 网络/深入理解Linux网络笔记.md",
+      "current_path": "wiki/computer-network/深入理解 Linux 网络/深入理解Linux网络笔记.md",
+      "current_sha256": "e3a1f22ca8252390ffefa9c1bf57f5512fda230e5cfe35603848f1eab6ba63f6"
+    }
+  ],
+  "historical_missing_attachments": 9
+}

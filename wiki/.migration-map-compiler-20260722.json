@@ -1,0 +1,25 @@
+{
+  "scope": "编译原理",
+  "created": "2026-07-22",
+  "backup_dir": "/home/mxy/.hermes/backups/mxy-wiki/编译原理-before-20260722",
+  "metadata_policy": {
+    "created": "preserve explicit ISO date; otherwise migration date",
+    "updated": "2026-07-22",
+    "status": "needs-review",
+    "confidence": "INFERRED",
+    "source": "not invented"
+  },
+  "records": [
+    {
+      "old_path": "编译原理/名词解释.md",
+      "new_path": "wiki/compiler/编译原理名词解释.md",
+      "original_sha256": "925077b3b56c2046696f0f2eb3129081be23a091ef5066c0328320e288439e1d",
+      "final_sha256": "b5cb66932592daacc397088f51a8232fc4d4d7a82d3c4beb49763a26cc13e277",
+      "reason": "legacy domain migration; topic directories flattened",
+      "status": "active",
+      "current_path": "wiki/compiler/编译原理名词解释.md",
+      "current_sha256": "39cf186f3b9eff5c46d0b314bc542878a263b3a40fb4809309726004f728d880"
+    }
+  ],
+  "historical_missing_attachments": 0
+}

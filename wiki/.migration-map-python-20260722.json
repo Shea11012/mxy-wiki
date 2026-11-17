@@ -1,0 +1,145 @@
+{
+  "scope": "python",
+  "created": "2026-07-22",
+  "backup_dir": "/home/mxy/.hermes/backups/mxy-wiki/python-before-20260722",
+  "metadata_policy": {
+    "created": "preserve explicit ISO date; otherwise migration date",
+    "updated": "2026-07-22",
+    "status": "needs-review",
+    "confidence": "INFERRED",
+    "source": "preserve only existing source"
+  },
+  "records": [
+    {
+      "old_path": "python/Python 的一些实用技巧.md",
+      "new_path": "wiki/python/Python 的一些实用技巧.md",
+      "original_sha256": "02c0cf48623b1026aad084d4fbad7e92d5ece4bbaac97985682b399e133cdecb",
+      "final_sha256": "6ef8784b636eaeb29e56331ef50a25f10490c541fd905425bb93df94449e329d",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/python/Python 的一些实用技巧.md",
+      "current_sha256": "6ef8784b636eaeb29e56331ef50a25f10490c541fd905425bb93df94449e329d"
+    },
+    {
+      "old_path": "python/python 内置模块使用.md",
+      "new_path": "wiki/python/python 内置模块使用.md",
+      "original_sha256": "6b9b552d18f01e40662b291a7b3d7281ffa664ad8d98a5b3c96a703a154ba49f",
+      "final_sha256": "a56098888bbe0cfd1e2293c91274f23dbdf088ef15f6dc4219a62726635764e2",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/python/python 内置模块使用.md",
+      "current_sha256": "a56098888bbe0cfd1e2293c91274f23dbdf088ef15f6dc4219a62726635764e2"
+    },
+    {
+      "old_path": "python/python基础教程第三版/第2章 列表和元组.md",
+      "new_path": "wiki/python/Python基础教程第三版/第2章 列表和元组.md",
+      "original_sha256": "aa0918b9c65f73f839e4207ab44449b94fd3fea7b7a48c0e6a11224758845e71",
+      "final_sha256": "0e4958a51498b0c8eb21c722080648dd7e249c4b1354b13da89bed1bad57c999",
+      "reason": "stable book collection",
+      "status": "active",
+      "current_path": "wiki/python/Python基础教程第三版/第2章 列表和元组.md",
+      "current_sha256": "0e4958a51498b0c8eb21c722080648dd7e249c4b1354b13da89bed1bad57c999"
+    },
+    {
+      "old_path": "python/python基础教程第三版/第3章 字符串.md",
+      "new_path": "wiki/python/Python基础教程第三版/第3章 字符串.md",
+      "original_sha256": "809e57c0ad2e41899a935af86c8b06e23ca1cbcfe05d43b63cd31acf791634f8",
+      "final_sha256": "916f8bd462f7e728042f68e9974dc67f6300e336075cf946fd72a2fee4a895af",
+      "reason": "stable book collection",
+      "status": "active",
+      "current_path": "wiki/python/Python基础教程第三版/第3章 字符串.md",
+      "current_sha256": "916f8bd462f7e728042f68e9974dc67f6300e336075cf946fd72a2fee4a895af"
+    },
+    {
+      "old_path": "python/python基础教程第三版/第4章 字典.md",
+      "new_path": "wiki/python/Python基础教程第三版/第4章 字典.md",
+      "original_sha256": "45f5729cd7008fad36d822751a57e6a4e05d4c80f27011bd696bf9d12ee5856d",
+      "final_sha256": "d24798768ed49d268da005163d30328c4fcc256c04343f6999b80391ecd0d68b",
+      "reason": "stable book collection",
+      "status": "active",
+      "current_path": "wiki/python/Python基础教程第三版/第4章 字典.md",
+      "current_sha256": "d24798768ed49d268da005163d30328c4fcc256c04343f6999b80391ecd0d68b"
+    },
+    {
+      "old_path": "python/python基础教程第三版/第5章 循环和推导.md",
+      "new_path": "wiki/python/Python基础教程第三版/第5章 循环和推导.md",
+      "original_sha256": "7310e256ef3f687717a4dd6b1c62264034717569e71eac2f5237f5f567c53ce0",
+      "final_sha256": "d0f106b9a6fa374cab2d7f0492828ce6d22c3b6e047072e1a44ac4a35575df41",
+      "reason": "stable book collection",
+      "status": "active",
+      "current_path": "wiki/python/Python基础教程第三版/第5章 循环和推导.md",
+      "current_sha256": "d0f106b9a6fa374cab2d7f0492828ce6d22c3b6e047072e1a44ac4a35575df41"
+    },
+    {
+      "old_path": "python/python基础教程第三版/第6章 函数.md",
+      "new_path": "wiki/python/Python基础教程第三版/第6章 函数.md",
+      "original_sha256": "3d623afebd1fd25670f0627c78aef02b37afa523af88f704d5aa9e4403d3b02a",
+      "final_sha256": "75ac19961b497da5ea5d7950ae776fea9b106ac7594c33e4b9db54ce5cdb7b1d",
+      "reason": "stable book collection",
+      "status": "active",
+      "current_path": "wiki/python/Python基础教程第三版/第6章 函数.md",
+      "current_sha256": "75ac19961b497da5ea5d7950ae776fea9b106ac7594c33e4b9db54ce5cdb7b1d"
+    },
+    {
+      "old_path": "python/python基础教程第三版/第8章 异常.md",
+      "new_path": "wiki/python/Python基础教程第三版/第8章 异常.md",
+      "original_sha256": "379f205b25022d1df6e09df9ec4901b579d068419659ec52da325507ee582b03",
+      "final_sha256": "5b928f57932112ed4397b3a83014f8b7a582129537853e3a934b3f51ca982d6c",
+      "reason": "stable book collection",
+      "status": "active",
+      "current_path": "wiki/python/Python基础教程第三版/第8章 异常.md",
+      "current_sha256": "5b928f57932112ed4397b3a83014f8b7a582129537853e3a934b3f51ca982d6c"
+    },
+    {
+      "old_path": "python/python基础教程第三版/第9章 模块.md",
+      "new_path": "wiki/python/Python基础教程第三版/第9章 模块.md",
+      "original_sha256": "ab5b45f72aba7aebcb77c6c8f28ba867874374eca3aefd1d7551e715eb83c6f3",
+      "final_sha256": "6a0dde6a6a419dbddb09d0779884cc95583a218e6f834fe6642f4dadcf9a045b",
+      "reason": "stable book collection",
+      "status": "active",
+      "current_path": "wiki/python/Python基础教程第三版/第9章 模块.md",
+      "current_sha256": "6a0dde6a6a419dbddb09d0779884cc95583a218e6f834fe6642f4dadcf9a045b"
+    },
+    {
+      "old_path": "python/数据存储 pickle模块.md",
+      "new_path": "wiki/python/数据存储 pickle模块.md",
+      "original_sha256": "140382a245cef8f3afb0911df0d5a1b840b7dde6ba4af09f11f5e66191a9974f",
+      "final_sha256": "6e40a7eadc61006735b8b9bf0f7f9bcce458c55f9bf5098af3942bc3c3f9689c",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/python/数据存储 pickle模块.md",
+      "current_sha256": "5178953cf55810f892ae8dc590bbfe4bd63910c8c8c2ba5630f45e239b0940ee"
+    },
+    {
+      "old_path": "python/类的静态属性，静态方法，类方法.md",
+      "new_path": "wiki/python/类的静态属性，静态方法，类方法.md",
+      "original_sha256": "9b3a982b94fd5d3018e18e0e21bea1a76a820bfcb64b73b29864b75eea86850d",
+      "final_sha256": "b9526e5217494d815321cb1fd6eed6b91678c2bdabb57c6ef8928696b0665c95",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/python/类的静态属性，静态方法，类方法.md",
+      "current_sha256": "b9526e5217494d815321cb1fd6eed6b91678c2bdabb57c6ef8928696b0665c95"
+    },
+    {
+      "old_path": "python/遇到的问题集合.md",
+      "new_path": "wiki/python/遇到的问题集合.md",
+      "original_sha256": "289f98e87ccb933e5aa29f257b6e7a92cfb12ae1a2eb4af8b493b54587f96815",
+      "final_sha256": "7b261fdf3c79fe810e00dad852261ae5d75b92bac8ba372a933582fce1bf7849",
+      "reason": "legacy language migration; topic directories flattened to tags",
+      "status": "active",
+      "current_path": "wiki/python/遇到的问题集合.md",
+      "current_sha256": "7b261fdf3c79fe810e00dad852261ae5d75b92bac8ba372a933582fce1bf7849"
+    }
+  ],
+  "created_files": [
+    {
+      "path": "wiki/python/Python 知识地图.md",
+      "sha256": "12986c96f9055abca4d2162ac1b6e5071e039cd281124a3e806bbc6a8b91a72d"
+    },
+    {
+      "path": "wiki/python/Python基础教程第三版/Python基础教程第三版（总览）.md",
+      "sha256": "3b52b93654b51ed010a2de1509fe7ad54aade1cc42b84f4d5f08113066ed02c5"
+    }
+  ],
+  "historical_missing_attachments": "recorded by /tmp/audit_language_migration.py; unresolved legacy assets only"
+}

@@ -4,15 +4,11 @@
   "obsidian-style-settings",
   "dataview",
   "obsidian-linter",
-  "templater-obsidian",
   "obsidian-minimal-settings",
-  "floating-toc",
-  "obsidian-hider",
   "obsidian-excalidraw-plugin",
   "nl-fast-image-cleaner",
-  "quickadd",
-  "obsidian-tasks-plugin",
   "obsidian42-brat",
   "albus-imagine",
-  "tldraw"
+  "tldraw",
+  "templater-obsidian"
 ]

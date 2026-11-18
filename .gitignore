@@ -33,3 +33,12 @@ id_ed25519
 *.p12
 *.pfx
 *.keystore
+
+# BEGIN obsidian-plugin-programs (local configuration stays private)
+/.obsidian/plugins/*
+!/.obsidian/plugins/*/
+/.obsidian/plugins/*/**
+!/.obsidian/plugins/*/main.js
+!/.obsidian/plugins/*/manifest.json
+!/.obsidian/plugins/*/styles.css
+# END obsidian-plugin-programs
